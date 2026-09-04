@@ -1,0 +1,24 @@
+{
+  "_readme": "Glossary eksternal untuk foreign_term_checker.py. Edit file ini (bukan .py) tiap kali nemu kata yang salah ke-flag ATAU salah LOLOS sebagai 'istilah asing wajib italic'. Tidak perlu ubah kode / redeploy checker -- cukup tambah entri lalu simpan. Tiga kategori punya alasan beda, jangan campur: 'proper_nouns' = nama produk/tool/merek (bukan kata umum sama sekali) -- menambal FALSE POSITIVE. 'absorbed_words' = kata serapan/istilah baku yang lazim dipakai TANPA italic dalam tulisan ilmiah Indonesia, tapi korpus 'id' di wordfreq tipis untuk kosakata ini sehingga salah ke-flag -- juga menambal FALSE POSITIVE. 'forced_foreign' = KEBALIKANNYA: istilah yang HARUS selalu di-flag wajib italic meskipun skor zipf-nya tidak cukup tinggi untuk lolos threshold otomatis (biasanya istilah niche/domain-specific yang jarang muncul di korpus umum wordfreq) -- ini menambal FALSE NEGATIVE. Isi forced_foreign HANYA kalau sudah yakin kata itu memang istilah yang wajib italic, karena kata di sini melewati SEMUA pengecualian lain (termasuk heuristik proper-noun/ALL CAPS).",
+  "proper_nouns": [
+    "python-docx",
+    "pymupdf",
+    "libreoffice",
+    "arxiv"
+  ],
+  "absorbed_words": {
+    "kustom": "KBBI: disesuaikan/dipesan khusus",
+    "render": null,
+    "rendering": null,
+    "manipulator": "istilah baku robotika/teknik (lengan manipulator)",
+    "dataset": "en_zipf~3.03, id_zipf=0.0 -- korpus id tipis utk istilah teknis",
+    "pipeline": "en_zipf~4.04, id_zipf=0.0",
+    "metadata": "en_zipf~3.36, id_zipf=0.0",
+    "evaluator": "en_zipf~2.49, id_zipf=0.0",
+    "bilingual": "en_zipf~3.52, id_zipf=0.0",
+    "frontend": "en_zipf~2.48, id_zipf=0.0",
+    "backend": "en_zipf~2.86, id_zipf=0.0",
+    "multilingual": "en_zipf~3.03, id_zipf=0.0"
+  },
+  "forced_foreign": {}
+}
