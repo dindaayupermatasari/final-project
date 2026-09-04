@@ -1,0 +1,33 @@
+name: DOCX Cross-OS Structure Check
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'docx-cross-os-check/test-assets/**'
+      - 'docx-cross-os-check/extract_structure.py'
+
+jobs:
+  extract:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install python-docx
+
+      - name: Extract structure
+        run: python docx-cross-os-check/extract_structure.py docx-cross-os-check/test-assets/sample.docx
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: structure-${{ matrix.os }}
+          path: structure_*.json
