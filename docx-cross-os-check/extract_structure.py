@@ -14,10 +14,19 @@ import platform
 
 from docx import Document
 from docx.shared import Emu
+from docx.oxml.ns import qn
 
 
 def emu_to_cm(val):
     return round(Emu(val).cm, 3) if val is not None else None
+
+
+def has_mirror_margins(section):
+    # python-docx has no high-level API for this; mirror margins only
+    # shows up as a <w:mirrorMargins/> element inside <w:sectPr> in the
+    # raw XML, so we check for it directly.
+    sect_pr = section._sectPr
+    return sect_pr.find(qn('w:mirrorMargins')) is not None
 
 
 def extract(path):
@@ -31,7 +40,7 @@ def extract(path):
             "top_margin": emu_to_cm(s.top_margin),
             "bottom_margin": emu_to_cm(s.bottom_margin),
             "gutter": emu_to_cm(s.gutter),
-            "mirror_margins": s.mirror_margins,
+            "mirror_margins": has_mirror_margins(s),
         })
 
     for p in doc.paragraphs:
