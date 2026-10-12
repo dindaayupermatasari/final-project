@@ -20,7 +20,9 @@ Aturan yang dicek (dari Panduan Buku PA, bagian DAFTAR PUSTAKA):
     1. Tiap entri diakhiri Tahun (field terakhir).
     2. Tiap entri diawali Nama pengarang (bukan kosong/angka).
     3. Field wajib per JENIS sumber (heuristik dari kata kunci):
-       - Jurnal   : ada "Vol."/"No." -> wajib juga ada "Hal."
+       - Jurnal   : ada "Vol."/"No." -> "Hal." OPSIONAL, tidak dicek
+         sama sekali (sesuai ketentuan Panduan Buku PA, khusus
+         makalah/jurnal halaman tidak wajib dicantumkan).
        - Tugas Akhir (TA/Skripsi/Tesis/Disertasi): wajib ada nama
          perguruan tinggi.
        - Online   : wajib ada alamat internet (http/www).
@@ -83,10 +85,6 @@ YEAR_AT_END_RE = re.compile(
 )
 YEAR_ANYWHERE_RE = re.compile(r"(19|20)\d{2}")
 URL_RE = re.compile(r"(https?://|www\.)\S+", re.IGNORECASE)
-DOI_OR_ARTNO_RE = re.compile(
-    r"\bDOI\b|\b10\.\d{4,9}/\S+|\bART\.?\s*NO\.?\s*\d|\bARTICLE\s*NO\.?\s*\d",
-    re.IGNORECASE,
-)
 INSTITUTION_RE = re.compile(r"POLITEKNIK|UNIVERSITAS|INSTITUT|SEKOLAH TINGGI|AKADEMI")
 THESIS_KEYWORDS = ("PROYEK AKHIR", "SKRIPSI", "TESIS", "DISERTASI")
 BULAN_RE = re.compile(
@@ -229,38 +227,15 @@ def check_entry_fields(entries: list[dict]) -> tuple[list[dict], dict]:
         upper = body.upper()
 
         if entry_type == "jurnal":
-            # Jurnal open-access/early-access modern (IEEE Access, MDPI,
-            # dll) sering pakai DOI atau "Art. no." sebagai pengganti sah
-            # rentang halaman -- itu format asli sumbernya, bukan
-            # kesalahan penulisan mahasiswa. Jadi kedua bentuk ini
-            # diterima sebagai pemenuhan syarat "identitas lokasi
-            # artikel", tidak wajib literally "Hal. aa-bb".
-            has_pages = re.search(r"\bHAL\.?\s*\d", upper)
-            has_doi_or_artno = DOI_OR_ARTNO_RE.search(body)
-            checks[CHAPTER_LABEL]["checked"] += 1
-            if not has_pages and not has_doi_or_artno:
-                # TIDAK dihitung sebagai "failed" -- ini soft-notice,
-                # bukan penalti skor, karena kita tidak bisa pastikan
-                # dari teks saja apakah jurnal sumbernya memang tidak
-                # menerbitkan halaman/DOI/Art.no. sama sekali (early
-                # access, dsb). Tetap dilaporkan supaya mahasiswa bisa
-                # cek manual.
-                findings.append(
-                    {
-                        "category": "Format",
-                        "chapter": CHAPTER_LABEL,
-                        "location": loc,
-                        "description": (
-                            "Entri jurnal ini punya 'Vol.' tapi tidak "
-                            "ditemukan 'Hal. aa-bb', DOI, atau nomor "
-                            "artikel. Kalau jurnal sumbernya memang "
-                            "menerbitkan salah satu dari itu, sebaiknya "
-                            "dicantumkan; kalau sumbernya memang tidak "
-                            "punya (mis. early access), ini boleh "
-                            "diabaikan."
-                        ),
-                    }
-                )
+            # Sesuai ketentuan Panduan Buku PA (lihat contoh sistematika
+            # no. 1 di header dokumen): field "Hal. aa-bb" untuk entri
+            # jurnal/makalah bersifat OPSIONAL (tidak wajib ada), beda
+            # dari field lain (Nama_Pengarang, Judul, Nama Jurnal, Vol.,
+            # No., Penerbit, Tahun) yang tetap wajib dan sudah dicek di
+            # cek 1 & 2 di atas. Karena itu TIDAK ADA pengecekan
+            # kelengkapan halaman/DOI/Art.no. sama sekali untuk jenis
+            # ini -- baik sebagai failed maupun sebagai soft-notice.
+            pass
 
         elif entry_type == "tugas_akhir":
             checks[CHAPTER_LABEL]["checked"] += 1

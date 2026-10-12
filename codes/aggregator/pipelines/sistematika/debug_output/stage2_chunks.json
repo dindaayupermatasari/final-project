@@ -1,0 +1,683 @@
+{
+  "format_keywords_used_for_filtering": [
+    "times new roman",
+    "font",
+    "ukuran huruf",
+    "huruf kapital",
+    "cetak tebal",
+    "italic",
+    "cetak miring",
+    "margin",
+    "spasi",
+    "kertas a4",
+    "a4-80 gram",
+    "nomor halaman",
+    "penomoran halaman",
+    "footer",
+    "header",
+    "hexa",
+    "rgb",
+    "mirror-margin",
+    "poin",
+    "point",
+    " pt ",
+    "cm)",
+    "inch",
+    "rata tengah",
+    "rata kanan",
+    "rata kiri",
+    "bolak-balik",
+    "warna biru",
+    "kode hexa"
+  ],
+  "per_section_filter_detail": [
+    {
+      "bab_num": 1,
+      "subbab_num": "1.1",
+      "subbab_title": "LATAR BELAKANG",
+      "total_sentences": 25,
+      "kept_count": 9,
+      "dropped_count": 16,
+      "kept_sentences": [
+        "Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.",
+        "Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.",
+        "Misalkan penulis mengambil suatu judul berikut \"Deteksi Penyakit Kanker Dengan Sistem Pakar Berbasis Fuzzy\".",
+        "Judul tersebut mempunyai Problem adalah Deteksi Penyakit Kanker, Problem Domain adalah Penyakit Kanker, dan Uniqueness adalah Sistem Pakar Berbasis Fuzzy.",
+        "Berkaitan dengan Latar Belakang, Problem Domain-nya adalah tentang penyakit kanker, sehingga disini penulis dapat menceritakan tentang penyakit kanker dan tingkat urgensi (seperti tingkat kenaikan jumlah penderitanya dari tahun ke tahun, gawatnya penyakit kanker tersebut, dan semisalnya).",
+        "Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.",
+        "Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11.",
+        "Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir.",
+        "Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel."
+      ],
+      "dropped_sentences": [
+        "Pengetikan buku proyek akhir mengikuti ketentuan sebagai berikut: Penulisan menggunakan jenis huruf Times New Roman.",
+        "Halaman judul sama dengan halaman kulit luar, berisi : tulisan \"PROYEK AKHIR\" (ukuran huruf 20, huruf Kapital semua), judul Proyek Akhir (ukuran huruf 18, huruf Kapital semua); lambang PENS, nama langkap penulis dengan nomor pokok (NRP) dan nama lengkap dosen pembimbing berserta gelar (ukuran huruf 16); nama program studi, departemen, politeknik (ditulis lengkap), serta tahun pembuatan (ukuran huruf 16, huruf Kapital semua).",
+        "Judul Proyek Akhir harus diketik seluruhnya dengan huruf- huruf kapital dan tidak boleh disingkat, kecuali singkatan yang sudah baku.",
+        "Nama penulis dan dosen pembimbing harus ditulis dengan huruf kapital di awal kata dan tidak disingkat.",
+        "Halaman sampul buku proyek akhir berwarna biru dengan kode hexa “#002FA7” dengan nilai RGB 0,47,dan 167.",
+        "Konten buku proyek akhir diketik pada kertas A4-80 gram, huruf yang digunakan adalah Times New Roman ukuran 12.",
+        "Judul bab itulis dengan huruf kapital, tebal dengan ukuran 14.",
+        "Judul sub-bab itulis dengan huruf kapital, tebal dengan ukuran 12.",
+        "Tulisan menggunakan jarak antar baris 1,5 spasi.",
+        "Setiap bagian inti (latar belakang, dst) ditulis dengan huruf kapital diawal kata dan dicetak tebal.",
+        "Istilah asing ditulis dalam cetak miring (italic).",
+        "Tulisan di ketik dengan ketentuan margin sebagai berikut: jarak dari tepi kiri kertas = 4 cm (1,57 inch), jarak dari tepi atas, tepi bawah dan tepi kanan kertas = 3 cm (1,18 inch).",
+        "Buku dicetak bolak-balik dengan pengaturan mirror-margin dimulai dengan halaman ganjil pada setiap halaman pertama Bab.",
+        "Pemberian nomor halaman dimulai dari “BAB 1” diberi nomor urut dengan angka Arab, dimulai dengan angka 1 dan dimulai dari Bab Pendahuluan sampai dengan lampiran.",
+        "Nomor halaman ditulis di bawah (footer) tengah.",
+        "Bila suatu bab berakhir pada halaman bernomor gasal, maka ditambahkan satu halaman kosong dengan nomor halaman genap (diberi tulisan \"Halaman ini sengaja dikosongkan\")."
+      ]
+    },
+    {
+      "bab_num": 1,
+      "subbab_num": "1.2",
+      "subbab_title": "PERMASALAHAN",
+      "total_sentences": 5,
+      "kept_count": 5,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.",
+        "Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.",
+        "Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif.",
+        "Pada contoh judul diatas, Problem-nya adalah tentang deteksi penyakit kanker, sehingga penulis disini dapat menceritakan tentang sulitnya pendeteksian penyakit kanker dengan mendeskripsikan faktor- faktor yang membuat sulit dalam pendeteksiannya.",
+        "Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 1,
+      "subbab_num": "1.3",
+      "subbab_title": "BATASAN MASALAH",
+      "total_sentences": 2,
+      "kept_count": 2,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir.",
+        "Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 1,
+      "subbab_num": "1.4",
+      "subbab_title": "TUJUAN",
+      "total_sentences": 9,
+      "kept_count": 9,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.",
+        "Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas.",
+        "Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.",
+        "Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................",
+        "(hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”.",
+        "Kalimat-kalimat selanjutnya kemudian memperjelas solusi dengan fitur-fitur unik seperti apa yang ditawarkan pada penelitian sebagai suatu solusi untuk menjawab permasalahan.",
+        "Pada contoh judul diatas, orisinalitasnya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker.",
+        "Kalimat pertama pada tujuan dapat diawali dengan contoh berikut, “Penelitian proyek akhir ini mengajukan suatu pendekatan baru untuk pendeteksian penyakit kanker dengan mempresentasikan model klasifikasi menggunakan Sistem Pakar yang berbasis Fuzzy”.",
+        "Kemudian pada kalimat- kalimat berikutnya terangkan secara argumentatif tentang fitur-fitur unik pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 1,
+      "subbab_num": "1.5",
+      "subbab_title": "MANFAAT",
+      "total_sentences": 4,
+      "kept_count": 4,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan.",
+        "Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai.",
+        "Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada.",
+        "Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 1,
+      "subbab_num": "1.6",
+      "subbab_title": "SISTEMATIKA PENULISAN",
+      "total_sentences": 9,
+      "kept_count": 9,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Jelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1.",
+        "Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2.",
+        "Penjelasan memuat bagian-bagian penting pada Kajian Pustaka.",
+        "Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3.",
+        "Penjelasan memuat bagian-bagian penting pada Desain Sistem.",
+        "Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4.",
+        "Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis.",
+        "Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5.",
+        "Penjelasan memuat bagian-bagian penting pada Penutup."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 2,
+      "subbab_num": "2.1",
+      "subbab_title": "DESKRIPSI PERMASALAHAN",
+      "total_sentences": 4,
+      "kept_count": 4,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Deskripsikan dengan jelas dan detil dari permasalahan yang ingin diselesaikan pada proyek akhir.",
+        "Permasalahan berisi penjelasan dari Problem yang termuat pada judul kegiatan.",
+        "Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif.",
+        "Deskripsi masalah boleh memuat gambar, tabel dan skema tertentu untuk mengilustrasikan permasalahan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 2,
+      "subbab_num": "2.2",
+      "subbab_title": "TEORI PENUNJANG",
+      "total_sentences": 4,
+      "kept_count": 4,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan.",
+        "Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan.",
+        "Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir.",
+        "Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2]."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 2,
+      "subbab_num": "2.3",
+      "subbab_title": "PENELITIAN TERKAIT",
+      "total_sentences": 8,
+      "kept_count": 7,
+      "dropped_count": 1,
+      "kept_sentences": [
+        "Penelitian terkait memuat hasil penelitian pihak lain yang mempunyai Problem yang sama dengan penelitian kita, tetapi dengan menggunakan Uniqueness yang berbeda.",
+        "Disini ceritakan bagaimana penelitian-penelitian terkait telah mencoba untuk menyelesaikan permasalahan yang sama dengan kita, dengan cara mereka masing-masing yang ditunjukkan dengan kutipan terhadap pustaka.",
+        "Penelitian terkait yang baik melibatkan kajian pustaka yang relevan dan terpercaya dari jurnal ilmiah internasional ataupun nasional, presentasi ilmiah internasional ataupun nasional, dan buku atau catatan rujukan ilmiah.",
+        "Penulis harus mencantumkan sumber referensi pada daftar pustaka manakala penulis melakukan rujukan dan kutipan dari pihak lain secara jujur dan benar seperti ini [3].",
+        "Pencantuman sumber referensi perlu dilakukan baik terhadap kutipan langsung ataupun kutipan tidak langsung (parafrase).",
+        "Untuk kutipan langsung dan pendek (1-2 baris), cara penulisan rujukan untuk kutipan dilakukan dengan memberikan tanda petik ganda di awal dan akhir kutipan dan ditulis miring dan kemudian diiringi dengan sumber referensi pada daftar pustaka, seperti ini \"Ini contoh penulisan rujukan untuk kutipan langsung dan pendek\" [3, 4].",
+        "Sedangkan untuk kutipan langsung dan panjang (lebih dari 2 baris), Penulis dapat menuliskannya seperti dibawah ini."
+      ],
+      "dropped_sentences": [
+        "\"Ini contoh penulisan rujukan untuk kutipan langsung dan panjang, ditulis pada paragraf terpisah dengan dengan memberikan tanda petik ganda di awal dan akhir kutipan, ukuran font 10 point dan margin kanan kiri yang masuk 10 mm dari batas penulisan, kemudian diiringi dengan sumber referensi pada daftar pustaka.\" [5] Untuk kutipan tidak langsung (parafrase), penulis dapat menuliskan sumber referensi setelah kalimat parafrase selesai, seperti ini [6]."
+      ]
+    },
+    {
+      "bab_num": 3,
+      "subbab_num": "3.1",
+      "subbab_title": "DESKRIPSI SOLUSI",
+      "total_sentences": 4,
+      "kept_count": 4,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Deskripsikan solusi yang ditawarkan pada buku proyek akhir dengan jelas dan detil.",
+        "Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada kegiatan sebagai sesuatu solusi pada kegiatan laporan akhir.",
+        "Pada contoh judul “Deteksi Kanker dengan Sistem Pakar Berbasis Fuzzy”, solusinya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker.",
+        "Terangkan secara argumentatif tentang fitur-fitur pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 3,
+      "subbab_num": "3.2",
+      "subbab_title": "PERANCANGAN SISTEM",
+      "total_sentences": 12,
+      "kept_count": 9,
+      "dropped_count": 3,
+      "kept_sentences": [
+        "Desain sistem adalah penjelasan teknikal dari solusi yang berisi urutan-urutan proses yang akan dilakukan untuk menyelesaikan masalah.",
+        "Akan lebih mudah dicerna, apabila penjelasan ini disertai dengan diagram sistem secara high-level view sehingga pembaca mendapatkan gambaran menyeluruh tentang desain sistem untuk menyelesaikan Problem.",
+        "Setelah itu, penulis dapat menguraikan desain sistem yang digunakan dalam buku proyek akhir secara rinci.",
+        "Gambar 3.1 adalah contoh diagram desain sistem secara high-level view dan contoh sistematika pembahasan dari diagram desain.",
+        "Nomer identitas dan keterangan gambar dituliskan pada 1 (satu) baris dibawah gambar.",
+        "Nomer identitas terdiri dari nomer bab dan nomer urutan gambar pada bab tersebut.",
+        "Setiap gambar harus dirujuk dan dibahas pada pembahasan dalam paragraf, seperti kalimat berikut.",
+        "Gambar 3.1 menunjukkan bagan desain sistem yang mempunyai tiga bagian.",
+        "Gambar 3.1 Desain system dari Solusi yang ditawarkan Sumber: http://cdn3.techworld.com/cmsdata/features/3210134/cisco-search-patent.jpg Gambar 3.2 Contoh gambar kutipan"
+      ],
+      "dropped_sentences": [
+        "Gambar diletakkan rata tengah, dengan menyisakan 1 (satu) baris kosong diatas dan dibawah gambar.",
+        "Setiap gambar harus mempunyai nomer identitas gambar dan diiringi dengan keterangan gambar, yang dituliskan rata tengah dan tebal.",
+        "Jika isi gambar adalah kutipan, maka penulis dapat menyebutkan sumber referensi dari gambar dibawah gambar dan diatas identitas gambar, dengan rata tengah dan ditulis dengan ukuran 11 point, seperti yang terlihat pada Gambar 3.2."
+      ]
+    },
+    {
+      "bab_num": 3,
+      "subbab_num": "3.2.1",
+      "subbab_title": "Bagian 1",
+      "total_sentences": 23,
+      "kept_count": 17,
+      "dropped_count": 6,
+      "kept_sentences": [
+        "Disini penulis dapat menjelaskan lebih terperinci apa saja yang ada pada bagian ini.",
+        "Jika bagian ini mempunyai sub bagian yang perlu diperjelas dalam pembahasan, penulis dapat menuliskannya dalam sub pembahasan pada bagian ini.",
+        "Aaaa Disini penulis dapat membahas sub bagian Aaaa lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "Apabila pembahasan penulis memerlukan penulisan persamaan matematis, penulis dapat menuliskannya seperti pada Persamaan 3.1.",
+        "Setiap persamaan harus dirujuk dan dibahas pada pembahasan dalam paragraf, seperti kalimat berikut.",
+        "Persamaan 3.1 menunjukkan keterhubungan antara fungsi pada waktu sekarang dan sebelumnya.",
+        "Nomer identitas dan keterangan tabel dituliskan pada 1 (satu) baris dibawah tabel.",
+        "Nomer identitas terdiri dari nomer bab dan nomer urutan tabel pada bab tersebut.",
+        "Setiap tabel harus dirujuk dan dibahas pada pembahasan dalam paragraf, seperti kalimat berikut.",
+        "Tabel 3.1 menunjukkan contoh penulisan tabel, yang terdiri dari nomer identitas dan keterangan tabel, dan kemudian isi tabel.",
+        "Satu tabel tidak boleh melebihi dari 1 (satu) halaman.",
+        "Jika isi tabel terlalu banyak lebih dari 1 (satu) halaman, penulis dapat memecah tabel dan memberikan identitas tabel yang berbeda.",
+        "𝐹= 𝑚.",
+        "𝑎 (3.2) Bbbb Disini penulis dapat membahas sub bagian Bbbb lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "𝑙𝑖𝑚 (𝑥→𝑐) 𝑓(𝑥) = 𝐿 (3.3)"
+      ],
+      "dropped_sentences": [
+        "(𝑥+ 𝑎)𝑛= ∑(𝑛 𝑘) 𝑥𝑘𝑎𝑛−𝑘 𝑛 𝑘=0 (3.1) Penulisan persamaan diletakkan pada baris sendiri rata kiri yang masuk 10 mm dari batas kiri, dengan menyisakan 1 (satu) baris kosong diatas dan dibawah gambar.",
+        "Setiap persamaan harus mempunyai nomer identitas persamaan yang dituliskan rata kanan dan tebal.",
+        "Untuk cara penulisan tabel, tabel diletakkan rata tengah, dengan menyisakan 1 (satu) baris kosong diatas dan dibawah tabel.",
+        "Setiap tabel harus mempunyai nomer identitas tabel dan diiringi dengan keterangan tabel, yang dituliskan rata tengah dan tebal.",
+        "Tabel 3.1 Contoh penulisan tabel Kolom 1 Kolom 2 Kolom 3 Sumber : Badan Pusat Pengolahan Data, 2012 [7] Judul pada tabel dapat dituliskan rata tengah, tebal dan berlatar- belakang agak gelap.",
+        "Jika isi tabel adalah kutipan, maka penulis dapat menyebutkan sumber referensi dari tabel dibawah tabel dengan rata tengah dan ditulis dengan ukuran 11 point, seperti yang terlihat pada Tabel 3.1."
+      ]
+    },
+    {
+      "bab_num": 3,
+      "subbab_num": "3.2.2",
+      "subbab_title": "Bagian 2",
+      "total_sentences": 6,
+      "kept_count": 6,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat menjelaskan lebih terperinci apa saja yang ada pada Bagian 2 ini.",
+        "Jika bagian ini mempunyai sub bagian yang perlu diperjelas dalam pembahasan, penulis dapat menuliskannya dalam sub pembahasan pada bagian ini.",
+        "Tabel 3.2 Contoh penulisan tabel 2 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Sumber : Badan Pusat Pengolahan Data, 2012 [7] Cccc Disini penulis dapat membahas sub bagian Cccc lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "Dddd Disini penulis dapat membahas sub bagian Dddd lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 3,
+      "subbab_num": "3.2.3",
+      "subbab_title": "Bagian 3",
+      "total_sentences": 6,
+      "kept_count": 6,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat menjelaskan lebih terperinci apa saja yang ada pada Bagian 3 ini.",
+        "Jika bagian ini mempunyai sub bagian yang perlu diperjelas dalam pembahasan, penulis dapat menuliskannya dalam sub pembahasan pada bagian ini.",
+        "Eeee Disini penulis dapat membahas sub bagian Eeee lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "Ffff Disini penulis dapat membahas sub bagian Ffff lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisa"
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.1",
+      "subbab_title": "PARAMETER EKSPERIMEN",
+      "total_sentences": 3,
+      "kept_count": 3,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas parameter eksperimen lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.",
+        "Dalam eksperimen ini menggunakan persamaan sebagai berikut: 𝑦 = 𝑚𝑥 + 𝑐 (4.1) (𝑦 − 𝑦1) (𝑥 − 𝑥1) = (𝑦2 − 𝑦1) (𝑥2 − 𝑥1) (4.2) Selain itu dalam eksperimen untuk juga menggunakan persamaan sebagai berikut untuk formulasi perbandingan hasil pengukuran dengan perhitungan 𝑣 = 𝑣₀ + 𝑎𝑡 (4.3) 𝑠 = 𝑣₀𝑡 + (1/2)𝑎𝑡² (4.4) 𝑣² = 𝑣₀² + 2𝑎𝑠 (4.5)"
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.2",
+      "subbab_title": "KARATERISTIK DATA",
+      "total_sentences": 3,
+      "kept_count": 3,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas karakteristik data lebih terperinci.",
+        "Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.3",
+      "subbab_title": "TEMPAT UJICOBA",
+      "total_sentences": 2,
+      "kept_count": 2,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas tempat pelaksanaan ujicoba lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.4",
+      "subbab_title": "WAKTU UJICOBA",
+      "total_sentences": 2,
+      "kept_count": 2,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas waktu pelaksanaan ujicoba pada penelitian lebih detil.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan terkait dengan waktu yang digunakan untuk ujicoba pada penelitian."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.5",
+      "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+      "total_sentences": 3,
+      "kept_count": 3,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas spesifikasi peralatan lebih terperinci.",
+        "Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.6",
+      "subbab_title": "HASIL EKSPERMEN",
+      "total_sentences": 3,
+      "kept_count": 3,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas hasil eksperimen lebih terperinci.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "Tabel 4.1 Contoh tabel hasil eksperimen 1 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.2 Contoh tabel hasil eksperimen 2 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.3 Contoh tabel hasil eksperimen 3 dengan parameter eksperimen yang cukup banyak sehingga nama tabel panjang Kolom 1 Kolom 2 Kolom 3 Kolom 4"
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 4,
+      "subbab_num": "4.7",
+      "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+      "total_sentences": 7,
+      "kept_count": 7,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini penulis dapat membahas analisis hasil eksperimen lebih terperinci.",
+        "Analisis hasil eksperimen seharusnya menjawab hipotesa bahwa solusi yang diajukan pada Tujuan dapat menyelesaikan permasalahan.",
+        "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "Gambar 4.1 Contoh Gambar hasil eksperimen 1 Gambar atau grafik yang menunjukkan hasil eksperimen harus dijelaskan dalam paragraf penjelasan yang padat dan informatif, sebagai contoh dalam kalimat berikut.",
+        "Grafik pada Gambar 4.1 menunjukkan hubungan antara pengukuran dan perhitungan dari Persamaan 4.1.",
+        "Gambar 4.2 Contoh Gambar hasil eksperimen 2 dengan nama gambar yang cukup panjang sehingga diperlukan penataan yang baik dalam daftar gambar.",
+        "Penjelasan: Grafik pada Gambar 4.2 menunjukkan hubungan antara sensor suhu 1 dan sensor suhu 2 yang dibentuk dari Persamaan 4.2."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 5,
+      "subbab_num": "5.1",
+      "subbab_title": "KESIMPULAN",
+      "total_sentences": 1,
+      "kept_count": 1,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan."
+      ],
+      "dropped_sentences": []
+    },
+    {
+      "bab_num": 5,
+      "subbab_num": "5.2",
+      "subbab_title": "SARAN",
+      "total_sentences": 2,
+      "kept_count": 2,
+      "dropped_count": 0,
+      "kept_sentences": [
+        "Solusi yang penulis tawarkan pasti mempunyai sisi-sisi keterbatasan.",
+        "Berikanlah suatu saran terhadap keterbatasan tersebut untuk pengembangan dan peningkatan solusi dalam menjawab permasalahan."
+      ],
+      "dropped_sentences": []
+    }
+  ],
+  "final_chunks": [
+    {
+      "id": "bab1_sub1-1_instruction",
+      "text": "Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.1",
+        "subbab_title": "LATAR BELAKANG",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab1_sub1-1_example",
+      "text": "Misalkan penulis mengambil suatu judul berikut \"Deteksi Penyakit Kanker Dengan Sistem Pakar Berbasis Fuzzy\". Judul tersebut mempunyai Problem adalah Deteksi Penyakit Kanker, Problem Domain adalah Penyakit Kanker, dan Uniqueness adalah Sistem Pakar Berbasis Fuzzy. Berkaitan dengan Latar Belakang, Problem Domain-nya adalah tentang penyakit kanker, sehingga disini penulis dapat menceritakan tentang penyakit kanker dan tingkat urgensi (seperti tingkat kenaikan jumlah penderitanya dari tahun ke tahun, gawatnya penyakit kanker tersebut, dan semisalnya).",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.1",
+        "subbab_title": "LATAR BELAKANG",
+        "chunk_type": "example"
+      }
+    },
+    {
+      "id": "bab1_sub1-2_instruction",
+      "text": "Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab1_sub1-2_example",
+      "text": "Pada contoh judul diatas, Problem-nya adalah tentang deteksi penyakit kanker, sehingga penulis disini dapat menceritakan tentang sulitnya pendeteksian penyakit kanker dengan mendeskripsikan faktor- faktor yang membuat sulit dalam pendeteksiannya.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "chunk_type": "example"
+      }
+    },
+    {
+      "id": "bab1_sub1-3_instruction",
+      "text": "Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab1_sub1-4_instruction",
+      "text": "Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”. Kalimat-kalimat selanjutnya kemudian memperjelas solusi dengan fitur-fitur unik seperti apa yang ditawarkan pada penelitian sebagai suatu solusi untuk menjawab permasalahan.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab1_sub1-4_example",
+      "text": "Pada contoh judul diatas, orisinalitasnya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker. Kalimat pertama pada tujuan dapat diawali dengan contoh berikut, “Penelitian proyek akhir ini mengajukan suatu pendekatan baru untuk pendeteksian penyakit kanker dengan mempresentasikan model klasifikasi menggunakan Sistem Pakar yang berbasis Fuzzy”. Kemudian pada kalimat- kalimat berikutnya terangkan secara argumentatif tentang fitur-fitur unik pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "chunk_type": "example"
+      }
+    },
+    {
+      "id": "bab1_sub1-5_instruction",
+      "text": "Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.5",
+        "subbab_title": "MANFAAT",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab1_sub1-6_instruction",
+      "text": "Jelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan memuat bagian-bagian penting pada Penutup.",
+      "metadata": {
+        "bab_num": 1,
+        "bab_title": "PENDAHULUAN",
+        "subbab_num": "1.6",
+        "subbab_title": "SISTEMATIKA PENULISAN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab2_sub2-1_instruction",
+      "text": "Deskripsikan dengan jelas dan detil dari permasalahan yang ingin diselesaikan pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul kegiatan. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Deskripsi masalah boleh memuat gambar, tabel dan skema tertentu untuk mengilustrasikan permasalahan.",
+      "metadata": {
+        "bab_num": 2,
+        "bab_title": "KAJIAN PUSTAKA",
+        "subbab_num": "2.1",
+        "subbab_title": "DESKRIPSI PERMASALAHAN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab2_sub2-2_instruction",
+      "text": "Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan. Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan. Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir. Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2].",
+      "metadata": {
+        "bab_num": 2,
+        "bab_title": "KAJIAN PUSTAKA",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab2_sub2-3_instruction",
+      "text": "Penelitian terkait memuat hasil penelitian pihak lain yang mempunyai Problem yang sama dengan penelitian kita, tetapi dengan menggunakan Uniqueness yang berbeda. Disini ceritakan bagaimana penelitian-penelitian terkait telah mencoba untuk menyelesaikan permasalahan yang sama dengan kita, dengan cara mereka masing-masing yang ditunjukkan dengan kutipan terhadap pustaka. Penelitian terkait yang baik melibatkan kajian pustaka yang relevan dan terpercaya dari jurnal ilmiah internasional ataupun nasional, presentasi ilmiah internasional ataupun nasional, dan buku atau catatan rujukan ilmiah. Penulis harus mencantumkan sumber referensi pada daftar pustaka manakala penulis melakukan rujukan dan kutipan dari pihak lain secara jujur dan benar seperti ini [3]. Pencantuman sumber referensi perlu dilakukan baik terhadap kutipan langsung ataupun kutipan tidak langsung (parafrase). Untuk kutipan langsung dan pendek (1-2 baris), cara penulisan rujukan untuk kutipan dilakukan dengan memberikan tanda petik ganda di awal dan akhir kutipan dan ditulis miring dan kemudian diiringi dengan sumber referensi pada daftar pustaka, seperti ini \"Ini contoh penulisan rujukan untuk kutipan langsung dan pendek\" [3, 4]. Sedangkan untuk kutipan langsung dan panjang (lebih dari 2 baris), Penulis dapat menuliskannya seperti dibawah ini.",
+      "metadata": {
+        "bab_num": 2,
+        "bab_title": "KAJIAN PUSTAKA",
+        "subbab_num": "2.3",
+        "subbab_title": "PENELITIAN TERKAIT",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab3_sub3-1_instruction",
+      "text": "Deskripsikan solusi yang ditawarkan pada buku proyek akhir dengan jelas dan detil. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada kegiatan sebagai sesuatu solusi pada kegiatan laporan akhir.",
+      "metadata": {
+        "bab_num": 3,
+        "bab_title": "DESAIN SISTEM",
+        "subbab_num": "3.1",
+        "subbab_title": "DESKRIPSI SOLUSI",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab3_sub3-1_example",
+      "text": "Pada contoh judul “Deteksi Kanker dengan Sistem Pakar Berbasis Fuzzy”, solusinya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker. Terangkan secara argumentatif tentang fitur-fitur pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker.",
+      "metadata": {
+        "bab_num": 3,
+        "bab_title": "DESAIN SISTEM",
+        "subbab_num": "3.1",
+        "subbab_title": "DESKRIPSI SOLUSI",
+        "chunk_type": "example"
+      }
+    },
+    {
+      "id": "bab3_sub3-2_instruction",
+      "text": "Desain sistem adalah penjelasan teknikal dari solusi yang berisi urutan-urutan proses yang akan dilakukan untuk menyelesaikan masalah. Akan lebih mudah dicerna, apabila penjelasan ini disertai dengan diagram sistem secara high-level view sehingga pembaca mendapatkan gambaran menyeluruh tentang desain sistem untuk menyelesaikan Problem. Setelah itu, penulis dapat menguraikan desain sistem yang digunakan dalam buku proyek akhir secara rinci. Gambar 3.1 adalah contoh diagram desain sistem secara high-level view dan contoh sistematika pembahasan dari diagram desain. Nomer identitas dan keterangan gambar dituliskan pada 1 (satu) baris dibawah gambar. Nomer identitas terdiri dari nomer bab dan nomer urutan gambar pada bab tersebut. Setiap gambar harus dirujuk dan dibahas pada pembahasan dalam paragraf, seperti kalimat berikut. Gambar 3.1 menunjukkan bagan desain sistem yang mempunyai tiga bagian. Gambar 3.1 Desain system dari Solusi yang ditawarkan Sumber: http://cdn3.techworld.com/cmsdata/features/3210134/cisco-search-patent.jpg Gambar 3.2 Contoh gambar kutipan",
+      "metadata": {
+        "bab_num": 3,
+        "bab_title": "DESAIN SISTEM",
+        "subbab_num": "3.2",
+        "subbab_title": "PERANCANGAN SISTEM",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab4_sub4-1_instruction",
+      "text": "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan. Dalam eksperimen ini menggunakan persamaan sebagai berikut: 𝑦 = 𝑚𝑥 + 𝑐 (4.1) (𝑦 − 𝑦1) (𝑥 − 𝑥1) = (𝑦2 − 𝑦1) (𝑥2 − 𝑥1) (4.2) Selain itu dalam eksperimen untuk juga menggunakan persamaan sebagai berikut untuk formulasi perbandingan hasil pengukuran dengan perhitungan 𝑣 = 𝑣₀ + 𝑎𝑡 (4.3) 𝑠 = 𝑣₀𝑡 + (1/2)𝑎𝑡² (4.4) 𝑣² = 𝑣₀² + 2𝑎𝑠 (4.5)",
+      "metadata": {
+        "bab_num": 4,
+        "bab_title": "EKSPERIMEN DAN ANALISIS",
+        "subbab_num": "4.1",
+        "subbab_title": "PARAMETER EKSPERIMEN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab4_sub4-2_instruction",
+      "text": "Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.",
+      "metadata": {
+        "bab_num": 4,
+        "bab_title": "EKSPERIMEN DAN ANALISIS",
+        "subbab_num": "4.2",
+        "subbab_title": "KARATERISTIK DATA",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab4_sub4-5_instruction",
+      "text": "Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+      "metadata": {
+        "bab_num": 4,
+        "bab_title": "EKSPERIMEN DAN ANALISIS",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab4_sub4-6_instruction",
+      "text": "Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Tabel 4.1 Contoh tabel hasil eksperimen 1 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.2 Contoh tabel hasil eksperimen 2 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.3 Contoh tabel hasil eksperimen 3 dengan parameter eksperimen yang cukup banyak sehingga nama tabel panjang Kolom 1 Kolom 2 Kolom 3 Kolom 4",
+      "metadata": {
+        "bab_num": 4,
+        "bab_title": "EKSPERIMEN DAN ANALISIS",
+        "subbab_num": "4.6",
+        "subbab_title": "HASIL EKSPERMEN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab4_sub4-7_instruction",
+      "text": "Analisis hasil eksperimen seharusnya menjawab hipotesa bahwa solusi yang diajukan pada Tujuan dapat menyelesaikan permasalahan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Gambar 4.1 Contoh Gambar hasil eksperimen 1 Gambar atau grafik yang menunjukkan hasil eksperimen harus dijelaskan dalam paragraf penjelasan yang padat dan informatif, sebagai contoh dalam kalimat berikut. Grafik pada Gambar 4.1 menunjukkan hubungan antara pengukuran dan perhitungan dari Persamaan 4.1. Gambar 4.2 Contoh Gambar hasil eksperimen 2 dengan nama gambar yang cukup panjang sehingga diperlukan penataan yang baik dalam daftar gambar. Penjelasan: Grafik pada Gambar 4.2 menunjukkan hubungan antara sensor suhu 1 dan sensor suhu 2 yang dibentuk dari Persamaan 4.2.",
+      "metadata": {
+        "bab_num": 4,
+        "bab_title": "EKSPERIMEN DAN ANALISIS",
+        "subbab_num": "4.7",
+        "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab5_sub5-1_instruction",
+      "text": "Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan.",
+      "metadata": {
+        "bab_num": 5,
+        "bab_title": "PENUTUP",
+        "subbab_num": "5.1",
+        "subbab_title": "KESIMPULAN",
+        "chunk_type": "instruction"
+      }
+    },
+    {
+      "id": "bab5_sub5-2_instruction",
+      "text": "Solusi yang penulis tawarkan pasti mempunyai sisi-sisi keterbatasan. Berikanlah suatu saran terhadap keterbatasan tersebut untuk pengembangan dan peningkatan solusi dalam menjawab permasalahan.",
+      "metadata": {
+        "bab_num": 5,
+        "bab_title": "PENUTUP",
+        "subbab_num": "5.2",
+        "subbab_title": "SARAN",
+        "chunk_type": "instruction"
+      }
+    }
+  ]
+}

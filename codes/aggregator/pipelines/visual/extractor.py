@@ -9,6 +9,17 @@ tahu apa itu "benar" atau "salah" — cuma menangkap fakta mentah dari
 dokumen. Perbandingan terhadap rule sepenuhnya jadi tugas comparator.py.
 
 CHANGELOG (revisi terbaru):
+- BUG DIPERBAIKI (laporan user, Buku_PA_Masyitha_Fahra.docx):
+  (1) _resolve_effective_font_size() sekarang jatuh ke <w:docDefaults>
+      (dan character style) kalau ukuran tidak di-set di run/paragraph
+      style. Sebelumnya paragraf 12pt dengan satu run "." 10pt dilaporkan
+      "10.0pt" karena run 12pt (mewarisi dari docDefaults) dianggap None
+      dan dibuang dari perhitungan ukuran dominan.
+  (2) Level heading dari numbering Word sekarang dihitung dari NOMOR YANG
+      TAMPIL (_get_numbering_depth, membaca lvlText di numbering.xml),
+      bukan dari ilvl mentah. Template dengan nomor bab literal
+      ("2.%1" / "2.%1.%2") sebelumnya membuat "2.1.1 Judul" (ilvl 1)
+      dibaca sebagai level "X.Y" dan salah dituntut KAPITAL SEMUA.
 - SUBCHAPTER_L1_RE/L2_RE (hardcode 2 & 3 level angka) DIHAPUS, diganti
   SUBCHAPTER_NUMBER_RE generik yang menangkap SEMUA level angka
   bertingkat ("1.1", "2.2.1", "3.2.2.1", dst) sekaligus menghitung
@@ -73,10 +84,65 @@ CHAPTER_TITLE_ONLY_RE = re.compile(r"^BAB\s+\d+$")
 # sebelumnya di laporan.
 CHAPTER_TITLE_RE = re.compile(r"^BAB\s+\d+(\s+\S.*)?$")
 
+# BUG DIPERBAIKI (2026-09-12, laporan user): heading "LAMPIRAN A" /
+# "LAMPIRAN B" dst level hierarkinya SAMA dengan "BAB N" -- dicetak
+# 14pt bold center ALL CAPS sama seperti judul bab, dan caption
+# Gambar/Tabel di dalamnya memakai HURUF lampiran sebagai pengganti
+# angka bab (mis. "Tabel A.1", "Gambar B.1"), persis seperti caption
+# "Tabel 4.1"/"Gambar 4.1" di dalam "BAB 4" -- itu sendiri buktinya
+# lampiran memang level yang setara BAB, bukan subbab. Sebelum fix
+# ini, "LAMPIRAN B" TIDAK dikenali di classify_paragraph() sama sekali
+# (bukan match CHAPTER_TITLE_RE, bukan di FRONT_HEADINGS), jatuh ke
+# jalur "heading tanpa nomor" dan keliru diklasifikasi
+# "subsubchapter_title" (expected 12pt) padahal harusnya
+# "chapter_title" (expected 14pt), sama seperti bug lama CHAPTER_
+# TITLE_RE untuk BAB N di atas. Dua varian format diterima sama
+# seperti BAB: "LAMPIRAN A" berdiri sendiri (nama lampiran di paragraf
+# terpisah setelahnya) ATAU "LAMPIRAN A DOKUMENTASI ..." digabung satu
+# baris.
+LAMPIRAN_TITLE_ONLY_RE = re.compile(r"^LAMPIRAN(?:\s+[A-Z]+)?$")
+# BUG DIPERBAIKI (2026-09-21, laporan user): dokumen dengan LAMPIRAN
+# TUNGGAL (tidak dipecah per huruf A/B/dst, cuma satu heading
+# "LAMPIRAN" polos) sebelumnya tidak match REGEX manapun di atas (baik
+# LAMPIRAN_TITLE_ONLY_RE maupun LAMPIRAN_TITLE_RE versi lama, keduanya
+# MEWAJIBKAN huruf lampiran setelah "LAMPIRAN"), jatuh ke jalur
+# "heading tanpa nomor" -> keliru diklasifikasi "subsubchapter_title"
+# (expected 12pt, padahal ini judul setingkat BAB, expected 14pt) DAN
+# current_chapter TIDAK PERNAH pindah dari bab/daftar terakhir sebelum
+# heading ini (mis. "DAFTAR PUSTAKA") -- akibatnya SELURUH isi lampiran
+# (screenshot UI, caption "Gambar N. ...", dst) tetap tercatat di bawah
+# chapter lama itu, LOLOS dari pengecualian _is_excluded_chapter() di
+# comparator.py (yang cuma mengenali chapter berawalan literal
+# "LAMPIRAN"), dan ikut kena SEMUA aturan format body/caption biasa --
+# inilah penyebab utama banyaknya false-positive di bawah chapter
+# "DAFTAR PUSTAKA" pada laporan nyata. Fix: huruf lampiran dibuat
+# OPSIONAL di kedua regex -- "LAMPIRAN" polos kini juga dikenali
+# setara level BAB, current_chapter dinormalisasi jadi "LAMPIRAN" saja
+# (tetap lolos startswith("LAMPIRAN") di _is_excluded_chapter()).
+LAMPIRAN_TITLE_RE = re.compile(r"^LAMPIRAN(?:\s+[A-Z]+)?(\s+\S.*)?$")
+
 # Label nomor persamaan berdiri sendiri, mis. "(2.1)" di akhir baris
 # rumus matematika. Pendek + bold -> kalau tidak dikecualikan di sini,
 # ke-tangkap is_unnumbered_heading() sebagai heading tanpa nomor.
-EQUATION_NUMBER_RE = re.compile(r"^\(\d+(\.\d+)*\)$")
+# Pola nomor identitas persamaan yang dipakai BERSAMA oleh jalur docx & PDF
+# (EQUATION_NUMBER_RE, EQUATION_NUMBER_IN_TEXT_RE di bawah, dan
+# _BARE_EQUATION_NUMBER_RE di pdf_extractor.py).
+#
+# DILONGGARKAN (2026-09-21, laporan user -- "nomor persamaan 3.1, 3.2
+# sudah ada tapi tetap dibilang tidak ada"): pola lama cuma menerima
+# "(2.1)" / "(Persamaan 2.1)" PERSIS. Nomor yang hasil ketikan Word/PDF
+# sungguhan sering sedikit beda dari itu walau secara visual sama:
+#   - spasi di dalam kurung: "( 3.1 )", "(3. 1)" (sering muncul di teks
+#     PDF hasil ekspor rumus, atau spasi tipis U+2009 dari math zone);
+#   - pemisah bab-urut selain titik: "(3-1)", "(3,1)";
+#   - kata "Pers." selain "Persamaan";
+#   - kurung fullwidth "（3.1）" dari IME.
+# Semua varian itu tetap satu nomor identitas yang sah. Aturan posisinya
+# TIDAK berubah: nomor wajib jadi karakter paling akhir di baris.
+_EQ_NUM_LABEL = r"(?:(?:Persamaan|Pers\.?)\s*)?"
+_EQ_NUM_DIGITS = r"\d+(?:\s*[.\-\u2010-\u2013,]\s*\d+)*"
+_EQ_NUM_PAREN = r"[(\uff08]\s*" + _EQ_NUM_LABEL + _EQ_NUM_DIGITS + r"\s*[)\uff09]"
+EQUATION_NUMBER_RE = re.compile(r"^" + _EQ_NUM_PAREN + r"$", re.IGNORECASE)
 
 # Marker teks untuk halaman-halaman "template tetap" di bagian depan
 # dokumen (sampul, halaman judul dalam, halaman pengesahan, surat
@@ -130,13 +196,179 @@ ABSTRACT_KEYWORD_RE = re.compile(r"^(Kata\s+Kunci|Keywords?)\b", re.IGNORECASE)
 # ala body text (padahal caption punya aturan sendiri), DAN otomatis
 # lolos tanpa pernah divalidasi oleh compare_caption_numbering() di
 # comparator.py (yang cuma memproses elemen ber-ptype "caption").
-CAPTION_RE = re.compile(r"^(Gambar|Tabel)\s+\d+\.\s*\d+")
+#
+# BUG DIPERBAIKI (2026-09-12, laporan user): caption di dalam LAMPIRAN
+# pakai HURUF sebagai pengganti angka bab (mis. "Tabel A.1", "Gambar
+# B.1" -- lihat LAMPIRAN_TITLE_RE di atas). Sebelumnya regex ini HANYA
+# menerima angka ("\d+\.\s*\d+"), jadi caption lampiran yang sudah
+# 100% benar formatnya gagal match CAPTION_RE, jatuh ke ptype "body"
+# default (expected 12pt) alih-alih "caption" (expected 11pt) --
+# caption 11pt yang sudah benar keliru dilaporkan "font tidak sesuai
+# untuk tipe body, seharusnya 12pt".
+#
+# BUG DIPERBAIKI (2026-09-20, laporan user): regex lama cuma mengecek
+# AWALAN "Gambar/Tabel N.N", tanpa peduli apa yang muncul SESUDAHNYA --
+# jadi kalimat body biasa yang KEBETULAN menyebut nomor gambar/tabel di
+# awal kalimat ("Gambar 3.2 menampilkan mockup untuk para pengguna...",
+# "Tabel 4.1 merupakan hasil pengujian...") ikut ke-match dan salah
+# diklasifikasi ptype "caption" (expected 11pt) padahal ini body text
+# biasa (expected 12pt) -- laporan comparator jadi nunjuk ke KALIMAT DI
+# TENGAH PARAGRAF, bukan caption gambar/tabel yang sesungguhnya.
+# Caption asli SELALU berupa judul singkat ("Gambar 3.2 Mockup Halaman
+# Login"), bukan kalimat penuh -- kata pertama setelah nomornya selalu
+# diawali huruf kapital (ikut konvensi judul), sedangkan kalimat body
+# yang menyambung dari nomor gambar/tabel selalu diawali kata kerja
+# rujukan huruf kecil ("menampilkan", "merupakan", "menunjukkan",
+# "memperlihatkan", dst -- karena secara gramatikal itu predikat
+# kalimat, bukan judul). Fix: wajibkan huruf kapital tepat setelah
+# nomornya (dengan toleransi tanda baca pemisah opsional ":"/"-"/"."
+# yang umum dipakai sebelum judul caption) supaya kalimat body yang
+# hanya numpang lewat nomor gambar/tabel tidak lagi ke-match.
+CAPTION_RE = re.compile(
+    r"^(Gambar|Tabel)\s+(?:\d+|[A-Z]+)\.\s*\d+\s*[:.\-]?\s*[A-Za-z]"
+)
+
+# LAPIS PERTAHANAN KEDUA (2026-09-21, laporan user): syarat "huruf
+# kapital setelah nomor" di CAPTION_RE di atas TIDAK CUKUP kalau
+# mahasiswa (tidak sengaja/tidak konsisten) menuliskan kata kerja
+# predikat rujukan itu dengan huruf kapital di awal, mis. "Gambar 4.14
+# Menggambarkan perubahan daya..." -- ini tetap kalimat body biasa
+# yang menyambung dari nomor gambar (predikat "menggambarkan"),
+# BUKAN judul caption, walau kebetulan huruf pertamanya kapital.
+# CAPTION_REFERRAL_WORDS berisi kata kerja/predikat rujukan yang
+# lazim dipakai mahasiswa untuk MENYEBUT gambar/tabel di awal kalimat
+# body (baik bentuk aktif "menampilkan" maupun pasif "ditampilkan"),
+# dicocokkan case-insensitive terhadap kata PERTAMA setelah nomornya.
+# Caption asli tidak pernah dibuka dengan kata-kata ini -- caption
+# adalah judul benda ("Gambar 4.14 Grafik Perubahan Daya"), bukan
+# kalimat berpredikat.
+CAPTION_REFERRAL_WORDS = {
+    "menampilkan",
+    "merupakan",
+    "menunjukkan",
+    "memperlihatkan",
+    "menggambarkan",
+    "menyajikan",
+    "memberikan",
+    "menjelaskan",
+    "menerangkan",
+    "menjabarkan",
+    "mengilustrasikan",
+    "menampakkan",
+    "diperlihatkan",
+    "ditampilkan",
+    "ditunjukkan",
+    "disajikan",
+    "digambarkan",
+    "dijelaskan",
+    "berisi",
+    "terdiri",
+    "adalah",
+    "yaitu",
+    "berikut",
+}
+
+# Caption asli SELALU judul singkat (nama gambar/tabel), tidak pernah
+# sepanjang kalimat penuh. Kalimat body yang lolos dua filter lain
+# (kapital + bukan kata rujukan di atas) tapi keseluruhan teksnya jauh
+# lebih panjang dari sebuah judul hampir pasti tetap kalimat biasa,
+# bukan caption -- dipakai sebagai jaring pengaman terakhir.
+CAPTION_MAX_WORDS = 20
+
+# Kata benda berawalan me-/di-/ter-/ber-/ke- yang lazim membuka judul
+# caption berhuruf kecil, dikecualikan dari filter "awalan kata kerja".
+CAPTION_LOWERCASE_NOUN_EXCEPTIONS = {
+    "diagram",
+    "dimensi",
+    "desain",
+    "direktori",
+    "berkas",
+    "beranda",
+    "mekanisme",
+    "metode",
+    "metodologi",
+    "medan",
+    "media",
+    "memori",
+    "mesin",
+    "menu",
+    "meter",
+    "kerangka",
+    "keluaran",
+    "keseluruhan",
+    "kesalahan",
+    "kecepatan",
+    "ketinggian",
+    "kemiringan",
+    "keadaan",
+    "kondisi",
+    "konfigurasi",
+    "kurva",
+}
+
+
+def is_caption_title(text: str) -> bool:
+    """
+    Wrapper lebih ketat di atas CAPTION_RE mentah -- dipakai di SEMUA
+    titik keputusan yang butuh tahu "apakah baris ini caption
+    Gambar/Tabel sungguhan" (klasifikasi ptype "caption" di
+    classify_paragraph(), dan heuristik penggabungan baris caption
+    bersambung di pdf_extractor.py), supaya definisi "caption" KONSISTEN
+    di semua titik, bukan cuma di ptype akhir. Kalau prefix "Gambar/
+    Tabel N.N [huruf kapital]" cocok tapi kata PERTAMA setelah nomornya
+    ada di CAPTION_REFERRAL_WORDS (case-insensitive), atau keseluruhan
+    teksnya melebihi CAPTION_MAX_WORDS, tetap ditolak -- lihat
+    CHANGELOG di atas untuk alasan lengkap kenapa syarat kapital saja
+    tidak cukup.
+    """
+    m = CAPTION_RE.match(text)
+    if not m:
+        return False
+    # m.end() - 1 adalah index huruf kapital yang sudah ke-match --
+    # sertakan kembali supaya first_word tidak kehilangan huruf itu.
+    remainder = text[m.end() - 1 :].strip()
+    first_word_match = re.match(r"[A-Za-z]+", remainder)
+    if first_word_match and first_word_match.group(0).lower() in CAPTION_REFERRAL_WORDS:
+        return False
+    if len(text.split()) > CAPTION_MAX_WORDS:
+        return False
+    # BUG DIPERBAIKI (2026-09-21, laporan user): caption yang kata
+    # pertama judulnya huruf kecil (mis. "Gambar 4. 47 grafik arus
+    # listrik simulasi statis") tertolak oleh syarat kapital dan jatuh
+    # ke "body" (expected 12pt), padahal fontnya 11pt sudah benar.
+    # CAPTION_RE sekarang menerima huruf kecil, tapi khusus kasus
+    # huruf kecil kita perketat supaya kalimat body tetap tidak lolos:
+    # (1) tidak boleh berakhir tanda titik/koma/titik dua (kalimat
+    # penuh), (2) kata pertama tidak boleh berimbuhan kata kerja
+    # (me-/di-/ter-/ber-) kecuali noun yang umum di judul caption.
+    if remainder[:1].islower():
+        if re.search(r"[.,:;]\s*$", text):
+            return False
+        fw = first_word_match.group(0).lower() if first_word_match else ""
+        if (
+            re.match(r"^(me|mem|men|meng|meny|di|ter|ber|ke)[a-z]{4,}$", fw)
+            and fw not in CAPTION_LOWERCASE_NOUN_EXCEPTIONS
+        ):
+            return False
+    return True
+
 
 # Baris "Sumber: ..." / "Sumber : ..." di bawah gambar/tabel kutipan --
 # opsional (panduan: "penulis DAPAT menyebutkan sumber referensi"),
 # jadi cuma dicek FORMATnya (rata tengah, 11pt) KALAU baris ini ada,
 # tidak pernah dianggap wajib ada.
-SOURCE_CITATION_RE = re.compile(r"^Sumber\s*[:.]", re.IGNORECASE)
+# BUG DIPERBAIKI (jalur PDF -- laporan user: paragraf body biasa yang
+# KEBETULAN diawali kata "sumber." huruf kecil (sisa kalimat yang
+# terpotong baris/halaman, mis. "...berasal dari berbagai\nsumber.
+# Risiko terjadinya kesalahan saat...") ke-klasifikasi keliru sebagai
+# ptype "source_citation" dan dicek pakai aturan ukuran font caption
+# (11pt) padahal ini body text biasa (12pt): re.IGNORECASE di regex
+# lama membuatnya cocok ke "sumber." huruf kecil manapun, termasuk kata
+# "sumber" biasa di tengah/awal kalimat. Baris kutipan "Sumber: ..."/
+# "Sumber. ..." yang SUNGGUHAN selalu ditulis dengan S kapital
+# (konvensi baku akademik) -- fix: buang re.IGNORECASE supaya regex
+# ini HANYA cocok ke "Sumber" berhuruf S kapital di awal baris.
+SOURCE_CITATION_RE = re.compile(r"^Sumber\s*[:.]")
 
 # Notice baku "Halaman ini sengaja dikosongkan" yang ditaruh di halaman
 # genap kosong (buat cetak bolak-balik). Ini BUKAN body text -- tidak
@@ -154,7 +386,46 @@ BLANK_PAGE_NOTICE_RE = re.compile(
 # EQUATION_NUMBER_RE), karena OMML (rumus matematikanya sendiri) tidak
 # pernah muncul di para.text sama sekali -- yang tersisa di teks
 # paragraf cuma tab + label nomornya.
-EQUATION_NUMBER_IN_TEXT_RE = re.compile(r"\(\d+(?:\.\d+)*\)\s*$")
+#
+# ATURAN DARI PAK ALI (dosen pembimbing, klarifikasi lisan): nomor
+# persamaan HARUS jadi karakter paling akhir di baris tsb -- begitu
+# tutup kurung ")", langsung ganti baris, TIDAK BOLEH ada spasi/tab
+# sisa setelahnya. Ini yang dipakai buat MENDETEKSI apakah nomornya
+# benar-benar rata kanan (bukan cuma "rata kanan visual" krn dipepet
+# banyak spasi manual, yang teksnya tetap akan ada residu spasi
+# setelah karakter ")").
+#
+# BUG DIPERBAIKI: pola lama pakai "\s*$" (spasi trailing OPSIONAL
+# sebelum akhir teks) -- ini SALAH karena tetap match walau ada sisa
+# spasi/tab setelah ")", padahal itu justru kasus yang harus DITOLAK
+# menurut aturan di atas. Diganti jadi anchor "$" langsung tanpa
+# toleransi whitespace apapun setelah tutup kurung.
+#
+# LONGGARAN (atas permintaan user, 2026-09-07): label boleh ditulis
+# "(2.1)" ATAU "(Persamaan 2.1)" -- kata "Persamaan" di dalam kurung
+# label dianggap sah, tidak wajib dibuang. Case-insensitive supaya
+# "persamaan"/"PERSAMAAN" juga diterima.
+EQUATION_NUMBER_IN_TEXT_RE = re.compile(_EQ_NUM_PAREN + r"$", re.IGNORECASE)
+
+_EQ_SPACE_CHARS_RE = re.compile(r"[\u00a0\u2000-\u200a\u202f\u205f\u3000]")
+_EQ_INVISIBLE_CHARS_RE = re.compile(r"[\u200b-\u200d\u2060\ufeff]")
+
+
+def normalize_equation_text(text: str) -> str:
+    """
+    Rapikan teks untuk pencarian nomor identitas persamaan: spasi
+    "aneh" (NBSP, spasi tipis, dll) jadi spasi biasa, karakter tak
+    terlihat (zero-width) dibuang, lalu trim ujung-ujungnya.
+
+    HANYA dipakai untuk teks hasil ekstraksi rumus (math zone, field,
+    teks PDF) yang memang sering membawa karakter semacam itu -- BUKAN
+    untuk full_text w:t biasa, yang tetap dicek KETAT (aturan Pak Ali:
+    tidak boleh ada sisa spasi/tab setelah tutup kurung).
+    """
+    text = _EQ_SPACE_CHARS_RE.sub(" ", text or "")
+    text = _EQ_INVISIBLE_CHARS_RE.sub("", text)
+    return text.strip()
+
 
 # Kata sambung/preposisi pendek yang boleh huruf kecil di tengah judul
 # Title Case (bukan kata pertama/terakhir). Dipakai is_titlecase().
@@ -209,6 +480,21 @@ FRONT_HEADINGS = {
     "KATA PENGANTAR",
     "ABSTRAK",
     "ABSTRACT",
+    # BUG DIPERBAIKI (2026-09-12, laporan user): "BIODATA PENULIS" --
+    # halaman penutup standalone di akhir dokumen (setelah semua
+    # LAMPIRAN), BUKAN bagian dari isi lampiran/bab manapun sehingga
+    # tidak seharusnya diperlakukan sebagai subbab. Namanya "FRONT_
+    # HEADINGS" menyesatkan (kebanyakan isinya memang heading bagian
+    # depan), tapi secara fungsi set ini dipakai untuk SEMUA heading
+    # standalone tanpa nomor yang levelnya setara BAB, di posisi
+    # manapun di dokumen -- "DAFTAR PUSTAKA" sendiri juga baru muncul
+    # di BELAKANG semua BAB, bukan di depan, dan sudah diperlakukan
+    # begitu sebelum fix ini. Tanpa entry ini, "BIODATA PENULIS" tidak
+    # match apa pun di classify_paragraph() (bukan BAB, bukan LAMPIRAN,
+    # tidak ada di set ini) sehingga jatuh ke jalur "heading tanpa
+    # nomor" dan keliru diklasifikasi subsubchapter_title (12pt),
+    # persis kasus yang sama seperti bug LAMPIRAN sebelum diperbaiki.
+    "BIODATA PENULIS",
 }
 
 
@@ -263,6 +549,143 @@ def _get_numbering_ilvl(para) -> int | None:
 
     ilvl_el = numPr.find(qn("w:ilvl"))
     return int(ilvl_el.get(qn("w:val"))) if ilvl_el is not None else 0
+
+
+def _find_numbering_level(part, num_id, ilvl):
+    """
+    Cari elemen <w:lvl> milik (numId, ilvl) di numbering.xml. Memperhitungkan
+    <w:lvlOverride> di <w:num> kalau ada, lalu jatuh ke definisi
+    <w:abstractNum> aslinya. Return None kalau tidak ketemu / dokumen tidak
+    punya numbering part.
+    """
+    try:
+        numbering = part.numbering_part.element
+    except Exception:
+        return None
+    num = next(
+        (
+            n
+            for n in numbering.findall(qn("w:num"))
+            if n.get(qn("w:numId")) == str(num_id)
+        ),
+        None,
+    )
+    if num is None:
+        return None
+    for ov in num.findall(qn("w:lvlOverride")):
+        if ov.get(qn("w:ilvl")) == str(ilvl):
+            lvl = ov.find(qn("w:lvl"))
+            if lvl is not None:
+                return lvl
+    abs_id_el = num.find(qn("w:abstractNumId"))
+    if abs_id_el is None:
+        return None
+    abs_id = abs_id_el.get(qn("w:val"))
+    for an in numbering.findall(qn("w:abstractNum")):
+        if an.get(qn("w:abstractNumId")) == abs_id:
+            for lvl in an.findall(qn("w:lvl")):
+                if lvl.get(qn("w:ilvl")) == str(ilvl):
+                    return lvl
+    return None
+
+
+def _ilvl_from_style_link(part, num_id, style_id):
+    """
+    Kalau numPr di STYLE cuma menyebut numId tanpa w:ilvl, level-nya
+    ditentukan oleh <w:pStyle> di dalam definisi level list (tautan
+    style <-> level). Return None kalau tidak ada tautan.
+    """
+    try:
+        numbering = part.numbering_part.element
+    except Exception:
+        return None
+    num = next(
+        (
+            n
+            for n in numbering.findall(qn("w:num"))
+            if n.get(qn("w:numId")) == str(num_id)
+        ),
+        None,
+    )
+    if num is None:
+        return None
+    abs_id_el = num.find(qn("w:abstractNumId"))
+    if abs_id_el is None:
+        return None
+    for an in numbering.findall(qn("w:abstractNum")):
+        if an.get(qn("w:abstractNumId")) == abs_id_el.get(qn("w:val")):
+            for lvl in an.findall(qn("w:lvl")):
+                ps = lvl.find(qn("w:pStyle"))
+                if ps is not None and ps.get(qn("w:val")) == style_id:
+                    return int(lvl.get(qn("w:ilvl")))
+    return None
+
+
+def _get_numbering_depth(para) -> int | None:
+    """
+    KEDALAMAN heading (1 = setingkat BAB, 2 = "X.Y", 3+ = "X.Y.Z" dst)
+    berdasarkan NOMOR YANG BENAR-BENAR DITAMPILKAN Word, bukan sekadar
+    w:ilvl mentah.
+
+    BUG DIPERBAIKI (laporan user -- "2.1.1 Internet Service Provider"
+    dituntut KAPITAL SEMUA seperti judul "2.1 ..."): kode lama menganggap
+    ilvl 0 = BAB, ilvl 1 = "X.Y", ilvl 2+ = "X.Y.Z". Asumsi itu hanya
+    benar kalau nomor BAB ikut jadi bagian dari list. Di banyak template
+    (termasuk dokumen ini) nomor bab ditulis LITERAL di lvlText per bab:
+        ilvl 0 -> lvlText "2.%1"     (tampil "2.1"   = level X.Y)
+        ilvl 1 -> lvlText "2.%1.%2"  (tampil "2.1.1" = level X.Y.Z)
+    sehingga judul "2.1.1 ..." (ilvl 1) keliru dibaca sebagai "X.Y" dan
+    wajib ALL CAPS, padahal panduan hanya mewajibkan ALL CAPS di level
+    "X.Y"; level "X.Y.Z" tidak wajib.
+
+    Kedalaman dihitung dari jumlah komponen bernomor di lvlText (dipisah
+    titik/strip; komponen literal "2" dan placeholder "%1" sama-sama
+    dihitung), lalu diambil max() dengan ilvl+1 supaya lvlText yang tidak
+    bernomor (mis. numFmt none / "(%4)") tidak turun di bawah perilaku
+    lama. Return None kalau paragraf tidak punya numbering.
+    """
+    pPr = para._p.find(qn("w:pPr"))
+    numPr = pPr.find(qn("w:numPr")) if pPr is not None else None
+    linked_style_id = None
+    if numPr is None:
+        style = para.style
+        while style is not None:
+            style_pPr = style.element.find(qn("w:pPr"))
+            style_numPr = (
+                style_pPr.find(qn("w:numPr")) if style_pPr is not None else None
+            )
+            if style_numPr is not None:
+                numPr = style_numPr
+                linked_style_id = style.style_id
+                break
+            style = style.base_style
+    if numPr is None:
+        return None
+
+    num_id_el = numPr.find(qn("w:numId"))
+    num_id = num_id_el.get(qn("w:val")) if num_id_el is not None else None
+    if num_id == "0":
+        return None  # numbering dimatikan eksplisit
+
+    ilvl_el = numPr.find(qn("w:ilvl"))
+    if ilvl_el is not None:
+        ilvl = int(ilvl_el.get(qn("w:val")))
+    else:
+        ilvl = None
+        if num_id is not None and linked_style_id is not None:
+            ilvl = _ilvl_from_style_link(para.part, num_id, linked_style_id)
+        if ilvl is None:
+            ilvl = 0
+
+    lvl_text = ""
+    if num_id is not None:
+        lvl = _find_numbering_level(para.part, num_id, ilvl)
+        if lvl is not None:
+            lt = lvl.find(qn("w:lvlText"))
+            lvl_text = (lt.get(qn("w:val")) if lt is not None else "") or ""
+
+    parts = [p for p in re.split(r"[.\-]", lvl_text) if re.search(r"%\d|\d", p)]
+    return max(len(parts), ilvl + 1)
 
 
 def _has_outline_level(para) -> bool:
@@ -410,6 +833,12 @@ def classify_paragraph(text: str, para=None) -> str:
     if CHAPTER_TITLE_RE.match(upper) and stripped == upper:
         return "chapter_title"
 
+    # LAMPIRAN setara BAB (lihat komentar LAMPIRAN_TITLE_RE di atas) --
+    # dicek di jalur yang sama, SEBELUM jalur heading tanpa nomor,
+    # supaya tidak ke-tangkap sebagai subsubchapter_title.
+    if LAMPIRAN_TITLE_RE.match(upper) and stripped == upper:
+        return "chapter_title"
+
     if upper in FRONT_HEADINGS and stripped == upper:
         return "chapter_title"
 
@@ -449,8 +878,11 @@ def classify_paragraph(text: str, para=None) -> str:
     # membedakan "nomor heading" dari "nomor list biasa di body text"
     # (keduanya sama-sama pakai w:numPr/w:ilvl di XML).
     if para is not None and _has_outline_level(para):
-        ilvl = _get_numbering_ilvl(para)
-        if ilvl == 0:
+        # Pakai KEDALAMAN nomor yang tampil (lihat _get_numbering_depth),
+        # BUKAN ilvl mentah: template dengan nomor bab literal di lvlText
+        # ("2.%1" / "2.%1.%2") membuat ilvl 0 = "X.Y" dan ilvl 1 = "X.Y.Z".
+        depth = _get_numbering_depth(para)
+        if depth == 1:
             # Heading level TERTINGGI (mis. style "Heading 1") --
             # setara "BAB N", TERLEPAS teksnya diawali kata "BAB"
             # atau tidak. BUG SEBELUMNYA: cabang ilvl==0 ini TIDAK
@@ -475,9 +907,9 @@ def classify_paragraph(text: str, para=None) -> str:
             # cek caption, sehingga gambar yang SUDAH punya caption
             # tetap dilaporkan "tidak punya caption".
             return "chapter_title"
-        elif ilvl == 1:
+        elif depth == 2:
             return "subchapter_title"
-        elif ilvl is not None and ilvl >= 2:
+        elif depth is not None and depth >= 3:
             return "subsubchapter_title"
 
         # --- Jalur 3: heading tanpa nomor sama sekali ---
@@ -486,7 +918,7 @@ def classify_paragraph(text: str, para=None) -> str:
         if is_unnumbered_heading(para):
             return "subsubchapter_title"
 
-    if CAPTION_RE.match(stripped):
+    if is_caption_title(stripped):
         return "caption"
 
     return "body"
@@ -511,6 +943,34 @@ def _resolve_effective_bold(run, paragraph) -> bool:
     return False
 
 
+def _resolve_effective_all_caps(run, paragraph) -> bool:
+    """
+    True kalau run ditampilkan HURUF KAPITAL SEMUA oleh Word lewat
+    properti font "All caps" (w:caps) -- teks aslinya di XML bisa saja
+    huruf biasa ("Contextual Analysis ..."), tapi yang tercetak/terlihat
+    KAPITAL. Ditelusuri dari run -> character style -> paragraph style
+    -> base style, sama seperti _resolve_effective_bold().
+
+    Dipakai KHUSUS cek "huruf kapital semua" di halaman sampul (lihat
+    elem["is_visual_upper"]) -- tanpa ini, judul yang tampil ALL CAPS
+    lewat style/w:caps dianggap "bukan kapital" karena para.text-nya
+    huruf biasa.
+    """
+    if run.font.all_caps is not None:
+        return bool(run.font.all_caps)
+    style = run.style
+    while style is not None:
+        if style.font.all_caps is not None:
+            return bool(style.font.all_caps)
+        style = style.base_style
+    style = paragraph.style
+    while style is not None:
+        if style.font.all_caps is not None:
+            return bool(style.font.all_caps)
+        style = style.base_style
+    return False
+
+
 def _resolve_effective_italic(run, paragraph) -> bool:
     """
     Simetris dengan _resolve_effective_bold(). run.italic bisa None
@@ -530,17 +990,53 @@ def _resolve_effective_italic(run, paragraph) -> bool:
     return False
 
 
+def _get_doc_default_font_size_pt(paragraph) -> float | None:
+    """
+    Ukuran font default dokumen dari <w:docDefaults>/<w:rPrDefault>/<w:rPr>/
+    <w:sz> di styles.xml (half-points -> pt). None kalau tidak didefinisikan.
+    """
+    try:
+        styles_el = paragraph.part.styles.element
+    except Exception:
+        return None
+    dd = styles_el.find(qn("w:docDefaults"))
+    if dd is None:
+        return None
+    rpr_default = dd.find(qn("w:rPrDefault"))
+    rpr = rpr_default.find(qn("w:rPr")) if rpr_default is not None else None
+    sz = rpr.find(qn("w:sz")) if rpr is not None else None
+    if sz is None:
+        return None
+    try:
+        return int(sz.get(qn("w:val"))) / 2.0
+    except (TypeError, ValueError):
+        return None
+
+
 def _resolve_effective_font_size(run, paragraph) -> float | None:
     """
-    Simetris dengan _resolve_effective_bold(). Kalau run.font.size
-    None (tidak di-set langsung di run), telusuri ke style dan
-    base_style-nya. Sebelumnya nilai None di sini membuat comparator
-    MEN-SKIP pengecekan ukuran font sepenuhnya (bukan dianggap salah),
-    sehingga mahasiswa yang set ukuran font lewat modifikasi style
-    (bukan pilih ukuran langsung di teks) lolos tanpa pernah dicek.
+    Simetris dengan _resolve_effective_bold(). Urutan pewarisan Word:
+    run langsung -> character style -> paragraph style (+ base_style)
+    -> <w:docDefaults>.
+
+    BUG DIPERBAIKI (laporan user -- "Ukuran font 10.0pt tidak sesuai"
+    padahal paragraf aslinya 12pt): run yang ukurannya TIDAK di-set
+    langsung dan tidak ada di style chain (mewarisi 12pt dari
+    docDefaults) dulu dikembalikan None lalu di-SKIP comparator. Kalau di
+    paragraf yang sama ada satu run pendek yang ukurannya eksplisit beda
+    (mis. tanda titik "." 10pt di akhir kalimat), run itulah SATU-SATUNYA
+    yang dihitung sehingga "ukuran dominan" paragraf salah jadi 10pt.
+    Dengan fallback docDefaults, run tanpa ukuran eksplisit ikut dihitung
+    12pt dan ukuran dominan (character-weighted) menjadi benar.
     """
     if run.font.size is not None:
         return run.font.size.pt
+
+    char_style = run.style
+    while char_style is not None:
+        if char_style.font.size is not None:
+            return char_style.font.size.pt
+        char_style = char_style.base_style
 
     style = paragraph.style
     while style is not None:
@@ -548,7 +1044,7 @@ def _resolve_effective_font_size(run, paragraph) -> float | None:
             return style.font.size.pt
         style = style.base_style
 
-    return None
+    return _get_doc_default_font_size_pt(paragraph)
 
 
 def _resolve_effective_font_name(run, paragraph) -> str | None:
@@ -710,13 +1206,212 @@ def _has_drawing(para) -> bool:
 
 def _has_equation(para) -> bool:
     """
-    True kalau paragraf memuat rumus matematika OMML (m:oMath). OMML
+    True kalau paragraf memuat rumus matematika OMML (m:oMath) DI MANA
+    PUN -- termasuk equation INLINE kecil yang cuma jadi bagian dari
+    kalimat prosa biasa (mis. "...cluster (delta_i^2), yang..."). OMML
     TIDAK PERNAH muncul di para.text (python-docx cuma membaca w:t) --
     jadi paragraf persamaan yang tidak diberi nomor identitas apa pun
     akan terlihat seperti paragraf kosong tanpa deteksi ini, dan lolos
     tanpa pernah dicek sama sekali.
+
+    DIPAKAI HANYA untuk keputusan "paragraf ini kosong atau tidak" (di
+    extract_all, supaya paragraf yang isinya cuma OMML -- inline maupun
+    display -- tidak ikut ke-skip sebagai paragraf kosong) dan untuk
+    mengisi field equation_alignment/equation_math_text/equation_full_text
+    (yang aman tetap dihitung longgar, karena field itu cuma dipakai
+    comparator.py KALAU ptype elemennya "equation"). BUKAN dipakai untuk
+    keputusan ptype "equation" itu sendiri -- lihat _has_display_equation()
+    di bawah untuk itu.
     """
     return next(para._p.iter(qn("m:oMath")), None) is not None
+
+
+def _has_display_equation(para) -> bool:
+    """
+    True kalau paragraf memuat rumus matematika dalam mode "Display"
+    Word -- yaitu dibungkus <m:oMathPara> (equation yang di-set berdiri
+    sendiri di baris sendiri, lewat panah kecil di equation -> "Change
+    to Display", atau otomatis kalau equation-nya besar/mandiri) --
+    BUKAN sekadar mengandung <m:oMath> di mana pun.
+
+    BUG DIPERBAIKI (2026-09-22, laporan user -- kalimat prosa biasa yang
+    cuma menyisipkan SATU simbol matematis kecil di tengah kalimat, mis.
+    "menghitung variansi masing-masing cluster (delta_i^2), yang
+    menggambarkan..." -- 219 karakter, MAYORITAS teks biasa -- salah
+    diklasifikasikan SELURUH paragrafnya jadi ptype "equation" hanya
+    karena ada SATU <m:oMath> inline di dalamnya. Akibatnya paragraf
+    prosa itu dipaksa tunduk ke aturan display-equation (rata kiri, 1
+    baris kosong atas-bawah, wajib nomor identitas) yang sama sekali
+    tidak relevan buat dia, dan SELALU gagal karena memang bukan
+    persamaan display.
+
+    Pembeda yang dipakai di sini SAMA PERSIS dengan yang sudah dipakai
+    _get_equation_alignment(): Word HANYA membungkus OMML dengan
+    <m:oMathPara> (dan mengisi <m:oMathParaPr>) kalau equation-nya
+    di-set mode Display. Equation inline yang menyatu di tengah kalimat
+    TIDAK PERNAH punya <m:oMathPara> -- OMML-nya langsung anak <w:r>
+    tanpa pembungkus itu. Verified langsung dari dokumen mahasiswa
+    nyata: kalimat prosa ber-simbol inline di atas -> False; persamaan
+    display sungguhan (mis. "(3.1)") -> True.
+
+    Dipakai KHUSUS untuk keputusan ptype "equation" di extract_all --
+    supaya cuma persamaan display sungguhan yang tunduk ke aturan
+    format persamaan, dan paragraf prosa yang kebetulan menyisipkan
+    simbol matematis inline tetap diperlakukan (dan dicek) sebagai
+    body text biasa.
+    """
+    return next(para._p.iter(qn("m:oMathPara")), None) is not None
+
+
+def _get_equation_alignment(para) -> str | None:
+    """
+    Rata (justification) KHUSUS milik objek Equation Word, dibaca dari
+    m:oMathParaPr/m:jc -- BUKAN w:pPr/w:jc paragraf biasa yang dibaca
+    _get_paragraph_alignment().
+
+    BUG YANG DIPERBAIKI (2026-09-08, laporan mahasiswa): Word menyimpan
+    rata visual sebuah Equation di tempat TERPISAH dari rata paragraf
+    pembungkusnya. Begitu mahasiswa insert equation lalu equation itu
+    di-set mode "Display" (klik panah kecil di equation -> "Change to
+    Display" -- ini otomatis terjadi kalau equation-nya besar/mandiri
+    di baris sendiri, seperti rumus ber-pecahan pada laporan ini), Word
+    menyimpan justifikasi VISUAL rumus itu di m:oMathParaPr/m:jc DI
+    DALAM elemen m:oMathPara, dengan default "centerGroup" (rumus
+    diposisikan rata TENGAH halaman) -- SAMA SEKALI TIDAK MENYENTUH
+    w:pPr/w:jc paragrafnya sendiri, yang bisa saja tetap "left" (atau
+    malah warisan dari style, bukan di-set eksplisit).
+
+    Akibatnya sebelum fix ini: cek "rata kiri" comparator.py yang cuma
+    membaca elem["alignment"] (asal dari w:pPr/w:jc) LOLOS padahal
+    rumusnya SECARA VISUAL rata tengah -- persis studi kasus laporan
+    mahasiswa yang rumusnya rata tengah tapi tidak pernah ke-flag.
+
+    Return None kalau paragraf ini tidak (atau belum) punya
+    m:oMathParaPr/m:jc sama sekali (mis. equation inline kecil yang
+    tidak pernah di-"Display"-kan, ikut w:pPr/w:jc paragraf biasa apa
+    adanya) -- pemanggil (extract_all -> elements[i]) harus fallback ke
+    _get_paragraph_alignment() dalam kasus ini.
+
+    Nilai m:jc yang mungkin: "left", "right", "center", "centerGroup".
+    "centerGroup" (rumus & nomor identitas diposisikan sbg SATU grup di
+    tengah horizontal -- default Word) DINORMALISASI jadi "center" di
+    sini, karena efeknya SAMA-SAMA bukan rata kiri dari sudut pandang
+    comparator.py.
+    """
+    om_para_pr = next(para._p.iter(qn("m:oMathParaPr")), None)
+    if om_para_pr is None:
+        return None
+    jc_el = om_para_pr.find(qn("m:jc"))
+    if jc_el is None:
+        return None
+    val = jc_el.get(qn("m:val"))
+    return "center" if val == "centerGroup" else val
+
+
+_EQ_TEXT_SKIP_TAGS = None
+
+
+def _equation_full_text(para) -> str:
+    """
+    Teks paragraf persamaan dalam URUTAN DOKUMEN yang meniru apa yang
+    dilihat pembaca di Word: gabungan <w:t>, tab, <m:t>, DAN kurung
+    pembungkus objek <m:d> (delimiter).
+
+    BUG YANG DIPERBAIKI (2026-09-21, laporan user -- nomor "(3.1)",
+    "(3.2)" sudah ada tapi dibilang tidak ada). Dua penyebab nyata,
+    dua-duanya sudah direproduksi di dokumen uji:
+
+    1. Nomor persamaan otomatis Word ("rumus#(3.1)" -> Enter) disimpan
+       sebagai <m:eqArr> berisi "#" lalu objek <m:d> yang isinya cuma
+       "3.1". Kurung "(" dan ")" TIDAK ADA di <m:t> mana pun -- itu
+       properti bawaan <m:d> (begChr/endChr default), sehingga
+       _equation_math_text() cuma menghasilkan "...#3.1" dan regex
+       nomor (yang mewajibkan kurung) gagal cocok.
+    2. Nomor yang dibuat dengan field (mis. "(3." + SEQ Persamaan +
+       ")"). Hasil field tersimpan sebagai <w:fldSimple><w:r><w:t>,
+       yang BUKAN anak langsung <w:p>, jadi para.text/para.runs
+       python-docx melewatinya -- full_text cuma "(3.)".
+
+    Fungsi ini berjalan rekursif di seluruh anak paragraf, sehingga
+    kedua kasus (dan pembungkus lain seperti w:ins, w:hyperlink,
+    w:sdt) terbaca lengkap. Teks yang dihapus (w:del), instruksi field
+    (w:instrText), dan properti (rPr/pPr/...) dilewati.
+
+    Dipakai comparator.py HANYA sebagai fallback mencari nomor
+    identitas, sama seperti _equation_math_text().
+    """
+    global _EQ_TEXT_SKIP_TAGS
+    if _EQ_TEXT_SKIP_TAGS is None:
+        _EQ_TEXT_SKIP_TAGS = {
+            qn(t)
+            for t in (
+                "w:pPr",
+                "w:rPr",
+                "w:del",
+                "w:delText",
+                "w:instrText",
+                "m:ctrlPr",
+                "m:rPr",
+                "m:dPr",
+                "m:eqArrPr",
+                "m:oMathParaPr",
+            )
+        }
+
+    def _chr_prop(dpr, name, default):
+        if dpr is None:
+            return default
+        el = dpr.find(qn(f"m:{name}"))
+        if el is None:
+            return default
+        val = el.get(qn("m:val"))
+        return default if val is None else val
+
+    def walk(el) -> str:
+        tag = el.tag
+        if tag in (qn("w:t"), qn("m:t")):
+            return el.text or ""
+        if tag == qn("w:tab"):
+            return "\t"
+        if tag in _EQ_TEXT_SKIP_TAGS:
+            return ""
+        if tag == qn("m:d"):
+            dpr = el.find(qn("m:dPr"))
+            beg = _chr_prop(dpr, "begChr", "(")
+            end = _chr_prop(dpr, "endChr", ")")
+            sep = _chr_prop(dpr, "sepChr", "|")
+            inner = sep.join(walk(e) for e in el.findall(qn("m:e")))
+            return beg + inner + end
+        return "".join(walk(child) for child in el)
+
+    return walk(para._p)
+
+
+def _equation_math_text(para) -> str:
+    """
+    Gabungan literal teks dari SEMUA elemen <m:t> (math text run) di
+    dalam OMML rumus milik paragraf ini.
+
+    BUG YANG DIPERBAIKI (2026-09-08, laporan mahasiswa): kalau nomor
+    identitas persamaan (mis. "(Persamaan 2.2)") diketik SAMBIL MASIH
+    berada di dalam math zone Word (kursor belum di-klik keluar dari
+    mode Equation sebelum mengetik nomornya), teks itu ikut terbungkus
+    sebagai bagian dari OMML dan tersimpan sebagai <m:t>, BUKAN sebagai
+    <w:t> run biasa. para.text/para.runs (python-docx) SAMA SEKALI
+    TIDAK MEMBACA <m:t> -- cuma <w:t>/<w:tab>/<w:br> yang terbaca --
+    jadi nomor identitas yang "kejebak" di math zone begini HILANG
+    TOTAL dari elem["full_text"] dan comparator.py keliru melaporkan
+    "tidak memiliki nomor identitas", padahal mahasiswa SUDAH menulis
+    nomornya, cuma posisi ketikannya yang belum keluar dari mode
+    Equation.
+
+    Dipakai comparator.py HANYA sebagai fallback pencarian pola nomor
+    identitas (EQUATION_NUMBER_IN_TEXT_RE) kalau full_text (w:t biasa)
+    tidak ketemu -- BUKAN untuk cek font/bold nomornya, karena offset
+    karakter <m:t> tidak sejajar/comparable dengan elem["runs"] (yang
+    cuma berisi <w:r> biasa, bukan <m:r> math run).
+    """
+    return "".join(m_t.text for m_t in para._p.iter(qn("m:t")) if m_t.text)
 
 
 # Rentang Unicode "Mathematical Alphanumeric Symbols" (U+1D400-U+1D7FF)
@@ -751,10 +1446,54 @@ def _is_math_run_text(text: str) -> bool:
     return bool(_MATH_ALPHANUMERIC_RE.search(text))
 
 
+def _indent_fallback_cm(para, attr_name: str) -> float | None:
+    """
+    Baca w:ind/@w:start atau @w:end langsung dari XML mentah -- fallback
+    untuk dokumen yang atribut indent-nya ditulis pakai w:start/w:end
+    (varian bidi-aware OOXML) alih-alih w:left/w:right klasik.
+
+    KENAPA INI PERLU: python-docx (paragraph_format.left_indent/
+    right_indent) HANYA membaca w:ind/@w:left dan @w:right -- tidak
+    pernah fallback ke w:start/w:end walau keduanya sah menurut skema
+    OOXML (ECMA-376) dan merepresentasikan nilai yang SAMA PERSIS untuk
+    dokumen left-to-right seperti tesis Bahasa Indonesia. LibreOffice
+    diketahui menulis w:start/w:end (bukan w:left/w:right) saat
+    meng-IMPOR file .rtf lalu simpan ulang jadi .docx -- konsekuensinya,
+    dokumen yang mahasiswa submit dalam bentuk RTF dan dikonversi lewat
+    LibreOffice akan SELALU balik None di sini walau indentasi
+    sebenarnya ADA di file, dan CEK KUTIPAN PANJANG (indentasi
+    kiri-kanan 10mm) jadi tidak pernah ter-deteksi/gagal secara keliru.
+    Diverifikasi lewat pengujian round-trip docx -> rtf -> docx nyata:
+    nilai w:start="720"/w:end="720" (720 twips = 1.27cm) HILANG total
+    kalau cuma baca left_indent/right_indent bawaan python-docx, dan
+    balik BENAR (1.27cm) begitu fallback ini ditambahkan.
+    """
+    pPr = para._p.pPr
+    if pPr is None:
+        return None
+    ind_el = pPr.find(qn("w:ind"))
+    if ind_el is None:
+        return None
+    raw = ind_el.get(qn(attr_name))
+    if raw is None:
+        return None
+    try:
+        return Length(int(raw) * 635).cm  # 1 twip = 635 EMU
+    except (TypeError, ValueError):
+        return None
+
+
 def _get_left_indent_cm(para) -> float | None:
-    """Indentasi kiri paragraf dalam cm, None kalau tidak di-set."""
+    """
+    Indentasi kiri paragraf dalam cm, None kalau tidak di-set. Fallback
+    ke w:ind/@w:start kalau w:left kosong -- lihat docstring
+    _indent_fallback_cm() untuk kenapa ini penting (kasus dokumen hasil
+    konversi RTF->DOCX lewat LibreOffice).
+    """
     ind = para.paragraph_format.left_indent
-    return ind.cm if ind is not None else None
+    if ind is not None:
+        return ind.cm
+    return _indent_fallback_cm(para, "w:start")
 
 
 def _get_right_indent_cm(para) -> float | None:
@@ -764,10 +1503,12 @@ def _get_right_indent_cm(para) -> float | None:
     langsung PANJANG (quotation_checker.py / compare_quotations() di
     comparator.py), yang mensyaratkan indentasi KIRI *DAN* KANAN masuk
     10mm dari batas tulisan (beda dari persamaan yang cuma indentasi
-    kiri).
+    kiri). Fallback ke w:ind/@w:end -- lihat _indent_fallback_cm().
     """
     ind = para.paragraph_format.right_indent
-    return ind.cm if ind is not None else None
+    if ind is not None:
+        return ind.cm
+    return _indent_fallback_cm(para, "w:end")
 
 
 def extract_paragraph_params(doc) -> list[dict]:
@@ -780,6 +1521,20 @@ def extract_paragraph_params(doc) -> list[dict]:
 
     current_chapter = "Pra-Bab"  # sampul, kata pengantar, daftar isi, dst.
     expect_chapter_name = False  # true tepat setelah baris "BAB N" ditemukan
+    # BUG DIPERBAIKI (2026-09-12, laporan user + konfirmasi pedoman PENS):
+    # flag TERPISAH dari expect_chapter_name, khusus untuk baris nama
+    # SETELAH heading "LAMPIRAN <huruf>" berdiri sendiri (mis. baris
+    # "Arsitektur English-Language Prompting" setelah "LAMPIRAN A").
+    # Pedoman PENS (dicek langsung oleh user) HANYA menjelaskan isi
+    # umum bagian LAMPIRAN -- tidak pernah mensyaratkan nama tiap
+    # lampiran ditulis ALL CAPS seperti nama BAB. Kalau baris ini ikut
+    # dipaksa jadi ptype "chapter_title" biasa (disatukan dengan
+    # expect_chapter_name), dia akan ikut kena cek ALL CAPS di
+    # comparator.py yang sebenarnya HANYA berlaku untuk nama BAB --
+    # jadi dipisah ke ptype sendiri "lampiran_title" yang tetap kena
+    # cek ukuran font/bold setingkat chapter_title, TAPI TIDAK kena
+    # cek ALL CAPS (lihat comparator.py).
+    expect_lampiran_name = False
     bab_counter = 0  # penomor "BAB N" mandiri, dipakai KHUSUS untuk heading
     # level-0 (ilvl==0 / style "Heading 1") yang teksnya TIDAK diawali
     # "BAB N" sama sekali -- lihat cabang baru di bawah untuk detail.
@@ -813,6 +1568,13 @@ def extract_paragraph_params(doc) -> list[dict]:
         stripped = para.text.strip()
         has_image = _has_drawing(para)
         has_equation = _has_equation(para)
+        # True HANYA untuk equation mode "Display" (m:oMathPara) --
+        # dipakai KHUSUS buat keputusan ptype "equation" di bawah, beda
+        # dari has_equation (mendeteksi m:oMath di mana pun, termasuk
+        # inline di tengah kalimat prosa) yang tetap dipakai apa adanya
+        # buat keputusan "paragraf kosong" & pengisian field equation_*.
+        # Lihat docstring _has_display_equation() untuk alasan lengkap.
+        has_display_equation = _has_display_equation(para)
         # Paragraf gambar/persamaan sering TIDAK punya teks sama sekali
         # (objeknya OMML/drawing, bukan w:t) -- kalau di-skip seperti
         # paragraf kosong biasa, gambar/persamaan itu jadi tidak pernah
@@ -894,10 +1656,38 @@ def extract_paragraph_params(doc) -> list[dict]:
                         CHAPTER_TITLE_ONLY_RE.match(upper_stripped)
                     )
                 elif (
+                    LAMPIRAN_TITLE_RE.match(upper_stripped)
+                    and stripped == upper_stripped
+                ):
+                    # Sama seperti normalisasi "BAB N" di atas, tapi untuk
+                    # LAMPIRAN (lihat komentar LAMPIRAN_TITLE_RE) --
+                    # current_chapter dinormalisasi ke "LAMPIRAN <huruf>"
+                    # murni supaya caption Gambar/Tabel di dalamnya (mis.
+                    # "Tabel A.1") bisa dicocokkan ke chapter yang benar
+                    # oleh compare_caption_numbering() di comparator.py.
+                    # Dicek SEBELUM cabang ilvl==0 di bawah (harus menang
+                    # duluan) supaya "LAMPIRAN B" yang stylenya kebetulan
+                    # Heading 1 tidak salah masuk jalur bab_counter atau
+                    # jalur demosi subsubchapter_title -- teksnya sendiri
+                    # sudah eksplisit bilang LAMPIRAN, tidak perlu ditebak
+                    # dari ilvl Word.
+                    current_chapter = re.match(
+                        r"^LAMPIRAN(?:\s+[A-Z]+)?", upper_stripped
+                    ).group(0)
+                    seen_bab = True
+                    literal_bab_used = True
+                    # PAKAI expect_lampiran_name (bukan expect_chapter_name)
+                    # -- lihat komentar deklarasinya di atas: baris nama
+                    # setelah "LAMPIRAN <huruf>" tidak wajib ALL CAPS.
+                    expect_chapter_name = False
+                    expect_lampiran_name = bool(
+                        LAMPIRAN_TITLE_ONLY_RE.match(upper_stripped)
+                    )
+                elif (
                     not literal_bab_used
                     and upper_stripped not in FRONT_HEADINGS
                     and _has_outline_level(para)
-                    and _get_numbering_ilvl(para) == 0
+                    and _get_numbering_depth(para) == 1
                 ):
                     # Heading level TERTINGGI (ilvl==0, mis. style
                     # "Heading 1") TAPI teksnya TIDAK diawali "BAB N"
@@ -943,7 +1733,7 @@ def extract_paragraph_params(doc) -> list[dict]:
                     literal_bab_used
                     and upper_stripped not in FRONT_HEADINGS
                     and _has_outline_level(para)
-                    and _get_numbering_ilvl(para) == 0
+                    and _get_numbering_depth(para) == 1
                 ):
                     # Sama seperti kasus di atas (Heading-1-style tanpa
                     # teks "BAB N"), TAPI dokumen ini SUDAH terbukti
@@ -990,6 +1780,13 @@ def extract_paragraph_params(doc) -> list[dict]:
             elif expect_chapter_name:
                 ptype = "chapter_title"
                 expect_chapter_name = False
+            elif expect_lampiran_name:
+                # Padanan expect_chapter_name di atas, tapi ptype-nya
+                # "lampiran_title" (bukan "chapter_title") supaya lolos
+                # dari cek ALL CAPS di comparator.py -- lihat komentar
+                # deklarasi expect_lampiran_name.
+                ptype = "lampiran_title"
+                expect_lampiran_name = False
             elif in_toc or in_figure_table_list:
                 # SEMUA baris di halaman Daftar Isi/Gambar/Tabel --
                 # entri caption ("Tabel 2.1 Tabel Perbandingan ... 12"),
@@ -1013,7 +1810,7 @@ def extract_paragraph_params(doc) -> list[dict]:
         # gambar/persamaan di halaman itu memang tidak tunduk ke aturan
         # tata letak BAB biasa.
         if ptype != "cover":
-            if has_equation:
+            if has_display_equation:
                 ptype = "equation"
             elif has_image:
                 ptype = "image"
@@ -1032,13 +1829,24 @@ def extract_paragraph_params(doc) -> list[dict]:
                     "font_size_pt": _resolve_effective_font_size(run, para),
                     "bold": _resolve_effective_bold(run, para),
                     "italic": _resolve_effective_italic(run, para),
+                    "all_caps": _resolve_effective_all_caps(run, para),
                     # True kalau run ini variabel/simbol matematis yang
                     # diketik sebagai teks biasa (bukan objek OMML) --
-                    # dipakai comparator.py buat skip cek font PER-RUN
-                    # (bukan per-paragraf), lihat _is_math_run_text() &
-                    # MATH_FONT_NAMES di atas untuk alasan lengkapnya.
+                    # dipakai comparator.py buat skip cek font & UKURAN
+                    # PER-RUN (bukan per-paragraf), lihat
+                    # _is_math_run_text() & MATH_FONT_NAMES di atas
+                    # untuk alasan lengkapnya.
+                    # Perbandingan case-insensitive (2026-09-20) --
+                    # konsisten dengan _span_is_math() versi PDF di
+                    # pdf_extractor.py yang juga case-insensitive
+                    # (perbaikan bug jalur PDF, lihat docstring-nya):
+                    # nama font dari docx XML normalnya sudah persis
+                    # "Cambria Math", tapi ini jaga-jaga kalau ada
+                    # variasi kapitalisasi yang lolos dari style chain.
                     "is_math": (
-                        run_font_name in MATH_FONT_NAMES or _is_math_run_text(run.text)
+                        (run_font_name or "").strip().lower()
+                        in {n.lower() for n in MATH_FONT_NAMES}
+                        or _is_math_run_text(run.text)
                     ),
                 }
             )
@@ -1077,6 +1885,19 @@ def extract_paragraph_params(doc) -> list[dict]:
                 "type": ptype,
                 "full_text": stripped,
                 "is_upper": stripped == stripped.upper(),
+                # Tampil KAPITAL SEMUA secara visual: teksnya sudah
+                # kapital, ATAU setiap run berhuruf dipasang "All caps"
+                # (w:caps). Dipakai cek sampul -- lihat
+                # _resolve_effective_all_caps().
+                "is_visual_upper": stripped == stripped.upper()
+                or (
+                    any(any(ch.isalpha() for ch in r["text"]) for r in runs_data)
+                    and all(
+                        r.get("all_caps") or r["text"].upper() == r["text"]
+                        for r in runs_data
+                        if any(ch.isalpha() for ch in r["text"])
+                    )
+                ),
                 "is_titlecase": is_titlecase(stripped),
                 "line_spacing": line_spacing_value,
                 "line_spacing_is_multiple": line_spacing_is_multiple,
@@ -1088,6 +1909,31 @@ def extract_paragraph_params(doc) -> list[dict]:
                 "section": section_idx,
                 "abstract_part": abstract_part,
                 "alignment": _get_paragraph_alignment(para),
+                # KHUSUS ptype "equation": rata VISUAL rumus itu sendiri
+                # (m:oMathParaPr/m:jc), TERPISAH dari "alignment" di atas
+                # (w:pPr/w:jc paragraf pembungkus) -- lihat docstring
+                # _get_equation_alignment() untuk alasan lengkap kenapa
+                # dua-duanya WAJIB dibaca terpisah (equation Word punya
+                # justifikasinya sendiri yang independen dari paragraf).
+                # None kalau bukan equation, atau equation-nya tidak
+                # (belum) punya m:oMathParaPr/m:jc eksplisit sama sekali.
+                "equation_alignment": (
+                    _get_equation_alignment(para) if has_equation else None
+                ),
+                # KHUSUS ptype "equation": teks dari <m:t> (math text run)
+                # -- fallback pencarian nomor identitas kalau nomornya
+                # kejebak diketik masih di dalam math zone, lihat
+                # docstring _equation_math_text() untuk detail lengkap.
+                "equation_math_text": (
+                    _equation_math_text(para).strip() if has_equation else ""
+                ),
+                # KHUSUS ptype "equation": teks LENGKAP dalam urutan
+                # dokumen (w:t + tab + m:t + kurung <m:d> + hasil
+                # field) -- fallback nomor identitas yang tidak
+                # kelihatan di full_text. Lihat _equation_full_text().
+                "equation_full_text": (
+                    _equation_full_text(para).strip() if has_equation else ""
+                ),
                 # Sebelumnya cuma diekstrak untuk ptype "equation" (satu-
                 # satunya pemakai saat itu). Sekarang diekstrak untuk
                 # SEMUA paragraf -- compare_quotations() di comparator.py
@@ -1351,6 +2197,37 @@ def extract_table_params(doc) -> list[dict]:
     return tables_data
 
 
+def _get_document_background_color_hex(doc) -> str | None:
+    """
+    Warna latar belakang halaman (Word: Design > Page Color), disimpan
+    di XML sebagai elemen <w:background w:color="RRGGBB"/> tepat di
+    bawah root <w:document> -- SEJAJAR dengan <w:body>, BUKAN di
+    dalamnya -- makanya diambil langsung dari doc.element, beda dari
+    elemen lain di modul ini yang selalu lewat doc.element.body.
+
+    Dipakai comparator.py untuk cek warna sampul "#002FA7" (RGB 0, 47,
+    167) sesuai panduan.
+
+    KETERBATASAN PENTING: cek ini HANYA menangkap warna yang diset
+    lewat fitur Page Color bawaan Word (elemen <w:background> di atas).
+    Kalau mahasiswa mewarnai sampul dengan cara lain -- misalnya shape/
+    rectangle selebar 1 halaman penuh yang di-fill manual, atau
+    menempelkan gambar sampul biru sebagai background image -- warna
+    itu TIDAK PERNAH tertangkap fungsi ini, walau secara visual sampul
+    sudah 100% benar. comparator.py HARUS memperlakukan return None di
+    sini sebagai "tidak bisa dipastikan otomatis", BUKAN sebagai
+    "warna salah" -- supaya sampul yang sebenarnya sudah benar (dibuat
+    lewat shape, bukan Page Color) tidak ikut salah ditandai.
+    """
+    bg = doc.element.find(qn("w:background"))
+    if bg is None:
+        return None
+    color = bg.get(qn("w:color"))
+    if not color or color.upper() == "AUTO":
+        return None
+    return color.upper()
+
+
 def extract_all(doc) -> dict:
     """Entry point tahap Extract Parameter: gabungkan semua parameter mentah."""
     return {
@@ -1359,4 +2236,10 @@ def extract_all(doc) -> dict:
         "tables": extract_table_params(doc),
         # Level DOKUMEN, bukan per-section -- lihat docstring _get_mirror_margins().
         "mirror_margins": _get_mirror_margins(doc),
+        # None kalau tidak terdeteksi -- lihat keterbatasan di docstring
+        # _get_document_background_color_hex() di atas. Cuma tersedia di
+        # jalur docx; jalur PDF (pdf_extractor.py) belum mengimplementasikan
+        # deteksi warna latar halaman sama sekali, comparator.py akan
+        # menerima None lewat extracted_params.get(...) untuk jalur itu.
+        "cover_background_hex": _get_document_background_color_hex(doc),
     }

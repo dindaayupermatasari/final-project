@@ -20,6 +20,12 @@ SUBBAB_PATTERN = re.compile(
     re.MULTILINE,
 )
 
+NON_NUMBERED_TERMINATOR_PATTERN = re.compile(
+    r"^(DAFTAR PUSTAKA|LAMPIRAN)\s*$", re.MULTILINE
+)
+
+PAGE_NUMBER_LINE_PATTERN = re.compile(r"^\s*\d{1,4}\s*$")
+
 
 @dataclass
 class Section:
@@ -31,10 +37,19 @@ class Section:
     kept_sentences: List[str] = field(default_factory=list)
 
 
+def _strip_page_number_lines(page_text: str) -> str:
+    lines = page_text.split("\n")
+    while lines and PAGE_NUMBER_LINE_PATTERN.match(lines[0]):
+        lines.pop(0)
+    while lines and PAGE_NUMBER_LINE_PATTERN.match(lines[-1]):
+        lines.pop()
+    return "\n".join(lines)
+
+
 def extract_text_by_page(pdf_path: str) -> str:
     """Baca seluruh halaman PDF, gabung jadi satu string teks mentah."""
     doc = fitz.open(pdf_path)
-    full_text = [page.get_text("text") for page in doc]
+    full_text = [_strip_page_number_lines(page.get_text("text")) for page in doc]
     doc.close()
     return "\n".join(full_text)
 
@@ -51,6 +66,16 @@ def split_into_sections(full_text: str) -> List[Section]:
             bab_matches[i + 1].start() if i + 1 < len(bab_matches) else len(full_text)
         )
         bab_block = full_text[bab_start:bab_end]
+
+        # Potong bab_block SEBELUM heading non-bernomor (DAFTAR
+        # PUSTAKA / LAMPIRAN) kalau ada di dalamnya -- lihat komentar
+        # NON_NUMBERED_TERMINATOR_PATTERN di atas. Harus dilakukan di
+        # sini (sebelum first_line/subbab_matches dihitung) supaya
+        # baik jalur "0 sub-bab" maupun jalur normal di bawah sama-sama
+        # kepotong, bukan cuma salah satunya.
+        terminator_match = NON_NUMBERED_TERMINATOR_PATTERN.search(bab_block)
+        if terminator_match:
+            bab_block = bab_block[: terminator_match.start()]
 
         first_line = bab_block.strip().split("\n", 1)[0].strip()
         bab_title = first_line if first_line.isupper() else f"BAB {bab_num}"

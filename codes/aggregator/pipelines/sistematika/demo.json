@@ -1,0 +1,4029 @@
+{
+  "settings": {
+    "prefix": "query",
+    "chunk_type": "instruction",
+    "top_k": 3,
+    "candidates_k": 8,
+    "max_chars": 1000,
+    "rerank": false,
+    "reranker_model": null,
+    "rerank_header": null
+  },
+  "modes": {
+    "label+content": {
+      "summary": {
+        "total_sections": 48,
+        "retriever": {
+          "evaluable": 17,
+          "recall@1": 0.588,
+          "recall@3": 0.765,
+          "recall@5": 0.882,
+          "recall@8": 0.882,
+          "mrr": 0.686
+        },
+        "reranked": null
+      },
+      "results": [
+        {
+          "query_label": "BAB 1 > 1.1 LATAR BELAKANG (dari dokumen mahasiswa)",
+          "query_text": "LATAR BELAKANG. Perusahaan Manufaktur Kereta Api mengembangkan dikenal sebagai manufaktur yang bergerak di bidang perancangan dan produksi sarana perkeretaapian. Salah satu produknya adalah kereta listrik, yaitu jenis kereta yang menggunakan tenaga listrik untuk pengoperasiannya tanpa menggunakan mesin diesel atau lokomotif. Kereta ini terdiri atas dua kabin masinis yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal. Kereta listrik dikenal karena efisiensi energinya yang tinggi, akselerasi yang cepat, serta kontribusinya dalam mengurangi emisi karbon. Dalam pengembangannya, harus dipastikan bahwa kereta listrik yang diproduksi memiliki spesifikasi teknis yang optimal, agar dapat beroperasi secara andal dengan spesifikasi yang paling optimal yang dibutuhkan oleh pelanggan. Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata.",
+          "expected_guideline_title": "LATAR BELAKANG",
+          "retriever_rank": 2,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2869
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2912
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.2981
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.2984
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3079
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.308
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3089
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3184
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 1 > 1.2 PERMASALAHAN (dari dokumen mahasiswa)",
+          "query_text": "PERMASALAHAN. Perusahan Manufaktur Kereta Api memproduksi berbagai jenis kereta berpenggerak seperti Kereta Rel Diesel (KRD), Kereta Rel Listrik (KRL), dan kereta Hybrid. Salah satu produk unggulan Perusahaan Manufaktur Kereta Api adalah kereta listrik (KRL), yaitu jenis kereta yang menggunakan motor traksi listrik terintegrasi tanpa memerlukan lokomotif terpisah. KRL memiliki keunggulan dibanding KRD dalam hal efisiensi energi (85-90% vs 30-40%), akselerasi yang lebih cepat, dan emisi nol pada titik operasi. Kereta ini terdiri atas dua atau lebih kereta yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal. Kereta listrik dikenal karena efisiensi energi yang tinggi, akselerasi yang cepat, serta berkontribusi dalam mengurangi emisi karbon. Pengujian performa kereta dapat dilakukan melalui uji lapangan, walaupun metode ini tidak efisien dari segi waktu, biaya, dan risiko.",
+          "expected_guideline_title": "PERMASALAHAN",
+          "retriever_rank": 4,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3241
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3268
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3289
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3328
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.338
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3444
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3479
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3484
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 1 > 1.3 TUJUAN (dari dokumen mahasiswa)",
+          "query_text": "TUJUAN. Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy. Sistem ini dirancang untuk memungkinkan pengguna untuk menentukan spesifikasi yang paling optimal secara otomatis, sehingga hasil yang diberikan akan lebih objektif, terukur dan efisien secara biaya. Melalui simulasi, sistem akan menghitung parameter-parameter teknis seperti berat, gaya resistensi, kecepatan, daya, jarak tempuh, serta konsumsi energi kereta secara real time. Nilai-nilai ini akan diproses lebih lanjut dengan menggunakan logika fuzzy, guna menentukan spesifikasi kereta paling optimal berdasarkan nilai- nilai hasil perhitungan simulasi sebelumnya. Dengan adanya proses ini, sistem menyeimbangkan antara waktu tempuh paling cepat dengan daya penggerak dan konsumsi energi yang paling minimum. Sistem ini tidak dapat diakses dengan mudah tanpa adanya antarmuka pengguna.",
+          "expected_guideline_title": "TUJUAN",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3012
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3159
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3178
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.3303
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3339
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3345
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3368
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3375
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 1 > 1.4 MANFAAT (dari dokumen mahasiswa)",
+          "query_text": "MANFAAT. Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.",
+          "expected_guideline_title": "MANFAAT",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.2537
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.299
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3098
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3123
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3211
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.3218
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3227
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3271
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 1 > 1.5 SISTEMATIKA PENULISAN (dari dokumen mahasiswa)",
+          "query_text": "SISTEMATIKA PENULISAN. Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir. Bab ini berisi pembahasan tentang teori-teori yang relevan sebagai dasar penelitian, mencakup tinjauan tentang logika fuzzy (fuzzy logic), pengembangan simulasi yang diusulkan. Bab ini menguraikan solusi yang ditawarkan untuk mengatasi permasalahan, mencakup deskripsi sistem, rancangan desain, serta langkah-langkah teknis yang akan dilakukan dalam pengembangan simulasi kereta yang menggunakan logika fuzzy. Bab ini menjelaskan pengujian sistem yang telah dirancang, analisis terhadap hasil eksperimen, serta evaluasi kinerja sistem dalam menyelesaikan permasalahan yang diangkat. Bab ini memuat kesimpulan dari penelitian yang dilakukan serta saran untuk pengembangan lebih lanjut di masa depan.",
+          "expected_guideline_title": "SISTEMATIKA PENULISAN",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.2029
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.217
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2186
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.2268
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2278
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2303
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.243
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.2458
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.1 DESKRIPSI PERMASALAHAN (dari dokumen mahasiswa)",
+          "query_text": "DESKRIPSI PERMASALAHAN. Perancangan spesifikasi teknis kereta juga melibatkan parameter-parameter yang tidak selalu bernilai pasti, serta sulit dijelaskan hanya dengan angka. Dalam praktiknya, istilah seperti \"cukup\", \"tinggi\", atau \"ringan\" sering digunakan secara verbal untuk menggambarkan suatu kondisi teknis, namun belum ada sistem yang mampu menangkap makna linguistik tersebut dalam konteks pengambilan keputusan. Pada kasus yang nyata yang dialami oleh Perusahaan Manufaktur Kereta Api, terdapat parameter yang tidak memiliki nilai yang tidak bisa dijelaskan dengan angka eksak. Parameter-parameter tersebut seperti berat, akselerasi, weakening point, kecepatan maksimal, serta gradien maksimal yang bisa dilalui, dimana tiap spesifikasi kereta memiliki nilai yang berbeda, dan sulit dijelaskan dengan angka eksak.",
+          "expected_guideline_title": "DESKRIPSI PERMASALAHAN",
+          "retriever_rank": 3,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2686
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2748
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2892
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2907
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2927
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2971
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2983
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3075
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.2 TEORI PENUNJANG (dari dokumen mahasiswa)",
+          "query_text": "TEORI PENUNJANG. Pengembangan aplikasi simulasi kereta berbasis logika fuzzy memerlukan landasan teori yang kuat untuk memastikan akurasi dan keandalannya, serta tools yang diperlukan guna membangun aplikasi yang memiliki antarmuka pengguna yang mudah digunakan. Beberapa teori yang menjadi penunjang adalah sebagai berikut:",
+          "expected_guideline_title": "TEORI PENUNJANG",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.2241
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2732
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2802
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2818
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.2952
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3037
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3048
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3074
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.2.1 Simulasi Kereta (dari dokumen mahasiswa)",
+          "query_text": "Simulasi Kereta. Simulasi kereta adalah proses pemodelan matematis dan komputasional yang bertujuan untuk merepresentasikan perilaku sistem perkeretaapian dalam berbagai kondisi operasi. Simulasi ini digunakan untuk memprediksi, menganalisis, dan mengevaluasi kinerja kereta api serta interaksinya dengan lintasan, lingkungan, dan sistem pendukung lainnya. Dengan simulasi, berbagai skenario operasi dapat diuji tanpa risiko nyata, sehingga sangat bermanfaat dalam proses perancangan, optimasi, dan pengambilan keputusan. [21], [22] Beberapa komponen utama simulasi kereta antara lain : Model Dinamika Kereta Model dinamika kereta didasarkan pada hukum Newton II, pada persamaan Persamaan 2.1: Rumus tersebut berhubungan dengan gaya-gaya yang bekerja pada kereta, seperti gaya traksi, gaya rem, digunakan untuk menghitung perubahan kecepatan dan posisi kereta sepanjang waktu.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2962
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3163
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3287
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3294
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3314
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3357
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3359
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.337
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.2.2 Logika Fuzzy (dari dokumen mahasiswa)",
+          "query_text": "Logika Fuzzy. Logika fuzzy merupakan pendekatan logika yang memungkinkan sistem untuk menangani informasi yang bersifat ambigu atau tidak pasti. Tidak seperti logika boolean yang hanya mengenal nilai kebenaran 0 dan 1, logika fuzzy mengizinkan nilai kebenaran dalam rentang kontinu antara 0 dan 1 [3], [6]. Hal ini mencerminkan cara berpikir manusia dalam menilai suatu kondisi secara bertahap, seperti “agak cepat”, “cukup berat”, atau “sangat curam”. Konsep ini berakar pada teori himpunan fuzzy, atau fuzzy set, yang diperkenalkan oleh Lotfi Zadeh pada tahun 1965. Dalam logika fuzzy, suatu nilai input seperti percepatan atau berat tidak dinilai secara mutlak, melainkan diklasifikasikan berdasarkan derajat keanggotaan terhadap kategori linguistik tertentu. Misalnya, percepatan 1.0 m/s² dapat memiliki keanggotaan 1.0 dalam kategori “sedang” dan 0.2 dalam kategori “tinggi”[2]. Logika fuzzy juga memiliki beberapa metode yang paling umum digunakan, salah satunya ialah Mamdani.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3527
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.358
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.363
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3665
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3698
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3725
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3774
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3788
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.2.3 Qt Creator (dari dokumen mahasiswa)",
+          "query_text": "Qt Creator. Qt Creator merupakan sebuah IDE cross platform yang didesain untuk membuat perangkat lunak, khususnya perangkat lunak GUI. Qt Creator dapat QML, C++, Python, JavaScript dalam pengembangannya. Qt Creator memungkinkan para developer untuk membangun perangkat lunak untuk berbagai platform, termasuk mem-build file executable yang bisa langsung dipakai oleh para user. Alasan penulis menggunakan Qt Creator untuk membangun aplikasi simulasi ini ialah kemudahan dalam pengembangan aplikasi berbasis GUI karena banyak class yang siap pakai, serta bisa diakses dengan berbagai platform.Qt juga merupakan tools yang lebih baik dalam pengembangan aplikasi desktop dibandingkan dengan Java Swing karena memiliki banyak pustaka dan tools yang memungkinkan penulis untuk membangun aplikasi berbasis desktop. C++ adalah bahasa pemrograman komputer yang dibuat oleh Bjarne Stroustrup, yang merupakan perkembangan dari bahasa C dikembangkan di Bell Labs (Dennis Ritchie).",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3141
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3152
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3217
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3217
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3268
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3415
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3447
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3457
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.2.5 DOP (Data Oriented Programming) (dari dokumen mahasiswa)",
+          "query_text": "DOP (Data Oriented Programming). Data Oriented design atau DOP adalah sebuah pendekatan pemrograman yang bertujuan untuk menyimplifikasi sebuah desain dan implementasi pada sistem perangkat lunak, di0020mana informasi terletak pada inti dar sebuah sistem. Seperti aplikasi website frontend atau backend, web service, game, atau aplikasi desktop sederhana [17]. Alih-alih menggunakan arsitektur objek yang menggabungkan kode dan data, seperti object yang di-instansiasi dari sebuah class, DOP akan cenderung memisahkan data dengan kode yang berisi logic. Cara ini akan memudahkan developer untuk memanipulasi data [17]. Penulis menggunakan pendekatan ini karena sistem simulasi memerlukan performa tinggi serta manajemen memori yang andal. Dengan adanya Data Oriented Programming, data suatu objek akan dipisah dengan logic sehingga dapat menghemat memori yang berimplikasi pada peningkatan performa secara signifikan, karena sistem tidak perlu menduplikasi logic yang dimiliki oleh sebuah class.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3295
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3296
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3325
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.3327
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3343
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3369
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3384
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3481
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.3 PENELITIAN TERKAIT (dari dokumen mahasiswa)",
+          "query_text": "PENELITIAN TERKAIT. Dengan adanya proyek akhir ini, maka peninjauan studi terkait dengan topik yang serupa sangat penting guna mendukung pengerjaan proyek akhir penulis. Penelitian-penelitian ini memberikan gambaran mengenai tren metode yang digunakan serta ruang pengembangan yang masih terbuka, khususnya pada integrasi sistem optimasi spesifikasi kereta dengan simulasi dan berbasis logika fuzzy. Adapun penelitian terdahulu yang pernah dilakukan sebelumnya, antara lain:",
+          "expected_guideline_title": "PENELITIAN TERKAIT",
+          "retriever_rank": 4,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2232
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.2418
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2468
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.2532
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.2681
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2682
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2774
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2783
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.3.1 Perbandingan Simulasi Kontrol Kecepatan Kereta Api Dengan (dari dokumen mahasiswa)",
+          "query_text": "Perbandingan Simulasi Kontrol Kecepatan Kereta Api Dengan. Logika Fuzzy Metode Mamdani dan Sugeno Penelitian oleh Apriyanto dan Samudra (2022) [1] membahas perbandingan metode logika fuzzy Mamdani dan Sugeno dalam mengontrol kecepatan kereta commuter. Hasil penelitian menunjukkan bahwa metode Sugeno menghasilkan performa kontrol kecepatan yang lebih stabil pada skenario jalur berliku. Penelitian ini menunjukkan bahwa logika fuzzy efektif dalam mengelola parameter dinamis dalam sistem transportasi rel.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3315
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3362
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3419
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3453
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3498
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3529
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3591
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3631
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.3.2 Train braking distance calculation using fuzzy logic (dari dokumen mahasiswa)",
+          "query_text": "Train braking distance calculation using fuzzy logic. Penelitian oleh Milosavljević, Jeremić, dan Vujović (2018) [10] memfokuskan kajiannya pada perhitungan jarak pengereman kereta menggunakan logika fuzzy. Studi ini memodelkan empat parameter input, yaitu kecepatan kereta, derajat tanjakan, gaya rem, dan respon pengemudi, untuk memperkirakan jarak pengereman yang aman. Penelitian ini menunjukkan bagaimana fuzzy logic dapat menangani variabel-variabel teknis yang bersifat tidak pasti dalam sistem simulasi perkeretaapian. 2.3.3 Speed Control of a Single Taipei Mass Rapid Transit System Train by Using a Single Input Fuzzy Logic Controller Studi oleh Hari Maghfiroh, Oyas Wahyunggoro, Adha Imam Cahyadi, Kuo Lung Lian, dan Bwo Ren Ke (2016) [7] mengusulkan pendekatan baru menggunakan Single Input Fuzzy Logic Controller (SIFLC) untuk mengurangi kompleksitas fuzzy rule yang biasanya memerlukan dua input, yaitu error dan delta error.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3841
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3893
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3912
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3922
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3936
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.4009
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.4015
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.4066
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.3.4 Automatic Braking System in Train using Fuzzy Logic (dari dokumen mahasiswa)",
+          "query_text": "Automatic Braking System in Train using Fuzzy Logic. Penelitian oleh Ravivarman Govindarajulu (2018) berfokus pada sistem pengereman otomatis berbasis logika fuzzy untuk menghentikan kereta secara halus tanpa intervensi manusia. Sistem mengandalkan dua input utama, yaitu jarak dan kecepatan kereta terhadap stasiun, serta satu output yaitu besaran gaya pengereman. Implementasi dilakukan di MATLAB Fuzzy Toolbox dengan 16 aturan fuzzy berbasis pengalaman pengemudi kereta [15]. Simulasi membuktikan bahwa sistem mampu berhenti otomatis secara halus dan tepat ketika jarak mencapai nol.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.334
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3426
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.347
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3502
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3521
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.3531
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3536
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.354
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 2 > 2.3.5 Optimal operation of high-speed train based on fuzzy model (dari dokumen mahasiswa)",
+          "query_text": "Optimal operation of high-speed train based on fuzzy model. Penelitian oleh Xi Wang dan Tao Tang (2017) [21] mengembangkan pendekatan Fuzzy Model Predictive Control (FMPC) berbasis model Takagi– Sugeno untuk mengoptimalkan operasi kereta cepat. Fokus utama adalah meminimalkan gaya pada kopler antar gerbong, menjaga kenyamanan, efisiensi energi, serta akurasi pelacakan kecepatan target. Model kereta diwakili sebagai susunan kaskade dengan gaya kopel seperti pegas. Hasil simulasi menunjukkan bahwa pendekatan ini efektif untuk optimasi multi-objektif secara simultan dan adaptif terhadap kondisi dinamis. 2.3.6 Control System of Train Speed Based on Fuzzy Logic Controller Penelitian oleh Reza Dwi Utomo, Sumardi, dan Eko Didik Widianto (2015) [19] memanfaatkan metode logika fuzzy tipe Mamdani untuk mengendalikan kecepatan kereta. Model sistem direpresentasikan dalam bentuk fungsi transfer, dengan pengendali fuzzy dirancang dengan dua input, yaitu error dan delta error.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3935
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3998
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.4067
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.4097
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.4113
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.4157
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.4159
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.4171
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.1 DESKRIPSI SOLUSI (dari dokumen mahasiswa)",
+          "query_text": "DESKRIPSI SOLUSI. Dengan adanya permasalahan yang sudah dijabarkan di bab awal, solusi yang diusulkan oleh penulis adalah pengembangan aplikasi simulasi kereta berbasis desktop dengan GUI yang interaktif, serta optimasi spesifikasi teknis kereta listrik berbasis logika fuzzy. Sistem ini diharapkan dapat memberikan solusi atas kebutuhan Perusahaan Manufaktur Kereta Api dalam merencanakan konfigurasi kereta secara efisien, akurat, dan adaptif terhadap ketidakpastian nilai parameter teknis. Sistem ini dibangun menggunakan Qt Creator dengan bahasa pemrograman C++ sebagai lingkungan pengembangan utama. Untuk mendukung modularitas dan efisiensi struktur data, sistem ini mengadopsi pendekatan Data-Oriented Programming, atau DOP, yang memisahkan antara representasi data dan logika proses. Pendekatan dengan DOP diharapkan mampu memberikan performa yang baik untuk menjalankan simulasi secara real time dengan data yang beragam.",
+          "expected_guideline_title": "DESKRIPSI SOLUSI",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2436
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2597
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2788
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2915
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2974
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3085
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3214
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3217
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2 PERANCANGAN SISTEM (dari dokumen mahasiswa)",
+          "query_text": "PERANCANGAN SISTEM. Desain sistem aplikasi simulasi kereta ini dirancang untuk melakukan simulasi gerak kereta mulai dari kondisi diam hingga kereta berhenti pada stasiun tertentu, dengan menggunakan logika fuzzy untuk optimasi spesifikasi kereta untuk membantu pengguna untuk menentukan kombinasi konfigurasi teknis terbaik berdasarkan hasil simulasi performa dan evaluasi linguistik. Sistem yang dibangun ditulis menggunakan bahasa C++ dengan framework Qt yang terdiri dari beberapa komponen utama dengan workflow yang berbeda. Perancangan desain sistem terdapat pada Gambar 3.1.",
+          "expected_guideline_title": "PERANCANGAN SISTEM",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.3033
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.318
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3232
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3326
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3328
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3389
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3403
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3406
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2.1 DATA (dari dokumen mahasiswa)",
+          "query_text": "DATA. Tahap awal dari sistem ini adalah proses menginput data oleh pengguna. Data ini merepresentasikan parameter-parameter awal yang menjadi dasar dari proses simulasi kereta listrik, khususnya kereta listrik di Indonesia, baik untuk simulasi statis maupun simulasi dinamis. Data yang digunakan dalam simulasi ini merupakan representasi struktur spesifikasi teknis dari unit kereta listrik yang umum digunakan di Indonesia. Nilai- nilai yang tercantum disusun berdasarkan asumsi teknis yang mendekati karakteristik aslinya, dengan mengacu pada parameter umum seperti jumlah motor, berat per unit, diameter roda, konfigurasi gear, serta parameter sistem penggerak seperti VVVF dan weakening point. Pendekatan ini digunakan untuk menjaga validitas simulasi, sekaligus memberikan fleksibilitas dalam proses optimasi spesifikasi.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3055
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3169
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3286
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3365
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3383
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3409
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3437
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3566
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2.2 Antarmuka Pengguna (Frontend) (dari dokumen mahasiswa)",
+          "query_text": "Antarmuka Pengguna (Frontend). Penelitian ini tidak hanya terpaku pada hasil simulasi dengan tampilan yang seadanya, karena penelitian ini membangun aplikasi desktop yang memiliki antarmuka pengguna yang intuitif. Antarmuka pengguna yang intuitif dibutuhkan karena aplikasi akan lebih mudah digunakan oleh para pengguna. Apabila sebuah aplikasi memiliki antarmuka yang intuitif, maka pengguna tidak hanya akan mudah untuk menggunakan fitur-fiturnya dengan mudah, namun juga memberikan penjelasan yang jelas apabila pengguna mendapatkan pesan error, mendapatkan pesan peringatan, ataupun pesan bahwa suatu aksi berhasil dilakukan. Sub-bab ini menjelaskan mockup dari aplikasi yang dikembangkan yang terdiri dari halaman input dan halaman output. Halaman ini digunakan untuk menentukan besaran dari variabel-variabel yang nantinya akan digunakan untuk simulasi statis dan simulasi dinamis. Halaman ini dibagi menjadi 4 bagian besar, yakni parameter kereta, parameter operasi, parameter lintasan, dan parameter kelistrikan.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2777
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2893
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2918
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3044
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3051
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3056
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3078
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3131
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2.3 Simulasi (dari dokumen mahasiswa)",
+          "query_text": "Simulasi. Simulasi adalah satu dari dua fitur utama dari aplikasi ini, dimana user melakukan simulasi kereta dengan parameter-parameter yang telah diinputkan sebelumnya. Simulasi ini dibuat menggunakan bahasa C++ demi keandalan performa serta manajemen data yang baik. Dalam sistem aplikasi ini, user dapat memilih antara simulasi dinamis maupun statis, bergantung pada urgensi apa yang dimiliki oleh perusahaan. Data yang didapatkan dari simulasi ini berasal dari data spesifikasi awal kereta seperti jumlah penumpang, panjang gerbong, diameter roda, dan sebagainya. Simulasi ini merupakan proyek dari Kerja Praktik yang dilakukan penulis di Perusahaan Manufaktur Kereta Api pada semester 6. Simulasi ini dibagi menjadi dua bagian, yakni simulasi dinamis dan simulasi statis, yang akan dibahas pada poin-poin di bawah ini.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2838
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3084
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3135
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3142
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3143
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3154
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3174
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3192
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2.4 Optimasi dengan Logika Fuzzy (dari dokumen mahasiswa)",
+          "query_text": "Optimasi dengan Logika Fuzzy. Bagian ini merupakan inti dari proses pengambilan keputusan sistem. Logika fuzzy berperan sebagai alat evaluasi matematis berbasis linguistik untuk menentukan seberapa optimal spesifikasi kereta terhadap standar spesifikasi kereta yang diinginkan. Permasalahan utama dalam menentukan spesifikasi kereta terbaik adalah adanya trade-off (tarik-ulur) antara waktu tempuh operasional yang cepat dengan konsumsi daya motor dan konsumsi energi yang minimal. Alih-alih menggunakan spesifikasi dengan batas pakem, pendekatan dengan logika fuzzy memungkinkan sistem untuk memberikan penilaian yang fleksibel, sehingga pengguna dapat merangkai berbagai kombinasi untuk mendapatkan hasil terbaik. Pada pendekatan ini, sistem mengelola parameter-parameter hasil simulasi dalam bentuk fuzzy set dan mengevaluasi kecocokan terhadap standar spesifikasi teknis yang telah ditentukan.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3624
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3663
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3736
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3761
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3761
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3887
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3918
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3986
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 3 > 3.2.5 Output (dari dokumen mahasiswa)",
+          "query_text": "Output. Keluaran atau output dari aplikasi ini terbagi atas tiga bagian, yakni hasil dari simulasi statis, hasil dari simulasi dinamis, serta optimasi berbasis logika fuzzy. Output dari simulasi dinamis adalah hasil dari perhitungan matematis dari berbagai variabel yang dihitung setiap satu detik. Sedangkan output dari simulasi statis adalah hasil perhitungan matematis dari berbagai variabel yang dihitung setiap perubahan 1 km/h. Untuk output dari optimasi berbasis logika fuzzy adalah rekomendasi spesifikasi yang paling optimal dari kombinasi percepatan dan weakening point yang telah ditentukan pengguna. Adapun penjelasan lebih lanjut akan diuraikan pada poin-poin berikut. Output dari simulasi dinamis adalah hasil dari perhitungan matematis dari berbagai variabel yang dihitung setiap satu detik. Perhitungan dilakukan secara berulang yang merepresentasikan pergerakan kereta yang diamati setiap satu detik.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3129
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3371
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3387
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3466
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3544
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3567
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3578
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3582
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.1 PARAMETER EKSPERIMEN (dari dokumen mahasiswa)",
+          "query_text": "PARAMETER EKSPERIMEN. Eksperimen dilakukan untuk memvalidasi parameter yang dikelompokkan menjadi spesifikasi unit kereta, kondisi lingkungan lintasan, variabel pembebanan, dan parameter logika fuzzy. Parameter yang digunakan dalam eksperimen ini mengacu pada spesifikasi teknis Kereta Rel Listrik (KRL) dan karakteristik lintas Solo Balapan – Lempuyangan.",
+          "expected_guideline_title": "PARAMETER EKSPERIMEN",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2225
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2597
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2659
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2917
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3223
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3248
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3303
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3349
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.1.1 Spesifikasi Unit Kereta Uji (dari dokumen mahasiswa)",
+          "query_text": "Spesifikasi Unit Kereta Uji. Parameter ini memiliki variabel konstan atau fixed variables dan variable yang diubah-ubah oleh pengguna selama simulasi untuk merepresentasikan karakteristik fisik dari Kereta Rel Listrik (KRL) yang digunakan sebagai objek studi. Data teknis yang digunakan tersaji pada tabel berikut:",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2497
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2506
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2536
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2733
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2747
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2813
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2914
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3021
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.1.2 Skenario Kondisi Lintasan (dari dokumen mahasiswa)",
+          "query_text": "Skenario Kondisi Lintasan. Eksperimen dilakukan menggunakan data riil lintas Solo Balapan- Padalarang-Cicalengka untuk menguji respons sistem terhadap kontur jalan rel yang bervariasi. Parameter lingkungan meliputi: Simulasi mencakup segmen perjalanan antar stasiun dengan variasi jarak, seperti segmen pendek (Lempuyangan - Maguwo) maupun segmen panjang (Klaten - Purwosari) sesuai data pada Lampiran 1. Geometri Lintasan: a. Gradien (Slope), mencakup kondisi jalan datar (0‰) hingga tanjakan curam (5‰) untuk menguji lonjakan beban motor. b. Radius Tikungan, memperhitungkan gaya sentripetal pada tikungan dengan radius terkecil 200 meter hingga radius lebar 100000 meter (apabila kondisi lintasan lurus). Batas Kecepatan (Speed Limit) Kecepatan maksimum dibatasi bervariasi antara 50 km/jam hingga 90 km/jam bergantung pada segmen lintasan. Pemetaan jarak antara stasiun dan titik meter yang merepresentasikan letak stasiun pada jarak tertentu, yang akan digunakan oleh sistem untuk menentukan di mana kereta harus berhenti",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2898
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2911
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3078
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3089
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.311
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3127
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3156
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3167
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.1.3 Variabel Kondisi Operasi (dari dokumen mahasiswa)",
+          "query_text": "Variabel Kondisi Operasi. Variabel ini merupakan parameter bebas (independent variables) yang dimanipulasi untuk melihat pengaruh beban terhadap performa traksi dan skor optimasi. Variabel yang berubah-ubah antara lain: Pengujian dilakukan dengan jumlah rangkaian kereta yang berbeda, yakni sebanyak 12 gerbong pada rute Solo Balapan-Yogyakarta, Jakarta-Bogor, dan Padalarang-Cicalengka. International Airport, rangkaian kereta yang digunakan yakni sebanyak 6 gerbong.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2965
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2979
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3144
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3188
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3203
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3339
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3446
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3464
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.1.4 Parameter input Logika Fuzzy (dari dokumen mahasiswa)",
+          "query_text": "Parameter input Logika Fuzzy. Bagian ini menjabarkan batasan nilai yang digunakan sebagai masukan bagi Fuzzy Inference System untuk menentukan skor optimasi spesifikasi. Adapun nilai yang digunakan antara lain Variabel Input evaluasi (Percepatan dan Weakening Point), di mana user yang menentukan rentang maksimal dan minimal, lalu sistem akan memetakan rangkaian kombinasi untuk optimasi. Variabel Input fuzzy (Waktu Tempuh, Power Motor per Motor Train, dan Konsumsi Energi), di mana merupakan tiga variabel hasil dari simulasi dinamis yang secara umum dikategorikan menjadi himpunan Low, Medium, High berdasarkan rata-rata konsumsi daya dan/atau waktu per perjalanan. Variabel Output (Skor Optimasi), merupakan rentang nilai crisp 0 hingga 100 yang merepresentasikan tingkat kelayakan spesifikasi (Poor, Fair, Good, Excellent).",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3198
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3365
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3382
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3416
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3475
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3478
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.354
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.373
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.2 KARAKTERISTIK DATA (dari dokumen mahasiswa)",
+          "query_text": "KARAKTERISTIK DATA. Data yang digunakan dalam simulasi ini dikategorikan menjadi tiga kelompok utama, yakni data teknis sarana (kereta), data prasarana (lintasan), dan data parameter kelistrikan. Penggunaan karakteristik data ini bertujuan untuk merepresentasikan kondisi operasional Kereta Rel Listrik (KRL) di Indonesia serealistis mungkin. Data spesifikasi kereta disusun berdasarkan karakteristik umum KRL yang beroperasi di wilayah Yogyakarta-Solo. Karakteristik data ini meliputi konfigurasi rangkaian, massa, dan dimensi fisik yang menjadi basis perhitungan inersia dan gaya traksi.",
+          "expected_guideline_title": "KARATERISTIK DATA",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2362
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.294
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2944
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2964
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3017
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3036
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3061
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3076
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.2.1 Konfigurasi Rangkaian (Trainset) (dari dokumen mahasiswa)",
+          "query_text": "Konfigurasi Rangkaian (Trainset). Satu rangkaian terdiri dari 12 kereta (cars) dengan susunan kombinasi gerbong berpenggerak (Motor Car) dan gerbong tak berpenggerak (Trailer Car) tipe Tc, M1, M2, T1, T2, dan T3.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3565
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3671
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3709
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3739
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.374
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3754
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.3755
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3758
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.2.2 Massa dan Kondisi Beban (Load Condition) (dari dokumen mahasiswa)",
+          "query_text": "Massa dan Kondisi Beban (Load Condition). Kondisi yang terkait dengan massa dan kondisi beban yang dialami kereta, seperti: Berat kosong (empty weight) bervariasi antara 10 ton hingga 20 ton per gerbong tergantung tipe. Kapasitas penumpang diasumsikan 100-200 orang per gerbong dengan standar berat rata-rata penumpang 70 kg. Total massa kereta saat beroperasi dihitung secara dinamis berdasarkan penjumlahan berat kosong dan beban penumpang (kondisi AW2/AW4).",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2928
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.2997
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3013
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3019
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3033
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3044
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3075
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.3079
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.2.3 Dimensi Roda (dari dokumen mahasiswa)",
+          "query_text": "Dimensi Roda. Menggunakan diameter roda 860 mm yang mempengaruhi perhitungan torsi ke gaya dorong linear serta kecepatan putar motor (RPM).",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3879
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-3_instruction",
+              "subbab_num": "1.3",
+              "subbab_title": "BATASAN MASALAH",
+              "chunk_type": "instruction",
+              "distance": 0.3914
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3963
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.399
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3997
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3998
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.401
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.4011
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.3 TEMPAT UJICOBA (dari dokumen mahasiswa)",
+          "query_text": "TEMPAT UJICOBA. Karena eksperimen ini merupakan simulasi yang dijalankan di perangkat penulis, maka tempat ujicoba pada eksperimen dilakukan di perangkat Laptop dengan perangkat Acer Nitro 5 AN515-57 dengan sistem operasi Fedora OS berbasis Linux. Adapun tools yang digunakan demi menjalankan simulasi ini adalah code editor Visual Studio Code dan Google Antigravity, serta Qt sebagai framework dan IDE untuk menjalankan aplikasinya.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2929
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3221
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3244
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3284
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3314
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.333
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.3342
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3391
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.4 WAKTU UJICOBA (dari dokumen mahasiswa)",
+          "query_text": "WAKTU UJICOBA. Waktu ujicoba eksperimen ini dilaksanakan di rentang waktu Oktober 2025 untuk validasi dan pengumpulan data, serta Oktober 2025 hingga April 2026 untuk menjalankan simulasi dan proses trial and error dalam pengembangan lanjutan simulasi optimasi dengan Logika Fuzzy.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3224
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.341
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3446
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3465
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3485
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3579
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3595
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3681
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.5 SPESIFIKASI PERALATAN UJI COBA (dari dokumen mahasiswa)",
+          "query_text": "SPESIFIKASI PERALATAN UJI COBA. Mengingat simulasi ini melibatkan perhitungan fisika real-time dan rendering grafik dinamis, spesifikasi perangkat keras dan lunak memegang peranan penting dalam performa simulasi. Berikut peralatan yang digunakan oleh penulis dalam eksperimen ini:",
+          "expected_guideline_title": "SPESIFIKASI PERALATAN UJICOBA",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.241
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2561
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2731
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2811
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2828
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2836
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2862
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2893
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.5.1 Perangkat Keras (dari dokumen mahasiswa)",
+          "query_text": "Perangkat Keras. Uji coba eksperimen ini dilakukan dengan satu unit laptop dengan spesifikasi sebagai berikut: Perangkat yang digunakan Adalah laptop Acer Nitro 5 (AN515-57). Prosesor yang digunakan adalah Intel Core i511400H Kartu Grafis yang digunakan Adalah NVIDIA GeForce RTX 3050. Memori (RAM) yang digunakan adalah 16 GB DDR4.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2826
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3034
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.3119
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3132
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3136
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.314
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab5_sub5-2_instruction",
+              "subbab_num": "5.2",
+              "subbab_title": "SARAN",
+              "chunk_type": "instruction",
+              "distance": 0.3298
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3355
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.5.2 Perangkat Lunak (dari dokumen mahasiswa)",
+          "query_text": "Perangkat Lunak. Sistem Operasi Fedora OS dengan basis Linux. Bahasa Pemrograman: C++ untuk backend simulasi fisika dan TypeScript untuk frontend. IDE & Framework: Qt Creator 6.10.1 digunakan sebagai integrator utama sistem, dengan modul QWebEngine yang menjembatani logika C++ dengan visualisasi yang ditulis menggunakan Next.Js.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3479
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3554
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3569
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3636
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3656
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3674
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3759
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3766
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6 HASIL EKSPERIMEN (dari dokumen mahasiswa)",
+          "query_text": "HASIL EKSPERIMEN. Hasil eksperimen yang telah dilakukan dapat dibagi dalam lima bagian utama. Bagian pertama menyajikan data yang digunakan untuk skenario pada aplikasi. Bagian kedua menyajikan hasil frontend atau antarmuka pengguna pada aplikasi. Bagian kedua memaparkan hasil simulasi dinamis untuk memvalidasi pergerakan fisik kereta terhadap waktu. Bagian keempat memaparkan hasil simulasi statis guna memverifikasi karakteristik kereta yang bergerak pada lintasan tetap. Terakhir, data teknis dari kedua simulasi tersebut diintegrasikan ke dalam logika fuzzy untuk menghasilkan rekomendasi spesifikasi yang optimal.",
+          "expected_guideline_title": "HASIL EKSPERMEN",
+          "retriever_rank": 3,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.225
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2388
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2487
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2686
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2735
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2836
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2842
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2939
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6.1 Data (dari dokumen mahasiswa)",
+          "query_text": "Data. Data yang digunakan untuk berbagai skenario dalam penelitian ini mengacu pada data tiap stasiun untuk skenario lintasan Solo Balapan – Yogyakarta, Jakarta – Bogor, Yogyakarta – Yogyakarta Internasional Airport, Padalarang – Cicalengka. Semua rute memiliki dataset seperti detail stasiun beserta jaraknya, data kemiringan rel, data jari-jari kelengkungan lintasan, serta data batas kecepatan. Detail dataset dari skenario yang dimaksudkan tersaji pada berikut ini. Skenario 1: Rute Jakarta – Bogor Skenario ini menggunakan karakteristik lintasan pada rute Jakarta – Bogor. Skenario lintasan yang dimaksudkan mengacu pada perbedaan karakteristik rel seperti jarak antar stasiun, profil kemiringan rel, jari-jari kelengkungan rel, serta batas kecepatan operasional yang dapat digunakan oleh kereta saat melintasi section tertentu. Selain karakteristik lintasan, perbedaan dari skenario ini terdapat pada jumlah gerbong pada satu rangkaian kereta.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2845
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3022
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.322
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab2_sub2-3_instruction",
+              "subbab_num": "2.3",
+              "subbab_title": "PENELITIAN TERKAIT",
+              "chunk_type": "instruction",
+              "distance": 0.323
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.325
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.327
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3365
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.339
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6.2 Antarmuka Pengguna (Frontend) (dari dokumen mahasiswa)",
+          "query_text": "Antarmuka Pengguna (Frontend). Antarmuka pengguna dalam aplikasi yang dikembangkan pada penelitian ini dibagi menjadi 4, yakni halaman input, halaman output, halaman optimisasi, serta halaman panduan pengguna. Halaman ini digunakan untuk memasukkan nilai-nilai yang diperlukan untuk simulasi yang ada pada Tabel 3.1, Tabel 3.3, Tabel 3.5, Tabel 3.6, Tabel 3.7, dengan lengkap dan mudah untuk pengguna. Adapun tampilan dari halaman input antara lain: pengguna harus memasukkan nilai variabel-variabel yang ada, baik secara manual maupun menggunakan file .csv. Halaman ini digunakan untuk menampilkan hasil simulasi yang dilakukan oleh pengguna, baik simulasi dinamis maupun simulasi statis. Hasil simulasi secara real-time direpresentasikan dalam bentuk diagram garis untuk kategori kecepatan, tractive efforts, daya kereta, energi, dan jarak kereta.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2509
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2565
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.2743
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2759
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2762
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.279
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.2799
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2893
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6.3 Simulasi Dinamis (dari dokumen mahasiswa)",
+          "query_text": "Simulasi Dinamis. Sub-bab ini memaparkan hasil pengujian simulasi gerak kereta api pada skenario perjalanan nyata dari stasiun awal ke stasiun akhir. Karena algoritma, rumus dan logika bisnis pada simulasi ini merupakan perpanjangan dari proyek KP, penulis menggunakan logika bisnis sebagai backend yang dihubungkan pada frontend. Pengujian dilakukan dengan menjalankan model kereta pada rute Solo Balapan – Lempuyangan yang memiliki variasi parameter lingkungan seperti gradien, radius tikungan, dan batas kecepatan yang berbeda pada setiap segmennya. Data yang disajikan berfokus pada validasi respons fisika kereta terhadap hambatan lintasan, pencapaian target kecepatan operasional, serta perhitungan akumulasi waktu tempuh dan konsumsi energi selama perjalanan. Hasil pengujian yang disajikan meliputi 4 skenario yang berbeda, dengan menggunakan parameter lintasan yang berbeda, yakni pada rute Solo Balapan-Yogyakarta, Jakarta-Bogor, Yogyakarta-Yogyakarta International Airport, Padalarang-Cicalengka.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2598
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2675
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2676
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2709
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.274
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2811
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2835
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2886
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6.4 Simulasi Statis (dari dokumen mahasiswa)",
+          "query_text": "Simulasi Statis. Berbeda dengan simulasi dinamis yang dipengaruhi oleh variabel lintasan, hasil simulasi statis pada sub-bab ini difokuskan untuk memvalidasi karakteristik fundamental dari spesifikasi kereta yang akan diuji di atas lintasan yang tetap. Sama halnya dengan simulasi dinamis, rumus dan logika bisnis pada simulasi ini merupakan perpanjangan dari proyek KP, penulis menggunakan logika bisnis sebagai backend yang dihubungkan pada frontend. Pengujian dilakukan untuk memetakan hubungan antara Gaya Traksi (Tractive Effort), Daya kereta, Arus listrik, dan Kecepatan kereta tanpa memperhitungkan durasi perjalanan. Hasil simulasi ini digunakan untuk memverifikasi apakah perilaku motor listrik, khususnya pada fase penurunan torsi atau Weakening Point, telah sesuai dengan spesifikasi teknis motor KRL yang didefinisikan pada parameter awal. Hasil simulasi statis dapat dipetakkan pada Tabel 4.6.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2556
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2578
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.2637
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.2678
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.2686
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.2696
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2725
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2731
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.6.5 Optimasi Fuzzy (dari dokumen mahasiswa)",
+          "query_text": "Optimasi Fuzzy. Bagian ini menyajikan evaluasi kinerja sistem dalam memberikan rekomendasi keputusan teknis. Hasil perhitungan fisik dari simulasi dinamis (Waktu Tempuh dan Konsumsi Daya) diolah lebih lanjut menggunakan algoritma Fuzzy Logic metode Mamdani. Tujuan dari pemaparan data pada sub-bab ini adalah untuk menunjukkan bagaimana sistem mengklasifikasikan berbagai skenario spesifikasi ke dalam kategori linguistik (seperti \"Optimal\" atau \"Tidak Optimal\") melalui defuzzifikasi Centroid dan menghasilkan skor akhir (Crisp Value) yang dapat digunakan pengguna sebagai acuan dalam menentukan konfigurasi percepatan dan weakening point serta spesifikasi motor kereta yang paling efisien. Berikut penjelasan lebih lanjut terkait dengan mekanisme optimasi menggunakan logika fuzzy. Sistem ini membagi optimasi menjadi dua tahapan, yakni pembangunan ruang pencarian dari kombinasi variabel bebas yang ditentukan oleh pengguna, kemudian evaluasi fuzzy dan penilaian. i.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3146
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3284
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3293
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3356
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3453
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.348
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3552
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3584
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.7 ANALISIS HASIL EKSPERIMEN (dari dokumen mahasiswa)",
+          "query_text": "ANALISIS HASIL EKSPERIMEN. Bagian ini menguraikan interpretasi terhadap data hasil simulasi yang telah disajikan sebelumnya. Analisis difokuskan pada dua aspek utama, yakni validitas hasil simulasi dinamis dan/atau simulasi statis dan efektivitas algoritma fuzzy logic dalam menyelesaikan permasalahan trade-off spesifikasi teknis.",
+          "expected_guideline_title": "ANALISIS HASIL EKSPERIMEN",
+          "retriever_rank": 1,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2672
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2872
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3029
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3283
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3308
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3335
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3393
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.365
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.7.1 ANALISIS HASIL SIMULASI STATIS DAN DINAMIS (dari dokumen mahasiswa)",
+          "query_text": "ANALISIS HASIL SIMULASI STATIS DAN DINAMIS. Berdasarkan grafik karakteristik traksi yang ditampilkan pada Gambar 4.2, terlihat bahwa kurva gaya traksi mengalami penurunan drastis pada titik kecepatan 35 km/jam dan 65 km/jam. Fenomena ini konsisten dengan teori field weakening pada motor traksi KRL, di mana torsi dibatasi untuk menjaga daya tetap konstan pada putaran tinggi 1. Dengan tabel yang sudah disajikan pada Tabel 4.2, Tabel 4.3, Tabel 4.4, ditemukan anomali seperti lonjakan kecepatan instan (akselerasi tak terbatas) atau jarak pengereman yang tidak logis. Jarak pengereman darurat yang tercatat sejauh 780 meter dari kecepatan 90 km/jam yang dilakukan di simulasi statis juga masih berada dalam batas aman sinyal blok yang berlaku di lintas Yogyakarta-Solo. Dengan demikian, model fisika yang dibangun pada simulasi ini dinyatakan valid untuk merepresentasikan perilaku gerak KRL.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2796
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.2886
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3046
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3076
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3098
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3107
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3117
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3297
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 4 > 4.7.2 ANALISIS HASIL OPTIMASI LOGIKA FUZZY (dari dokumen mahasiswa)",
+          "query_text": "ANALISIS HASIL OPTIMASI LOGIKA FUZZY. Bagian ini menyajikan evaluasi kinerja sistem dalam memberikan rekomendasi keputusan teknis. Hasil perhitungan fisik dari simulasi dinamis, khususnya pada waktu tempuh dan daya puncak per unit, diolah lebih lanjut menggunakan algoritma Logika Fuzzy metode Mamdani dengan memainkan kombinasi terbaik dari parameter percepatan dan weakening point yang menghasilkan titik seimbang, yang akan disebut dengan nilai paling optimal, antara waktu tempuh dan daya puncak. Adapun analisis dari hasil optimasi logika fuzzy dijabarkan pada poin-poin berikut. Hasil optimasi yang diurutkan dari yang terbaik hingga terburuk, 5 hasil diambil sebagai kombinasi terbaik. Detail hasil optimasi disajikan pada tabel-tabel berikut: Dari Tabel 4.30, kombinasi yang dihasilkan adalah percepatan 1.15 m/s² dengan weakening point 50 km/h, menghasilkan puncak daya motor per unit sebesar 482.2 kilowatt(kW), waktu tempuh 3893 detik, serta konsumsi energi 234.25 kilowatt-hour (kWh) dengan Optimization Score tertinggi.",
+          "expected_guideline_title": null,
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3351
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab4_sub4-6_instruction",
+              "subbab_num": "4.6",
+              "subbab_title": "HASIL EKSPERMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3482
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3494
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3501
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab4_sub4-5_instruction",
+              "subbab_num": "4.5",
+              "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+              "chunk_type": "instruction",
+              "distance": 0.3526
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.3604
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-2_instruction",
+              "subbab_num": "4.2",
+              "subbab_title": "KARATERISTIK DATA",
+              "chunk_type": "instruction",
+              "distance": 0.3634
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab5_sub5-1_instruction",
+              "subbab_num": "5.1",
+              "subbab_title": "KESIMPULAN",
+              "chunk_type": "instruction",
+              "distance": 0.3809
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 5 > 5.1 KESIMPULAN (dari dokumen mahasiswa)",
+          "query_text": "KESIMPULAN. Berdasarkan tahapan perancangan, implementasi, dan pengujian yang telah dilakukan dalam pengembangan aplikasi simulasi kereta api ini, dapat ditarik kesimpulan bahwa penelitian ini berhasil menjawab permasalahan yang dihadapi Perusahaan Manufaktur Kereta Api, yakni ketiadaan sistem yang mampu menentukan kombinasi teknis kereta listrik secara otomatis dan objektif. Sistem yang dibangun mengintegrasikan perhitungan fisika kereta dengan algoritma optimasi berbasis Fuzzy Logic, di mana fungsi keanggotaan dibangun secara dinamis berdasarkan rentang data hasil simulasi. Perusahaan Manufaktur Kereta Api memproduksi berbagai jenis kereta berpenggerak, salah satunya Kereta Rel Listrik yang mana memerlukan simulasi sistem perkeretaapian yang akurat untuk mengetahui spesifikasi teknis untuk menjamin performa operasional yang paling optimal.",
+          "expected_guideline_title": "KESIMPULAN",
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab4_sub4-1_instruction",
+              "subbab_num": "4.1",
+              "subbab_title": "PARAMETER EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3536
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.3537
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3624
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3631
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.366
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab2_sub2-2_instruction",
+              "subbab_num": "2.2",
+              "subbab_title": "TEORI PENUNJANG",
+              "chunk_type": "instruction",
+              "distance": 0.3673
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab4_sub4-7_instruction",
+              "subbab_num": "4.7",
+              "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+              "chunk_type": "instruction",
+              "distance": 0.3692
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3738
+            }
+          ]
+        },
+        {
+          "query_label": "BAB 5 > 5.2 SARAN (dari dokumen mahasiswa)",
+          "query_text": "SARAN. Untuk pengembangan lebih lanjut guna menyempurnakan sistem ini menjadi produk yang siap pakai di lingkungan industri, disarankan beberapa hal sebagai berikut: 1. Penyempurnaan Antarmuka Pengguna Diperlukan pengembangan lebih lanjut pada sisi frontend Next.js untuk meningkatkan stabilitas rendering grafik dan manajemen memori. Pengembangan selanjutnya disarankan untuk fokus pada responsivitas UI saat menangani aliran data berkecepatan tinggi (high-frequency data stream) dari backend C++ agar tidak terjadi lag visual. Implementasi database diperlukan sehingga pengguna dapat secara mudah untuk menyimpan data tanpa perlu memasukkan data yang diperlukan menggunakan file .csv. Selain itu, dengan diimplementasinya database, pengguna dapat mengakses data hasil maupun input oleh berbagai tim dan lintas unit. 3. Implementasi simulasi kereta model lain Penelitian ini memungkinkan untuk digunakan pada model kereta lain seperti Kereta Rel Diesel atau Kereta Hybrid.",
+          "expected_guideline_title": "SARAN",
+          "retriever_rank": null,
+          "rerank_rank": null,
+          "candidates": [
+            {
+              "rank": 1,
+              "chunk_id": "bab3_sub3-1_instruction",
+              "subbab_num": "3.1",
+              "subbab_title": "DESKRIPSI SOLUSI",
+              "chunk_type": "instruction",
+              "distance": 0.2917
+            },
+            {
+              "rank": 2,
+              "chunk_id": "bab3_sub3-2_instruction",
+              "subbab_num": "3.2",
+              "subbab_title": "PERANCANGAN SISTEM",
+              "chunk_type": "instruction",
+              "distance": 0.3001
+            },
+            {
+              "rank": 3,
+              "chunk_id": "bab1_sub1-4_instruction",
+              "subbab_num": "1.4",
+              "subbab_title": "TUJUAN",
+              "chunk_type": "instruction",
+              "distance": 0.307
+            },
+            {
+              "rank": 4,
+              "chunk_id": "bab1_sub1-6_instruction",
+              "subbab_num": "1.6",
+              "subbab_title": "SISTEMATIKA PENULISAN",
+              "chunk_type": "instruction",
+              "distance": 0.3074
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bab1_sub1-1_instruction",
+              "subbab_num": "1.1",
+              "subbab_title": "LATAR BELAKANG",
+              "chunk_type": "instruction",
+              "distance": 0.3087
+            },
+            {
+              "rank": 6,
+              "chunk_id": "bab1_sub1-5_instruction",
+              "subbab_num": "1.5",
+              "subbab_title": "MANFAAT",
+              "chunk_type": "instruction",
+              "distance": 0.3091
+            },
+            {
+              "rank": 7,
+              "chunk_id": "bab2_sub2-1_instruction",
+              "subbab_num": "2.1",
+              "subbab_title": "DESKRIPSI PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3099
+            },
+            {
+              "rank": 8,
+              "chunk_id": "bab1_sub1-2_instruction",
+              "subbab_num": "1.2",
+              "subbab_title": "PERMASALAHAN",
+              "chunk_type": "instruction",
+              "distance": 0.3117
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "skipped": [],
+  "rejected_sectionizer_candidates": [
+    {
+      "bab_num": 3,
+      "matched_num": "1.05",
+      "matched_title": "Inertial Coeffient Motor",
+      "reason": "nomor '1.05' tidak diawali '3.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 3,
+      "matched_num": "1.1",
+      "matched_title": "Jumlah Axle",
+      "reason": "nomor '1.1' tidak diawali '3.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 3,
+      "matched_num": "39.2",
+      "matched_title": "kN",
+      "reason": "nomor '39.2' tidak diawali '3.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 3,
+      "matched_num": "1.2",
+      "matched_title": "m/s2",
+      "reason": "nomor '1.2' tidak diawali '3.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1.0",
+      "matched_title": "m/s2",
+      "reason": "nomor '1.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Accelerating",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Coasting",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "At Station",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Accelerating",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "4956.41",
+      "matched_title": "Accelerating",
+      "reason": "nomor '4956.41' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "6648.05",
+      "matched_title": "Accelerating",
+      "reason": "nomor '6648.05' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Coasting",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "At Station",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Accelerating",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "5552.29",
+      "matched_title": "Accelerating",
+      "reason": "nomor '5552.29' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "6648.05",
+      "matched_title": "Accelerating",
+      "reason": "nomor '6648.05' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "At Station",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Accelerating",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "2613.1",
+      "matched_title": "Accelerating",
+      "reason": "nomor '2613.1' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "3365.6",
+      "matched_title": "Accelerating",
+      "reason": "nomor '3365.6' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "Coasting",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "30.0",
+      "matched_title": "At Station",
+      "reason": "nomor '30.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "703.5",
+      "matched_title": "kW",
+      "reason": "nomor '703.5' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "262.6",
+      "matched_title": "kW",
+      "reason": "nomor '262.6' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "163.62",
+      "matched_title": "kWh",
+      "reason": "nomor '163.62' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "368.22",
+      "matched_title": "kWh",
+      "reason": "nomor '368.22' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "204.60",
+      "matched_title": "kWh",
+      "reason": "nomor '204.60' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "698.4",
+      "matched_title": "kW",
+      "reason": "nomor '698.4' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "517.2",
+      "matched_title": "kW",
+      "reason": "nomor '517.2' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "998.53",
+      "matched_title": "kWh",
+      "reason": "nomor '998.53' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1024.59",
+      "matched_title": "kWh",
+      "reason": "nomor '1024.59' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "26.06",
+      "matched_title": "kWh",
+      "reason": "nomor '26.06' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "700.7",
+      "matched_title": "kW",
+      "reason": "nomor '700.7' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "519.5",
+      "matched_title": "kW",
+      "reason": "nomor '519.5' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1029.29",
+      "matched_title": "kWh",
+      "reason": "nomor '1029.29' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1055.41",
+      "matched_title": "kWh",
+      "reason": "nomor '1055.41' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "26.12",
+      "matched_title": "kWh",
+      "reason": "nomor '26.12' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "349.5",
+      "matched_title": "kW",
+      "reason": "nomor '349.5' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "58.2",
+      "matched_title": "kW",
+      "reason": "nomor '58.2' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "554.75",
+      "matched_title": "kWh",
+      "reason": "nomor '554.75' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "560.36",
+      "matched_title": "kWh",
+      "reason": "nomor '560.36' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "5.41",
+      "matched_title": "kWh",
+      "reason": "nomor '5.41' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "234.25",
+      "matched_title": "Good",
+      "reason": "nomor '234.25' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "246.0",
+      "matched_title": "Good",
+      "reason": "nomor '246.0' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "274.16",
+      "matched_title": "Good",
+      "reason": "nomor '274.16' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "249.92",
+      "matched_title": "Good",
+      "reason": "nomor '249.92' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "282.22",
+      "matched_title": "Good",
+      "reason": "nomor '282.22' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1008.93",
+      "matched_title": "Excellent",
+      "reason": "nomor '1008.93' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1011.71",
+      "matched_title": "Excellent",
+      "reason": "nomor '1011.71' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1006.17",
+      "matched_title": "Good",
+      "reason": "nomor '1006.17' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1012.20",
+      "matched_title": "Good",
+      "reason": "nomor '1012.20' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1013.00",
+      "matched_title": "Good",
+      "reason": "nomor '1013.00' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1044.04",
+      "matched_title": "Good",
+      "reason": "nomor '1044.04' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1044.60",
+      "matched_title": "Good",
+      "reason": "nomor '1044.60' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1039.78",
+      "matched_title": "Good",
+      "reason": "nomor '1039.78' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1040.62",
+      "matched_title": "Good",
+      "reason": "nomor '1040.62' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1043.12",
+      "matched_title": "Good",
+      "reason": "nomor '1043.12' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "556.29",
+      "matched_title": "Excellent",
+      "reason": "nomor '556.29' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "555.80",
+      "matched_title": "Excellent",
+      "reason": "nomor '555.80' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "556.29",
+      "matched_title": "Excellent",
+      "reason": "nomor '556.29' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "556.82",
+      "matched_title": "Excellent",
+      "reason": "nomor '556.82' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "555.87",
+      "matched_title": "Excellent",
+      "reason": "nomor '555.87' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "356.18",
+      "matched_title": "Poor",
+      "reason": "nomor '356.18' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "346.22",
+      "matched_title": "Poor",
+      "reason": "nomor '346.22' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "353.38",
+      "matched_title": "Poor",
+      "reason": "nomor '353.38' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "347.33",
+      "matched_title": "Poor",
+      "reason": "nomor '347.33' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "355.96",
+      "matched_title": "Poor",
+      "reason": "nomor '355.96' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1020.95",
+      "matched_title": "Poor",
+      "reason": "nomor '1020.95' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1022.14",
+      "matched_title": "Poor",
+      "reason": "nomor '1022.14' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1020.48",
+      "matched_title": "Poor",
+      "reason": "nomor '1020.48' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1017.45",
+      "matched_title": "Poor",
+      "reason": "nomor '1017.45' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1019.83",
+      "matched_title": "Poor",
+      "reason": "nomor '1019.83' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1047.81",
+      "matched_title": "Poor",
+      "reason": "nomor '1047.81' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1046.88",
+      "matched_title": "Poor",
+      "reason": "nomor '1046.88' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1046.05",
+      "matched_title": "Poor",
+      "reason": "nomor '1046.05' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1047.42",
+      "matched_title": "Poor",
+      "reason": "nomor '1047.42' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1049.25",
+      "matched_title": "Poor",
+      "reason": "nomor '1049.25' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "559.03",
+      "matched_title": "Fair",
+      "reason": "nomor '559.03' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "1046.88",
+      "matched_title": "Fair",
+      "reason": "nomor '1046.88' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "558.85",
+      "matched_title": "Fair",
+      "reason": "nomor '558.85' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "557.51",
+      "matched_title": "Fair",
+      "reason": "nomor '557.51' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    },
+    {
+      "bab_num": 4,
+      "matched_num": "558.37",
+      "matched_title": "Fair",
+      "reason": "nomor '558.37' tidak diawali '4.' -- kemungkinan baris tabel/data, bukan heading sub-bab"
+    }
+  ]
+}

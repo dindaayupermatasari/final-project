@@ -80,6 +80,37 @@ Dependency TAMBAHAN di luar python-docx:
     - LibreOffice terpasang & bisa dipanggil lewat command `soffice`
     - PyMuPDF  (pip install pymupdf --break-system-packages), import
       sebagai `fitz`
+
+CHANGELOG (revisi terbaru -- confidence flag utk hasil berbasis font):
+- BUG DITEMUKAN (kasus nyata: Proposal_PA_Bintang_Punta_Dzaky): di
+  environment yang TIDAK punya font "Times New Roman" asli (cuma ada
+  pengganti metric-compatible seperti Liberation Serif),
+  _verify_font_available() kalau found is None (tooling fc-list/registry
+  sendiri tidak tersedia) ATAU SKIP_FONT_CHECK=1 tetap MELANJUTKAN
+  render tanpa membawa sinyal apa pun ke hasil akhir -- finding
+  ganjil/genap & notice halaman kosong tetap disajikan seolah 100%
+  pasti benar, padahal fondasinya (asumsi wrapping baris identik dengan
+  Word) tidak pernah benar-benar terverifikasi. Kasus nyata: dokumen
+  yang di Word BAB 1-nya berakhir di halaman genap (8) malah dilaporkan
+  berakhir di halaman ganjil (9) -- SATU baris terakhir tabel jadwal
+  yang mepet ke batas halaman cukup tergeser gara-gara font substitusi,
+  padahal urutan angka footer yang terbaca sendiri konsisten sempurna
+  (jadi tidak tertangkap _validate_footer_sequence(), yang memang
+  didesain untuk glitch SATU halaman, bukan pergeseran sistemik akibat
+  font).
+  FIX: _verify_font_available() sekarang RETURN status tri-state
+  ("verified"/"skipped"/"unconfirmed") alih-alih cuma print warning
+  untuk kasus "unconfirmed". render_to_pdf() meneruskan status ini ke
+  caller (return jadi tuple (pdf_path, font_status) -- BREAKING CHANGE,
+  lihat docstring render_to_pdf(), main.py WAJIB di-update untuk
+  meneruskan font_status ini ke check_page_layout()). check_page_layout()
+  sekarang menerima param font_status: kalau bukan "verified", SETIAP
+  finding yang dihasilkan modul ini (semuanya bergantung pada asumsi
+  wrapping halaman identik dengan Word) ditandai confidence="rendah" +
+  catatan eksplisit di description, BUKAN dihapus/disembunyikan --
+  supaya pembimbing tetap lihat potensi masalahnya, tapi tahu untuk
+  verifikasi manual dulu sebelum menindaklanjuti, bukan menelan mentah-
+  mentah sebagai temuan pasti.
 """
 
 import os
@@ -180,14 +211,15 @@ def _font_available_windows_registry(font_name: str) -> bool | None:
         winreg.CloseKey(key)
 
 
-def _verify_font_available(font_name: str = "Times New Roman") -> None:
+def _verify_font_available(font_name: str = "Times New Roman") -> str:
     """
     Cek APAKAH font ini beneran terpasang di mesin ini SEBELUM mulai
-    render -- kalau tidak, GAGAL KERAS dengan pesan jelas, BUKAN diam-
-    diam lanjut render pakai font substitusi LibreOffice yang lebar
-    hurufnya beda tipis (root cause SELURUH kelas bug "wrapping baris
-    geser -> jumlah halaman salah -> ganjil/genap salah" yang sudah
-    didokumentasikan panjang lebar di CHANGELOG modul ini).
+    render -- kalau PASTI TIDAK ADA (found is False), GAGAL KERAS dengan
+    pesan jelas, BUKAN diam-diam lanjut render pakai font substitusi
+    LibreOffice yang lebar hurufnya beda tipis (root cause SELURUH kelas
+    bug "wrapping baris geser -> jumlah halaman salah -> ganjil/genap
+    salah" yang sudah didokumentasikan panjang lebar di CHANGELOG modul
+    ini).
 
     INI DIPANGGIL DI SETIAP render_to_pdf(), baik pas dites lokal
     MAUPUN pas sudah di server produksi -- justru supaya KALAU ada
@@ -198,9 +230,33 @@ def _verify_font_available(font_name: str = "Times New Roman") -> None:
     engine" sebelumnya -- gagal cepat & jelas lebih baik daripada
     silently correct di satu environment tapi silently wrong di
     environment lain.
+
+    RETURN (bukan None lagi -- lihat CHANGELOG terbaru modul ini):
+      "verified"    -- font dikonfirmasi ADA. Nomor halaman hasil render
+                       bisa dipercaya penuh.
+      "skipped"     -- SKIP_FONT_CHECK=1, verifikasi sengaja dilewati
+                       (mode darurat/debug). Font BISA SAJA tidak ada;
+                       caller wajib anggap nomor halaman TIDAK terjamin.
+      "unconfirmed" -- tooling deteksi font (fc-list/registry) sendiri
+                       tidak tersedia di environment ini -- TIDAK BISA
+                       DIPASTIKAN font-nya ada atau tidak. Sebelumnya
+                       kasus ini cuma di-print sebagai warning ke stderr
+                       (gampang tidak kebaca / tidak sampai ke pengguna
+                       akhir) lalu tetap lanjut render seolah tidak ada
+                       masalah -- finding yang dihasilkan disajikan
+                       seolah 100% pasti padahal fondasinya tidak pernah
+                       benar-benar diverifikasi. Sekarang status ini
+                       WAJIB diteruskan sampai ke check_page_layout()
+                       supaya finding berbasis nomor halaman ikut
+                       ditandai confidence="rendah", bukan cuma warning
+                       yang gampang terlewat di log server.
+
+    Caller (render_to_pdf) meneruskan return value ini apa adanya ke
+    check_page_layout() lewat parameter font_status -- lihat docstring
+    keduanya untuk alur lengkapnya.
     """
     if _SKIP_FONT_CHECK:
-        return
+        return "skipped"
 
     if sys.platform == "win32":
         found = _font_available_windows_registry(font_name)
@@ -227,10 +283,13 @@ def _verify_font_available(font_name: str = "Times New Roman") -> None:
         print(
             f"[peringatan] Tidak bisa memastikan font '{font_name}' "
             "terpasang di sistem ini (tooling deteksi tidak tersedia di "
-            "environment ini). Kalau hasil hitungan halaman terasa "
-            "aneh/salah, cek manual dulu sebelum lanjut debug bagian lain.",
+            "environment ini). Finding berbasis nomor halaman akan "
+            "ditandai confidence rendah -- cek manual dulu sebelum "
+            "menindaklanjuti.",
             file=sys.stderr,
         )
+        return "unconfirmed"
+    return "verified"
 
 
 def _render_via_libreoffice(docx_path: str, output_dir: str) -> str:
@@ -346,7 +405,7 @@ def _render_via_word(docx_path: str, output_dir: str) -> str:
     return pdf_path
 
 
-def render_to_pdf(docx_path: str, output_dir: str | None = None) -> str:
+def render_to_pdf(docx_path: str, output_dir: str | None = None) -> tuple[str, str]:
     """
     Convert docx -> pdf. Entry point tunggal yang dipanggil modul lain
     (check_page_layout dst) -- mereka TIDAK PERLU tahu engine mana yang
@@ -360,19 +419,30 @@ def render_to_pdf(docx_path: str, output_dir: str | None = None) -> str:
 
     Font diverifikasi WAJIB duluan (_verify_font_available) sebelum
     render apa pun jalan -- gagal cepat & jelas kalau font yang dipakai
-    dokumen tidak benar-benar terpasang, bukan diam-diam render pakai
-    font substitusi yang hasilnya salah tapi kelihatan "berhasil".
+    dokumen PASTI tidak terpasang (RuntimeError, lihat fungsi itu).
+
+    RETURN (BREAKING CHANGE -- lihat CHANGELOG modul ini): sekarang
+    tuple (pdf_path, font_status), BUKAN cuma pdf_path polos lagi.
+    font_status salah satu dari "verified"/"skipped"/"unconfirmed" (lihat
+    _verify_font_available()). CALLER (main.py) WAJIB di-update untuk
+    unpack tuple ini DAN meneruskan font_status ke check_page_layout()
+    lewat parameter font_status-nya -- kalau tidak diteruskan, seluruh
+    manfaat perubahan ini (finding halaman ditandai confidence rendah
+    saat font tidak terjamin) hilang percuma, balik seperti sebelumnya
+    (finding selalu disajikan seolah pasti benar).
+
+    Jalur Word (RENDER_ENGINE="word") selalu "verified" -- Word memakai
+    font aslinya sendiri lewat OS, tidak ada substitusi metric-compatible
+    sama sekali, jadi tidak perlu _verify_font_available().
     """
     output_dir = output_dir or tempfile.mkdtemp(prefix="page_layout_")
 
     if RENDER_ENGINE == "word":
-        # Word tidak butuh _verify_font_available -- Times New Roman
-        # default terpasang bareng Windows/Office, dan ini toh cuma
-        # dipakai manual/debug, bukan jalur yang dites rutin.
-        return _render_via_word(docx_path, output_dir)
+        return _render_via_word(docx_path, output_dir), "verified"
 
-    _verify_font_available()  # gagal cepat kalau font tidak terpasang
-    return _render_via_libreoffice(docx_path, output_dir)
+    font_status = _verify_font_available()  # gagal cepat kalau font PASTI tidak ada
+    pdf_path = _render_via_libreoffice(docx_path, output_dir)
+    return pdf_path, font_status
 
 
 def extract_page_texts(pdf_path: str) -> list[str]:
@@ -397,12 +467,40 @@ def extract_page_texts(pdf_path: str) -> list[str]:
 # berakhir di halaman ganjil (9)" padahal harusnya genap, karena ground
 # truth (footer asli) tidak pernah benar-benar dipakai.
 #
-# 70pt dipilih karena ada celah aman terverifikasi: footer asli di
+# 70pt dipilih semula karena ada celah aman terverifikasi: footer asli di
 # ~64.2pt, sedangkan baris body teks terdekat ke footer di dokumen yang
 # sama ada di ~74.8pt ke atas. 70pt menangkap footer TANPA ikut
 # menangkap baris body teks (yang bisa bikin candidates ambigu dan
 # malah gagal ke-detect juga).
-FOOTER_ZONE_PT = 70
+#
+# BUG DITEMUKAN & DIPERBAIKI (2026-09-12, laporan user): 70pt ternyata
+# TIDAK CUKUP untuk halaman PERTAMA setiap section baru -- footer di
+# halaman itu bisa duduk ~6-7pt lebih TINGGI (lebih jauh dari tepi
+# bawah) dibanding halaman lain di section yang sama, kemungkinan
+# quirk render LibreOffice/Word soal jarak footer khusus di halaman
+# pertama section (mis. dari transisi "Different First Page" atau
+# footer-distance yang sedikit bergeser tepat di batas section).
+# Kasus nyata (dokumen "Buku_PA_Awal_Raya.pdf"): footer "1" di halaman
+# fisik 13 (halaman PERTAMA BAB 1, section baru) duduk di y0=770.72pt
+# dari atas (page height 841.92pt) -- cuma 71.2pt dari tepi bawah, TIPIS
+# di luar batas 70pt lama (perlu >= page_height-70 = 771.92pt), MELESET
+# cuma ~1.2pt. Akibatnya footer halaman itu SATU-SATUNYA yang gagal
+# terbaca, dan karena itu PERSIS halaman tempat restart ke "1" terjadi,
+# _validate_footer_sequence() di build_page_number_sections() kehilangan
+# titik restart itu SAMA SEKALI -- bukan cuma 1 halaman yang salah, tapi
+# SELURUH 116 halaman ber-format decimal setelahnya (BAB 1 s.d. akhir
+# dokumen) ikut gagal divalidasi sebagai satu rangkaian yang konsisten
+# (loncatan roman->decimal di titik itu terlihat seperti urutan rusak
+# tanpa ada halaman 13 sebagai jembatan), sehingga compare_page_numbering()
+# salah menyimpulkan section BAB 1 masih mewarisi format section
+# sebelumnya (lowerRoman) -- padahal dokumen aslinya SUDAH benar (footer
+# BAB 1 memang "1" format Arab).
+#
+# Dinaikkan ke 90pt: masih ada celah aman ke body teks terdekat (~740-
+# 747pt dari atas pada dokumen uji, alias ~95-102pt dari tepi bawah --
+# di ATAS 90pt, jadi tidak ikut tertangkap), sekaligus cukup longgar
+# untuk variasi ~7pt di halaman pertama section yang ditemukan di atas.
+FOOTER_ZONE_PT = 100
 
 _ROMAN_VALUES = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100, "d": 500, "m": 1000}
 _ROMAN_RE = re.compile(r"^[ivxlcdm]+$", re.IGNORECASE)
@@ -1044,15 +1142,45 @@ def _is_notice_page(text: str) -> bool:
     )
 
 
+_LOW_CONFIDENCE_FONT_STATUSES = {"skipped", "unconfirmed"}
+
+_LOW_CONFIDENCE_NOTE = (
+    " (CATATAN: font 'Times New Roman' tidak terverifikasi terpasang di "
+    "server yang merender dokumen ini, jadi jumlah halaman fisik hasil "
+    "render berpotensi bergeser dari yang mahasiswa lihat sendiri di "
+    "Word -- mohon cek manual halaman terkait di Word sebelum "
+    "menindaklanjuti temuan ini.)"
+)
+
+
 def check_page_layout(
     page_texts: list[str],
     sections: list[dict],
     section_pages: dict[int, int],
     footer_numbers: dict[int, int] | None = None,
+    font_status: str = "unconfirmed",
 ) -> tuple[list[dict], dict]:
     """
     Entry point tahap Render & Locate. Return (findings, checks) dengan
     bentuk sama seperti comparator.compare_all.
+
+    font_status: status dari render_to_pdf()/_verify_font_available()
+    ("verified"/"skipped"/"unconfirmed") untuk render PDF yang dipakai
+    menghasilkan page_texts/section_pages/footer_numbers di atas. Kalau
+    BUKAN "verified", SETIAP finding yang dihasilkan fungsi ini (semua
+    bergantung pada asumsi wrapping halaman render == wrapping di Word)
+    ditandai "confidence": "rendah" + catatan eksplisit ditambahkan ke
+    description-nya -- BUKAN dihapus atau disembunyikan (pembimbing
+    tetap perlu tahu potensi masalahnya), cuma diberi sinyal supaya
+    diverifikasi manual dulu sebelum ditindaklanjuti sebagai temuan
+    pasti. Default sengaja "unconfirmed" (bukan "verified") supaya
+    caller yang LUPA meneruskan font_status dari render_to_pdf() gagal
+    ke arah AMAN (terlalu banyak memberi catatan kehati-hatian) alih-
+    alih diam-diam menganggap semuanya pasti benar seperti sebelum
+    perbaikan ini ada.
+
+    Lihat CHANGELOG modul ini (kasus Proposal_PA_Bintang_Punta_Dzaky)
+    untuk kronologi lengkap kenapa flag ini perlu ada.
 
     CHANGELOG: dulu fungsi ini nerima docx_path dan ngerender PDF-nya
     SENDIRI di dalam. Sekarang nerima page_texts yang SUDAH dirender --
@@ -1101,6 +1229,22 @@ def check_page_layout(
     """
     findings = []
     checks = defaultdict(_new_counter)
+    page_number_reliable = font_status not in _LOW_CONFIDENCE_FONT_STATUSES
+
+    def _add_finding(chapter_key: str, location: str, description: str) -> None:
+        findings.append(
+            {
+                "category": "Format",
+                "chapter": chapter_key,
+                "location": location,
+                "description": (
+                    description
+                    if page_number_reliable
+                    else description + _LOW_CONFIDENCE_NOTE
+                ),
+                "confidence": "tinggi" if page_number_reliable else "rendah",
+            }
+        )
 
     total_pages = len(page_texts)
     boundaries = find_chapter_boundaries(page_texts)
@@ -1198,6 +1342,13 @@ def check_page_layout(
     # sini supaya findings dari kedua modul kekelompokkan konsisten,
     # bukan pecah jadi grup yang beda konvensi.
     seen_bab = False
+    # first_checked_boundary: menggantikan peran "i == 0" lama (lihat cek
+    # 1 di bawah) sekarang bahwa boundary Pra-Bab dilewati sepenuhnya --
+    # tanpa ini, cek "mulai di halaman ganjil" tidak akan pernah jalan
+    # sama sekali untuk BAB 1 kalau dokumen punya Pra-Bab (karena BAB 1
+    # bukan lagi i == 0 di `boundaries`, tapi DIA-lah boundary pertama
+    # yang sungguh-sungguh dicek/di-skor sekarang).
+    first_checked_boundary = True
 
     for i, b in enumerate(boundaries):
         label, start_page_physical = b["label"], b["start_page"]
@@ -1210,35 +1361,60 @@ def check_page_layout(
         else:
             chapter_key = label
 
+        # DIHAPUS (atas permintaan user eksplisit): aturan ganjil/genap
+        # DAN aturan halaman "sengaja dikosongkan" sengaja dikosongkan
+        # untuk Pra-Bab (dari setelah cover sampai sebelum BAB 1) --
+        # hitungannya sekarang mulai dari BAB 1 saja, berlaku sama untuk
+        # docx maupun pdf (fungsi ini dipakai bersama oleh keduanya lewat
+        # render LibreOffice). Boundary Pra-Bab dilewati total: tidak
+        # checked, tidak failed, tidak ada finding sama sekali.
+        if chapter_key == "Pra-Bab":
+            continue
+
+        # DIKECUALIKAN TOTAL (atas permintaan user, 2026-09-17): DAFTAR
+        # LAMPIRAN dan BIODATA PENULIS -- sama seperti Pra-Bab di atas,
+        # tidak checked/failed/finding sama sekali, berlaku sama untuk
+        # docx maupun pdf (fungsi ini dipakai bersama oleh keduanya).
+        # LAMPIRAN <huruf> (mis. "LAMPIRAN A") sendiri MEMANG tidak
+        # pernah jadi boundary di sini sejak awal -- modul ini cuma
+        # mengenali CHAPTER_TITLE_RE ("BAB N") & FRONT_HEADINGS
+        # (lihat _is_chapter_boundary_line()), sedang LAMPIRAN_TITLE_RE
+        # sengaja tidak diimpor ke modul ini -- jadi entri "DAFTAR
+        # LAMPIRAN" (heading daftar isi lampiran di bagian akhir) dan
+        # "BIODATA PENULIS" ini SATU-SATUNYA titik terkait
+        # lampiran/biodata yang perlu dikecualikan eksplisit di modul
+        # page-layout ini.
+        if chapter_key in ("DAFTAR LAMPIRAN", "BIODATA PENULIS"):
+            continue
+
         start_page_display = to_displayed(start_page_physical)
 
         # --- cek 1: boundary INI mulai di halaman (TERCETAK) ganjil ---
         # KOREKSI (bug dobel-hitung sebelumnya): cek ini HANYA dijalankan
-        # untuk boundary PERTAMA di dokumen (i == 0). Untuk boundary
-        # ke-2 dst, "mulai di halaman genap" itu SELALU 100% ekuivalen
-        # dengan "boundary SEBELUMNYA berakhir ganjil tanpa notice" --
-        # dua pertanyaan yang menguji FAKTA FISIK YANG SAMA (ada/tidaknya
-        # celah halaman kosong di antara keduanya), cuma dilihat dari
-        # dua sisi. Kalau tetap dicek dua-duanya, satu halaman kosong
-        # yang hilang dilaporkan sebagai DUA finding terpisah (skor
-        # "dihukum dua kali" untuk satu kesalahan yang sama) -- itu
-        # sudah tercakup lengkap oleh cek 2 (bagian bawah) milik
-        # boundary sebelumnya, jadi di sini tidak perlu diulang.
-        if i == 0:
+        # untuk boundary CHECKED PERTAMA di dokumen (dulu "i == 0", kini
+        # first_checked_boundary karena Pra-Bab di-skip di atas). Untuk
+        # boundary ke-2 dst, "mulai di halaman genap" itu SELALU 100%
+        # ekuivalen dengan "boundary SEBELUMNYA berakhir ganjil tanpa
+        # notice" -- dua pertanyaan yang menguji FAKTA FISIK YANG SAMA
+        # (ada/tidaknya celah halaman kosong di antara keduanya), cuma
+        # dilihat dari dua sisi. Kalau tetap dicek dua-duanya, satu
+        # halaman kosong yang hilang dilaporkan sebagai DUA finding
+        # terpisah (skor "dihukum dua kali" untuk satu kesalahan yang
+        # sama) -- itu sudah tercakup lengkap oleh cek 2 (bagian bawah)
+        # milik boundary sebelumnya, jadi di sini tidak perlu diulang.
+        if first_checked_boundary:
             checks[chapter_key]["checked"] += 1
             if start_page_display % 2 == 0:
                 checks[chapter_key]["failed"] += 1
-                findings.append(
-                    {
-                        "category": "Format",
-                        "chapter": chapter_key,
-                        "location": f"Halaman {start_page_display}",
-                        "description": (
-                            f"{label} dimulai di halaman {start_page_display} (genap), "
-                            f"seharusnya di halaman ganjil."
-                        ),
-                    }
+                _add_finding(
+                    chapter_key,
+                    f"Halaman {start_page_display}",
+                    (
+                        f"{label} dimulai di halaman {start_page_display} (genap), "
+                        f"seharusnya di halaman ganjil."
+                    ),
                 )
+        first_checked_boundary = False
 
         # --- cek 2: di mana konten ASLI bab ini berakhir? ---
         # next_start = halaman FISIK mulai bab/boundary berikutnya (atau
@@ -1274,18 +1450,15 @@ def check_page_layout(
             ):
                 checks[chapter_key]["failed"] += 1
                 expected_notice_display = content_end_display + 1
-                findings.append(
-                    {
-                        "category": "Format",
-                        "chapter": chapter_key,
-                        "location": f"Halaman {expected_notice_display}",
-                        "description": (
-                            f"{label} berakhir di halaman ganjil ({content_end_display}), "
-                            f"halaman {expected_notice_display} seharusnya dikosongkan "
-                            f"dengan tulisan 'Halaman ini sengaja dikosongkan' di "
-                            f"tengah halaman."
-                        ),
-                    }
+                _add_finding(
+                    chapter_key,
+                    f"Halaman {expected_notice_display}",
+                    (
+                        f"{label} berakhir di halaman ganjil ({content_end_display}), "
+                        f"halaman {expected_notice_display} seharusnya dikosongkan "
+                        f"dengan tulisan 'Halaman ini sengaja dikosongkan' di "
+                        f"tengah halaman."
+                    ),
                 )
         else:
             # Bab berakhir genap (tercetak) -> TIDAK boleh ada halaman
@@ -1293,17 +1466,14 @@ def check_page_layout(
             if boundary_end_physical in notice_pages_physical:
                 checks[chapter_key]["failed"] += 1
                 boundary_end_display = to_displayed(boundary_end_physical)
-                findings.append(
-                    {
-                        "category": "Format",
-                        "chapter": chapter_key,
-                        "location": f"Halaman {boundary_end_display}",
-                        "description": (
-                            f"{label} sudah berakhir di halaman genap ({content_end_display}), "
-                            f"halaman kosong bertulisan 'Halaman ini sengaja "
-                            f"dikosongkan' di halaman {boundary_end_display} tidak diperlukan."
-                        ),
-                    }
+                _add_finding(
+                    chapter_key,
+                    f"Halaman {boundary_end_display}",
+                    (
+                        f"{label} sudah berakhir di halaman genap ({content_end_display}), "
+                        f"halaman kosong bertulisan 'Halaman ini sengaja "
+                        f"dikosongkan' di halaman {boundary_end_display} tidak diperlukan."
+                    ),
                 )
 
     return findings, dict(checks)
