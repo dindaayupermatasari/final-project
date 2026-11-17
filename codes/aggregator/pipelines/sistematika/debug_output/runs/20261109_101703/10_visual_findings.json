@@ -1,0 +1,188 @@
+[
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #218 ('LATAR BELAKANG')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #222 ('PERMASALAHAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #226 ('TUJUAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #231 ('MANFAAT')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #236 ('SISTEMATIKA PENULISAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #244 ('DESKRIPSI PERMASALAHAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #251 ('TEORI PENUNJANG')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #283 ('PENELITIAN TERKAIT')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #315 ('DESKRIPSI SOLUSI')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #321 ('PERANCANGAN SISTEM')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #466 ('PARAMETER EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #497 ('KARAKTERISTIK DATA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #502 ('TEMPAT UJICOBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #505 ('WAKTU UJICOBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #513 ('SPESIFIKASI PERALATAN UJICOBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #520 ('HASIL EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #751 ('ANALISIS HASIL EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 5",
+    "location": "Paragraf #793 ('KESIMPULAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 5",
+    "location": "Paragraf #799 ('SARAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Abstrak (Paragraf #136-#138)",
+    "description": "Abstrak berisi 275 kata, seharusnya 300-500 kata."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-3 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-3 dalam dokumen)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-5 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-7 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-7 dalam dokumen)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-8 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-9 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Persamaan dalam tabel (tabel ke-9 dalam dokumen)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Persamaan dalam tabel (tabel ke-10 dalam dokumen)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Persamaan dalam tabel (tabel ke-10 dalam dokumen)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #7 ('Contextual Analysis untuk Opinion Mining...')",
+    "description": "Teks pada halaman sampul seharusnya ditulis huruf kapital semua."
+  }
+]

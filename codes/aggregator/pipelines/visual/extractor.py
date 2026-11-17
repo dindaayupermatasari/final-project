@@ -66,9 +66,12 @@ CHANGELOG (revisi terbaru):
   ptype-nya tetap "body" biasa.
 """
 
+import bisect
 import re
+import types
 from docx.oxml.ns import qn
 from docx.shared import Length
+from docx.table import Table
 
 CHAPTER_TITLE_ONLY_RE = re.compile(r"^BAB\s+\d+$")
 # Menerima DUA format judul bab: "BAB 1" berdiri sendiri (nama bab di
@@ -405,7 +408,20 @@ BLANK_PAGE_NOTICE_RE = re.compile(
 # "(2.1)" ATAU "(Persamaan 2.1)" -- kata "Persamaan" di dalam kurung
 # label dianggap sah, tidak wajib dibuang. Case-insensitive supaya
 # "persamaan"/"PERSAMAAN" juga diterima.
-EQUATION_NUMBER_IN_TEXT_RE = re.compile(_EQ_NUM_PAREN + r"$", re.IGNORECASE)
+#
+# DILONGGARKAN LAGI (laporan user -- persamaan bernomor "4.1" TANPA
+# kurung tetap dibilang tidak bernomor): nomor identitas sekarang juga
+# boleh berupa angka bab-urut telanjang ("4.1", "3-2"), TAPI hanya kalau
+# posisinya jelas terpisah sebagai label di ujung kanan -- yaitu tepat
+# sesudah tab, sesudah >= 2 spasi, atau berdiri sendiri di awal teks.
+# Syarat posisi ini yang mencegah ujung rumus biasa seperti "... = 0.5"
+# salah dianggap nomor persamaan (di situ cuma ada SATU spasi).
+_EQ_NUM_BARE = r"\d+\s*[.\-\u2010-\u2013,]\s*\d+"
+EQUATION_NUMBER_BARE_RE = re.compile(r"^" + _EQ_NUM_BARE + r"$")
+EQUATION_NUMBER_IN_TEXT_RE = re.compile(
+    r"(?:" + _EQ_NUM_PAREN + r"|(?:^|(?<=\t)|(?<=\s\s))" + _EQ_NUM_BARE + r")$",
+    re.IGNORECASE,
+)
 
 _EQ_SPACE_CHARS_RE = re.compile(r"[\u00a0\u2000-\u200a\u202f\u205f\u3000]")
 _EQ_INVISIBLE_CHARS_RE = re.compile(r"[\u200b-\u200d\u2060\ufeff]")
@@ -1263,6 +1279,148 @@ def _has_display_equation(para) -> bool:
     return next(para._p.iter(qn("m:oMathPara")), None) is not None
 
 
+def _prose_text(el) -> str:
+    """
+    Teks <w:t> BIASA (di luar rumus OMML) dari elemen XML apa pun
+    (paragraf, sel tabel, dst), termasuk yang dibungkus w:fldSimple/
+    w:hyperlink/w:ins -- yang TIDAK terbaca para.text python-docx.
+    <m:t> (teks di dalam math zone) sengaja tidak ikut: itu bagian rumus,
+    bukan kalimat prosa. Teks w:del dilewati.
+    """
+    skip = qn("w:delText")
+    return "".join(
+        t.text or ""
+        for t in el.iter(qn("w:t"))
+        if t.tag != skip
+    )
+
+
+def _is_standalone_inline_equation(para) -> bool:
+    """
+    True kalau paragraf berisi rumus OMML INLINE (tanpa pembungkus
+    <m:oMathPara>) yang BERDIRI SENDIRI, yaitu satu-satunya isi
+    paragraf selain (opsional) tab dan nomor identitas "(3.1)".
+
+    KENAPA PERLU (2026-11-09, laporan user -- pengecekan rumus di PDF
+    jalan, di DOCX tidak): _has_display_equation() HANYA True untuk
+    rumus mode Display (<m:oMathPara>). Padahal cara sangat umum
+    mahasiswa menulis persamaan + nomor di Word adalah:
+        [rumus inline] <TAB kanan> (3.1)
+    Rumus semacam itu TIDAK pernah dibungkus <m:oMathPara> (Word cuma
+    membungkus kalau equation di-set Display / berdiri di baris
+    sendiri tanpa teks lain), sehingga seluruh paragrafnya jatuh ke
+    ptype "body" dan LOLOS TANPA cek persamaan sama sekali (rata kiri,
+    nomor identitas, tebal, baris kosong atas-bawah). Jalur PDF tidak
+    kena masalah ini karena mendeteksi persamaan dari tata letak
+    visual, bukan dari struktur XML.
+
+    Pembeda dari kalimat prosa yang menyisipkan simbol inline (kasus
+    yang diperbaiki 2026-09-22 di _has_display_equation): di sini
+    prosa SAMA SEKALI TIDAK ADA -- teks <w:t> paragraf kosong atau
+    persis sebuah nomor identitas. Kalimat prosa pasti punya teks lain
+    sehingga tetap ptype "body".
+    """
+    if _has_display_equation(para) or not _has_equation(para):
+        return False
+    if _has_drawing(para):
+        return False
+    rest = normalize_equation_text(_prose_text(para._p))
+    return rest == "" or bool(EQUATION_NUMBER_RE.match(rest))
+
+
+def _math_run_is_bold(m_r) -> bool:
+    """
+    True kalau <m:r> (math run) dicetak tebal. Word menyimpan tebal di
+    math zone lewat <m:rPr><m:sty m:val="b"|"bi"/> ATAU lewat <w:rPr>
+    <w:b/> di dalam <m:r> -- keduanya dibaca di sini.
+    """
+    rpr = m_r.find(qn("m:rPr"))
+    if rpr is not None:
+        sty = rpr.find(qn("m:sty"))
+        if sty is not None and sty.get(qn("m:val")) in ("b", "bi"):
+            return True
+    wrpr = m_r.find(qn("w:rPr"))
+    if wrpr is not None:
+        b = wrpr.find(qn("w:b"))
+        if b is not None and b.get(qn("w:val")) not in ("0", "false", "off"):
+            return True
+    return False
+
+
+def _equation_number_bold(para) -> bool | None:
+    """
+    Apakah NOMOR identitas persamaan yang terjebak di math zone
+    (mis. "rumus#(3.1)" otomatis Word -> "3.1" di <m:r> dalam <m:d>)
+    dicetak tebal?
+
+    Return True / False, atau None kalau tidak bisa dinilai (nomor tidak
+    ditemukan di akhir teks, atau nomor ada di <w:r> biasa -- yang itu
+    sudah dicek lewat elem["runs"] di comparator.py).
+
+    Sebelumnya cek tebal SENGAJA dilewati untuk nomor di math zone
+    (offset <m:t> tidak sejajar dengan elem["runs"]), sehingga di DOCX
+    nomor "(3.1)" yang tidak tebal tidak pernah ke-flag, padahal di
+    jalur PDF ke-flag. Di sini dibangun teks + penanda tebal PER KARAKTER
+    dengan urutan jalan yang sama seperti _equation_full_text(), lalu
+    span nomor dicari dengan EQUATION_NUMBER_IN_TEXT_RE.
+    """
+    _equation_full_text(para)  # memastikan _EQ_TEXT_SKIP_TAGS terisi
+    chars: list[str] = []
+    flags: list[bool | None] = []
+
+    def chr_prop(dpr, name, default):
+        if dpr is None:
+            return default
+        el = dpr.find(qn(f"m:{name}"))
+        if el is None:
+            return default
+        val = el.get(qn("m:val"))
+        return default if val is None else val
+
+    def emit(text: str, flag):
+        chars.append(text)
+        flags.extend([flag] * len(text))
+
+    def walk(el, flag):
+        tag = el.tag
+        if tag in (qn("w:t"), qn("m:t")):
+            emit(el.text or "", flag)
+            return
+        if tag == qn("w:tab"):
+            emit("\t", None)
+            return
+        if tag in _EQ_TEXT_SKIP_TAGS:
+            return
+        if tag == qn("m:r"):
+            flag = _math_run_is_bold(el)
+        if tag == qn("m:d"):
+            dpr = el.find(qn("m:dPr"))
+            emit(chr_prop(dpr, "begChr", "("), None)
+            sep = chr_prop(dpr, "sepChr", "|")
+            for k, e in enumerate(el.findall(qn("m:e"))):
+                if k:
+                    emit(sep, None)
+                walk(e, flag)
+            emit(chr_prop(dpr, "endChr", ")"), None)
+            return
+        for child in el:
+            walk(child, flag)
+
+    walk(para._p, None)
+    text = "".join(chars)
+    m = EQUATION_NUMBER_IN_TEXT_RE.search(text)
+    if not m:
+        return None
+    vals = [
+        flags[i]
+        for i in range(*m.span())
+        if flags[i] is not None and text[i].strip()
+    ]
+    if not vals:
+        return None
+    return all(vals)
+
+
 def _get_equation_alignment(para) -> str | None:
     """
     Rata (justification) KHUSUS milik objek Equation Word, dibaca dari
@@ -1575,6 +1733,13 @@ def extract_paragraph_params(doc) -> list[dict]:
         # buat keputusan "paragraf kosong" & pengisian field equation_*.
         # Lihat docstring _has_display_equation() untuk alasan lengkap.
         has_display_equation = _has_display_equation(para)
+        # Rumus inline berdiri sendiri (+ tab + nomor) -- lihat docstring
+        # _is_standalone_inline_equation(). Diperlakukan sebagai persamaan
+        # juga supaya aturan rata kiri/nomor/tebal berlaku di DOCX seperti
+        # di PDF.
+        standalone_inline_equation = (
+            not has_display_equation and _is_standalone_inline_equation(para)
+        )
         # Paragraf gambar/persamaan sering TIDAK punya teks sama sekali
         # (objeknya OMML/drawing, bukan w:t) -- kalau di-skip seperti
         # paragraf kosong biasa, gambar/persamaan itu jadi tidak pernah
@@ -1810,7 +1975,7 @@ def extract_paragraph_params(doc) -> list[dict]:
         # gambar/persamaan di halaman itu memang tidak tunduk ke aturan
         # tata letak BAB biasa.
         if ptype != "cover":
-            if has_display_equation:
+            if has_display_equation or standalone_inline_equation:
                 ptype = "equation"
             elif has_image:
                 ptype = "image"
@@ -1933,6 +2098,20 @@ def extract_paragraph_params(doc) -> list[dict]:
                 # kelihatan di full_text. Lihat _equation_full_text().
                 "equation_full_text": (
                     _equation_full_text(para).strip() if has_equation else ""
+                ),
+                # "display" (<m:oMathPara>) | "inline_tab" (rumus inline +
+                # tab + nomor, tanpa <m:oMathPara>) | None. Dipakai
+                # comparator.py untuk menafsirkan rata kiri (lihat catatan
+                # di compare_visual_objects).
+                "equation_layout": (
+                    "display"
+                    if has_display_equation
+                    else ("inline_tab" if standalone_inline_equation else None)
+                ),
+                # Tebal/tidaknya nomor yang terjebak di math zone (lihat
+                # _equation_number_bold). None = tidak bisa dinilai.
+                "equation_number_bold": (
+                    _equation_number_bold(para) if has_equation else None
                 ),
                 # Sebelumnya cuma diekstrak untuk ptype "equation" (satu-
                 # satunya pemakai saat itu). Sekarang diekstrak untuk
@@ -2197,6 +2376,150 @@ def extract_table_params(doc) -> list[dict]:
     return tables_data
 
 
+def _is_blank_body_p(el) -> bool:
+    """True kalau elemen XML adalah <w:p> kosong sungguhan (tanpa teks,
+    gambar, maupun rumus) -- dipakai utk cek 1 baris kosong di sekitar
+    persamaan yang dibungkus tabel."""
+    if el is None or el.tag != qn("w:p"):
+        return False
+    if next(el.iter(qn("m:oMath")), None) is not None:
+        return False
+    if (
+        next(el.iter(qn("w:drawing")), None) is not None
+        or next(el.iter(qn("w:pict")), None) is not None
+    ):
+        return False
+    return not _prose_text(el).strip()
+
+
+def _table_row_as_equation(tbl_el, doc):
+    """
+    Kalau tabel ini adalah TRIK LAYOUT persamaan -- tepat 1 baris, 1-3
+    sel, tepat satu sel berisi rumus OMML murni (tanpa teks prosa), sel
+    lain kosong atau cuma nomor identitas "(3.1)" -- kembalikan
+    (runs, formula_paragraph); selain itu None.
+    """
+    tbl = Table(tbl_el, doc._body)
+    if len(tbl.rows) != 1:
+        return None
+    cells = []
+    for c in tbl.rows[0].cells:
+        if not any(c._tc is x._tc for x in cells):  # sel merge: jangan dobel
+            cells.append(c)
+    if not 1 <= len(cells) <= 3:
+        return None
+
+    formula_cells = [
+        c
+        for c in cells
+        if next(c._tc.iter(qn("m:oMath")), None) is not None
+    ]
+    if len(formula_cells) != 1:
+        return None
+    formula_para = None
+    for p in formula_cells[0].paragraphs:
+        if next(p._p.iter(qn("m:oMath")), None) is not None:
+            formula_para = p
+            break
+    if formula_para is None:
+        return None
+
+    runs = []
+    for c in cells:
+        prose = normalize_equation_text(_prose_text(c._tc))
+        if c is formula_cells[0]:
+            if prose:  # sel rumus bercampur prosa -> bukan trik persamaan
+                return None
+        elif prose and not EQUATION_NUMBER_RE.match(prose):
+            return None  # sel lain berisi teks selain nomor (mis. kotak teks)
+        for p in c.paragraphs:
+            for run in p.runs:
+                if not run.text.strip():
+                    continue
+                runs.append(
+                    {
+                        "text": run.text,
+                        "font_name": _resolve_effective_font_name(run, p),
+                        "font_size_pt": _resolve_effective_font_size(run, p),
+                        "bold": _resolve_effective_bold(run, p),
+                        "italic": _resolve_effective_italic(run, p),
+                    }
+                )
+    return runs, formula_para
+
+
+def extract_table_equations(doc, paragraphs: list[dict]) -> list[dict]:
+    """
+    Persamaan yang diletakkan di dalam TABEL LAYOUT 1 baris (rumus di
+    satu sel, nomor "(3.1)" di sel sebelahnya) -- trik yang sangat umum
+    karena tab stop gampang geser (lihat catatan n_rows di
+    extract_table_params).
+
+    KENAPA PERLU (2026-11-09): extract_paragraph_params() hanya membaca
+    doc.paragraphs, yaitu paragraf level-body saja; paragraf DI DALAM
+    sel tabel tidak ikut sama sekali. Persamaan ber-tabel jadi tak
+    terlihat oleh cek persamaan, dan tabelnya sendiri dikecualikan dari
+    cek tabel (n_rows<=1). Jalur PDF tidak kena karena membaca tata
+    letak visual.
+
+    Hasilnya elemen berbentuk sama dengan elemen paragraf ber-ptype
+    "equation" (dipakai compare_visual_objects(table_equations=...)),
+    ditambah "location_label". Sengaja DISIMPAN TERPISAH dari
+    elem["paragraphs"] supaya index paragraf (yang jadi acuan
+    extract_table_params & cek lain) tidak bergeser.
+    """
+    body = doc.element.body
+    idxs = [p["index"] for p in paragraphs]
+    results = []
+    para_counter = -1
+    table_seq = 0
+    for child in body.iterchildren():
+        if child.tag == qn("w:p"):
+            para_counter += 1
+            continue
+        if child.tag != qn("w:tbl"):
+            continue
+        table_seq += 1
+        parsed = _table_row_as_equation(child, doc)
+        if parsed is None:
+            continue
+        runs, fp = parsed
+
+        # Bab/chapter: elemen paragraf terdekat SEBELUM tabel ini.
+        pos = bisect.bisect_right(idxs, para_counter) - 1
+        chapter = paragraphs[pos]["chapter"] if pos >= 0 else "Pra-Bab"
+
+        eq_align = _get_equation_alignment(fp)
+        if eq_align is None and _has_display_equation(fp):
+            # Default OMML (ECMA-376) untuk equation Display tanpa
+            # m:jc eksplisit = centerGroup (rata tengah).
+            eq_align = "center"
+
+        shim = types.SimpleNamespace(_p=child)  # walker rekursif generik
+        results.append(
+            {
+                "index": para_counter,
+                "type": "equation",
+                "chapter": chapter,
+                "location_label": (
+                    f"Persamaan dalam tabel (tabel ke-{table_seq} dalam "
+                    f"dokumen)"
+                ),
+                "full_text": "".join(r["text"] for r in runs),
+                "runs": runs,
+                "alignment": _get_paragraph_alignment(fp),
+                "equation_alignment": eq_align,
+                "equation_math_text": _equation_math_text(shim).strip(),
+                "equation_full_text": _equation_full_text(shim).strip(),
+                "equation_number_bold": _equation_number_bold(shim),
+                "equation_layout": "table",
+                "blank_before": _is_blank_body_p(child.getprevious()),
+                "blank_after": _is_blank_body_p(child.getnext()),
+            }
+        )
+    return results
+
+
 def _get_document_background_color_hex(doc) -> str | None:
     """
     Warna latar belakang halaman (Word: Design > Page Color), disimpan
@@ -2230,8 +2553,12 @@ def _get_document_background_color_hex(doc) -> str | None:
 
 def extract_all(doc) -> dict:
     """Entry point tahap Extract Parameter: gabungkan semua parameter mentah."""
+    paragraphs = extract_paragraph_params(doc)
     return {
-        "paragraphs": extract_paragraph_params(doc),
+        "paragraphs": paragraphs,
+        # Persamaan yang dibungkus tabel layout 1 baris (lihat
+        # extract_table_equations). Terpisah dari "paragraphs".
+        "table_equations": extract_table_equations(doc, paragraphs),
         "sections": extract_section_params(doc),
         "tables": extract_table_params(doc),
         # Level DOKUMEN, bukan per-section -- lihat docstring _get_mirror_margins().

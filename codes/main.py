@@ -17,12 +17,17 @@ CHANGELOG (revisi -- format input adaptif):
                      langsung, dan pembimbing eksplisit minta PDF
                      diutamakan. Tidak perlu render_to_pdf lagi --
                      filenya sendiri sudah PDF.
-    lainnya      -> (.doc, .odt, dst) convert dulu ke PDF via
-                     LibreOffice (render_to_pdf() SUDAH generic,
-                     bukan cuma nerima docx -- cuma dokumentasinya
-                     yang menyebut "docx", implementasinya cuma
-                     manggil `soffice --convert-to pdf`), lalu ikut
-                     jalur .pdf di atas.
+    .rtf / .doc  -> jalur BARU (rtf_converter.py). Convert dulu ke
+                     .docx via LibreOffice (BUKAN ke PDF -- lihat
+                     CHANGELOG "FIX RTF" di bawah untuk alasannya),
+                     lalu ikut jalur .docx di atas apa adanya, dengan
+                     fidelity yang sama seperti dokumen .docx asli.
+    lainnya      -> (.odt, dst) convert dulu ke PDF via LibreOffice
+                     (render_to_pdf() SUDAH generic, bukan cuma
+                     nerima docx -- cuma dokumentasinya yang menyebut
+                     "docx", implementasinya cuma manggil
+                     `soffice --convert-to pdf`), lalu ikut jalur
+                     .pdf di atas.
 - Kedua jalur extractor (docx & pdf) mengembalikan bentuk `params`
   yang SAMA PERSIS ({"paragraphs","sections","tables","mirror_margins"}),
   jadi compare_all/check_bibliography/calculate_score di bawahnya
@@ -50,6 +55,50 @@ SEBELUM params dikembalikan ke run_pipeline(), supaya find_section_start_pages()
 data yang benar tanpa perlu tahu detail jalur mana yang dipakai. Jalur
 .docx TIDAK disentuh -- section & pgnum_fmt/dst di jalur itu sudah
 akurat langsung dari XML (w:pgNumType), tidak butuh fix ini.
+
+BUG DIPERBAIKI (2026-09-08 -- "FIX RTF": .rtf salah masuk jalur PDF):
+_extract_params() SEBELUMNYA tidak punya cabang khusus untuk .rtf/.doc
+sama sekali -- ekstensi ini jatuh ke cabang "format lain" paling
+bawah, yang mengonversi file ke PDF (render_to_pdf) lalu memprosesnya
+lewat extract_all_pdf(). Akibatnya file .rtf dicek pakai MESIN YANG
+SALAH: estimasi geometris dari koordinat PDF, bukan pembacaan XML
+docx yang presisi -- padahal modul rtf_converter.py (convert_to_docx,
+via LibreOffice --convert-to docx) SUDAH ADA di project ini persis
+untuk mencegah ini, tapi tidak pernah di-import/dipanggil di sini.
+Gejala yang diamati: hasil cek .rtf berbeda jauh dari .docx sumber
+yang identik -- jumlah paragraf ter-parsing beda drastis (PyMuPDF
+memecah teks per blok visual, bukan per elemen XML <w:p>), temuan
+alignment gambar "rata tengah" hilang (cek ini memang sengaja
+dinonaktifkan di jalur PDF karena tidak reliable dari koordinat),
+beberapa temuan font baru muncul (PyMuPDF baca font per span, beda
+sensitivitas dari python-docx yang baca dari style Word), dan margin
+section berubah pola (7 section jadi 2, margin ganjil/genap asimetris
+ala mirror-margin PDF) karena python-docx & PyMuPDF membaca section
+break dengan cara yang sama sekali berbeda.
+FIX: tambah cabang RTF_DOC_EXTENSIONS di _extract_params() yang
+memanggil rtf_converter.convert_to_docx() lebih dulu, lalu meneruskan
+hasilnya ke jalur .docx yang sudah ada (parse_docx + extract_all +
+render_to_pdf), PERSIS seperti kalau mahasiswa upload .docx asli --
+bukan membuat jalur baru. source yang dikembalikan juga "docx" (bukan
+"pdf"), supaya compare_sections() di comparator.py memakai toleransi
+margin yang ketat (exact dari XML), sesuai kenyataan bahwa margin
+sudah dibaca dari file .docx hasil konversi, bukan diestimasi dari
+koordinat PDF.
+
+BUG DIPERBAIKI (2026-09-09 -- finding halaman ganjil/genap disajikan
+seolah pasti benar walau font render tidak terverifikasi): render_to_pdf()
+sekarang balik tuple (pdf_path, font_status) -- BUKAN cuma pdf_path
+polos lagi (lihat CHANGELOG page_layout_checker.py). _extract_params()
+di bawah SEKARANG ikut balik font_status sebagai elemen ke-4
+(params, pdf_path, source, font_status), dan run_pipeline() WAJIB
+meneruskannya ke check_page_layout() lewat parameter font_status= --
+kalau tidak, seluruh manfaat perbaikan itu (finding ditandai
+confidence="rendah" saat font "Times New Roman" tidak terverifikasi
+terpasang di server render) hilang percuma. Jalur .pdf (mahasiswa
+upload PDF asli, TIDAK lewat render_to_pdf()/LibreOffice sama sekali)
+selalu diberi font_status="verified" -- tidak ada substitusi font yang
+mungkin terjadi kalau PDF-nya memang sudah jadi dari sono-nya (mis.
+export langsung dari Word oleh mahasiswa sendiri).
 """
 
 import os
@@ -71,6 +120,7 @@ from aggregator.pipelines.visual.page_layout_checker import (
     finalize_page_numbering,
 )
 from aggregator.pipelines.visual.scorer import calculate_score
+from aggregator.pipelines.visual.rtf_converter import convert_to_docx, ConversionError
 
 # DINONAKTIFKAN (atas permintaan user, 2026-08-21): cek format DAFTAR
 # PUSTAKA di-nonaktifkan sementara -- lihat blok yang dikomentari di
@@ -79,9 +129,13 @@ from aggregator.pipelines.visual.scorer import calculate_score
 # from aggregator.pipelines.visual.bibliography_checker import check_bibliography
 
 # Ekstensi yang dianggap "docx asli" -- jalur extractor XML presisi
-# tinggi. Selain ini & .pdf, semua dianggap "perlu dikonversi dulu".
+# tinggi.
 DOCX_EXTENSIONS = {".docx"}
 PDF_EXTENSIONS = {".pdf"}
+# Ekstensi yang dikonversi ke .docx DULU (via rtf_converter.py), lalu
+# ikut jalur .docx apa adanya -- BUKAN dikonversi ke PDF. Lihat
+# CHANGELOG "FIX RTF" di atas modul ini untuk alasan lengkapnya.
+RTF_DOC_EXTENSIONS = {".rtf", ".doc"}
 
 
 def _chapter_sort_key(chapter: str):
@@ -118,28 +172,43 @@ def merge_checks(base: dict, extra: dict) -> dict:
     return dict(merged)
 
 
-def _extract_params(filepath: str) -> tuple[dict, str, str]:
+def _extract_params(filepath: str) -> tuple[dict, str, str, str]:
     """
     Pilih jalur extractor sesuai ekstensi file, balik
-    (params, pdf_path, source). pdf_path SELALU balik path PDF yang
-    valid (baik file aslinya sendiri, atau hasil convert) -- dipakai
-    bareng oleh check_page_layout & find_section_start_pages di bawah,
-    SAMA seperti alur lama, cuma sekarang sumbernya bisa dari salah
-    satu dari dua jalur.
+    (params, pdf_path, source, font_status). pdf_path SELALU balik path
+    PDF yang valid (baik file aslinya sendiri, atau hasil convert) --
+    dipakai bareng oleh check_page_layout & find_section_start_pages di
+    bawah, SAMA seperti alur lama, cuma sekarang sumbernya bisa dari
+    salah satu dari beberapa jalur.
+
+    font_status ("verified"/"skipped"/"unconfirmed", ditambahkan
+    2026-09-09) adalah status verifikasi font "Times New Roman" untuk
+    PDF yang dipakai di atas -- lihat CHANGELOG modul ini & CHANGELOG
+    page_layout_checker.py untuk alasan lengkap. run_pipeline() WAJIB
+    meneruskan ini ke check_page_layout(font_status=...) supaya finding
+    ganjil/genap ikut ditandai confidence-nya. Jalur .pdf (tidak lewat
+    render_to_pdf()/LibreOffice sama sekali -- filenya sudah PDF asli
+    dari mahasiswa) selalu "verified", karena tidak ada substitusi font
+    yang mungkin terjadi di jalur itu.
 
     source ("docx" | "pdf") ditambahkan (2026-08-24) supaya
     run_pipeline() bisa meneruskannya ke compare_all() -> compare_sections(),
     yang butuh tahu jalur mana yang dipakai buat nentuin toleransi
     margin yang tepat (lihat docstring compare_sections di comparator.py):
     margin dari .docx dibaca EXACT dari XML, sedangkan margin dari PDF
-    (baik file .pdf asli maupun hasil convert .doc/.odt) cuma ESTIMASI
-    geometris dari posisi teks -- jadi wajar lebih longgar. Makanya
-    cabang .docx balik source="docx", dua cabang lainnya balik
-    source="pdf" (cabang "convert dulu" tetap "pdf" karena ujungnya
-    tetap lewat extract_all_pdf() juga, sama-sama estimasi geometris,
-    bukan baca XML).
+    (baik file .pdf asli maupun hasil convert .odt/dst) cuma ESTIMASI
+    geometris dari posisi teks -- jadi wajar lebih longgar.
 
-    Jalur .pdf & "lainnya" (convert dulu) SEKARANG WAJIB lewat
+    Cabang .rtf/.doc (2026-09-08) SENGAJA dikembalikan sebagai
+    source="docx" juga -- BUKAN "pdf" -- karena setelah convert_to_docx()
+    berhasil, params di bawah ini dibaca dari file .docx hasil konversi
+    lewat extractor.py yang SAMA PERSIS dipakai untuk .docx asli (bukan
+    lewat extract_all_pdf()), jadi margin & struktur lain yang
+    dihasilkan memang EXACT dari XML, bukan estimasi geometris --
+    menandainya "pdf" di sini justru akan salah membuat comparator.py
+    memakai toleransi yang tidak perlu.
+
+    Jalur .pdf & "lainnya" (convert dulu ke PDF) SEKARANG WAJIB lewat
     finalize_page_numbering() sebelum return -- lihat CHANGELOG di atas
     modul ini untuk root-cause lengkap kenapa ini wajib ada di sini
     (bukan cukup ditambahkan di pdf_extractor.py/page_layout_checker.py
@@ -147,36 +216,60 @@ def _extract_params(filepath: str) -> tuple[dict, str, str]:
     tetap versi stub lama, dan SEMUA fungsi di bawah run_pipeline()
     (find_section_start_pages, compare_all, check_page_layout) diam-diam
     kembali ke perilaku lama yang selalu salah, walau kode di
-    page_layout_checker.py sendiri sudah benar.
+    page_layout_checker.py sendiri sudah benar. Jalur .rtf/.doc TIDAK
+    lewat sini sama sekali karena ujungnya jadi .docx, dan jalur .docx
+    memang tidak butuh finalize_page_numbering() (sudah akurat dari
+    XML w:pgNumType).
     """
     ext = os.path.splitext(filepath)[1].lower()
 
     if ext in DOCX_EXTENSIONS:
         doc = parse_docx(filepath)
         params = extract_all(doc)
-        pdf_path = render_to_pdf(filepath)
-        return params, pdf_path, "docx"
+        pdf_path, font_status = render_to_pdf(filepath)
+        return params, pdf_path, "docx", font_status
 
     if ext in PDF_EXTENSIONS:
         params = extract_all_pdf(filepath)
         params = finalize_page_numbering(params, filepath)
-        return params, filepath, "pdf"
+        # Tidak lewat render_to_pdf()/LibreOffice sama sekali -- file
+        # ini SUDAH PDF asli (mis. export langsung dari Word oleh
+        # mahasiswa), jadi tidak ada risiko substitusi font sama sekali.
+        return params, filepath, "pdf", "verified"
 
-    # Format lain (.doc, .odt, dst) -- convert dulu ke PDF, lalu ikut
-    # jalur PDF. render_to_pdf() namanya menyebut "docx" di docstring
-    # lama, tapi implementasinya (_render_via_libreoffice) cuma
-    # menjalankan `soffice --convert-to pdf` apa adanya -- generic
-    # untuk format apapun yang didukung LibreOffice, jadi aman dipakai
-    # di sini tanpa perlu diubah.
-    pdf_path = render_to_pdf(filepath)
+    if ext in RTF_DOC_EXTENSIONS:
+        # Convert RTF/DOC -> DOCX dulu (BUKAN -> PDF), lalu ikut jalur
+        # .docx di atas apa adanya -- lihat CHANGELOG "FIX RTF" untuk
+        # alasan lengkap kenapa ini wajib lewat sini, bukan lewat
+        # render_to_pdf()/extract_all_pdf() seperti cabang "format
+        # lain" di bawah.
+        try:
+            docx_path = convert_to_docx(filepath)
+        except ConversionError as e:
+            raise RuntimeError(
+                f"Gagal mengonversi {filepath} ke .docx sebelum " f"pengecekan: {e}"
+            ) from e
+        doc = parse_docx(docx_path)
+        params = extract_all(doc)
+        pdf_path, font_status = render_to_pdf(docx_path)
+        return params, pdf_path, "docx", font_status
+
+    # Format lain (.odt, dst) -- convert dulu ke PDF, lalu ikut jalur
+    # .pdf. render_to_pdf() namanya menyebut "docx" di docstring lama,
+    # tapi implementasinya (_render_via_libreoffice) cuma menjalankan
+    # `soffice --convert-to pdf` apa adanya -- generic untuk format
+    # apapun yang didukung LibreOffice, jadi aman dipakai di sini
+    # tanpa perlu diubah. .rtf/.doc SUDAH ditangani di cabang khusus
+    # di atas dan tidak akan pernah sampai ke sini.
+    pdf_path, font_status = render_to_pdf(filepath)
     params = extract_all_pdf(pdf_path)
     params = finalize_page_numbering(params, pdf_path)
-    return params, pdf_path, "pdf"
+    return params, pdf_path, "pdf", font_status
 
 
 def run_pipeline(filepath: str) -> dict:
     # 1 & 2. Parsing + Extract Parameter (jalur dipilih berdasar format input)
-    params, pdf_path, source = _extract_params(filepath)
+    params, pdf_path, source, font_status = _extract_params(filepath)
 
     # 2b. page_texts & footer_numbers SELALU dari PDF (baik file aslinya
     #     PDF, atau hasil render/convert) -- dipakai bareng oleh
@@ -187,6 +280,8 @@ def run_pipeline(filepath: str) -> dict:
     #     oleh finalize_page_numbering() di _extract_params()), jadi
     #     find_section_start_pages() otomatis nemu SEMUA section (bukan
     #     cuma section 0) tanpa perlu tahu jalur mana yang dipakai.
+    #     Untuk jalur .docx (termasuk .rtf/.doc yang sudah dikonversi),
+    #     section sudah akurat langsung dari XML.
     page_texts = extract_page_texts(pdf_path)
     footer_numbers = extract_footer_numbers(pdf_path)
     section_pages = find_section_start_pages(page_texts, params["paragraphs"])
@@ -199,8 +294,16 @@ def run_pipeline(filepath: str) -> dict:
     findings, checks = compare_all(params, section_pages, source=source)
 
     # 3b. Render & Locate: cek halaman ganjil/genap awal Bab
+    # font_status diteruskan supaya finding di sini ditandai
+    # confidence="rendah" kalau font "Times New Roman" tidak
+    # terverifikasi terpasang di server render (lihat CHANGELOG modul
+    # ini & page_layout_checker.py).
     layout_findings, layout_checks = check_page_layout(
-        page_texts, params["sections"], section_pages, footer_numbers
+        page_texts,
+        params["sections"],
+        section_pages,
+        footer_numbers,
+        font_status=font_status,
     )
     findings = findings + layout_findings
     checks = merge_checks(checks, layout_checks)
@@ -231,7 +334,9 @@ def run_pipeline(filepath: str) -> dict:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python main.py path/ke/dokumen.[docx|pdf|doc|odt] [output.json]")
+        print(
+            "Usage: python main.py path/ke/dokumen.[docx|pdf|rtf|doc|odt] [output.json]"
+        )
         sys.exit(1)
 
     filepath = sys.argv[1]

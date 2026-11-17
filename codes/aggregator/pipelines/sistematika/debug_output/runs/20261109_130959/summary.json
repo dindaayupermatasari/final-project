@@ -1,0 +1,37 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "error",
+    "akhir": "error"
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "rag": "error",
+    "manual": null,
+    "aturan": "error",
+    "akhir": "error"
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "rag": "error",
+    "manual": null,
+    "aturan": "error",
+    "akhir": "error"
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "rag": "error",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "error"
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "rag": "error",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "error"
+  }
+]

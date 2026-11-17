@@ -1,0 +1,219 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "2/3",
+    "chunk_id": "bab1_sub1-1_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata. | Simulasi ini diharapkan dapat mengetahui spesifikasi teknis yang optimal untuk kereta listrik yang akan diproduksi.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Salah satu produknya adalah kereta listrik, yaitu jenis kereta yang menggunakan tenaga listrik untuk pengoperasiannya tanpa menggunakan mesin diesel atau lokomotif. | Kereta listrik dikenal karena efisiensi energinya yang tinggi, akselerasi yang cepat, serta kontribusinya dalam mengurangi emisi karbon.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY\nProblem Domain: kereta api listrik | Problem: sulitnya mengoptimalkan spesifikasi kereta api listrik | Uniqueness: simulasi optimasi menggunakan logika fuzzy\n\nSUBBAB: LATAR BELAKANG\n\nPETUNJUK PANDUAN:\nDeskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nCONTOH DI PANDUAN (ilustrasi):\nMisalkan penulis mengambil suatu judul berikut \"Deteksi Penyakit Kanker Dengan Sistem Pakar Berbasis Fuzzy\". Judul tersebut mempunyai Problem adalah Deteksi Penyakit Kanker, Problem Domain adalah Penyakit Kanker, dan Uniqueness adalah Sistem Pakar Berbasis Fuzzy. Berkaitan dengan Latar Belakang, Problem Domain-nya adalah tentang penyakit kanker, sehingga disini penulis dapat menceritakan tentang penyakit kanker dan tingkat urgensi (seperti tingkat kenaikan jumlah penderitanya dari tahun ke tahun, gawatnya penyakit kanker tersebut, dan semisalnya).\n\nTEKS MAHASISWA:\n\"\"\"\nPerusahaan Manufaktur Kereta Api mengembangkan dikenal sebagai manufaktur yang bergerak di bidang perancangan dan produksi sarana perkeretaapian. Salah satu produknya adalah kereta listrik, yaitu jenis kereta yang menggunakan tenaga listrik untuk pengoperasiannya tanpa menggunakan mesin diesel atau lokomotif. Kereta ini terdiri atas dua kabin masinis yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal. Kereta listrik dikenal karena efisiensi energinya yang tinggi, akselerasi yang cepat, serta kontribusinya dalam mengurangi emisi karbon. Dalam pengembangannya, harus dipastikan bahwa kereta listrik yang diproduksi memiliki spesifikasi teknis yang optimal, agar dapat beroperasi secara andal dengan spesifikasi yang paling optimal yang dibutuhkan oleh pelanggan. Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata. Simulasi ini diharapkan dapat mengetahui spesifikasi teknis yang optimal untuk kereta listrik yang akan diproduksi. Dalam rekayasa sistem perkeretaapian, sekadar memvalidasi apakah sebuah rangkaian kereta mampu melintasi jalur tertentu tidaklah cukup. Tantangan utamanya adalah menentukan konfigurasi spesifikasi yang paling efisien di antara berbagai kombinasi parameter teknis yang mungkin. Terdapat hubungan trade-off yang kompleks antar variabel; misalnya, peningkatan kapasitas motor traksi akan meningkatkan akselerasi dan memangkas waktu tempuh, namun secara bersamaan akan meningkatkan konsumsi energi dan biaya operasional. Metode perhitungan konvensional seringkali kesulitan untuk memetakan titik keseimbangan antara performa waktu dan efisiensi energi tersebut. Oleh karena itu, diperlukan pendekatan simulasi yang terintegrasi dengan algoritma optimasi untuk menghasilkan rekomendasi spesifikasi yang objektif dan terukur.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata. | Simulasi ini diharapkan dapat mengetahui spesifikasi teknis yang optimal untuk kereta listrik yang akan diproduksi.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Salah satu produknya adalah kereta listrik, yaitu jenis kereta yang menggunakan tenaga listrik untuk pengoperasiannya tanpa menggunakan mesin diesel atau lokomotif. | Kereta listrik dikenal karena efisiensi energinya yang tinggi, akselerasi yang cepat, serta kontribusinya dalam mengurangi emisi karbon.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "status": "sesuai",
+    "wajib_terpenuhi": "2/2",
+    "chunk_id": "bab1_sub1-2_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Pengujian performa kereta dapat dilakukan melalui uji lapangan, walaupun metode ini tidak efisien dari segi waktu, biaya, dan risiko. | Oleh karena itu, simulasi menjadi metode penting untuk memodelkan dan menganalisis berbagai skenario spesifikasi secara virtual. | Namun pada praktiknya, kombinasi variabel untuk pengujian belum merepresentasikan hasil terbaik yang bisa dicapai.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Ketiadaan sistem optimasi berdampak pada efisiensi spesifikasi dan kualitas keputusan teknis yang dihasilkan. | Tanpa adanya sistem evaluasi yang sistematis, engineer berpotensi memilih spesifikasi yang menghasilkan konsumsi daya yang lebih tinggi dari yang diperlukan.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY\nProblem Domain: kereta api listrik | Problem: sulitnya mengoptimalkan spesifikasi kereta api listrik | Uniqueness: simulasi optimasi menggunakan logika fuzzy\n\nSUBBAB: PERMASALAHAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, Problem-nya adalah tentang deteksi penyakit kanker, sehingga penulis disini dapat menceritakan tentang sulitnya pendeteksian penyakit kanker dengan mendeskripsikan faktor- faktor yang membuat sulit dalam pendeteksiannya.\n\nTEKS MAHASISWA:\n\"\"\"\nPerusahan Manufaktur Kereta Api memproduksi berbagai jenis kereta berpenggerak seperti Kereta Rel Diesel (KRD), Kereta Rel Listrik (KRL), dan kereta Hybrid. Salah satu produk unggulan Perusahaan Manufaktur Kereta Api adalah kereta listrik (KRL), yaitu jenis kereta yang menggunakan motor traksi listrik terintegrasi tanpa memerlukan lokomotif terpisah. KRL memiliki keunggulan dibanding KRD dalam hal efisiensi energi (85-90% vs 30-40%), akselerasi yang lebih cepat, dan emisi nol pada titik operasi. Kereta ini terdiri atas dua atau lebih kereta yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal. Kereta listrik dikenal karena efisiensi energi yang tinggi, akselerasi yang cepat, serta berkontribusi dalam mengurangi emisi karbon. Pengujian performa kereta dapat dilakukan melalui uji lapangan, walaupun metode ini tidak efisien dari segi waktu, biaya, dan risiko. Oleh karena itu, simulasi menjadi metode penting untuk memodelkan dan menganalisis berbagai skenario spesifikasi secara virtual. Simulasi dengan skenario spesifik secara virtual diharapkan dapat memberikan gambaran terbaik atas spesifikasi kereta yang akan diuji. Namun pada praktiknya, kombinasi variabel untuk pengujian belum merepresentasikan hasil terbaik yang bisa dicapai. Misalnya, kereta yang akan diuji memiliki konsumsi daya yang sangat tinggi, sehingga biaya yang dikeluarkan untuk perjalanan kereta akan sangat tinggi. Sebaliknya, jika konsumsi daya terlalu rendah, kereta memerlukan waktu yang lebih lama untuk mencapai tujuan. Hal tersebut dikarenakan penentuan kombinasi parameter teknis seperti percepatan dan weakening point masih dilakukan secara manual, sehingga tidak ada jaminan bahwa kombinasi yang dipilih benar-benar merepresentasikan titik keseimbangan terbaik antara waktu tempuh dan konsumsi daya. Ketiadaan sistem optimasi berdampak pada efisiensi spesifikasi dan kualitas keputusan teknis yang dihasilkan. Tanpa adanya sistem evaluasi yang sistematis, engineer berpotensi memilih spesifikasi yang menghasilkan konsumsi daya yang lebih tinggi dari yang diperlukan. Atau mungkin sebaliknya, spesifikasi yang terlalu berfokus pada efisiensi daya, sehingga waktu tempuh menjadi tidak efisien. Kedua kondisi ini berimplikasi pada peningkatan biaya produksi maupun operasional kereta yang merugikan Perusahaan Manufaktur Kereta Api maupun pelanggannya. Berdasarkan uraian permasalahan tersebut, dapat disimpulkan bahwa Perusahaan Manufaktur Kereta Api membutuhkan sebuah sistem simulasi yang lebih modern, interaktif, serta dapat digunakan secara fleksibel untuk membantu penentuan spesifikasi kereta listrik dengan lebih efisien dan akurat.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Pengujian performa kereta dapat dilakukan melalui uji lapangan, walaupun metode ini tidak efisien dari segi waktu, biaya, dan risiko. | Oleh karena itu, simulasi menjadi metode penting untuk memodelkan dan menganalisis berbagai skenario spesifikasi secara virtual. | Namun pada praktiknya, kombinasi variabel untuk pengujian belum merepresentasikan hasil terbaik yang bisa dicapai.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Ketiadaan sistem optimasi berdampak pada efisiensi spesifikasi dan kualitas keputusan teknis yang dihasilkan. | Tanpa adanya sistem evaluasi yang sistematis, engineer berpotensi memilih spesifikasi yang menghasilkan konsumsi daya yang lebih tinggi dari yang diperlukan.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "TUJUAN",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "5/6",
+    "chunk_id": "bab1_sub1-4_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Tujuan proyek akhir harus jelas,",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Tujuan proyek akhir harus singkat,",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Tujuan proyek akhir harus mengandung klaim orisinalitas.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Sistem ini dirancang untuk memungkinkan pengguna untuk menentukan spesifikasi yang paling optimal secara otomatis, sehingga hasil yang diberikan akan lebih objektif, terukur dan efisien secara biaya. | Dengan adanya antarmuka pengguna yang intuitif, pengguna dapat dengan mudah menyusun parameter teknis maupun melihat hasil dari simulasi dan proses lanjutan dengan logika fuzzy.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K6",
+        "sumber": "Awali tujuan dengan kalimat pembuka seperti: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY\nProblem Domain: kereta api listrik | Problem: sulitnya mengoptimalkan spesifikasi kereta api listrik | Uniqueness: simulasi optimasi menggunakan logika fuzzy\n\nSUBBAB: TUJUAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”. Kalimat-kalimat selanjutnya kemudian memperjelas solusi dengan fitur-fitur unik seperti apa yang ditawarkan pada penelitian sebagai suatu solusi untuk menjawab permasalahan.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, orisinalitasnya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker. Kalimat pertama pada tujuan dapat diawali dengan contoh berikut, “Penelitian proyek akhir ini mengajukan suatu pendekatan baru untuk pendeteksian penyakit kanker dengan mempresentasikan model klasifikasi menggunakan Sistem Pakar yang berbasis Fuzzy”. Kemudian pada kalimat- kalimat berikutnya terangkan secara argumentatif tentang fitur-fitur unik pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker.\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy. Sistem ini dirancang untuk memungkinkan pengguna untuk menentukan spesifikasi yang paling optimal secara otomatis, sehingga hasil yang diberikan akan lebih objektif, terukur dan efisien secara biaya. Melalui simulasi, sistem akan menghitung parameter-parameter teknis seperti berat, gaya resistensi, kecepatan, daya, jarak tempuh, serta konsumsi energi kereta secara real time. Nilai-nilai ini akan diproses lebih lanjut dengan menggunakan logika fuzzy, guna menentukan spesifikasi kereta paling optimal berdasarkan nilai-nilai hasil perhitungan simulasi sebelumnya. Dengan adanya proses ini, sistem mampu memberikan spesifikasi kereta yang paling optimal dengan menyeimbangkan antara waktu tempuh paling cepat dengan daya penggerak dan konsumsi energi yang paling minimum. Sistem ini tidak dapat diakses dengan mudah tanpa adanya antarmuka pengguna. Maka dari itu, selain adanya simulasi dan pemrosesan secara lanjut menggunakan logika fuzzy, antarmuka pengguna yang intuitif sangat diperlukan. Dengan adanya antarmuka pengguna yang intuitif, pengguna dapat dengan mudah menyusun parameter teknis maupun melihat hasil dari simulasi dan proses lanjutan dengan logika fuzzy. Dengan adanya aplikasi ini, diharapkan memberikan rekomendasi spesifikasi kereta yang optimal serta lebih efisien dan adaptif dibanding metode simulasi manual yang selama ini digunakan di lingkungan industri Perusahaan Manufaktur Kereta Api.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Tujuan proyek akhir harus jelas,\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Tujuan proyek akhir harus singkat,\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Tujuan proyek akhir harus mengandung klaim orisinalitas.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Sistem ini dirancang untuk memungkinkan pengguna untuk menentukan spesifikasi yang paling optimal secara otomatis, sehingga hasil yang diberikan akan lebih objektif, terukur dan efisien secara biaya. | Dengan adanya antarmuka pengguna yang intuitif, pengguna dapat dengan mudah menyusun parameter teknis maupun melihat hasil dari simulasi dan proses lanjutan dengan logika fuzzy.\"\n    },\n    {\n      \"id\": \"K6\",\n      \"sumber\": \"Awali tujuan dengan kalimat pembuka seperti: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "MANFAAT",
+    "status": "sesuai",
+    "wajib_terpenuhi": "2/2",
+    "chunk_id": "bab1_sub1-5_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY\nProblem Domain: kereta api listrik | Problem: sulitnya mengoptimalkan spesifikasi kereta api listrik | Uniqueness: simulasi optimasi menggunakan logika fuzzy\n\nSUBBAB: MANFAAT\n\nPETUNJUK PANDUAN:\nUraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan simulasi yang tidak memberikan spesifikasi paling optimal.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "status": "sesuai",
+    "wajib_terpenuhi": "6/6",
+    "chunk_id": "bab1_sub1-6_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 1.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Pendahuluan.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 2.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 2 Kajian Pustaka Bab ini berisi pembahasan tentang teori-teori yang relevan sebagai dasar penelitian, mencakup tinjauan tentang logika fuzzy (fuzzy logic), simulasi, dan penelitian-penelitian terkait yang mendukung pengembangan simulasi yang diusulkan.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 3.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 3 Deskripsi Sistem Bab ini menguraikan solusi yang ditawarkan untuk mengatasi permasalahan, mencakup deskripsi sistem, rancangan desain, serta langkah-langkah teknis yang akan dilakukan dalam pengembangan simulasi kereta yang menggunakan logika fuzzy.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 4.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 4 Eksperimen dan Analisis Bab ini menjelaskan pengujian sistem yang telah dirancang, analisis terhadap hasil eksperimen, serta evaluasi kinerja sistem dalam menyelesaikan permasalahan yang diangkat.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K6",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 5.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 5 Penutup Bab ini memuat kesimpulan dari penelitian yang dilakukan serta saran untuk pengembangan lebih lanjut di masa depan.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY\nProblem Domain: kereta api listrik | Problem: sulitnya mengoptimalkan spesifikasi kereta api listrik | Uniqueness: simulasi optimasi menggunakan logika fuzzy\n\nSUBBAB: SISTEMATIKA PENULISAN\n\nPETUNJUK PANDUAN:\nJelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan memuat bagian-bagian penting pada Penutup.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nBab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir. Bab 2 Kajian Pustaka Bab ini berisi pembahasan tentang teori-teori yang relevan sebagai dasar penelitian, mencakup tinjauan tentang logika fuzzy (fuzzy logic), simulasi, dan penelitian-penelitian terkait yang mendukung pengembangan simulasi yang diusulkan. Bab 3 Deskripsi Sistem Bab ini menguraikan solusi yang ditawarkan untuk mengatasi permasalahan, mencakup deskripsi sistem, rancangan desain, serta langkah-langkah teknis yang akan dilakukan dalam pengembangan simulasi kereta yang menggunakan logika fuzzy. Bab 4 Eksperimen dan Analisis Bab ini menjelaskan pengujian sistem yang telah dirancang, analisis terhadap hasil eksperimen, serta evaluasi kinerja sistem dalam menyelesaikan permasalahan yang diangkat. Bab 5 Penutup Bab ini memuat kesimpulan dari penelitian yang dilakukan serta saran untuk pengembangan lebih lanjut di masa depan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 1.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Pendahuluan.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 2.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 2 Kajian Pustaka Bab ini berisi pembahasan tentang teori-teori yang relevan sebagai dasar penelitian, mencakup tinjauan tentang logika fuzzy (fuzzy logic), simulasi, dan penelitian-penelitian terkait yang mendukung pengembangan simulasi yang diusulkan.\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 3.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 3 Deskripsi Sistem Bab ini menguraikan solusi yang ditawarkan untuk mengatasi permasalahan, mencakup deskripsi sistem, rancangan desain, serta langkah-langkah teknis yang akan dilakukan dalam pengembangan simulasi kereta yang menggunakan logika fuzzy.\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 4.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 4 Eksperimen dan Analisis Bab ini menjelaskan pengujian sistem yang telah dirancang, analisis terhadap hasil eksperimen, serta evaluasi kinerja sistem dalam menyelesaikan permasalahan yang diangkat.\"\n    },\n    {\n      \"id\": \"K6\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 5.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 5 Penutup Bab ini memuat kesimpulan dari penelitian yang dilakukan serta saran untuk pengembangan lebih lanjut di masa depan.\"\n    }\n  ]\n}"
+    }
+  }
+]

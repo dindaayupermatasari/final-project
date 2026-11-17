@@ -1,0 +1,226 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "match": {
+      "pilihan_llm": "bab1_sub1-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-4_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-4_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "match": {
+      "pilihan_llm": "bab1_sub1-5_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-5_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-6_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-6_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab2_sub2-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "match": {
+      "pilihan_llm": "bab2_sub2-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "match": {
+      "pilihan_llm": "bab2_sub2-3_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-3_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "match": {
+      "pilihan_llm": "bab3_sub3-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab3_sub3-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.2 PERANCANGAN SISTEM",
+    "match": {
+      "pilihan_llm": "bab3_sub3-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab3_sub3-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.5.1 Login Page",
+    "match": null,
+    "error": null
+  },
+  {
+    "subbab": "3.5.2 Generation Workspace Page",
+    "match": null,
+    "error": null
+  },
+  {
+    "subbab": "3.5.3 Verifikasi Sumber",
+    "match": null,
+    "error": null
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.2 KARAKTERISTIK DATA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.3 TEMPAT UJI COBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-3_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-3_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.4 WAKTU UJI COBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-4_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-4_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJI COBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-5_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-5_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERIMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-6_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-6_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-7_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-7_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "match": {
+      "pilihan_llm": "bab5_sub5-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab5_sub5-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "match": {
+      "pilihan_llm": "bab5_sub5-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab5_sub5-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  }
+]

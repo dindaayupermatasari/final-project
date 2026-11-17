@@ -1,0 +1,77 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "match": {
+      "pilihan_llm": "bab1_sub1-1_instruction",
+      "alasan": "Instruksi tersebut secara spesifik mengatur penulisan subbab LATAR BELAKANG yang sesuai dengan judul dan isi subbab mahasiswa.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-1_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: LATAR BELAKANG\nCuplikan isi: Perkembangan teknologi informasi dan komunikasi di Indonesia dalam beberapa tahun terakhir telah membawa perubahan besar dalam cara masyarakat beraktivitas. Internet kini menjadi bagian tak terpisahkan dari kehidupan sehari-hari, baik untuk bekerja, belajar, maupun berinteraksi sosial. Pertumbuhan pesat penggunaan internet ini tidak lepas dari peran penting Internet Service Provider (ISP) atau penyedia layanan internet yang menjadi penghubung utama antara masyarakat dan dunia digital. Internet S\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-1_instruction\nJudul panduan: LATAR BELAKANG\nIsi: Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nID: bab1_sub1-3_instruction\nJudul panduan: BATASAN MASALAH\nIsi: Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.\n\nID: bab2_sub2-2_instruction\nJudul panduan: TEORI PENUNJANG\nIsi: Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan. Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan. Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir. Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2].",
+        "raw": "{\"pilihan\": \"bab1_sub1-1_instruction\", \"alasan\": \"Instruksi tersebut secara spesifik mengatur penulisan subbab LATAR BELAKANG yang sesuai dengan judul dan isi subbab mahasiswa.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-2_instruction",
+      "alasan": "Subbab berjudul PERMASALAHAN dengan isi menjelaskan masalah penelitian cocok dengan panduan yang mengatur penulisan PERMASALAHAN.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-2_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: PERMASALAHAN\nCuplikan isi: Untuk menindaklanjuti latar belakang di atas, permasalahan yang dapat diidentifikasi sebagai berikut. Layanan Internet Service Provider (ISP) di Indonesia masih menimbulkan berbagai keluhan dari pelanggan. Hal ini menunjukkan bahwa kualitas layanan belum merata dan belum memenuhi harapan pelanggan di seluruh wilayah. Opini dan keluhan pelanggan yang tersebar di berbagai platform digital, khususnya media sosial, memiliki volume dan variasi yang sangat besar sehingga analisis secara manual menjadi\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-3_instruction\nJudul panduan: BATASAN MASALAH\nIsi: Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.\n\nID: bab1_sub1-2_instruction\nJudul panduan: PERMASALAHAN\nIsi: Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.\n\nID: bab4_sub4-5_instruction\nJudul panduan: SPESIFIKASI PERALATAN UJICOBA\nIsi: Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-2_instruction\", \"alasan\": \"Subbab berjudul PERMASALAHAN dengan isi menjelaskan masalah penelitian cocok dengan panduan yang mengatur penulisan PERMASALAHAN.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "TUJUAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-4_instruction",
+      "alasan": "Subbab berjudul 'TUJUAN' dan isinya menjelaskan tujuan penelitian, sesuai dengan petunjuk yang mengatur penulisan tujuan proyek akhir.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-4_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: TUJUAN\nCuplikan isi: Berdasarkan latar belakang dan permasalahan sebelumnya, proyek akhir ini memiliki tujuan sebagai berikut. Penelitian menganalisis opini pelanggan terhadap layanan Internet Service Provider (ISP) berdasarkan aspek-aspek layanan yang dibahas dalam komentar pelanggan. Proyek akhir ini mengidentifikasi aspek-aspek yang paling banyak menimbulkan keluhan maupun apresiasi dari pelanggan, seperti kecepatan, stabilitas jaringan, harga, dan layanan pelanggan. Penelitian mengklasifikasikan sentimen pelangg\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab2_sub2-2_instruction\nJudul panduan: TEORI PENUNJANG\nIsi: Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan. Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan. Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir. Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2].\n\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.",
+        "raw": "{\n  \"pilihan\": \"bab1_sub1-4_instruction\",\n  \"alasan\": \"Subbab berjudul 'TUJUAN' dan isinya menjelaskan tujuan penelitian, sesuai dengan petunjuk yang mengatur penulisan tujuan proyek akhir.\"\n}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "MANFAAT",
+    "match": {
+      "pilihan_llm": "bab1_sub1-5_instruction",
+      "alasan": "Subbab berjudul MANFAAT membahas manfaat bagi ISP dan masyarakat, sesuai dengan petunjuk yang mengatur penulisan manfaat proyek akhir.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-5_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: MANFAAT\nCuplikan isi: Berdasarkan latar belakang dan permasalahan sebelumnya, proyek akhir ini memiliki tujuan sebagai berikut. Perusahaan Internet Service Provider: Sebagai bahan evaluasi untuk mengetahui aspek layanan yang paling sering menjadi perhatian pelanggan, sehingga perusahaan dapat menentukan prioritas perbaikan dan meningkatkan mutu layanan secara berkelanjutan. Masyarakat umum: Sebagai gambaran yang lebih objektif mengenai kinerja berbagai ISP berdasarkan opini pelanggan, dan bahan pertimbangan dalam mem\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-5_instruction\nJudul panduan: MANFAAT\nIsi: Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab4_sub4-5_instruction\nJudul panduan: SPESIFIKASI PERALATAN UJICOBA\nIsi: Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-5_instruction\", \"alasan\": \"Subbab berjudul MANFAAT membahas manfaat bagi ISP dan masyarakat, sesuai dengan petunjuk yang mengatur penulisan manfaat proyek akhir.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-6_instruction",
+      "alasan": "Petunjuk dengan judul SISTEMATIKA PENULISAN secara langsung mengatur isi subbab yang menjelaskan struktur bab-bab laporan.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-6_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: SISTEMATIKA PENULISAN\nCuplikan isi: Bab 1 Pendahuluan Bagian ini membahas latar belakang, perumusan masalah, tujuan, dan manfaat penelitian, serta sistematika penulisan laporan. Bab 2 Kajian Pustaka Bagian ini berisi kajian pustaka yang membahas teori-teori, penelitian terdahulu, serta konsep yang mendukung proyek akhir ini. Kajian pustaka ini menjadi dasar konseptual dalam menyusun kerangka berpikir penelitian dan menunjukkan posisi penelitian terhadap studi sebelumnya. Bab 3 Desain Sistem Bagian ini menjelaskan desain sistem dan\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-6_instruction\nJudul panduan: SISTEMATIKA PENULISAN\nIsi: Jelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan mem\n\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.\n\nID: bab5_sub5-1_instruction\nJudul panduan: KESIMPULAN\nIsi: Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-6_instruction\", \"alasan\": \"Petunjuk dengan judul SISTEMATIKA PENULISAN secara langsung mengatur isi subbab yang menjelaskan struktur bab-bab laporan.\"}"
+      }
+    },
+    "error": null
+  }
+]

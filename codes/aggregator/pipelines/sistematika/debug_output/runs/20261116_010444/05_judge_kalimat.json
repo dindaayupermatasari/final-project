@@ -1,0 +1,507 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Selain itu, opini pelanggan di media sosial juga sering kali bersifat kompleks, karena satu komentar dapat memuat lebih dari satu aspek dengan sentimen yang berbeda."
+        ],
+        "dibebaskan": [
+          "Namun, meningkatnya jumlah pelanggan tidak serta-merta diikuti oleh pemerataan kualitas layanan.",
+          "Faktor geografis dan infrastruktur menjadi tantangan utama dalam pemerataan akses internet nasional.",
+          "Selain itu, tingkat literasi digital masyarakat yang masih rendah membuat pemanfaatan teknologi belum optimal.",
+          "Di sisi lain, banyak pelanggan juga mengeluhkan kualitas layanan yang tidak stabil, gangguan jaringan, serta lambatnya tanggapan dari layanan pelanggan.",
+          "Kondisi ini menunjukkan bahwa meskipun akses internet semakin luas, kualitas dan pengalaman pelanggan masih menjadi pekerjaan rumah bagi banyak penyedia layanan[4].",
+          "Sementara itu, masyarakat di daerah dengan jaringan terbatas sering merasa dirugikan karena layanan yang tidak sebanding dengan biaya berlangganan."
+        ],
+        "saran": "Latar belakang tidak perlu membahas problem; pindahkan ke Permasalahan.",
+        "catatan": "6 kalimat dibebaskan setelah verifikasi"
+      },
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Pada tahap ini, aspek penting dalam pengalaman pelanggan perlu dianalisis berdasarkan pandangan dari praktisi industri, agar dapat mengkategorikan aspek tersebut secara relevan dan berdampak terhadap kepuasan pelanggan.",
+          "Kompleksitas tersebut memerlukan metode analisis yang mampu menangani multi-aspect dan multi-Sentimen secara bersamaan."
+        ],
+        "dibebaskan": [],
+        "saran": "Solusi tidak dibahas di latar belakang; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 14,
+      "MASALAH": 7,
+      "SOLUSI": 2,
+      "LAIN": 2
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Perkembangan teknologi informasi dan komunikasi di Indonesia dalam beberapa tahun terakhir telah membawa perubahan besar dalam cara masyarakat beraktivitas.",
+        "label": "LAIN",
+        "alasan": "konteks umum ICT, tidak menyebut ISP"
+      },
+      {
+        "n": 2,
+        "kalimat": "Internet kini menjadi bagian tak terpisahkan dari kehidupan sehari-hari, baik untuk bekerja, belajar, maupun berinteraksi sosial.",
+        "label": "LAIN",
+        "alasan": "deskripsi umum internet, bukan ISP"
+      },
+      {
+        "n": 3,
+        "kalimat": "Pertumbuhan pesat penggunaan internet ini tidak lepas dari peran penting Internet Service Provider (ISP) atau penyedia layanan internet yang menjadi penghubung utama antara masyarakat dan dunia digital.",
+        "label": "PD",
+        "alasan": "menjelaskan peran penting ISP dalam pertumbuhan internet"
+      },
+      {
+        "n": 4,
+        "kalimat": "Internet Service Provider (ISP) merupakan entitas perusahaan yang menyediakan layanan konektivitas internet.",
+        "label": "PD",
+        "alasan": "definisi ISP sebagai entitas penyedia layanan"
+      },
+      {
+        "n": 5,
+        "kalimat": "ISP memberikan akses kepada konsumen untuk terhubung ke jaringan yang mencakup skala regional hingga internasional, sehingga memungkinkan konektivitas global yang lancar[1].",
+        "label": "PD",
+        "alasan": "menjabarkan fungsi ISP memberikan akses"
+      },
+      {
+        "n": 6,
+        "kalimat": "Me.lalui ISP, akses terhadap informasi, hiburan, serta layanan publik menjadi lebih mudah dijangkau oleh seluruh lapisan masyarakat.",
+        "label": "PD",
+        "alasan": "menyatakan peran ISP dalam akses informasi"
+      },
+      {
+        "n": 7,
+        "kalimat": "Keberadaan ISP juga berkontribusi terhadap munculnya masyarakat digital yang semakin terbuka terhadap inovasi dan pemanfaatan teknologi di berbagai bidang kehidupan[2].",
+        "label": "PD",
+        "alasan": "menyebut kontribusi ISP terhadap masyarakat digital"
+      },
+      {
+        "n": 8,
+        "kalimat": "Peran penting ISP dalam menyediakan akses internet tersebut sejalan dengan meningkatnya jumlah pelanggan internet di Indonesia dari tahun ke tahun.",
+        "label": "PD",
+        "alasan": "hubungan antara peran ISP dan peningkatan pelanggan"
+      },
+      {
+        "n": 9,
+        "kalimat": "Berdasarkan hasil Survei Sosial Ekonomi Nasional tahun 2024, sebanyak 72,78% penduduk Indonesia telah mengakses internet, meningkat dari 62,10% pada tahun 2021[3].",
+        "label": "PD",
+        "alasan": "statistik penggunaan internet di Indonesia"
+      },
+      {
+        "n": 10,
+        "kalimat": "Kenaikan ini tidak hanya terjadi di wilayah perkotaan, tetapi juga di daerah pedesaan, yang artinya menandakan bahwa transformasi digital telah menjangkau berbagai lapisan masyarakat.",
+        "label": "PD",
+        "alasan": "penyebaran internet ke wilayah perkotaan dan pedesaan"
+      },
+      {
+        "n": 11,
+        "kalimat": "Namun, meningkatnya jumlah pelanggan tidak serta-merta diikuti oleh pemerataan kualitas layanan.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan ketidakseimbangan kualitas layanan",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 12,
+        "kalimat": "Faktor geografis dan infrastruktur menjadi tantangan utama dalam pemerataan akses internet nasional.",
+        "label": "MASALAH",
+        "alasan": "menyebut tantangan geografis dan infrastruktur",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 13,
+        "kalimat": "Selain itu, tingkat literasi digital masyarakat yang masih rendah membuat pemanfaatan teknologi belum optimal.",
+        "label": "MASALAH",
+        "alasan": "literasi digital rendah sebagai kendala",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 14,
+        "kalimat": "Di sisi lain, banyak pelanggan juga mengeluhkan kualitas layanan yang tidak stabil, gangguan jaringan, serta lambatnya tanggapan dari layanan pelanggan.",
+        "label": "MASALAH",
+        "alasan": "keluhan pelanggan tentang kualitas layanan",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 15,
+        "kalimat": "Kondisi ini menunjukkan bahwa meskipun akses internet semakin luas, kualitas dan pengalaman pelanggan masih menjadi pekerjaan rumah bagi banyak penyedia layanan[4].",
+        "label": "MASALAH",
+        "alasan": "menyatakan masalah kualitas dan pengalaman pelanggan",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 16,
+        "kalimat": "Perbedaan kondisi layanan internet tersebut turut membentuk beragam persepsi di masyarakat.",
+        "label": "PD",
+        "alasan": "menjelaskan variasi persepsi layanan di masyarakat"
+      },
+      {
+        "n": 17,
+        "kalimat": "Di wilayah perkotaan, masyarakat umumnya mengandalkan internet untuk aktivitas produktif seperti bekerja dari rumah dan pembelajaran online.",
+        "label": "PD",
+        "alasan": "deskripsi penggunaan internet di wilayah perkotaan"
+      },
+      {
+        "n": 18,
+        "kalimat": "Sementara itu, masyarakat di daerah dengan jaringan terbatas sering merasa dirugikan karena layanan yang tidak sebanding dengan biaya berlangganan.",
+        "label": "MASALAH",
+        "alasan": "ketidakpuasan masyarakat di daerah dengan jaringan terbatas",
+        "alasan_verifikasi": "tidak menyebut sentimen",
+        "dibebaskan": true
+      },
+      {
+        "n": 19,
+        "kalimat": "Meski demikian, masyarakat tetap menilai internet sebagai kebutuhan dasar yang sangat penting untuk menunjang aktivitas harian.",
+        "label": "PD",
+        "alasan": "menyatakan nilai penting internet bagi masyarakat"
+      },
+      {
+        "n": 20,
+        "kalimat": "Seiring dengan meningkatnya ketergantungan masyarakat terhadap internet, media sosial menjadi ruang utama bagi pelanggan untuk menyampaikan opini terhadap layanan ISP.",
+        "label": "PD",
+        "alasan": "media sosial sebagai ruang opini pelanggan ISP"
+      },
+      {
+        "n": 21,
+        "kalimat": "Platform seperti X (Twitter), Instagram, dan Facebook digunakan untuk menyampaikan keluhan maupun apresiasi terhadap kualitas layanan yang diterima.",
+        "label": "PD",
+        "alasan": "platform media sosial yang dipakai untuk keluhan/apresiasi"
+      },
+      {
+        "n": 22,
+        "kalimat": "Komentar pelanggan tidak hanya mencerminkan rasa puas atau kecewa, tetapi juga sering kali menyinggung aspek-aspek tertentu dalam layanan seperti kecepatan, kestabilan jaringan, harga, dan pelayanan pelanggan.",
+        "label": "PD",
+        "alasan": "aspek-aspek layanan yang disebutkan dalam komentar"
+      },
+      {
+        "n": 23,
+        "kalimat": "Pada tahap ini, aspek penting dalam pengalaman pelanggan perlu dianalisis berdasarkan pandangan dari praktisi industri, agar dapat mengkategorikan aspek tersebut secara relevan dan berdampak terhadap kepuasan pelanggan.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kebutuhan analisis aspek pelanggan",
+        "alasan_verifikasi": "menyebut solusi/pendekatan"
+      },
+      {
+        "n": 24,
+        "kalimat": "Selain itu, opini pelanggan di media sosial juga sering kali bersifat kompleks, karena satu komentar dapat memuat lebih dari satu aspek dengan sentimen yang berbeda.",
+        "label": "MASALAH",
+        "alasan": "menyoroti kompleksitas opini multi‑aspek",
+        "alasan_verifikasi": "menyebut kesulitan analisis sentimen"
+      },
+      {
+        "n": 25,
+        "kalimat": "Kompleksitas tersebut memerlukan metode analisis yang mampu menangani multi-aspect dan multi-Sentimen secara bersamaan.",
+        "label": "SOLUSI",
+        "alasan": "menyebut perlunya metode analisis multi‑aspect dan multi‑sentimen",
+        "alasan_verifikasi": "menyebut solusi/pendekatan"
+      }
+    ]
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Diperlukan pendekatan analisis otomatis berbasis Natural Language Processing (NLP), khususnya metode Aspect-Based Sentimen Analysis (ABSA), untuk memetakan opini pelanggan berdasarkan aspek layanan yang dibahas, sehingga perusahaan dapat mengetahui aspek yang paling sering dikeluhkan dan menjadi prioritas perbaikan"
+        ],
+        "dibebaskan": [],
+        "saran": "Permasalahan tidak memuat solusi; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 2,
+      "MASALAH": 1,
+      "SOLUSI": 1,
+      "LAIN": 1
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Untuk menindaklanjuti latar belakang di atas, permasalahan yang dapat diidentifikasi sebagai berikut.",
+        "label": "LAIN",
+        "alasan": "Kalimat pengantar, tidak menyebut domain atau masalah spesifik"
+      },
+      {
+        "n": 2,
+        "kalimat": "Layanan Internet Service Provider (ISP) di Indonesia masih menimbulkan berbagai keluhan dari pelanggan.",
+        "label": "PD",
+        "alasan": "Menyebut layanan ISP di Indonesia dan keluhan pelanggan"
+      },
+      {
+        "n": 3,
+        "kalimat": "Hal ini menunjukkan bahwa kualitas layanan belum merata dan belum memenuhi harapan pelanggan di seluruh wilayah.",
+        "label": "PD",
+        "alasan": "Menjelaskan kondisi kualitas layanan ISP yang belum merata"
+      },
+      {
+        "n": 4,
+        "kalimat": "Opini dan keluhan pelanggan yang tersebar di berbagai platform digital, khususnya media sosial, memiliki volume dan variasi yang sangat besar sehingga analisis secara manual menjadi tidak efisien dan berpotensi mengabaikan pola penting dalam persepsi pelanggan.",
+        "label": "MASALAH",
+        "alasan": "Menunjukkan kesulitan analisis manual karena volume besar"
+      },
+      {
+        "n": 5,
+        "kalimat": "Diperlukan pendekatan analisis otomatis berbasis Natural Language Processing (NLP), khususnya metode Aspect-Based Sentimen Analysis (ABSA), untuk memetakan opini pelanggan berdasarkan aspek layanan yang dibahas, sehingga perusahaan dapat mengetahui aspek yang paling sering dikeluhkan dan menjadi prioritas perbaikan",
+        "label": "SOLUSI",
+        "alasan": "Menyatakan perlunya pendekatan otomatis (ABSA) sebagai solusi",
+        "alasan_verifikasi": "menyebut solusi"
+      }
+    ]
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 0,
+      "MASALAH": 0,
+      "SOLUSI": 5,
+      "LAIN": 1
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Berdasarkan latar belakang dan permasalahan sebelumnya, proyek akhir ini memiliki tujuan sebagai berikut.",
+        "label": "LAIN",
+        "alasan": "Pernyataan umum tentang tujuan"
+      },
+      {
+        "n": 2,
+        "kalimat": "Penelitian menganalisis opini pelanggan terhadap layanan Internet Service Provider (ISP) berdasarkan aspek-aspek layanan yang dibahas dalam komentar pelanggan.",
+        "label": "SOLUSI",
+        "alasan": "Menjelaskan metode analisis opini"
+      },
+      {
+        "n": 3,
+        "kalimat": "Proyek akhir ini mengidentifikasi aspek-aspek yang paling banyak menimbulkan keluhan maupun apresiasi dari pelanggan, seperti kecepatan, stabilitas jaringan, harga, dan layanan pelanggan.",
+        "label": "SOLUSI",
+        "alasan": "Menyebutkan identifikasi aspek keluhan/apresiasi"
+      },
+      {
+        "n": 4,
+        "kalimat": "Penelitian mengklasifikasikan sentimen pelanggan pada setiap aspek layanan menjadi kategori positif, negatif, atau netral guna memperoleh pemahaman yang lebih spesifik mengenai persepsi pelanggan.",
+        "label": "SOLUSI",
+        "alasan": "Menyatakan klasifikasi sentimen per aspek"
+      },
+      {
+        "n": 5,
+        "kalimat": "Penelitian memberikan gambaran yang lebih jelas mengenai masalah utama pada layanan ISP melalui analisis sentimen berbasis aspek (Aspect-Based Sentimen Analysis/ABSA).",
+        "label": "SOLUSI",
+        "alasan": "Memberikan gambaran masalah via ABSA"
+      },
+      {
+        "n": 6,
+        "kalimat": "Penelitian menyediakan hasil analisis yang dapat digunakan sebagai dasar pertimbangan bagi perusahaan dalam melakukan evaluasi dan peningkatan kualitas layanan secara berkelanjutan.",
+        "label": "SOLUSI",
+        "alasan": "Menyediakan hasil analisis untuk evaluasi layanan"
+      }
+    ]
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.2 SUMBER DATA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.3 PERANCANGAN SISTEM",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.4 TAHAPAN IMPLEMENTASI SISTEM",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.5 Proses Pembuatan Model",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.6 Stratisfied K-Fold Cross Validation",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.7 Fine-Tuning Model BERT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.8 Evaluasi Model",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.9 Penyimpanan Model",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.10 Alur Kerja Antarmuka Website",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.11 SEGMENTASI KALIMAT TAHAP INFERENSI",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.12 Latar Belakang Penerapan Segmentasi",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.13 Mekanisme Segmentasi Berbasis Konjungsi",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.14 Alur Proses Segmentasi",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.15 RANCANGAN ANTARMUKA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.2 KARATERISTIK DATA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  }
+]

@@ -1,0 +1,397 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "match": {
+      "pilihan_llm": "bab1_sub1-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-4_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-4_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "match": {
+      "pilihan_llm": "bab1_sub1-5_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-5_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-6_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-6_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab2_sub2-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "match": {
+      "pilihan_llm": "bab2_sub2-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "match": {
+      "pilihan_llm": "bab2_sub2-3_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab2_sub2-3_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "match": {
+      "pilihan_llm": "bab3_sub3-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab3_sub3-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.2 SUMBER DATA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-2_instruction",
+      "alasan": "Petunjuk tentang karakteristik data mengatur penjelasan sumber data dan alasan pemilihannya.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: SUMBER DATA\nCuplikan isi: Data yang digunakan dalam penelitian ini berupa komentar pengguna yang dikumpulkan dari akun Instagram resmi delapan penyedia layanan internet (ISP) di Indonesia. Pemilihan Instagram sebagai sumber data didasarkan pada tingginya tingkat interaksi pengguna di platform tersebut, khususnya dalam bentuk komentar yang secara eksplisit mengekspresikan pengalaman dan opini terhadap layanan yang mereka gunakan. Dibandingkan platform media sosial lainnya, Instagram dinilai lebih representatif karena akun\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab4_sub4-7_instruction\nJudul panduan: ANALISIS HASIL EKSPERIMEN\nIsi: Analisis hasil eksperimen seharusnya menjawab hipotesa bahwa solusi yang diajukan pada Tujuan dapat menyelesaikan permasalahan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Gambar 4.1 Contoh Gambar hasil eksperimen 1 Gambar atau grafik yang menunjukkan hasil eksperimen harus dijelaskan dalam paragraf penjelasan yang padat dan informatif, sebagai contoh dalam kalimat berikut. Grafik pada Gambar 4.1 menunjukkan hubungan antara pengukuran dan perhitungan dari Persamaan 4.1. Gambar 4.2 Contoh Gambar hasil eksperimen 2 dengan nama gambar yang cukup panjang sehingga diperlukan penataan yang baik dalam daftar\n\nID: bab4_sub4-6_instruction\nJudul panduan: HASIL EKSPERMEN\nIsi: Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Tabel 4.1 Contoh tabel hasil eksperimen 1 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.2 Contoh tabel hasil eksperimen 2 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.3 Contoh tabel hasil eksperimen 3 dengan parameter eksperimen yang cukup banyak sehingga nama tabel panjang Kolom 1 Kolom 2 Kolom 3 Kolom 4\n\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.",
+        "raw": "{\n  \"pilihan\": \"bab4_sub4-2_instruction\",\n  \"alasan\": \"Petunjuk tentang karakteristik data mengatur penjelasan sumber data dan alasan pemilihannya.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.3 PERANCANGAN SISTEM",
+    "match": {
+      "pilihan_llm": "bab3_sub3-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab3_sub3-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.4 TAHAPAN IMPLEMENTASI SISTEM",
+    "match": null,
+    "error": "tidak ada kandidat atau teks kosong"
+  },
+  {
+    "subbab": "3.5 Proses Pembuatan Model",
+    "match": {
+      "pilihan_llm": null,
+      "alasan": "Tidak ada petunjuk yang mengatur penjelasan proses pembuatan model, karena semua kandidat membahas tujuan, tempat uji coba, atau spesifikasi peralatan, bukan proses pengembangan model.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Proses Pembuatan Model\nCuplikan isi: Bagian ini menjelaskan proses pengembangan model yang dimulai dari pengumpulan data hingga tahap evaluasi hasil. Data yang digunakan berupa komentar atau opini pelanggan dari media sosial yang membahas layanan perusahaan penyedia jasa internet. Data yang diperoleh kemudian diproses dan dianalisis menggunakan pendekatan Aspect-Based Sentimen Analysis (ABSA) berbasis Large Language Model (LLM) untuk mengidentifikasi aspek layanan dan menentukan kecenderungan sentimen pelanggan terhadap aspek terse\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab4_sub4-3_instruction\nJudul panduan: TEMPAT UJICOBA\nIsi: Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.\n\nID: bab4_sub4-5_instruction\nJudul panduan: SPESIFIKASI PERALATAN UJICOBA\nIsi: Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "raw": "{\n  \"pilihan\": null,\n  \"alasan\": \"Tidak ada petunjuk yang mengatur penjelasan proses pembuatan model, karena semua kandidat membahas tujuan, tempat uji coba, atau spesifikasi peralatan, bukan proses pengembangan model.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.6 Stratisfied K-Fold Cross Validation",
+    "match": {
+      "pilihan_llm": null,
+      "alasan": "Tidak ada petunjuk yang mengatur pembahasan tentang teknik validasi Stratified K-Fold Cross Validation.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Stratisfied K-Fold Cross Validation\nCuplikan isi: Pada tahap ini, proses pembentukan dan evaluasi model Aspect-Based Sentimen Analysis (ABSA) dilakukan dengan menggunakan pendekatan Stratified K-Fold Cross Validation (SKCV). Teknik ini diterapkan untuk memastikan model memperoleh hasil evaluasi yang stabil dan representatif terhadap seluruh data, terutama karena dataset yang digunakan memiliki distribusi label yang tidak seimbang antara kelas positif, netral, dan negatif. Stratified K-Fold Cross Validation termasuk metode validasi model dengan \n\nKANDIDAT PETUNJUK PANDUAN\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.\n\nID: bab4_sub4-6_instruction\nJudul panduan: HASIL EKSPERMEN\nIsi: Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Tabel 4.1 Contoh tabel hasil eksperimen 1 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.2 Contoh tabel hasil eksperimen 2 Kolom 1 Kolom 2 Kolom 3 Kolom 4 Tabel 4.3 Contoh tabel hasil eksperimen 3 dengan parameter eksperimen yang cukup banyak sehingga nama tabel panjang Kolom 1 Kolom 2 Kolom 3 Kolom 4\n\nID: bab3_sub3-1_instruction\nJudul panduan: DESKRIPSI SOLUSI\nIsi: Deskripsikan solusi yang ditawarkan pada buku proyek akhir dengan jelas dan detil. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada kegiatan sebagai sesuatu solusi pada kegiatan laporan akhir.",
+        "raw": "{\n  \"pilihan\": null,\n  \"alasan\": \"Tidak ada petunjuk yang mengatur pembahasan tentang teknik validasi Stratified K-Fold Cross Validation.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.7 Fine-Tuning Model BERT",
+    "match": {
+      "pilihan_llm": "bab4_sub4-1_instruction",
+      "alasan": "Subbab membahas fine‑tuning BERT yang merupakan bagian dari eksperimen, sehingga diatur oleh panduan tentang Parameter Eksperimen.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Fine-Tuning Model BERT\nCuplikan isi: Model Bidirectional Encoder Representations from Transformers (BERT) merupakan salah satu arsitektur transformer yang paling banyak digunakan dalam tugas pemrosesan bahasa alami (Natural Language Processing/NLP), termasuk klasifikasi teks, analisis sentimen, deteksi aspek, dan ekstraksi informasi. Kemampuan BERT memahami konteks kalimat secara dua arah (bidirectional) membuatnya unggul dalam mempelajari hubungan antarkata dalam sebuah kalimat. Namun, model BERT yang telah dilatih menggunakan kor\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab4_sub4-1_instruction\nJudul panduan: PARAMETER EKSPERIMEN\nIsi: Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan. Dalam eksperimen ini menggunakan persamaan sebagai berikut: 𝑦 = 𝑚𝑥 + 𝑐 (4.1) (𝑦 − 𝑦1) (𝑥 − 𝑥1) = (𝑦2 − 𝑦1) (𝑥2 − 𝑥1) (4.2) Selain itu dalam eksperimen untuk juga menggunakan persamaan sebagai berikut untuk formulasi perbandingan hasil pengukuran dengan perhitungan 𝑣 = 𝑣₀ + 𝑎𝑡 (4.3) 𝑠 = 𝑣₀𝑡 + (1/2)𝑎𝑡² (4.4) 𝑣² = 𝑣₀² + 2𝑎𝑠 (4.5)\n\nID: bab5_sub5-1_instruction\nJudul panduan: KESIMPULAN\nIsi: Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan.\n\nID: bab1_sub1-5_instruction\nJudul panduan: MANFAAT\nIsi: Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.",
+        "raw": "{\n  \"pilihan\": \"bab4_sub4-1_instruction\",\n  \"alasan\": \"Subbab membahas fine‑tuning BERT yang merupakan bagian dari eksperimen, sehingga diatur oleh panduan tentang Parameter Eksperimen.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.8 Evaluasi Model",
+    "match": {
+      "pilihan_llm": "bab4_sub4-7_instruction",
+      "alasan": "Subbab Evaluasi Model membahas analisis hasil model dan metrik kinerja, yang sesuai dengan panduan 'ANALISIS HASIL EKSPERIMEN' yang mengatur analisis hasil eksperimen dan interpretasi grafik/hasil.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Evaluasi Model\nCuplikan isi: Tahap evaluasi model dilakukan untuk memastikan bahwa hasil prediksi model benar-benar mewakili pola opini pelanggan terhadap layanan perusahaan penyedia jasa internet (ISP) di media sosial. Dalam penelitian ini, evaluasi mencakup dua bagian utama, yaitu evaluasi model klasifikasi aspek dan evaluasi model analisis sentimen, yang keduanya menggunakan metrik pengukuran yang sama agar hasilnya dapat dibandingkan secara konsisten. Kinerja model diukur menggunakan empat variabel utama, yang didefinis\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab4_sub4-1_instruction\nJudul panduan: PARAMETER EKSPERIMEN\nIsi: Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan. Dalam eksperimen ini menggunakan persamaan sebagai berikut: 𝑦 = 𝑚𝑥 + 𝑐 (4.1) (𝑦 − 𝑦1) (𝑥 − 𝑥1) = (𝑦2 − 𝑦1) (𝑥2 − 𝑥1) (4.2) Selain itu dalam eksperimen untuk juga menggunakan persamaan sebagai berikut untuk formulasi perbandingan hasil pengukuran dengan perhitungan 𝑣 = 𝑣₀ + 𝑎𝑡 (4.3) 𝑠 = 𝑣₀𝑡 + (1/2)𝑎𝑡² (4.4) 𝑣² = 𝑣₀² + 2𝑎𝑠 (4.5)\n\nID: bab4_sub4-7_instruction\nJudul panduan: ANALISIS HASIL EKSPERIMEN\nIsi: Analisis hasil eksperimen seharusnya menjawab hipotesa bahwa solusi yang diajukan pada Tujuan dapat menyelesaikan permasalahan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan. Gambar 4.1 Contoh Gambar hasil eksperimen 1 Gambar atau grafik yang menunjukkan hasil eksperimen harus dijelaskan dalam paragraf penjelasan yang padat dan informatif, sebagai contoh dalam kalimat berikut. Grafik pada Gambar 4.1 menunjukkan hubungan antara pengukuran dan perhitungan dari Persamaan 4.1. Gambar 4.2 Contoh Gambar hasil eksperimen 2 dengan nama gambar yang cukup panjang sehingga diperlukan penataan yang baik dalam daftar\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak",
+        "raw": "{\n  \"pilihan\": \"bab4_sub4-7_instruction\",\n  \"alasan\": \"Subbab Evaluasi Model membahas analisis hasil model dan metrik kinerja, yang sesuai dengan panduan 'ANALISIS HASIL EKSPERIMEN' yang mengatur analisis hasil eksperimen dan interpretasi grafik/hasil.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.9 Penyimpanan Model",
+    "match": {
+      "pilihan_llm": null,
+      "alasan": "Tidak ada petunjuk yang mengatur subbab tentang penyimpanan model; kandidat yang ada membahas kesimpulan, manfaat, dan tujuan.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Penyimpanan Model\nCuplikan isi: Setelah model Aspect Classification dan Sentimen Polarity Detection selesai melalui tahap pelatihan dan evaluasi kinerja model, maka tahap selanjutnya yaitu penyimpanan model. Penyimpanan model bertujuan agar model yang telah terlatih dapat digunakan kembali tanpa perlu melakukan pelatihan ulang. Proses penyimpanan dilakukan dengan menyimpan struktur arsitektur model, hasil pelatihan, dan tokenizer yang digunakan selama proses pelatihan. File-file tersebut disimpan dalam direktori terpisah untuk\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab5_sub5-1_instruction\nJudul panduan: KESIMPULAN\nIsi: Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan.\n\nID: bab1_sub1-5_instruction\nJudul panduan: MANFAAT\nIsi: Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak",
+        "raw": "{\n  \"pilihan\": null,\n  \"alasan\": \"Tidak ada petunjuk yang mengatur subbab tentang penyimpanan model; kandidat yang ada membahas kesimpulan, manfaat, dan tujuan.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.10 Alur Kerja Antarmuka Website",
+    "match": {
+      "pilihan_llm": "bab3_sub3-1_instruction",
+      "alasan": "Subbab menjelaskan alur kerja antarmuka website yang merupakan bagian dari deskripsi solusi yang ditawarkan.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Alur Kerja Antarmuka Website\nCuplikan isi: Antarmuka website ISPLens dirancang untuk membantu pengguna memperoleh informasi mengenai aspek dan sentimen pelanggan ISP secara menyeluruh melalui tampilan yang interaktif dan mudah digunakan. Ketika pengguna membuka aplikasi, halaman pertama yang ditampilkan adalah Overview, yang berfungsi sebagai ringkasan umum dari seluruh data komentar pelanggan. Pada halaman ini, pengguna disambut dengan informasi berupa total sentimen, total aspek yang berhasil diidentifikasi, serta jumlah keseluruhan ko\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-1_instruction\nJudul panduan: LATAR BELAKANG\nIsi: Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab3_sub3-1_instruction\nJudul panduan: DESKRIPSI SOLUSI\nIsi: Deskripsikan solusi yang ditawarkan pada buku proyek akhir dengan jelas dan detil. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada kegiatan sebagai sesuatu solusi pada kegiatan laporan akhir.",
+        "raw": "{\n  \"pilihan\": \"bab3_sub3-1_instruction\",\n  \"alasan\": \"Subbab menjelaskan alur kerja antarmuka website yang merupakan bagian dari deskripsi solusi yang ditawarkan.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.11 SEGMENTASI KALIMAT TAHAP INFERENSI",
+    "match": null,
+    "error": "tidak ada kandidat atau teks kosong"
+  },
+  {
+    "subbab": "3.12 Latar Belakang Penerapan Segmentasi",
+    "match": {
+      "pilihan_llm": "bab1_sub1-1_instruction",
+      "alasan": "Subbab berisi latar belakang penerapan segmentasi, sesuai dengan petunjuk 'LATAR BELAKANG' yang mengatur penulisan latar belakang masalah.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Latar Belakang Penerapan Segmentasi\nCuplikan isi: Segmentasi klausa diterapkan sejak tahap persiapan data, yaitu sebelum proses pelabelan, dengan tujuan memecah kalimat multi-aspek menjadi klausa-klausa yang lebih kecil sehingga setiap klausa hanya mengandung satu aspek dan satu polaritas sentimen. Pendekatan ini memungkinkan model dilatih pada data berlabel tunggal yang bersih dan konsisten. Pada klausa tunggal, model diharapkan mampu memahami pola opini pada level yang lebih granular. Dengan demikian, segmentasi berperan ganda, yaitu sebagai \n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-1_instruction\nJudul panduan: LATAR BELAKANG\nIsi: Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nID: bab2_sub2-3_instruction\nJudul panduan: PENELITIAN TERKAIT\nIsi: Penelitian terkait memuat hasil penelitian pihak lain yang mempunyai Problem yang sama dengan penelitian kita, tetapi dengan menggunakan Uniqueness yang berbeda. Disini ceritakan bagaimana penelitian-penelitian terkait telah mencoba untuk menyelesaikan permasalahan yang sama dengan kita, dengan cara mereka masing-masing yang ditunjukkan dengan kutipan terhadap pustaka. Penelitian terkait yang baik melibatkan kajian pustaka yang relevan dan terpercaya dari jurnal ilmiah internasional ataupun nasional, presentasi ilmiah internasional ataupun nasional, dan buku atau catatan rujukan ilmiah. Penulis harus mencantumkan sumber referensi pada daftar pustaka manakala penulis melakukan rujukan dan kut\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak",
+        "raw": "{\n  \"pilihan\": \"bab1_sub1-1_instruction\",\n  \"alasan\": \"Subbab berisi latar belakang penerapan segmentasi, sesuai dengan petunjuk 'LATAR BELAKANG' yang mengatur penulisan latar belakang masalah.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.13 Mekanisme Segmentasi Berbasis Konjungsi",
+    "match": {
+      "pilihan_llm": null,
+      "alasan": "Tidak ada petunjuk yang mengatur penjelasan mekanisme segmentasi berbasis konjungsi; semua kandidat membahas tujuan, data, atau penelitian terkait, bukan metodologi segmentasi.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Mekanisme Segmentasi Berbasis Konjungsi\nCuplikan isi: Pendekatan segmentasi yang digunakan adalah rule-based dengan mendefinisikan daftar konjungsi bahasa Indonesia sebagai penanda batas antar segmen. Fungsi segment_sentence bekerja dengan cara memindai kalimat masukan dari kiri ke kanan, mencari kemunculan konjungsi yang telah didefinisikan, lalu memotong kalimat pada posisi konjungsi tersebut untuk menghasilkan dua atau lebih segmen. Apabila dalam suatu kalimat tidak ditemukan konjungsi dari daftar yang telah didefinisikan, kalimat tersebut diter\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab2_sub2-3_instruction\nJudul panduan: PENELITIAN TERKAIT\nIsi: Penelitian terkait memuat hasil penelitian pihak lain yang mempunyai Problem yang sama dengan penelitian kita, tetapi dengan menggunakan Uniqueness yang berbeda. Disini ceritakan bagaimana penelitian-penelitian terkait telah mencoba untuk menyelesaikan permasalahan yang sama dengan kita, dengan cara mereka masing-masing yang ditunjukkan dengan kutipan terhadap pustaka. Penelitian terkait yang baik melibatkan kajian pustaka yang relevan dan terpercaya dari jurnal ilmiah internasional ataupun nasional, presentasi ilmiah internasional ataupun nasional, dan buku atau catatan rujukan ilmiah. Penulis harus mencantumkan sumber referensi pada daftar pustaka manakala penulis melakukan rujukan dan kut",
+        "raw": "{\n  \"pilihan\": null,\n  \"alasan\": \"Tidak ada petunjuk yang mengatur penjelasan mekanisme segmentasi berbasis konjungsi; semua kandidat membahas tujuan, data, atau penelitian terkait, bukan metodologi segmentasi.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.14 Alur Proses Segmentasi",
+    "match": {
+      "pilihan_llm": "bab3_sub3-1_instruction",
+      "alasan": "Subbab menjelaskan alur proses segmentasi yang merupakan bagian dari deskripsi solusi yang ditawarkan dalam proyek.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: Alur Proses Segmentasi\nCuplikan isi: Alur proses segmentasi kalimat berbasis konjungsi pada tahap inferensi digambarkan pada flowchart berikut. Berdasarkan Gambar 3.5 di atas, alur segmentasi dimulai ketika sistem menerima kalimat masukan dari pengguna. Sistem kemudian memindai kalimat tersebut untuk mencari konjungsi yang terdapat dalam daftar yang telah didefinisikan. Apabila konjungsi ditemukan, kalimat dipecah menjadi beberapa segmen berdasarkan posisi konjungsi tersebut. Setiap segmen yang dihasilkan kemudian diproses secara i\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab3_sub3-1_instruction\nJudul panduan: DESKRIPSI SOLUSI\nIsi: Deskripsikan solusi yang ditawarkan pada buku proyek akhir dengan jelas dan detil. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada kegiatan sebagai sesuatu solusi pada kegiatan laporan akhir.\n\nID: bab1_sub1-1_instruction\nJudul panduan: LATAR BELAKANG\nIsi: Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.",
+        "raw": "{\n  \"pilihan\": \"bab3_sub3-1_instruction\",\n  \"alasan\": \"Subbab menjelaskan alur proses segmentasi yang merupakan bagian dari deskripsi solusi yang ditawarkan dalam proyek.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "3.15 RANCANGAN ANTARMUKA",
+    "match": {
+      "pilihan_llm": null,
+      "alasan": "Tidak ada petunjuk yang mengatur subbab tentang rancangan antarmuka; semua kandidat membahas penelitian terkait, tujuan, atau batasan masalah.",
+      "pilihan_valid": true,
+      "pilihan_aturan": null,
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: RANCANGAN ANTARMUKA\nCuplikan isi: Gambar 3.6 merupakan halaman pertama yang muncul setelah pengguna masuk ke sistem. Fokusnya adalah memberikan ringkasan cepat mengenai data komentar pelanggan ISP. Pada Gambar 3.7 menampilkan halaman visualisasi data sehingga pengguna dapat memahami pola dan kecenderungan sentimen secara lebih mendalam dari masing-masing provider di Indonesia. Gambar 3.8 menampilkan halaman yang memungkinkan pengguna untuk melakukan analisis komentar secara individual sehingga pengguna dapat menganalisis komenta\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab2_sub2-3_instruction\nJudul panduan: PENELITIAN TERKAIT\nIsi: Penelitian terkait memuat hasil penelitian pihak lain yang mempunyai Problem yang sama dengan penelitian kita, tetapi dengan menggunakan Uniqueness yang berbeda. Disini ceritakan bagaimana penelitian-penelitian terkait telah mencoba untuk menyelesaikan permasalahan yang sama dengan kita, dengan cara mereka masing-masing yang ditunjukkan dengan kutipan terhadap pustaka. Penelitian terkait yang baik melibatkan kajian pustaka yang relevan dan terpercaya dari jurnal ilmiah internasional ataupun nasional, presentasi ilmiah internasional ataupun nasional, dan buku atau catatan rujukan ilmiah. Penulis harus mencantumkan sumber referensi pada daftar pustaka manakala penulis melakukan rujukan dan kut\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab1_sub1-3_instruction\nJudul panduan: BATASAN MASALAH\nIsi: Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.",
+        "raw": "{\n  \"pilihan\": null,\n  \"alasan\": \"Tidak ada petunjuk yang mengatur subbab tentang rancangan antarmuka; semua kandidat membahas penelitian terkait, tujuan, atau batasan masalah.\"\n}"
+      },
+      "dari": "llm"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.2 KARATERISTIK DATA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-3_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-3_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-4_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-4_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJICOBA",
+    "match": {
+      "pilihan_llm": "bab4_sub4-5_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-5_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-6_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-6_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "match": {
+      "pilihan_llm": "bab4_sub4-7_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab4_sub4-7_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "match": {
+      "pilihan_llm": "bab5_sub5-1_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab5_sub5-1_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "match": {
+      "pilihan_llm": "bab5_sub5-2_instruction",
+      "alasan": "judul subbab sama dengan judul panduan (tanpa LLM)",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab5_sub5-2_instruction",
+      "dari": "judul"
+    },
+    "error": null
+  }
+]

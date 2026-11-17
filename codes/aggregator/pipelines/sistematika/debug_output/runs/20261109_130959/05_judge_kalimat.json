@@ -1,0 +1,35 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "status": "error",
+    "error": "Error code: 429 - Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m62pffx9e6fbaaxk4mcj0dqe` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199410, Requested 1693. Please try again in 7m56.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "status": "error",
+    "error": "Error code: 429 - Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m62pffx9e6fbaaxk4mcj0dqe` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199292, Requested 1132. Please try again in 3m3.168s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "TUJUAN",
+    "status": "error",
+    "error": "Error code: 429 - Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m62pffx9e6fbaaxk4mcj0dqe` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199174, Requested 1147. Please try again in 2m18.672s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "MANFAAT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  }
+]

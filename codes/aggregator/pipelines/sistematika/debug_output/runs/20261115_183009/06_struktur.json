@@ -1,0 +1,200 @@
+[
+  {
+    "chunk_id": "bab1_sub1-1_instruction",
+    "bab": "1",
+    "num": "1.1",
+    "title": "LATAR BELAKANG",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "1.1 LATAR BELAKANG"
+    ]
+  },
+  {
+    "chunk_id": "bab1_sub1-2_instruction",
+    "bab": "1",
+    "num": "1.2",
+    "title": "PERMASALAHAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "1.2 PERMASALAHAN"
+    ]
+  },
+  {
+    "chunk_id": "bab1_sub1-3_instruction",
+    "bab": "1",
+    "num": "1.3",
+    "title": "BATASAN MASALAH",
+    "ditemukan": false,
+    "subbab_mahasiswa": []
+  },
+  {
+    "chunk_id": "bab1_sub1-4_instruction",
+    "bab": "1",
+    "num": "1.4",
+    "title": "TUJUAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "1.3 TUJUAN"
+    ]
+  },
+  {
+    "chunk_id": "bab1_sub1-5_instruction",
+    "bab": "1",
+    "num": "1.5",
+    "title": "MANFAAT",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "1.4 MANFAAT"
+    ]
+  },
+  {
+    "chunk_id": "bab1_sub1-6_instruction",
+    "bab": "1",
+    "num": "1.6",
+    "title": "SISTEMATIKA PENULISAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "1.5 SISTEMATIKA PENULISAN"
+    ]
+  },
+  {
+    "chunk_id": "bab2_sub2-1_instruction",
+    "bab": "2",
+    "num": "2.1",
+    "title": "DESKRIPSI PERMASALAHAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "2.1 DESKRIPSI PERMASALAHAN"
+    ]
+  },
+  {
+    "chunk_id": "bab2_sub2-2_instruction",
+    "bab": "2",
+    "num": "2.2",
+    "title": "TEORI PENUNJANG",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "2.2 TEORI PENUNJANG"
+    ]
+  },
+  {
+    "chunk_id": "bab2_sub2-3_instruction",
+    "bab": "2",
+    "num": "2.3",
+    "title": "PENELITIAN TERKAIT",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "2.3 PENELITIAN TERKAIT"
+    ]
+  },
+  {
+    "chunk_id": "bab3_sub3-1_instruction",
+    "bab": "3",
+    "num": "3.1",
+    "title": "DESKRIPSI SOLUSI",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "3.1 DESKRIPSI SOLUSI"
+    ]
+  },
+  {
+    "chunk_id": "bab3_sub3-2_instruction",
+    "bab": "3",
+    "num": "3.2",
+    "title": "PERANCANGAN SISTEM",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "3.2 PERANCANGAN SISTEM"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-1_instruction",
+    "bab": "4",
+    "num": "4.1",
+    "title": "PARAMETER EKSPERIMEN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.1 PARAMETER EKSPERIMEN"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-2_instruction",
+    "bab": "4",
+    "num": "4.2",
+    "title": "KARATERISTIK DATA",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.2 KARAKTERISTIK DATA"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-3_instruction",
+    "bab": "4",
+    "num": "4.3",
+    "title": "TEMPAT UJICOBA",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.3 TEMPAT UJICOBA"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-4_instruction",
+    "bab": "4",
+    "num": "4.4",
+    "title": "WAKTU UJICOBA",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.4 WAKTU UJICOBA"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-5_instruction",
+    "bab": "4",
+    "num": "4.5",
+    "title": "SPESIFIKASI PERALATAN UJICOBA",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.5 SPESIFIKASI PERALATAN UJICOBA"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-6_instruction",
+    "bab": "4",
+    "num": "4.6",
+    "title": "HASIL EKSPERMEN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.6 HASIL EKSPERIMEN"
+    ]
+  },
+  {
+    "chunk_id": "bab4_sub4-7_instruction",
+    "bab": "4",
+    "num": "4.7",
+    "title": "ANALISIS HASIL EKSPERIMEN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "4.7 ANALISIS HASIL EKSPERIMEN"
+    ]
+  },
+  {
+    "chunk_id": "bab5_sub5-1_instruction",
+    "bab": "5",
+    "num": "5.1",
+    "title": "KESIMPULAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "5.1 KESIMPULAN"
+    ]
+  },
+  {
+    "chunk_id": "bab5_sub5-2_instruction",
+    "bab": "5",
+    "num": "5.2",
+    "title": "SARAN",
+    "ditemukan": true,
+    "subbab_mahasiswa": [
+      "5.2 SARAN"
+    ]
+  }
+]

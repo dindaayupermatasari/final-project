@@ -1,0 +1,178 @@
+[
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.1",
+    "subbab_title": "LATAR BELAKANG",
+    "source": "regex",
+    "chars": 2329
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.2",
+    "subbab_title": "PERMASALAHAN",
+    "source": "regex",
+    "chars": 1139
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.3",
+    "subbab_title": "TUJUAN",
+    "source": "regex",
+    "chars": 1377
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.4",
+    "subbab_title": "MANFAAT",
+    "source": "regex",
+    "chars": 1314
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.5",
+    "subbab_title": "SISTEMATIKA PENULISAN",
+    "source": "regex",
+    "chars": 2188
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.1",
+    "subbab_title": "DESKRIPSI PERMASALAHAN",
+    "source": "regex",
+    "chars": 1520
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.2",
+    "subbab_title": "TEORI PENUNJANG",
+    "source": "regex",
+    "chars": 33069
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.3",
+    "subbab_title": "PENELITIAN TERKAIT",
+    "source": "regex",
+    "chars": 11942
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.1",
+    "subbab_title": "DESKRIPSI SOLUSI",
+    "source": "regex",
+    "chars": 3794
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.2",
+    "subbab_title": "PERANCANGAN SISTEM",
+    "source": "regex",
+    "chars": 64740
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.5.1",
+    "subbab_title": "Login Page",
+    "source": "regex",
+    "chars": 1053
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.5.2",
+    "subbab_title": "Generation Workspace Page",
+    "source": "regex",
+    "chars": 2994
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.5.3",
+    "subbab_title": "Verifikasi Sumber",
+    "source": "regex",
+    "chars": 1478
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.1",
+    "subbab_title": "PARAMETER EKSPERIMEN",
+    "source": "regex",
+    "chars": 6537
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.2",
+    "subbab_title": "KARAKTERISTIK DATA",
+    "source": "regex",
+    "chars": 524
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.3",
+    "subbab_title": "TEMPAT UJI COBA",
+    "source": "regex",
+    "chars": 177
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.4",
+    "subbab_title": "WAKTU UJI COBA",
+    "source": "regex",
+    "chars": 199
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.5",
+    "subbab_title": "SPESIFIKASI PERALATAN UJI COBA",
+    "source": "regex",
+    "chars": 939
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.6",
+    "subbab_title": "HASIL EKSPERIMEN",
+    "source": "regex",
+    "chars": 31571
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.7",
+    "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+    "source": "regex",
+    "chars": 24505
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "PENUTUP",
+    "subbab_num": "5.1",
+    "subbab_title": "KESIMPULAN",
+    "source": "regex",
+    "chars": 2151
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "PENUTUP",
+    "subbab_num": "5.2",
+    "subbab_title": "SARAN",
+    "source": "regex",
+    "chars": 2588
+  }
+]

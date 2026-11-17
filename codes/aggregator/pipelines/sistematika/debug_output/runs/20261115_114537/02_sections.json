@@ -1,0 +1,154 @@
+[
+  {
+    "bab": "1",
+    "num": "1.1",
+    "title": "LATAR BELAKANG",
+    "chars": 1871,
+    "skip": false,
+    "preview": "Perusahaan Manufaktur Kereta Api mengembangkan dikenal sebagai manufaktur yang bergerak di bidang perancangan dan produksi sarana perkeretaapian. Salah satu produknya adalah kereta listrik, yaitu jeni"
+  },
+  {
+    "bab": "1",
+    "num": "1.2",
+    "title": "PERMASALAHAN",
+    "chars": 2654,
+    "skip": false,
+    "preview": "Perusahan Manufaktur Kereta Api memproduksi berbagai jenis kereta berpenggerak seperti Kereta Rel Diesel (KRD), Kereta Rel Listrik (KRL), dan kereta Hybrid. Salah satu produk unggulan Perusahaan Manuf"
+  },
+  {
+    "bab": "1",
+    "num": "1.3",
+    "title": "TUJUAN",
+    "chars": 1593,
+    "skip": false,
+    "preview": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy. Sistem ini dirancang u"
+  },
+  {
+    "bab": "1",
+    "num": "1.4",
+    "title": "MANFAAT",
+    "chars": 256,
+    "skip": false,
+    "preview": "Penelitian ini berkontribusi dalam pengembangan simulasi yang ada di Perusahaan Manufaktur Kereta Api, sebagai pihak yang menjadi objek studi, sehingga dapat memberikan solusi terhadap permasalahan si"
+  },
+  {
+    "bab": "1",
+    "num": "1.5",
+    "title": "SISTEMATIKA PENULISAN",
+    "chars": 1028,
+    "skip": false,
+    "preview": "Bab 1 Pendahuluan Bab ini menjelaskan latar belakang masalah, permasalahan yang dihadapi, tujuan penelitian, manfaat yang diharapkan, dan sistematika penulisan proposal proyek akhir. Bab 2 Kajian Pust"
+  },
+  {
+    "bab": "2",
+    "num": "2.1",
+    "title": "DESKRIPSI PERMASALAHAN",
+    "chars": 799,
+    "skip": false,
+    "preview": "Perancangan spesifikasi teknis kereta juga melibatkan parameter-parameter yang tidak selalu bernilai pasti, serta sulit dijelaskan hanya dengan angka. Dalam praktiknya, istilah seperti \"cukup\", \"tingg"
+  },
+  {
+    "bab": "2",
+    "num": "2.2",
+    "title": "TEORI PENUNJANG",
+    "chars": 9480,
+    "skip": false,
+    "preview": "Pengembangan aplikasi simulasi kereta berbasis logika fuzzy memerlukan landasan teori yang kuat untuk memastikan akurasi dan keandalannya, serta tools yang diperlukan guna membangun aplikasi yang memi"
+  },
+  {
+    "bab": "2",
+    "num": "2.3",
+    "title": "PENELITIAN TERKAIT",
+    "chars": 5589,
+    "skip": false,
+    "preview": "Dengan adanya proyek akhir ini, maka peninjauan studi terkait dengan topik yang serupa sangat penting guna mendukung pengerjaan proyek akhir penulis. Penelitian-penelitian ini memberikan gambaran meng"
+  },
+  {
+    "bab": "3",
+    "num": "3.1",
+    "title": "DESKRIPSI SOLUSI",
+    "chars": 1713,
+    "skip": false,
+    "preview": "Dengan adanya permasalahan yang sudah dijabarkan di bab awal, solusi yang diusulkan oleh penulis adalah pengembangan aplikasi simulasi kereta berbasis desktop dengan GUI yang interaktif, serta optimas"
+  },
+  {
+    "bab": "3",
+    "num": "3.2",
+    "title": "PERANCANGAN SISTEM",
+    "chars": 42388,
+    "skip": false,
+    "preview": "Desain sistem aplikasi simulasi kereta ini dirancang untuk melakukan simulasi gerak kereta mulai dari kondisi diam hingga kereta berhenti pada stasiun tertentu, dengan menggunakan logika fuzzy untuk o"
+  },
+  {
+    "bab": "4",
+    "num": "4.1",
+    "title": "PARAMETER EKSPERIMEN",
+    "chars": 3390,
+    "skip": false,
+    "preview": "Eksperimen dilakukan untuk memvalidasi parameter yang dikelompokkan menjadi spesifikasi unit kereta, kondisi lingkungan lintasan, variabel pembebanan, dan parameter logika fuzzy. Parameter yang diguna"
+  },
+  {
+    "bab": "4",
+    "num": "4.2",
+    "title": "KARAKTERISTIK DATA",
+    "chars": 1401,
+    "skip": false,
+    "preview": "Data yang digunakan dalam simulasi ini dikategorikan menjadi tiga kelompok utama, yakni data teknis sarana (kereta), data prasarana (lintasan), dan data parameter kelistrikan. Penggunaan karakteristik"
+  },
+  {
+    "bab": "4",
+    "num": "4.3",
+    "title": "TEMPAT UJICOBA",
+    "chars": 417,
+    "skip": false,
+    "preview": "Karena eksperimen ini merupakan simulasi yang dijalankan di perangkat penulis, maka tempat ujicoba pada eksperimen dilakukan di perangkat Laptop dengan perangkat Acer Nitro 5 AN515-57 dengan sistem op"
+  },
+  {
+    "bab": "4",
+    "num": "4.4",
+    "title": "WAKTU UJICOBA",
+    "chars": 266,
+    "skip": false,
+    "preview": "Waktu ujicoba eksperimen ini dilaksanakan di rentang waktu Oktober 2025 untuk validasi dan pengumpulan data, serta Oktober 2025 hingga April 2026 untuk menjalankan simulasi dan proses trial and error "
+  },
+  {
+    "bab": "4",
+    "num": "4.5",
+    "title": "SPESIFIKASI PERALATAN UJI COBA",
+    "chars": 929,
+    "skip": false,
+    "preview": "Mengingat simulasi ini melibatkan perhitungan fisika real-time dan rendering grafik dinamis, spesifikasi perangkat keras dan lunak memegang peranan penting dalam performa simulasi. Berikut peralatan y"
+  },
+  {
+    "bab": "4",
+    "num": "4.6",
+    "title": "HASIL EKSPERIMEN",
+    "chars": 58754,
+    "skip": false,
+    "preview": "Hasil eksperimen yang telah dilakukan dapat dibagi dalam lima bagian utama. Bagian pertama menyajikan data yang digunakan untuk skenario pada aplikasi. Bagian kedua menyajikan hasil frontend atau anta"
+  },
+  {
+    "bab": "4",
+    "num": "4.7",
+    "title": "ANALISIS HASIL EKSPERIMEN",
+    "chars": 12418,
+    "skip": false,
+    "preview": "Bagian ini menguraikan interpretasi terhadap data hasil simulasi yang telah disajikan sebelumnya. Analisis difokuskan pada dua aspek utama, yakni validitas hasil simulasi dinamis dan/atau simulasi sta"
+  },
+  {
+    "bab": "5",
+    "num": "5.1",
+    "title": "KESIMPULAN",
+    "chars": 2361,
+    "skip": false,
+    "preview": "Berdasarkan tahapan perancangan, implementasi, dan pengujian yang telah dilakukan dalam pengembangan aplikasi simulasi kereta api ini, dapat ditarik kesimpulan bahwa penelitian ini berhasil menjawab p"
+  },
+  {
+    "bab": "5",
+    "num": "5.2",
+    "title": "SARAN",
+    "chars": 1214,
+    "skip": false,
+    "preview": "Untuk pengembangan lebih lanjut guna menyempurnakan sistem ini menjadi produk yang siap pakai di lingkungan industri, disarankan beberapa hal sebagai berikut: 1. Penyempurnaan Antarmuka Pengguna Diper"
+  }
+]

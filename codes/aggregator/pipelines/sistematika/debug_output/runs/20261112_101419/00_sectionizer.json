@@ -1,0 +1,274 @@
+[
+  {
+    "bab_num": 1,
+    "bab_title": "BAB 1 PENDAHULUAN",
+    "subbab_num": "1.1",
+    "subbab_title": "LATAR BELAKANG",
+    "source": "heading_style",
+    "chars": 3740
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "BAB 1 PENDAHULUAN",
+    "subbab_num": "1.2",
+    "subbab_title": "PERMASALAHAN",
+    "source": "heading_style",
+    "chars": 898
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "BAB 1 PENDAHULUAN",
+    "subbab_num": "1.3",
+    "subbab_title": "TUJUAN",
+    "source": "heading_style",
+    "chars": 1000
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "BAB 1 PENDAHULUAN",
+    "subbab_num": "1.4",
+    "subbab_title": "MANFAAT",
+    "source": "heading_style",
+    "chars": 551
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "BAB 1 PENDAHULUAN",
+    "subbab_num": "1.5",
+    "subbab_title": "SISTEMATIKA PENULISAN",
+    "source": "heading_style",
+    "chars": 1136
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "BAB 2 KAJIAN PUSTAKA",
+    "subbab_num": "2.0",
+    "subbab_title": "BAB 2 KAJIAN PUSTAKA",
+    "source": "heading_style",
+    "chars": 1030
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "BAB 2 KAJIAN PUSTAKA",
+    "subbab_num": "2.1",
+    "subbab_title": "DESKRIPSI PERMASALAHAN",
+    "source": "heading_style",
+    "chars": 2423
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "BAB 2 KAJIAN PUSTAKA",
+    "subbab_num": "2.2",
+    "subbab_title": "TEORI PENUNJANG",
+    "source": "heading_style",
+    "chars": 29655
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "BAB 2 KAJIAN PUSTAKA",
+    "subbab_num": "2.3",
+    "subbab_title": "PENELITIAN TERKAIT",
+    "source": "heading_style",
+    "chars": 7118
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.0",
+    "subbab_title": "BAB 3 DESAIN SISTEM",
+    "source": "heading_style",
+    "chars": 382
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.1",
+    "subbab_title": "DESKRIPSI SOLUSI",
+    "source": "heading_style",
+    "chars": 1038
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.2",
+    "subbab_title": "SUMBER DATA",
+    "source": "heading_style",
+    "chars": 2237
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.3",
+    "subbab_title": "PERANCANGAN SISTEM",
+    "source": "heading_style",
+    "chars": 2467
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.4",
+    "subbab_title": "TAHAPAN IMPLEMENTASI SISTEM",
+    "source": "heading_style",
+    "chars": 0
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.5",
+    "subbab_title": "Proses Pembuatan Model",
+    "source": "heading_style",
+    "chars": 11713
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.6",
+    "subbab_title": "Stratisfied K-Fold Cross Validation",
+    "source": "heading_style",
+    "chars": 1900
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.7",
+    "subbab_title": "Fine-Tuning Model BERT",
+    "source": "heading_style",
+    "chars": 7221
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.8",
+    "subbab_title": "Evaluasi Model",
+    "source": "heading_style",
+    "chars": 3307
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.9",
+    "subbab_title": "Penyimpanan Model",
+    "source": "heading_style",
+    "chars": 1632
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.10",
+    "subbab_title": "Alur Kerja Antarmuka Website",
+    "source": "heading_style",
+    "chars": 1962
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.11",
+    "subbab_title": "SEGMENTASI KALIMAT TAHAP INFERENSI",
+    "source": "heading_style",
+    "chars": 0
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.12",
+    "subbab_title": "Latar Belakang Penerapan Segmentasi",
+    "source": "heading_style",
+    "chars": 721
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.13",
+    "subbab_title": "Mekanisme Segmentasi Berbasis Konjungsi",
+    "source": "heading_style",
+    "chars": 2148
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.14",
+    "subbab_title": "Alur Proses Segmentasi",
+    "source": "heading_style",
+    "chars": 2908
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "BAB 3 DESAIN SISTEM",
+    "subbab_num": "3.15",
+    "subbab_title": "RANCANGAN ANTARMUKA",
+    "source": "heading_style",
+    "chars": 779
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.1",
+    "subbab_title": "PARAMETER EKSPERIMEN",
+    "source": "heading_style",
+    "chars": 4437
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.2",
+    "subbab_title": "KARATERISTIK DATA",
+    "source": "heading_style",
+    "chars": 1289
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.3",
+    "subbab_title": "TEMPAT UJICOBA",
+    "source": "heading_style",
+    "chars": 265
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.4",
+    "subbab_title": "WAKTU UJICOBA",
+    "source": "heading_style",
+    "chars": 102
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.5",
+    "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+    "source": "heading_style",
+    "chars": 511
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.6",
+    "subbab_title": "HASIL EKSPERMEN",
+    "source": "heading_style",
+    "chars": 52500
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "BAB 4 EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.7",
+    "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+    "source": "heading_style",
+    "chars": 4373
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "BAB 5 PENUTUP",
+    "subbab_num": "5.1",
+    "subbab_title": "KESIMPULAN",
+    "source": "heading_style",
+    "chars": 2242
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "BAB 5 PENUTUP",
+    "subbab_num": "5.2",
+    "subbab_title": "SARAN",
+    "source": "heading_style",
+    "chars": 1520
+  }
+]

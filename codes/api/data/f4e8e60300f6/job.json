@@ -1,0 +1,20 @@
+{
+  "id": "f4e8e60300f6",
+  "status": "menunggu",
+  "file": "Buku PA_Awal Raya.pdf",
+  "path": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\f4e8e60300f6\\Buku PA_Awal Raya.pdf",
+  "judul": "",
+  "created": "2026-11-14T20:49:07",
+  "error": null,
+  "skor": null,
+  "started": "2026-11-14T20:49:07",
+  "decomp": {
+    "judul": "",
+    "problem_domain": "",
+    "problem": "",
+    "uniqueness": "",
+    "catatan": "Pemecahan judul otomatis gagal, isi manual. SyntaxError: f-string: unmatched '[' (sentence_judge.py, line 170)",
+    "perlu_dicek": [],
+    "judul_pasti": false
+  }
+}

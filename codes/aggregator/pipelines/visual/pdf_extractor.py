@@ -82,6 +82,7 @@ from aggregator.pipelines.visual.extractor import (
     BLANK_PAGE_NOTICE_RE,
     ABSTRACT_KEYWORD_RE,
     SOURCE_CITATION_RE,
+    EQUATION_NUMBER_BARE_RE,
     EQUATION_NUMBER_IN_TEXT_RE,
     EQUATION_NUMBER_RE,
     normalize_equation_text,
@@ -289,6 +290,28 @@ def _overlaps_table(
         if inter / area >= threshold:
             return True
     return False
+
+
+def _line_tail_token(line: dict) -> tuple[str, float, float] | None:
+    """
+    Token paling KANAN di satu baris PyMuPDF: span-span di ujung kanan yang
+    saling berdekatan (celah <= 6pt) digabung jadi satu token, berhenti di
+    celah lebar pertama. Dipakai membaca nomor identitas persamaan lewat
+    POSISI (mis. "(3.4)" atau "4.1" tanpa kurung di pojok kanan), bukan lewat
+    urutan teks. Return (teks, x0, x1) atau None.
+    """
+    spans = [sp for sp in (line.get("spans") or []) if sp.get("text", "").strip()]
+    if not spans:
+        return None
+    spans.sort(key=lambda sp: sp["bbox"][0])
+    group = [spans[-1]]
+    for sp in reversed(spans[:-1]):
+        if group[0]["bbox"][0] - sp["bbox"][2] <= 6.0:
+            group.insert(0, sp)
+        else:
+            break
+    text = "".join(sp.get("text", "") for sp in group)
+    return text, group[0]["bbox"][0], group[-1]["bbox"][2]
 
 
 def _extract_blocks(
@@ -575,12 +598,43 @@ def _extract_blocks(
             ):
                 number_line = pdf_lines_group.pop(bare_number_line_idxs[0])
                 pdf_lines_group.append(number_line)
+            elif not bare_number_line_idxs and len(pdf_lines_group) >= 2:
+                # BUG DIPERBAIKI (laporan user -- persamaan pecahan
+                # "Optimization Score = (Time+Power+Energy)/3 (3.4)" dibilang
+                # tidak bernomor): nomor identitas sejajar baris "Optimization
+                # Score =" (garis pembagi), jadi PyMuPDF menyatukannya dalam
+                # SATU baris ("Optimization Score =(3.4)") yang urutannya di
+                # TENGAH grup, sebelum penyebut ("3"). Kasus bare-number di atas
+                # tidak kena karena barisnya bukan cuma nomor. Pindahkan baris
+                # yang DIAKHIRI nomor ke akhir kalau semua baris sesudahnya
+                # cuma serpihan pendek (penyebut/pangkat), bukan kalimat.
+                tails = []
+                for li, line in enumerate(pdf_lines_group):
+                    ltxt = normalize_equation_text(
+                        "".join(sp.get("text", "") for sp in (line.get("spans") or []))
+                    )
+                    if EQUATION_NUMBER_IN_TEXT_RE.search(ltxt):
+                        tails.append(li)
+                if len(tails) == 1 and tails[0] != len(pdf_lines_group) - 1:
+                    after = pdf_lines_group[tails[0] + 1 :]
+                    if all(
+                        len(
+                            "".join(
+                                sp.get("text", "") for sp in (ln.get("spans") or [])
+                            ).strip()
+                        )
+                        <= 8
+                        for ln in after
+                    ):
+                        pdf_lines_group.append(pdf_lines_group.pop(tails[0]))
 
             runs = []
             line_bboxes = []
             line_baselines = []
+            line_tails = []
             for li, line in enumerate(pdf_lines_group):
                 line_bboxes.append(line["bbox"])
+                line_tails.append(_line_tail_token(line))
                 # Baseline ASLI baris (koordinat "origin" span pertama), BUKAN
                 # top-of-bbox -- lihat docstring _infer_line_spacing() untuk
                 # alasan kenapa ini penting.
@@ -671,6 +725,7 @@ def _extract_blocks(
                     "bbox": group_bbox,
                     "line_bboxes": line_bboxes,
                     "line_baselines": line_baselines,
+                    "line_tails": line_tails,
                 }
             )
 
@@ -965,6 +1020,7 @@ def _merge_wrapped_paragraph_blocks(
                 )
                 prev["line_bboxes"].extend(block["line_bboxes"])
                 prev["line_baselines"].extend(block["line_baselines"])
+                prev.setdefault("line_tails", []).extend(block.get("line_tails", []))
                 continue
 
         merged.append(
@@ -974,6 +1030,7 @@ def _merge_wrapped_paragraph_blocks(
                 "bbox": block["bbox"],
                 "line_bboxes": list(block["line_bboxes"]),
                 "line_baselines": list(block["line_baselines"]),
+                "line_tails": list(block.get("line_tails", [])),
             }
         )
     return merged
@@ -1041,7 +1098,10 @@ def _infer_alignment(
 
 
 def _infer_equation_alignment(
-    block: dict, left_margin_pt: float, right_margin_pt: float
+    block: dict,
+    left_margin_pt: float,
+    right_margin_pt: float,
+    extra_left_margins_pt: tuple = (),
 ) -> str | None:
     """
     Rata KHUSUS untuk blok ptype "equation", TERPISAH dari
@@ -1082,7 +1142,18 @@ def _infer_equation_alignment(
     tol = 0.45 / PT_TO_CM  # konsisten dengan toleransi _infer_alignment()
     x0, x1 = block["bbox"][0], block["bbox"][2]
 
-    if abs(x0 - left_margin_pt) <= tol:
+    # BUG DIPERBAIKI (laporan user -- persamaan yang JELAS sudah mentok kiri
+    # tetap dibilang "belum diatur perataannya"): margin kiri halaman ini
+    # diambil dari paritas halaman FISIK (ganjil/genap). Di dokumen
+    # mirror-margin yang penomoran halamannya restart (BAB 1 mulai dari 1),
+    # paritas nomor TERCETAK bisa berlawanan dengan paritas fisik, sehingga
+    # margin kiri yang dipakai tertukar (selisih ~1cm > toleransi 0.45cm)
+    # dan rumus yang rata kiri sungguhan jatuh ke "None". Cek rata-kiri
+    # sekarang menerima margin kiri MANA PUN dari set margin dokumen
+    # (ganjil/genap/gabungan). Rumus rata tengah tetap tidak lolos karena
+    # x0-nya berjarak jauh (>3cm) dari semua margin itu.
+    left_candidates = (left_margin_pt, *extra_left_margins_pt)
+    if any(abs(x0 - m) <= tol for m in left_candidates):
         return "left"
 
     col_center = (left_margin_pt + right_margin_pt) / 2
@@ -1101,6 +1172,174 @@ def _infer_equation_alignment(
 # bersama supaya docx & PDF tidak beda tafsir soal "apa itu nomor
 # persamaan".
 _BARE_EQUATION_NUMBER_RE = EQUATION_NUMBER_RE
+
+
+_BARE_NUMBER_TOKEN_RE = EQUATION_NUMBER_BARE_RE
+
+
+def _has_visual_equation_number(block: dict, right_margin_pt: float) -> bool:
+    """
+    True kalau SALAH SATU baris blok punya token di ujung KANAN (dekat margin
+    kanan, <= 2.5cm) yang berupa nomor identitas: "(3.4)", "(Persamaan 3.4)"
+    ATAU angka bab-urut telanjang "4.1" (tanpa kurung). Dibaca dari posisi,
+    jadi tidak terpengaruh urutan teks rumus bertingkat.
+    """
+    near = 2.5 / PT_TO_CM
+    for tail in block.get("line_tails") or []:
+        if not tail:
+            continue
+        text, _x0, x1 = tail
+        if x1 < right_margin_pt - near:
+            continue
+        t = normalize_equation_text(text)
+        if (
+            EQUATION_NUMBER_RE.match(t)
+            or _BARE_NUMBER_TOKEN_RE.match(t)
+            or EQUATION_NUMBER_IN_TEXT_RE.search(t)
+        ):
+            return True
+    return False
+
+
+def _slice_runs(runs: list[dict], start: int, end: int) -> list[dict]:
+    """Potong daftar run menurut offset karakter [start, end) di full_text."""
+    out = []
+    offset = 0
+    for r in runs:
+        r_start, r_end = offset, offset + len(r["text"])
+        offset = r_end
+        lo, hi = max(r_start, start), min(r_end, end)
+        if lo >= hi:
+            continue
+        piece = dict(r)
+        piece["text"] = r["text"][lo - r_start : hi - r_start]
+        out.append(piece)
+    return out
+
+
+def _move_equation_number_to_end(elem: dict) -> None:
+    """
+    Pindahkan nomor "(3.4)" yang terjebak di TENGAH full_text (karena urutan
+    baca PyMuPDF: pembilang, baris garis-pembagi+nomor, penyebut) ke akhir,
+    selama sisa teks sesudahnya cuma serpihan pendek (penyebut/pangkat).
+    full_text & runs diubah bersama supaya invarian "".join(runs) == full_text
+    tetap terjaga.
+    """
+    text = elem["full_text"]
+    if EQUATION_NUMBER_IN_TEXT_RE.search(normalize_equation_text(text)):
+        return
+    matches = [
+        m
+        for m in re.finditer(r"[(\uff08][^()\uff08\uff09]{1,24}[)\uff09]", text)
+        if EQUATION_NUMBER_RE.match(normalize_equation_text(m.group(0)))
+    ]
+    if len(matches) != 1:
+        return
+    m = matches[0]
+    tail = text[m.end() :]
+    if not tail.strip() or len(tail.strip()) > 12:
+        return
+    runs = elem["runs"]
+    if "".join(r["text"] for r in runs) != text:
+        return
+    joiner = {
+        "text": " ",
+        "font_name": None,
+        "font_size_pt": None,
+        "bold": False,
+        "italic": False,
+        "is_math": False,
+    }
+    new_runs = (
+        _slice_runs(runs, 0, m.start())
+        + _slice_runs(runs, m.end(), len(text))
+        + [joiner]
+        + _slice_runs(runs, m.start(), m.end())
+    )
+    elem["runs"] = new_runs
+    elem["full_text"] = "".join(r["text"] for r in new_runs)
+    elem["equation_number_visual"] = True
+
+
+def _merge_equation_fragments(elements: list[dict]) -> list[dict]:
+    """
+    Gabungkan serpihan SATU persamaan yang oleh PyMuPDF dipecah jadi
+    beberapa blok (pembilang, "Optimization Score =", penyebut, nomor).
+
+    BUG DIPERBAIKI (laporan user -- satu persamaan dilaporkan 2-3 kali dengan
+    pesan yang sama, mis. temuan "Penomoran persamaan" nomor 12 dan 14 di
+    halaman yang sama): tiap serpihan lolos jadi elemen ptype "equation"
+    sendiri, lalu masing-masing dicek rata kiri, baris kosong, dan nomor
+    -- serpihan tanpa nomor selalu gagal walau persamaannya utuh sudah
+    bernomor. Sekarang serpihan yang berdempetan secara vertikal (celah
+    <= 8pt atau saling tumpang) di halaman yang sama digabung jadi satu
+    elemen. Serpihan non-equation hanya ikut digabung kalau SANGAT pendek
+    (<= 12 karakter, mis. penyebut "3") dan berada di dalam rentang
+    horizontal persamaan, supaya paragraf body tidak pernah ikut tertelan.
+    """
+    if not elements:
+        return elements
+
+    gap_tol = 8.0
+    consumed: set[int] = set()
+    for i, elem in enumerate(elements):
+        if i in consumed or elem["type"] != "equation":
+            continue
+        for j in range(i + 1, min(i + 6, len(elements))):
+            if j in consumed:
+                continue
+            cand = elements[j]
+            if cand.get("page_index") != elem.get("page_index"):
+                break
+            eb, cb = elem["bbox"], cand["bbox"]
+            vertical_gap = max(cb[1] - eb[3], eb[1] - cb[3])
+            if vertical_gap > gap_tol:
+                break  # elemen berikutnya makin jauh di bawah
+            if cand["type"] == "equation":
+                pass
+            else:
+                ctext = cand["full_text"].strip()
+                inside_x = cb[0] >= eb[0] - 30 and cb[2] <= eb[2] + 30
+                if not (
+                    cand["type"] == "body"
+                    and 0 < len(ctext) <= 12
+                    and inside_x
+                ):
+                    continue
+            elem["full_text"] = (
+                elem["full_text"].rstrip() + " " + cand["full_text"].strip()
+            ).strip()
+            elem["runs"] = (
+                elem["runs"]
+                + [
+                    {
+                        "text": " ",
+                        "font_name": None,
+                        "font_size_pt": None,
+                        "bold": False,
+                        "italic": False,
+                        "is_math": False,
+                    }
+                ]
+                + cand["runs"]
+            )
+            elem["bbox"] = (
+                min(eb[0], cb[0]),
+                min(eb[1], cb[1]),
+                max(eb[2], cb[2]),
+                max(eb[3], cb[3]),
+            )
+            elem["equation_number_visual"] = bool(
+                elem.get("equation_number_visual")
+                or cand.get("equation_number_visual")
+            )
+            if cand["type"] == "equation" and cand.get("alignment") == "left":
+                elem["alignment"] = "left"
+            consumed.add(j)
+
+    if not consumed:
+        return elements
+    return [e for k, e in enumerate(elements) if k not in consumed]
 
 
 def _merge_split_equation_numbers(elements: list[dict]) -> list[dict]:
@@ -1263,6 +1502,12 @@ def _merge_split_equation_numbers(elements: list[dict]) -> list[dict]:
                 min(eq_bbox[1], cand_bbox[1]),
                 max(eq_bbox[2], cand_bbox[2]),
                 max(eq_bbox[3], cand_bbox[3]),
+            )
+            elem["equation_number_visual"] = bool(
+                elem.get("equation_number_visual")
+                or cand.get("equation_number_visual")
+                or is_bare_number
+                or trailing_match
             )
             consumed_indices.add(j)
             break  # satu equation cuma butuh satu nomor
@@ -2511,7 +2756,10 @@ def extract_paragraph_params_pdf(pdf_path: str) -> list[dict]:
                         "abstract_part": abstract_part,
                         "alignment": (
                             _infer_equation_alignment(
-                                block, page_left_pt, page_right_pt
+                                block,
+                                page_left_pt,
+                                page_right_pt,
+                                (left_margin_odd_pt, left_margin_even_pt),
                             )
                             if ptype == "equation"
                             else _infer_alignment(block, page_left_pt, page_right_pt)
@@ -2532,6 +2780,11 @@ def extract_paragraph_params_pdf(pdf_path: str) -> list[dict]:
                         # equation saat ini, jadi belum diperlukan.
                         "blank_before": False,
                         "blank_after": False,
+                        "equation_number_visual": (
+                            _has_visual_equation_number(block, page_right_pt)
+                            if ptype == "equation"
+                            else False
+                        ),
                     }
                 )
                 idx += 1
@@ -2539,6 +2792,10 @@ def extract_paragraph_params_pdf(pdf_path: str) -> list[dict]:
     # Perbaiki equation yang nomor identitasnya kepisah jadi blok
     # PyMuPDF tersendiri -- lihat docstring _merge_split_equation_numbers()
     # untuk alasan lengkap kenapa ini diperlukan KHUSUS jalur PDF.
+    elements = _merge_equation_fragments(elements)
+    for _e in elements:
+        if _e["type"] == "equation":
+            _move_equation_number_to_end(_e)
     elements = _merge_split_equation_numbers(elements)
 
     # Estimasi blank_before/blank_after utk equation dari jarak

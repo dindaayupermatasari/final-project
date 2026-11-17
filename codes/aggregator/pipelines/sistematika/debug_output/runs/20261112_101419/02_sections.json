@@ -1,0 +1,258 @@
+[
+  {
+    "bab": "1",
+    "num": "1.1",
+    "title": "LATAR BELAKANG",
+    "chars": 3739,
+    "skip": false,
+    "preview": "Perkembangan teknologi informasi dan komunikasi di Indonesia dalam beberapa tahun terakhir telah membawa perubahan besar dalam cara masyarakat beraktivitas. Internet kini menjadi bagian tak terpisahka"
+  },
+  {
+    "bab": "1",
+    "num": "1.2",
+    "title": "PERMASALAHAN",
+    "chars": 897,
+    "skip": false,
+    "preview": "Untuk menindaklanjuti latar belakang di atas, permasalahan yang dapat diidentifikasi sebagai berikut. Layanan Internet Service Provider (ISP) di Indonesia masih menimbulkan berbagai keluhan dari pelan"
+  },
+  {
+    "bab": "1",
+    "num": "1.3",
+    "title": "TUJUAN",
+    "chars": 1000,
+    "skip": false,
+    "preview": "Berdasarkan latar belakang dan permasalahan sebelumnya, proyek akhir ini memiliki tujuan sebagai berikut. Penelitian menganalisis opini pelanggan terhadap layanan Internet Service Provider (ISP) berda"
+  },
+  {
+    "bab": "1",
+    "num": "1.4",
+    "title": "MANFAAT",
+    "chars": 551,
+    "skip": false,
+    "preview": "Berdasarkan latar belakang dan permasalahan sebelumnya, proyek akhir ini memiliki tujuan sebagai berikut. Perusahaan Internet Service Provider: Sebagai bahan evaluasi untuk mengetahui aspek layanan ya"
+  },
+  {
+    "bab": "1",
+    "num": "1.5",
+    "title": "SISTEMATIKA PENULISAN",
+    "chars": 1136,
+    "skip": false,
+    "preview": "Bab 1 Pendahuluan Bagian ini membahas latar belakang, perumusan masalah, tujuan, dan manfaat penelitian, serta sistematika penulisan laporan. Bab 2 Kajian Pustaka Bagian ini berisi kajian pustaka yang"
+  },
+  {
+    "bab": "2",
+    "num": "2.1",
+    "title": "DESKRIPSI PERMASALAHAN",
+    "chars": 2423,
+    "skip": false,
+    "preview": "Kualitas layanan Internet Service Provider (ISP) di Indonesia masih sering dikeluhkan oleh pelanggan. Berbagai keluhan pelanggan terkait kecepatan internet, kestabilan jaringan, harga layanan, hingga "
+  },
+  {
+    "bab": "2",
+    "num": "2.2",
+    "title": "TEORI PENUNJANG",
+    "chars": 29646,
+    "skip": false,
+    "preview": "2.2.1 Internet Service Provider Internet (International Network) merupakan jaringan komputer berskala global yang menghubungkan berbagai sistem komputer di seluruh dunia, baik milik pemerintah, swasta"
+  },
+  {
+    "bab": "2",
+    "num": "2.3",
+    "title": "PENELITIAN TERKAIT",
+    "chars": 7116,
+    "skip": false,
+    "preview": "Dalam pengajuan proyek akhir ini, peneliti telah mencari referensi dari penelitian sebelumnya yang berkaitan dengan latar belakang ataupun permasalahan yang sama. Berikut merupakan penelitian terkait "
+  },
+  {
+    "bab": "3",
+    "num": "3.1",
+    "title": "DESKRIPSI SOLUSI",
+    "chars": 1038,
+    "skip": false,
+    "preview": "Pada proyek akhir ini, untuk menyusun penelitian terkait aspect-based Sentimen analysis pada perushaan ISP (Internet Service Provider), solusinya adalah dengan mengambil opini masyarakat dari media so"
+  },
+  {
+    "bab": "3",
+    "num": "3.2",
+    "title": "SUMBER DATA",
+    "chars": 2233,
+    "skip": false,
+    "preview": "Data yang digunakan dalam penelitian ini berupa komentar pengguna yang dikumpulkan dari akun Instagram resmi delapan penyedia layanan internet (ISP) di Indonesia. Pemilihan Instagram sebagai sumber da"
+  },
+  {
+    "bab": "3",
+    "num": "3.3",
+    "title": "PERANCANGAN SISTEM",
+    "chars": 2465,
+    "skip": false,
+    "preview": "Sebagai tindak lanjut atas solusi yang telah dipaparkan sebelumnya, peneliti melakukan aspect-based Sentimen analysis menggunakan library Transformer (Python). Desain sistem ini disusun untuk memberik"
+  },
+  {
+    "bab": "3",
+    "num": "3.4",
+    "title": "TAHAPAN IMPLEMENTASI SISTEM",
+    "chars": 0,
+    "skip": false,
+    "preview": ""
+  },
+  {
+    "bab": "3",
+    "num": "3.5",
+    "title": "Proses Pembuatan Model",
+    "chars": 11712,
+    "skip": false,
+    "preview": "Bagian ini menjelaskan proses pengembangan model yang dimulai dari pengumpulan data hingga tahap evaluasi hasil. Data yang digunakan berupa komentar atau opini pelanggan dari media sosial yang membaha"
+  },
+  {
+    "bab": "3",
+    "num": "3.6",
+    "title": "Stratisfied K-Fold Cross Validation",
+    "chars": 1900,
+    "skip": false,
+    "preview": "Pada tahap ini, proses pembentukan dan evaluasi model Aspect-Based Sentimen Analysis (ABSA) dilakukan dengan menggunakan pendekatan Stratified K-Fold Cross Validation (SKCV). Teknik ini diterapkan unt"
+  },
+  {
+    "bab": "3",
+    "num": "3.7",
+    "title": "Fine-Tuning Model BERT",
+    "chars": 7220,
+    "skip": false,
+    "preview": "Model Bidirectional Encoder Representations from Transformers (BERT) merupakan salah satu arsitektur transformer yang paling banyak digunakan dalam tugas pemrosesan bahasa alami (Natural Language Proc"
+  },
+  {
+    "bab": "3",
+    "num": "3.8",
+    "title": "Evaluasi Model",
+    "chars": 3289,
+    "skip": false,
+    "preview": "Tahap evaluasi model dilakukan untuk memastikan bahwa hasil prediksi model benar-benar mewakili pola opini pelanggan terhadap layanan perusahaan penyedia jasa internet (ISP) di media sosial. Dalam pen"
+  },
+  {
+    "bab": "3",
+    "num": "3.9",
+    "title": "Penyimpanan Model",
+    "chars": 1632,
+    "skip": false,
+    "preview": "Setelah model Aspect Classification dan Sentimen Polarity Detection selesai melalui tahap pelatihan dan evaluasi kinerja model, maka tahap selanjutnya yaitu penyimpanan model. Penyimpanan model bertuj"
+  },
+  {
+    "bab": "3",
+    "num": "3.10",
+    "title": "Alur Kerja Antarmuka Website",
+    "chars": 1962,
+    "skip": false,
+    "preview": "Antarmuka website ISPLens dirancang untuk membantu pengguna memperoleh informasi mengenai aspek dan sentimen pelanggan ISP secara menyeluruh melalui tampilan yang interaktif dan mudah digunakan. Ketik"
+  },
+  {
+    "bab": "3",
+    "num": "3.11",
+    "title": "SEGMENTASI KALIMAT TAHAP INFERENSI",
+    "chars": 0,
+    "skip": false,
+    "preview": ""
+  },
+  {
+    "bab": "3",
+    "num": "3.12",
+    "title": "Latar Belakang Penerapan Segmentasi",
+    "chars": 721,
+    "skip": false,
+    "preview": "Segmentasi klausa diterapkan sejak tahap persiapan data, yaitu sebelum proses pelabelan, dengan tujuan memecah kalimat multi-aspek menjadi klausa-klausa yang lebih kecil sehingga setiap klausa hanya m"
+  },
+  {
+    "bab": "3",
+    "num": "3.13",
+    "title": "Mekanisme Segmentasi Berbasis Konjungsi",
+    "chars": 2148,
+    "skip": false,
+    "preview": "Pendekatan segmentasi yang digunakan adalah rule-based dengan mendefinisikan daftar konjungsi bahasa Indonesia sebagai penanda batas antar segmen. Fungsi segment_sentence bekerja dengan cara memindai "
+  },
+  {
+    "bab": "3",
+    "num": "3.14",
+    "title": "Alur Proses Segmentasi",
+    "chars": 2908,
+    "skip": false,
+    "preview": "Alur proses segmentasi kalimat berbasis konjungsi pada tahap inferensi digambarkan pada flowchart berikut. Berdasarkan Gambar 3.5 di atas, alur segmentasi dimulai ketika sistem menerima kalimat masuka"
+  },
+  {
+    "bab": "3",
+    "num": "3.15",
+    "title": "RANCANGAN ANTARMUKA",
+    "chars": 778,
+    "skip": false,
+    "preview": "Gambar 3.6 merupakan halaman pertama yang muncul setelah pengguna masuk ke sistem. Fokusnya adalah memberikan ringkasan cepat mengenai data komentar pelanggan ISP. Pada Gambar 3.7 menampilkan halaman "
+  },
+  {
+    "bab": "4",
+    "num": "4.1",
+    "title": "PARAMETER EKSPERIMEN",
+    "chars": 4436,
+    "skip": false,
+    "preview": "Pada penelitian ini, dilakukan pengujian terhadap beberapa parameter utama untuk membangun sistem analisis sentimen berbasis Aspect-Based Sentimen Analysis (ABSA) dengan memanfaatkan Large Language Mo"
+  },
+  {
+    "bab": "4",
+    "num": "4.2",
+    "title": "KARATERISTIK DATA",
+    "chars": 1288,
+    "skip": false,
+    "preview": "Data yang digunakan dalam proses uji coba berasal dari hasil scraping komentar aduan pengguna pada akun Instagram resmi milik beberapa penyedia layanan internet (Internet Service Provider) di Indonesi"
+  },
+  {
+    "bab": "4",
+    "num": "4.3",
+    "title": "TEMPAT UJICOBA",
+    "chars": 265,
+    "skip": false,
+    "preview": "Penelitian ini dilaksanakan di lingkungan rumah dalam rentang waktu bulan Desember 2025 hingga Juli 2026. Pemilihan lokasi tersebut didasarkan pada ketersediaan akses internet yang stabil serta dapat "
+  },
+  {
+    "bab": "4",
+    "num": "4.4",
+    "title": "WAKTU UJICOBA",
+    "chars": 102,
+    "skip": false,
+    "preview": "Peneliti melaksanakan uji coba penelitian ini mulai bulan Desember 2025 sampai dengan bulan Juni 2026."
+  },
+  {
+    "bab": "4",
+    "num": "4.5",
+    "title": "SPESIFIKASI PERALATAN UJICOBA",
+    "chars": 510,
+    "skip": false,
+    "preview": "Dalam penelitian ini, peralatan yang digunakan untuk uji coba adalah perangkat dan perangkat lunak seperti pada tabel 4.1. Tabel 4. 1 Spesifikasi Peralatan Uji Coba No Bagian Perangkat Spesifikasi 1. "
+  },
+  {
+    "bab": "4",
+    "num": "4.6",
+    "title": "HASIL EKSPERMEN",
+    "chars": 52429,
+    "skip": false,
+    "preview": "Setiap eksperimen difokuskan pada pengujian terhadap parameter-parameter tersebut untuk melihat kontribusi masing-masing tahapan dalam meningkatkan kualitas data dan ketepatan hasil klasifikasi, sehin"
+  },
+  {
+    "bab": "4",
+    "num": "4.7",
+    "title": "ANALISIS HASIL EKSPERIMEN",
+    "chars": 4371,
+    "skip": false,
+    "preview": "Analisis Model Sentimen Pada data imbalance, IndoBERT memperoleh accuracy 0,7862 dan F1-score 0,6650, dengan performa timpang antar kelas: negatif 0,83, netral 0,66, positif hanya 0,55. Setelah augmen"
+  },
+  {
+    "bab": "5",
+    "num": "5.1",
+    "title": "KESIMPULAN",
+    "chars": 2242,
+    "skip": false,
+    "preview": "Penelitian ini dilatarbelakangi oleh pentingnya analisis ulasan pelanggan Internet Service Provider di media sosial sebagai sumber evaluasi kualitas layanan, karena ulasan tersebut memuat opini penggu"
+  },
+  {
+    "bab": "5",
+    "num": "5.2",
+    "title": "SARAN",
+    "chars": 1520,
+    "skip": false,
+    "preview": "Terdapat beberapa hal yang dapat dilakukan untuk meningkatkan dan menyempurnakan sistem ABSA berbasis segmentasi klausa yang telah dibangun, antara lain sebagai berikut. Memperluas jumlah dan variasi "
+  }
+]

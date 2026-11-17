@@ -1,0 +1,24 @@
+{
+  "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\de78ae7a0533\\Buku PA_Masyitha Fahra.docx",
+  "sections": null,
+  "judul": "ASPECT-BASED SENTIMEN ANALYSIS PADA PERUSAHAAN INTERNET SERVICE PROVIDER (ISP)",
+  "opsi": {
+    "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\de78ae7a0533\\Buku PA_Masyitha Fahra.docx",
+    "judul": "ASPECT-BASED SENTIMEN ANALYSIS PADA PERUSAHAAN INTERNET SERVICE PROVIDER (ISP)",
+    "sections": null,
+    "bab": "all",
+    "only": null,
+    "mode": "kalimat",
+    "retrieval": "live",
+    "topk": 3,
+    "match": "auto",
+    "max_chars": 9000,
+    "max_windows": 6,
+    "chroma_dir": null,
+    "pause": false,
+    "yes": true,
+    "problem_domain": "perusahaan internet service provider (ISP)",
+    "problem": "sulitnya menganalisis sentimen pada perusahaan internet service provider (ISP)",
+    "uniqueness": "aspect-based sentiment analysis"
+  }
+}

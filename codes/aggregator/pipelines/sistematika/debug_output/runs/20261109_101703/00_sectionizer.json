@@ -1,0 +1,418 @@
+[
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.1",
+    "subbab_title": "LATAR BELAKANG",
+    "source": "heading_style",
+    "chars": 1876
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.2",
+    "subbab_title": "PERMASALAHAN",
+    "source": "heading_style",
+    "chars": 1103
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.3",
+    "subbab_title": "TUJUAN",
+    "source": "heading_style",
+    "chars": 1798
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.4",
+    "subbab_title": "MANFAAT",
+    "source": "heading_style",
+    "chars": 1562
+  },
+  {
+    "bab_num": 1,
+    "bab_title": "PENDAHULUAN",
+    "subbab_num": "1.5",
+    "subbab_title": "SISTEMATIKA PENULISAN",
+    "source": "heading_style",
+    "chars": 56
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.0",
+    "subbab_title": "KAJIAN PUSTAKA",
+    "source": "heading_style",
+    "chars": 430
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.1",
+    "subbab_title": "DESKRIPSI PERMASALAHAN",
+    "source": "heading_style",
+    "chars": 2234
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.2",
+    "subbab_title": "TEORI PENUNJANG",
+    "source": "heading_style",
+    "chars": 0
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.3",
+    "subbab_title": "Contextual Analysis",
+    "source": "heading_style",
+    "chars": 1438
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.4",
+    "subbab_title": "Opinion Mining",
+    "source": "heading_style",
+    "chars": 2273
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.5",
+    "subbab_title": "Automatic Clustering",
+    "source": "heading_style",
+    "chars": 1748
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.6",
+    "subbab_title": "Feature Extraction",
+    "source": "heading_style",
+    "chars": 1150
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.7",
+    "subbab_title": "Web Scraping",
+    "source": "heading_style",
+    "chars": 1233
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.8",
+    "subbab_title": "Text Summarization",
+    "source": "heading_style",
+    "chars": 1328
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.9",
+    "subbab_title": "PENELITIAN TERKAIT",
+    "source": "heading_style",
+    "chars": 0
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.10",
+    "subbab_title": "Summarizing Students’ Free Responses for an Introductory Algebra-Based Physics Course Survey Using Cluster and Sentiment Analysis",
+    "source": "heading_style",
+    "chars": 1592
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.11",
+    "subbab_title": "Cluster-Based News Representative Generation with Automatic Incremental",
+    "source": "heading_style",
+    "chars": 1634
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.12",
+    "subbab_title": "SEOpinion: Summarization and Exploration of Opinion from E-Commerce Websites",
+    "source": "heading_style",
+    "chars": 1915
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.13",
+    "subbab_title": "GenSumm – A Joint Framework for Multi-Task Tweet Classification and Summarization Using Sentiment Analysis and Generative Modelling",
+    "source": "heading_style",
+    "chars": 1718
+  },
+  {
+    "bab_num": 2,
+    "bab_title": "KAJIAN PUSTAKA",
+    "subbab_num": "2.14",
+    "subbab_title": "Opinion Mining with Reviews Summarization Based on Clustering",
+    "source": "heading_style",
+    "chars": 1331
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.1",
+    "subbab_title": "DESKRIPSI SOLUSI",
+    "source": "heading_style",
+    "chars": 1788
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.2",
+    "subbab_title": "PERANCANGAN SISTEM",
+    "source": "heading_style",
+    "chars": 32
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.3",
+    "subbab_title": "Data Source",
+    "source": "heading_style",
+    "chars": 818
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.4",
+    "subbab_title": "Text Preprocessing",
+    "source": "heading_style",
+    "chars": 4904
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.5",
+    "subbab_title": "Feature Extraction",
+    "source": "heading_style",
+    "chars": 5826
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.6",
+    "subbab_title": "Automatic Clustering",
+    "source": "heading_style",
+    "chars": 7823
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.7",
+    "subbab_title": "Summarization",
+    "source": "heading_style",
+    "chars": 4042
+  },
+  {
+    "bab_num": 3,
+    "bab_title": "DESAIN SISTEM",
+    "subbab_num": "3.8",
+    "subbab_title": "Mockup dashboard",
+    "source": "heading_style",
+    "chars": 3207
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.1",
+    "subbab_title": "PARAMETER EKSPERIMEN",
+    "source": "heading_style",
+    "chars": 132
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.2",
+    "subbab_title": "Pengumpulan Data",
+    "source": "heading_style",
+    "chars": 501
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.3",
+    "subbab_title": "Preprocessing Teks",
+    "source": "heading_style",
+    "chars": 496
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.4",
+    "subbab_title": "Ekstraksi Fitur",
+    "source": "heading_style",
+    "chars": 572
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.5",
+    "subbab_title": "Clustering",
+    "source": "heading_style",
+    "chars": 578
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.6",
+    "subbab_title": "Summarization",
+    "source": "heading_style",
+    "chars": 946
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.7",
+    "subbab_title": "KARAKTERISTIK DATA",
+    "source": "heading_style",
+    "chars": 1648
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.8",
+    "subbab_title": "TEMPAT UJICOBA",
+    "source": "heading_style",
+    "chars": 320
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.9",
+    "subbab_title": "WAKTU UJICOBA",
+    "source": "heading_style",
+    "chars": 825
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.10",
+    "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+    "source": "heading_style",
+    "chars": 448
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.11",
+    "subbab_title": "HASIL EKSPERIMEN",
+    "source": "heading_style",
+    "chars": 0
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.12",
+    "subbab_title": "Hasil Scraping Komentar Instagram",
+    "source": "heading_style",
+    "chars": 3697
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.13",
+    "subbab_title": "Hasil Preprocessing Data",
+    "source": "heading_style",
+    "chars": 4205
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.14",
+    "subbab_title": "Hasil Ekstraksi Fitur",
+    "source": "heading_style",
+    "chars": 6744
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.15",
+    "subbab_title": "Hasil Uji Coba Clustering",
+    "source": "heading_style",
+    "chars": 31857
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.16",
+    "subbab_title": "Hasil Ujicoba Summarization",
+    "source": "heading_style",
+    "chars": 3919
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.17",
+    "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+    "source": "heading_style",
+    "chars": 383
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.18",
+    "subbab_title": "Analisis Hasil Scraping Kometar Instagram",
+    "source": "heading_style",
+    "chars": 1078
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.19",
+    "subbab_title": "Analisis Kinerja Preprocessing dan Ekstraksi Fitur",
+    "source": "heading_style",
+    "chars": 1802
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.20",
+    "subbab_title": "Analisis Hasil Penentuan Cluster Optimal",
+    "source": "heading_style",
+    "chars": 7917
+  },
+  {
+    "bab_num": 4,
+    "bab_title": "EKSPERIMEN DAN ANALISIS",
+    "subbab_num": "4.21",
+    "subbab_title": "Analisis Hasil Penyusunan Summary",
+    "source": "heading_style",
+    "chars": 5691
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "PENUTUP",
+    "subbab_num": "5.0",
+    "subbab_title": "PENUTUP",
+    "source": "heading_style",
+    "chars": 260
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "PENUTUP",
+    "subbab_num": "5.1",
+    "subbab_title": "KESIMPULAN",
+    "source": "heading_style",
+    "chars": 2794
+  },
+  {
+    "bab_num": 5,
+    "bab_title": "PENUTUP",
+    "subbab_num": "5.2",
+    "subbab_title": "SARAN",
+    "source": "heading_style",
+    "chars": 1159
+  }
+]

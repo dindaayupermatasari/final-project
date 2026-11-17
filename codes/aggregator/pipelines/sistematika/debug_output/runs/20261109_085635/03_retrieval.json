@@ -1,0 +1,137 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-1_instruction",
+        "subbab_num": "1.1",
+        "subbab_title": "LATAR BELAKANG",
+        "distance": 0.3227
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.4406
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.4542
+      }
+    ]
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.3873
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-2_instruction",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "distance": 0.3877
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.4034
+      }
+    ]
+  },
+  {
+    "subbab": "TUJUAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.4032
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.4309
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-2_instruction",
+        "subbab_num": "4.2",
+        "subbab_title": "KARATERISTIK DATA",
+        "distance": 0.4317
+      }
+    ]
+  },
+  {
+    "subbab": "MANFAAT",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-5_instruction",
+        "subbab_num": "1.5",
+        "subbab_title": "MANFAAT",
+        "distance": 0.3661
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.5528
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.5603
+      }
+    ]
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-6_instruction",
+        "subbab_num": "1.6",
+        "subbab_title": "SISTEMATIKA PENULISAN",
+        "distance": 0.2523
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-2_instruction",
+        "subbab_num": "4.2",
+        "subbab_title": "KARATERISTIK DATA",
+        "distance": 0.2719
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab5_sub5-1_instruction",
+        "subbab_num": "5.1",
+        "subbab_title": "KESIMPULAN",
+        "distance": 0.2734
+      }
+    ]
+  }
+]

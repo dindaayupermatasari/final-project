@@ -1,0 +1,164 @@
+[
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #81 ('KATA PENGANTAR')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #102 ('DAFTAR GAMBAR')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #123 ('DAFTAR TABEL')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #165 ('DAFTAR LAMPIRAN')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #178 ('BAB 1\nPENDAHULUAN')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #205 ('BAB 2\nKAJIAN PUSTAKA')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #323 ('Tabel 2. 1 Tabel Perbandingan Penelitian')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #324 ('BAB 3\nDESAIN SISTEM')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #370 ('Tabel 3. 1 Contoh Dataset Hasil Scrappin...')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #373 ('Tabel 3. 2 Contoh Dataset Multi Aspek & ...')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #459 ('Tabel 3. 3 Daftar Konjungsi Sebagai Pena...')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #481 ('Tabel 3. 4 Contoh Hasil Segmentasi Kalim...')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #534 ('BAB 4')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #535 ('EKSPERIMEN DAN ANALISIS')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #588 ('Tabel 4.  3 Sebelum dan Sesudah Segmenta...')",
+    "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 5",
+    "location": "Paragraf #850 ('BAB 5\nPENUTUP')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "DAFTAR PUSTAKA",
+    "location": "Paragraf #862 ('DAFTAR PUSTAKA')",
+    "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Umum (Cetak Bolak-Balik)",
+    "location": "Pengaturan Dokumen (Page Setup)",
+    "description": "Mirror-margin tidak aktif di pengaturan dokumen, padahal dokumen dicetak bolak-balik seharusnya mengaktifkan mirror-margin (Layout > Margins > Mirror Margins di Word)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #609 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #609 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #613 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #613 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #613 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #616 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #616 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #616 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "DAFTAR PUSTAKA",
+    "location": "Paragraf #869 ('[7]\tData Miner, “Data Miner: Extract dat...')",
+    "description": "Entri Daftar Pustaka ini mengandung tahun, tapi tidak di posisi akhir -- tahun seharusnya jadi field TERAKHIR (setelah nama publikasi/penerbit)."
+  }
+]

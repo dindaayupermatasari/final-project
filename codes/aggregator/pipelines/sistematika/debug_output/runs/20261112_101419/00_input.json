@@ -1,0 +1,24 @@
+{
+  "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\CheckRun\\data\\samples\\Buku PA_Masyitha Fahra.docx",
+  "sections": null,
+  "judul": null,
+  "opsi": {
+    "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\CheckRun\\data\\samples\\Buku PA_Masyitha Fahra.docx",
+    "judul": null,
+    "sections": null,
+    "bab": "all",
+    "only": null,
+    "mode": "kalimat",
+    "retrieval": "cached",
+    "topk": 3,
+    "match": "auto",
+    "max_chars": 9000,
+    "max_windows": 6,
+    "chroma_dir": null,
+    "pause": false,
+    "yes": false,
+    "problem_domain": null,
+    "problem": null,
+    "uniqueness": null
+  }
+}

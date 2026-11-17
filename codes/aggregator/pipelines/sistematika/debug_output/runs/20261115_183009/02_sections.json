@@ -1,0 +1,154 @@
+[
+  {
+    "bab": "1",
+    "num": "1.1",
+    "title": "LATAR BELAKANG",
+    "chars": 1873,
+    "skip": false,
+    "preview": "Perusahaan Umum Daerah (Perumda) Air Minum Surya Sembada, atau yang kerap dikenal dengan nama lamanya PDAM, merupakan Badan Usaha Milik Daerah (BUMD) yang diberi wewenang oleh pemerintah daerah untuk "
+  },
+  {
+    "bab": "1",
+    "num": "1.2",
+    "title": "PERMASALAHAN",
+    "chars": 1102,
+    "skip": false,
+    "preview": "Atas tuntutan yang tinggi untuk terus meningkatkan kualitas pelayanannya, salah satu aspek penting dalam peningkatan kualitas tersebut adalah kemampuan menerima dan menindaklanjuti pengaduan serta kel"
+  },
+  {
+    "bab": "1",
+    "num": "1.3",
+    "title": "TUJUAN",
+    "chars": 1796,
+    "skip": false,
+    "preview": "Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering ter"
+  },
+  {
+    "bab": "1",
+    "num": "1.4",
+    "title": "MANFAAT",
+    "chars": 1560,
+    "skip": false,
+    "preview": "Penelitian ini memberikan beberapa manfaat yang spesifik dan nyata bagi berbagai pihak terkait. Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan e"
+  },
+  {
+    "bab": "1",
+    "num": "1.5",
+    "title": "SISTEMATIKA PENULISAN",
+    "chars": 803,
+    "skip": false,
+    "preview": "Sistematika pembahasan dalam buku proyek akhir meliputi: Bab 1 Pendahuluan Menceritakan latar belakang dari penelitian, permasalahan, tujuan, manfaat, dan sistematika penulisan. Bab 2 Kajian Pustaka M"
+  },
+  {
+    "bab": "2",
+    "num": "2.1",
+    "title": "DESKRIPSI PERMASALAHAN",
+    "chars": 2230,
+    "skip": false,
+    "preview": "Permasalahan utama yang diangkat dalam proyek akhir ini berkaitan dengan sulitnya mengelola opini dan keluhan pelanggan PDAM Surya Sembada yang tersebar di berbagai platform, khususnya media sosial se"
+  },
+  {
+    "bab": "2",
+    "num": "2.2",
+    "title": "TEORI PENUNJANG",
+    "chars": 9309,
+    "skip": false,
+    "preview": "2.2.1 Contextual Analysis Contextual analysis, atau disebut juga context capturing, merupakan proses identifikasi konteks suatu kata atau frasa berdasarkan kata-kata di sekitarnya, yang bertujuan untu"
+  },
+  {
+    "bab": "2",
+    "num": "2.3",
+    "title": "PENELITIAN TERKAIT",
+    "chars": 10203,
+    "skip": false,
+    "preview": "2.3.1 Summarizing Students’ Free Responses for an Introductory Algebra-Based Physics Course Survey Using Cluster and Sentiment Analysis Kim dan Qin (2023) melakukan penelitian untuk merangkum tanggapa"
+  },
+  {
+    "bab": "3",
+    "num": "3.1",
+    "title": "DESKRIPSI SOLUSI",
+    "chars": 1788,
+    "skip": false,
+    "preview": "Proyek ini bertujuan memahami opini dan keluhan pelanggan di media sosial, khususnya Instagram, dengan studi kasus Perumda Surya Sembada. Komentar-komentar dari Instagram yang disampaikan oleh masyara"
+  },
+  {
+    "bab": "3",
+    "num": "3.2",
+    "title": "PERANCANGAN SISTEM",
+    "chars": 26845,
+    "skip": false,
+    "preview": "Gambar 3.1 Diagram desain sistem 3.2.1 Data Source Sumber data yang digunakan dalam proyek ini berasal dari komen instagram yang terdapat di bawah post milik akun resmi Perumda Air Minum Surya Sembada"
+  },
+  {
+    "bab": "4",
+    "num": "4.1",
+    "title": "PARAMETER EKSPERIMEN",
+    "chars": 3342,
+    "skip": false,
+    "preview": "Parameter eksperimen berupa konfigurasi tetap dan variabel yang digunakan selama pelaksanaan uji coba sistem adalah sebagai berikut: 4.1.1 Pengumpulan Data Pengumpulan data dilakukan menggunakan scrip"
+  },
+  {
+    "bab": "4",
+    "num": "4.2",
+    "title": "KARAKTERISTIK DATA",
+    "chars": 1648,
+    "skip": false,
+    "preview": "Data yang digunakan dalam eksperimen ini adalah komentar Instagram nyata yang diambil dari akun resmi PDAM Surya Sembada Surabaya melalui web scraping. Data ini terdiri dari komentar warganet dan bala"
+  },
+  {
+    "bab": "4",
+    "num": "4.3",
+    "title": "TEMPAT UJICOBA",
+    "chars": 320,
+    "skip": false,
+    "preview": "Ujicoba dilaksanakan secara lokal menggunakan laptop pribadi peneliti. Lingkungan pengujian adalah sistem operasi Windows 11 dengan Visual Studio Code sebagai IDE utamanya. Pengujian dilakukan menggun"
+  },
+  {
+    "bab": "4",
+    "num": "4.4",
+    "title": "WAKTU UJICOBA",
+    "chars": 825,
+    "skip": false,
+    "preview": "Ujicoba dilaksanakan mulai dari September 2025 hingga Juni 2026. Perincian fokus alokasi waktu ujicoba selama kurang lebih 8 bulan tersebut sebagai berikut: September–Oktober 2025: Pengembangan dan pe"
+  },
+  {
+    "bab": "4",
+    "num": "4.5",
+    "title": "SPESIFIKASI PERALATAN UJICOBA",
+    "chars": 1042,
+    "skip": false,
+    "preview": "Uji coba dilakukan dengan menggunakan perangkat laptop pribadi dengan spesifikasi yang ditunjukkan pada tabel 4.1. No Parameter Nilai 1 CPU 11th Gen Intel(R) Core (TM) i7-11370H @ 3.30GHz (3.30 GHz) 2"
+  },
+  {
+    "bab": "4",
+    "num": "4.6",
+    "title": "HASIL EKSPERIMEN",
+    "chars": 85648,
+    "skip": false,
+    "preview": "4.6.1 Hasil Scraping Komentar Instagram Eksperimen dimulai dengan proses pengumpulan data komentar Instagram menggunakan teknik scraping. Scraping dilakukan dengan script yang disusun untuk melakukan "
+  },
+  {
+    "bab": "4",
+    "num": "4.7",
+    "title": "ANALISIS HASIL EKSPERIMEN",
+    "chars": 17062,
+    "skip": false,
+    "preview": "Analisis hasil eksperimen ini bertujuan untuk mengevaluasi apakah pendekatan yang diajukan, yaitu Contextual Analysis melalui Automatic Hierarchical Clustering dengan dan Valley Tracing, mampu mengelo"
+  },
+  {
+    "bab": "5",
+    "num": "5.1",
+    "title": "KESIMPULAN",
+    "chars": 2792,
+    "skip": false,
+    "preview": "Penelitian ini berangkat dari urgensi untuk mengelola opini pelanggan Perumda Air Minum Surya Sembada yang tidak terstruktur dan bervolume besar, dengan fokus utama pada komentar publik. Solusi yang d"
+  },
+  {
+    "bab": "5",
+    "num": "5.2",
+    "title": "SARAN",
+    "chars": 1158,
+    "skip": false,
+    "preview": "Solusi yang ditawarkan dan dikemabngkan ini masih memiliki beberapa keterbatasan yang bisa diperbaiki lebih lanjut untuk mencapai hasil pengelompokan yang lebih berkualitas dan koheren. Mengingat pola"
+  }
+]

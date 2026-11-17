@@ -1,0 +1,25 @@
+{
+  "id": "de78ae7a0533",
+  "status": "done",
+  "file": "Buku PA_Masyitha Fahra.docx",
+  "path": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\de78ae7a0533\\Buku PA_Masyitha Fahra.docx",
+  "judul": "",
+  "created": "2026-11-16T01:04:04",
+  "error": null,
+  "skor": 78.9,
+  "started": "2026-11-16T01:04:44",
+  "decomp": {
+    "judul": "ASPECT-BASED SENTIMEN ANALYSIS PADA PERUSAHAAN INTERNET SERVICE PROVIDER (ISP)",
+    "problem_domain": "perusahaan internet service provider (ISP)",
+    "problem": "sulitnya menganalisis sentimen pada perusahaan internet service provider (ISP)",
+    "uniqueness": "aspect-based sentiment analysis",
+    "catatan": "",
+    "perlu_dicek": [
+      "uniqueness banyak memuat kata di luar judul"
+    ],
+    "judul_pasti": true,
+    "dikonfirmasi": true
+  },
+  "run_dir": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\aggregator\\pipelines\\sistematika\\debug_output\\runs\\20261116_010444",
+  "finished": "2026-11-16T01:11:05"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "3bc06f9141cb",
+  "status": "done",
+  "file": "Buku PA_Arief Satria.pdf",
+  "path": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\3bc06f9141cb\\Buku PA_Arief Satria.pdf",
+  "judul": "",
+  "created": "2026-11-15T11:45:20",
+  "error": null,
+  "skor": 77.4,
+  "started": "2026-11-15T11:45:37",
+  "decomp": {
+    "judul": "SIMULASI OPTIMASI SPESIFIKASI KERETA API LISTRIK MENGGUNAKAN LOGIKA FUZZY",
+    "problem_domain": "kereta api listrik",
+    "problem": "sulitnya mengoptimalkan spesifikasi kereta api listrik",
+    "uniqueness": "simulasi optimasi menggunakan logika fuzzy",
+    "catatan": "",
+    "perlu_dicek": [],
+    "judul_pasti": true,
+    "dikonfirmasi": true
+  },
+  "run_dir": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\aggregator\\pipelines\\sistematika\\debug_output\\runs\\20261115_114537",
+  "finished": "2026-11-15T11:47:34"
+}

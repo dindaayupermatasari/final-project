@@ -1,0 +1,61 @@
+{
+  "total_findings": 59,
+  "overall_score": 96.96,
+  "per_chapter": {
+    "Pra-Bab": {
+      "checked": 100,
+      "failed": 2,
+      "score": 98.0
+    },
+    "BAB 1": {
+      "checked": 89,
+      "failed": 5,
+      "score": 94.38
+    },
+    "BAB 2": {
+      "checked": 199,
+      "failed": 27,
+      "score": 86.43
+    },
+    "BAB 3": {
+      "checked": 476,
+      "failed": 7,
+      "score": 98.53
+    },
+    "BAB 4": {
+      "checked": 879,
+      "failed": 14,
+      "score": 98.41
+    },
+    "BAB 5": {
+      "checked": 53,
+      "failed": 2,
+      "score": 96.23
+    },
+    "DAFTAR PUSTAKA": {
+      "checked": 136,
+      "failed": 0,
+      "score": 100.0
+    },
+    "Umum (Margin Halaman)": {
+      "checked": 4,
+      "failed": 0,
+      "score": 100.0
+    },
+    "Umum (Ukuran Kertas)": {
+      "checked": 1,
+      "failed": 1,
+      "score": 0.0
+    },
+    "Umum (Cetak Bolak-Balik)": {
+      "checked": 1,
+      "failed": 0,
+      "score": 100.0
+    },
+    "Umum (Penomoran Halaman)": {
+      "checked": 2,
+      "failed": 1,
+      "score": 50.0
+    }
+  }
+}

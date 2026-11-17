@@ -1,0 +1,356 @@
+[
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #163 ('1.1 LATAR BELAKANG')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #169 ('1.2 PERMASALAHAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #176 ('1.3 TUJUAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #182 ('1.4 MANFAAT')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 1",
+    "location": "Paragraf #184 ('1.5 SISTEMATIKA PENULISAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #197 ('2.1 DESKRIPSI PERMASALAHAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #199 ('2.2 TEORI PENUNJANG')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #251 ('2.3 PENELITIAN TERKAIT')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #276 ('3.1 DESKRIPSI SOLUSI')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #281 ('3.2 PERANCANGAN SISTEM')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #475 ('4.1 PARAMETER EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #503 ('4.2 KARAKTERISTIK DATA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #515 ('4.3 TEMPAT UJICOBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #517 ('4.4 WAKTU UJICOBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #519 ('4.5 SPESIFIKASI PERALATAN UJI COBA')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #530 ('4.6  HASIL EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #587 ('Airport')",
+    "description": "Ukuran font 11.0pt tidak sesuai untuk tipe 'body', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #804 ('4.7 ANALISIS HASIL EKSPERIMEN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 5",
+    "location": "Paragraf #841 ('5.1 KESIMPULAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 5",
+    "location": "Paragraf #848 ('5.2 SARAN')",
+    "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subchapter_title', seharusnya 12pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Umum (Ukuran Kertas)",
+    "location": "Section #0 (21.59cm x 27.94cm)",
+    "description": "Ukuran kertas di section tsb tidak sesuai A4 (21.0cm x 29.7cm, potrait maupun landscape)."
+  },
+  {
+    "category": "Format",
+    "chapter": "Umum (Penomoran Halaman)",
+    "location": "Section 0 (mulai BAB 1)",
+    "description": "Penomoran halaman di section awal BAB 1 harus format angka Arab dan dimulai ulang dari 1, terdeteksi fmt='lowerRoman', start=1."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Abstrak (Paragraf #49-#55)",
+    "description": "Abstrak berisi 272 kata, seharusnya 300-500 kata."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #206 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #206 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #206 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #210 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #210 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #210 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #212 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #212 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #212 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #214 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #214 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #214 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #216 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #216 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #216 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #219 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #219 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #219 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #226 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #226 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #226 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #228 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #228 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 2",
+    "location": "Paragraf #228 (persamaan)",
+    "description": "Nomor identitas persamaan seharusnya dicetak tebal (bold)."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #453 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #454 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: center. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #454 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #454 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #769 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #769 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #791 (persamaan)",
+    "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #791 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #792 (persamaan)",
+    "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 4",
+    "location": "Paragraf #792 (persamaan)",
+    "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+  },
+  {
+    "category": "Format",
+    "chapter": "BAB 3",
+    "location": "Paragraf #413 ('Sumber : https://www.datacamp.com/tutori...')",
+    "description": "Baris 'Sumber:' seharusnya berukuran 11pt."
+  },
+  {
+    "category": "Format",
+    "chapter": "Pra-Bab",
+    "location": "Paragraf #14 ('PROYEK AKHIR')",
+    "description": "Ukuran font 22.5pt pada halaman sampul tidak sesuai, seharusnya 20pt."
+  }
+]

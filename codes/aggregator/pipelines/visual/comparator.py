@@ -1095,7 +1095,10 @@ def _chapter_of_table(paragraphs_by_index: dict, tbl: dict) -> str:
 
 
 def compare_visual_objects(
-    paragraphs: list[dict], tables: list[dict], source: str = "docx"
+    paragraphs: list[dict],
+    tables: list[dict],
+    source: str = "docx",
+    table_equations: list[dict] | None = None,
 ):
     """
     source: "docx" | "pdf" -- dipakai untuk toleransi estimasi PDF di
@@ -1236,7 +1239,11 @@ def compare_visual_objects(
     # Cek "1 baris kosong di atas/bawah" AKTIF untuk docx & PDF (nilai
     # PDF-nya hasil estimasi dari pdf_extractor.py, lihat docstring
     # _infer_equation_blank_lines() untuk keterbatasannya).
-    for elem in paragraphs:
+    # table_equations: persamaan yang dibungkus tabel layout 1 baris
+    # (extractor.extract_table_equations) -- elemen berbentuk sama dengan
+    # paragraf ber-ptype "equation", jadi lewat aturan yang SAMA di bawah.
+    reported_equation_findings: dict = {}
+    for elem in list(paragraphs) + list(table_equations or []):
         if elem["type"] != "equation":
             continue
         chapter = elem["chapter"]
@@ -1244,7 +1251,8 @@ def compare_visual_objects(
             # LAMPIRAN & BIODATA PENULIS dikecualikan total dari
             # pengecekan format -- lihat docstring _is_excluded_chapter().
             continue
-        loc = f"Paragraf #{elem['index']} (persamaan)"
+        loc = elem.get("location_label") or f"Paragraf #{elem['index']} (persamaan)"
+        findings_before_elem = len(findings)
 
         # --- rata kiri (RUMUSNYA, bukan cuma paragraf pembungkusnya) ---
         # BUG DIPERBAIKI (2026-09-08, laporan mahasiswa -- "rumus rata
@@ -1264,7 +1272,18 @@ def compare_visual_objects(
         # m:oMathParaPr/m:jc sama sekali).
         checks[chapter]["checked"] += 1
         effective_alignment = elem.get("equation_alignment") or elem["alignment"]
-        if effective_alignment != "left":
+        # Layout NON-display (rumus inline + tab, atau rumus di sel tabel):
+        # tidak ada m:oMathParaPr/m:jc, jadi rata visual rumus = rata
+        # paragrafnya. Paragraf tanpa w:jc (None) = default Word = rata
+        # kiri, dan "both" (justify) pada baris tunggal tampil rata kiri
+        # (baris terakhir tidak diregangkan) -- keduanya DITERIMA khusus
+        # layout ini. "center"/"right" tetap ke-flag.
+        left_like = {"left", "start"}
+        if elem.get("equation_layout") in ("inline_tab", "table") and not elem.get(
+            "equation_alignment"
+        ):
+            left_like |= {None, "both"}
+        if effective_alignment not in left_like:
             checks[chapter]["failed"] += 1
             detected = effective_alignment or "tidak diset"
             findings.append(
@@ -1352,7 +1371,15 @@ def compare_visual_objects(
                     found_in_math_zone = True
                     break
 
-        if not m and not found_in_math_zone:
+        # Jalur PDF: nomor identitas dibaca dari POSISI (token di ujung
+        # kanan baris, mis. "(3.4)" atau "4.1" tanpa kurung) oleh
+        # pdf_extractor, karena urutan teks hasil ekstraksi rumus bertingkat
+        # (pecahan) tidak menjamin nomor jadi karakter terakhir.
+        found_visually = bool(
+            not m and not found_in_math_zone and elem.get("equation_number_visual")
+        )
+
+        if not m and not found_in_math_zone and not found_visually:
             checks[chapter]["failed"] += 1
             findings.append(
                 {
@@ -1365,6 +1392,26 @@ def compare_visual_objects(
                     ),
                 }
             )
+        elif found_in_math_zone and elem.get("equation_number_bold") is not None:
+            # Nomor terjebak di math zone ("rumus#(3.1)" otomatis Word):
+            # tebal/tidaknya dibaca extractor per-karakter math run
+            # (_equation_number_bold). Sebelumnya cek ini dilewati
+            # sepenuhnya untuk kasus ini, jadi DOCX tidak pernah
+            # mengecek tebal nomor yang diketik lewat "#(3.1)".
+            checks[chapter]["checked"] += 1
+            if elem["equation_number_bold"] is False:
+                checks[chapter]["failed"] += 1
+                findings.append(
+                    {
+                        "category": "Format",
+                        "chapter": chapter,
+                        "location": loc,
+                        "description": (
+                            "Nomor identitas persamaan seharusnya dicetak "
+                            "tebal (bold)."
+                        ),
+                    }
+                )
         elif m:
             checks[chapter]["checked"] += 1
             # Cek bold HANYA pada run yang jadi bagian span nomor
@@ -1404,6 +1451,24 @@ def compare_visual_objects(
                         ),
                     }
                 )
+
+        # Dedup temuan persamaan di jalur PDF: rumus bertingkat (pecahan)
+        # kadang masih terbaca sebagai beberapa blok terpisah yang
+        # berdempetan. Aturan yang sama di halaman yang sama dan jarak
+        # vertikal dekat = SATU persamaan, cukup dilaporkan sekali.
+        bbox = elem.get("bbox")
+        if bbox and elem.get("page_index") is not None:
+            y_center = (bbox[1] + bbox[3]) / 2
+            kept = []
+            for f in findings[findings_before_elem:]:
+                key = (elem["page_index"], f["description"])
+                prev_y = reported_equation_findings.get(key)
+                if prev_y is not None and abs(prev_y - y_center) < 60:
+                    checks[chapter]["failed"] -= 1
+                    continue
+                reported_equation_findings[key] = y_center
+                kept.append(f)
+            findings[findings_before_elem:] = kept
 
     # --- TABEL ---
     # Rata tengah TIDAK dicek di sini -- itu aturan untuk CAPTION-nya
@@ -1809,6 +1874,72 @@ def compare_quotations(paragraphs: list[dict]):
     return findings, dict(checks)
 
 
+def _bab1_pagenum_message(fmt, start) -> str:
+    """Pesan temuan yang menyebut penyebab SEBENARNYA: format salah, atau
+    format sudah Arab tapi tidak mulai dari 1."""
+    if fmt != "decimal":
+        return (
+            "Nomor halaman mulai BAB 1 harus memakai angka Arab (1, 2, 3) dan "
+            "dimulai lagi dari 1. Saat ini memakai angka Romawi kecil "
+            "(i, ii, iii)."
+        )
+    return (
+        "Nomor halaman BAB 1 sudah memakai angka Arab, tetapi harus dimulai "
+        f"lagi dari 1. Saat ini dimulai dari {start}."
+    )
+
+
+def _resolve_bab1_numbering(paragraphs, sections, bab1_section, bab1_title_re):
+    """
+    Format & nomor TERCETAK di halaman tempat BAB 1 benar-benar mulai.
+
+    BUG DIPERBAIKI (laporan user -- "BAB 1 dimulai dari 30" padahal di
+    footer halaman BAB 1 tertulis 31): jalur PDF membangun section dari
+    TITIK TRANSISI format footer, jadi section yang menaungi BAB 1 bisa
+    mulai SATU halaman SEBELUM BAB 1 (mis. halaman kosong/pra-bab terakhir
+    yang sudah berformat Arab). pgnum_start section itu = nomor halaman
+    pertama section, bukan nomor halaman BAB 1. Di sini nomor dibaca
+    langsung di halaman BAB 1 (page_values), dan kalau footer halaman itu
+    sendiri tidak terbaca, diekstrapolasi dari halaman terdekat yang
+    terbaca. Jalur docx (tidak punya page_values) tetap memakai nilai
+    w:pgNumType section apa adanya.
+    """
+    fmt, start = bab1_section["pgnum_fmt"], bab1_section["pgnum_start"]
+    page_values = {}
+    for sec in sections:
+        for page, value in (sec.get("page_values") or {}).items():
+            page_values[page] = (value, sec["pgnum_fmt"])
+    if not page_values:
+        return fmt, start
+
+    bab1_page = next(
+        (
+            e["page_index"] + 1
+            for e in paragraphs
+            if e["type"] == "chapter_title"
+            and e.get("page_index") is not None
+            and bab1_title_re.match(e["full_text"])
+        ),
+        None,
+    )
+    if bab1_page is None:
+        return fmt, start
+    if bab1_page in page_values:
+        value, page_fmt = page_values[bab1_page]
+        return page_fmt, value
+
+    # Footer halaman BAB 1 tidak terbaca: ekstrapolasi dari halaman terdekat.
+    # Section baru mulai di BAB 1, jadi halaman SESUDAHNYA dipilih lebih
+    # dulu (selama dekat) daripada halaman sebelumnya yang formatnya bisa
+    # beda (romawi).
+    after = [p for p in page_values if bab1_page < p <= bab1_page + 3]
+    nearest = min(after) if after else min(
+        page_values, key=lambda p: (abs(p - bab1_page), p)
+    )
+    value, page_fmt = page_values[nearest]
+    return page_fmt, value + (bab1_page - nearest)
+
+
 def compare_page_numbering(
     paragraphs: list[dict],
     sections: list[dict],
@@ -1935,12 +2066,16 @@ def compare_page_numbering(
     #                 }
     #             )
 
+    bab1_fmt, bab1_start = _resolve_bab1_numbering(
+        paragraphs, sections, bab1_section, BAB1_TITLE_RE
+    )
+
     # --- cek 1: format Arab + restart dari 1 ---
     # Sama seperti cek 0 di atas: pgnum_fmt/pgnum_start None (jalur
     # PDF/RTF, gagal dibaca dari footer) berarti "belum bisa
     # diverifikasi", bukan otomatis "salah" -- lihat catatan lengkap di
     # cek 0.
-    if bab1_section["pgnum_fmt"] is None or bab1_section["pgnum_start"] is None:
+    if bab1_fmt is None or bab1_start is None:
         findings.append(
             {
                 "category": "Info",
@@ -1955,21 +2090,14 @@ def compare_page_numbering(
         )
     else:
         checks[group]["checked"] += 1
-        if not (
-            bab1_section["pgnum_fmt"] == "decimal" and bab1_section["pgnum_start"] == 1
-        ):
+        if not (bab1_fmt == "decimal" and bab1_start == 1):
             checks[group]["failed"] += 1
             findings.append(
                 {
                     "category": "Format",
                     "chapter": group,
                     "location": f"Section {bab1_section_idx} (mulai BAB 1)",
-                    "description": (
-                        "Penomoran halaman di section awal BAB 1 harus format angka "
-                        "Arab dan dimulai ulang dari 1, terdeteksi "
-                        f"fmt={bab1_section['pgnum_fmt']!r}, "
-                        f"start={bab1_section['pgnum_start']!r}."
-                    ),
+                    "description": _bab1_pagenum_message(bab1_fmt, bab1_start),
                 }
             )
 
@@ -2514,6 +2642,7 @@ def compare_all(
         extracted_params["paragraphs"],
         extracted_params.get("tables", []),
         source=source,
+        table_equations=extracted_params.get("table_equations", []),
     )
     q_findings, q_checks = compare_quotations(extracted_params["paragraphs"])
     # extracted_params.get(...) (bukan [...]) -- "cover_background_hex"

@@ -1,0 +1,24 @@
+{
+  "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\5db6ddc34fe2\\Buku PA_Fatimah Az-zahra_ Mahros.docx",
+  "sections": null,
+  "judul": "Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering",
+  "opsi": {
+    "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\5db6ddc34fe2\\Buku PA_Fatimah Az-zahra_ Mahros.docx",
+    "judul": "Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering",
+    "sections": null,
+    "bab": "all",
+    "only": null,
+    "mode": "kalimat",
+    "retrieval": "live",
+    "topk": 3,
+    "match": "auto",
+    "max_chars": 9000,
+    "max_windows": 6,
+    "chroma_dir": null,
+    "pause": false,
+    "yes": true,
+    "problem_domain": "opinion mining pada sosial media khususnya layanan PDAM",
+    "problem": "sulitnya menganalisis opinion mining pada sosial media",
+    "uniqueness": "automatic clustering"
+  }
+}

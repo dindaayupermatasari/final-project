@@ -3,179 +3,188 @@
     "Pra-Bab": [
       {
         "category": "Format",
-        "location": "Halaman 4",
-        "description": "DAFTAR GAMBAR berakhir di halaman ganjil (3), halaman 4 seharusnya dikosongkan dengan tulisan 'Halaman ini sengaja dikosongkan' di tengah halaman."
+        "location": "Paragraf #81 ('KATA PENGANTAR')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #102 ('DAFTAR GAMBAR')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #123 ('DAFTAR TABEL')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #165 ('DAFTAR LAMPIRAN')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      }
+    ],
+    "BAB 1": [
+      {
+        "category": "Format",
+        "location": "Paragraf #178 ('BAB 1\nPENDAHULUAN')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
       }
     ],
     "BAB 2": [
       {
         "category": "Format",
-        "location": "Paragraf #182 ('Tabel 2.1 Tabel Perbandingan Penelitian ...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+        "location": "Paragraf #205 ('BAB 2\nKAJIAN PUSTAKA')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
       },
       {
         "category": "Format",
-        "location": "Paragraf #162 ('Sumber: Penerapan Natural Language Proce...')",
-        "description": "Baris 'Sumber:' seharusnya berukuran 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #166 ('Sumber: Penerapan Natural Language Proce...')",
-        "description": "Baris 'Sumber:' seharusnya berukuran 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Halaman 16",
-        "description": "BAB 2 berakhir di halaman ganjil (15), halaman 16 seharusnya dikosongkan dengan tulisan 'Halaman ini sengaja dikosongkan' di tengah halaman."
+        "location": "Paragraf #323 ('Tabel 2. 1 Tabel Perbandingan Penelitian')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
       }
     ],
     "BAB 3": [
       {
         "category": "Format",
-        "location": "Paragraf #196 ('Gambar 3.1 Desain Sistem')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+        "location": "Paragraf #324 ('BAB 3\nDESAIN SISTEM')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
       },
       {
         "category": "Format",
-        "location": "Paragraf #202 ('Gambar 3.2 Alur Pengecekan Format Visual')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+        "location": "Paragraf #370 ('Tabel 3. 1 Contoh Dataset Hasil Scrappin...')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
       },
       {
         "category": "Format",
-        "location": "Paragraf #221 ('Gambar 3.3 Alur Pengecekan Sistematika')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+        "location": "Paragraf #373 ('Tabel 3. 2 Contoh Dataset Multi Aspek & ...')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
       },
       {
         "category": "Format",
-        "location": "Paragraf #225 ('Dokumen Panduan Penulisan Buku Proyek Ak...')",
-        "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subsubchapter_title', seharusnya 12pt."
+        "location": "Paragraf #459 ('Tabel 3. 3 Daftar Konjungsi Sebagai Pena...')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
       },
       {
         "category": "Format",
-        "location": "Paragraf #238 ('Embedding')",
-        "description": "Ukuran font 14.0pt tidak sesuai untuk tipe 'subsubchapter_title', seharusnya 12pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #246 ('Tabel 3.1 Metadata Panduan Buku Proyek A...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #271 ('Gambar 3.5 Prompt Deteksi Ketidaksesuaia...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #282 ('Gambar 3.6 Alur Agregrasi Skor Kesesuaia...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #296 ('Gambar 3.7 Tampilan Halaman Login')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #299 ('Gambar 3.8 Tampilan Halaman Unggah Dokum...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #302 ('Gambar 3.9 Tampilan Hasil Pengecekan Dok...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #305 ('Gambar 3.10 Tampilan Halaman Daftar Maha...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #308 ('Gambar 3.11 Tampilan Detail Hasil Pengec...')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #311 ('Gambar 3.12 Tampilan Halaman Panduan')",
-        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Paragraf #226 ('Sumber: https://drive.google.com/file/d/...')",
-        "description": "Baris 'Sumber:' seharusnya berukuran 11pt."
-      },
-      {
-        "category": "Format",
-        "location": "Halaman 32",
-        "description": "BAB 3 berakhir di halaman ganjil (31), halaman 32 seharusnya dikosongkan dengan tulisan 'Halaman ini sengaja dikosongkan' di tengah halaman."
+        "location": "Paragraf #481 ('Tabel 3. 4 Contoh Hasil Segmentasi Kalim...')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
       }
     ],
-    "Umum (Margin Halaman)": [
+    "BAB 4": [
       {
         "category": "Format",
-        "location": "Section #0 (3.00cm), #1 (3.00cm), #2 (3.00cm)",
-        "description": "Margin kiri tidak sesuai di beberapa section tsb, seharusnya 4.0cm."
+        "location": "Paragraf #534 ('BAB 4')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
       },
       {
         "category": "Format",
-        "location": "Section #0 (2.52cm), #1 (2.52cm), #2 (2.52cm)",
-        "description": "Margin atas tidak sesuai di beberapa section tsb, seharusnya 3.0cm."
-      }
-    ],
-    "Umum (Penomoran Halaman)": [
+        "location": "Paragraf #535 ('EKSPERIMEN DAN ANALISIS')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      },
       {
         "category": "Format",
-        "location": "Halaman 7 (Section #1)",
-        "description": "Penomoran halaman di section tsb (sebelum BAB 1) harus format angka Romawi kecil (i, ii, iii, ...)."
+        "location": "Paragraf #588 ('Tabel 4.  3 Sebelum dan Sesudah Segmenta...')",
+        "description": "Ukuran font 10.0pt tidak sesuai untuk tipe 'caption', seharusnya 11pt."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #613 (persamaan)",
+        "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #613 (persamaan)",
+        "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #613 (persamaan)",
+        "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #616 (persamaan)",
+        "description": "Rumus (persamaan) seharusnya rata kiri (mentok kiri), terdeteksi: tidak diset. Cek justifikasi objek Equation-nya sendiri (klik panah kecil di pojok kanan-bawah kotak rumus -> Justification -> Left), BUKAN cuma perataan paragraf -- Word menyimpan keduanya secara terpisah."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #616 (persamaan)",
+        "description": "Persamaan seharusnya menyisakan 1 baris kosong di atas dan di bawahnya."
+      },
+      {
+        "category": "Format",
+        "location": "Paragraf #616 (persamaan)",
+        "description": "Persamaan tidak memiliki nomor identitas rata kanan, mis. '(2.1)' atau '(Persamaan 2.1)'."
+      }
+    ],
+    "BAB 5": [
+      {
+        "category": "Format",
+        "location": "Paragraf #850 ('BAB 5\nPENUTUP')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
+      }
+    ],
+    "Umum (Cetak Bolak-Balik)": [
+      {
+        "category": "Format",
+        "location": "Pengaturan Dokumen (Page Setup)",
+        "description": "Mirror-margin tidak aktif di pengaturan dokumen, padahal dokumen dicetak bolak-balik seharusnya mengaktifkan mirror-margin (Layout > Margins > Mirror Margins di Word)."
       }
     ],
     "DAFTAR PUSTAKA": [
       {
         "category": "Format",
-        "location": "Halaman 36",
-        "description": "DAFTAR PUSTAKA berakhir di halaman ganjil (35), halaman 36 seharusnya dikosongkan dengan tulisan 'Halaman ini sengaja dikosongkan' di tengah halaman."
+        "location": "Paragraf #862 ('DAFTAR PUSTAKA')",
+        "description": "Ukuran font 12.0pt tidak sesuai untuk tipe 'chapter_title', seharusnya 14pt."
       }
     ]
   },
   "summary": {
-    "total_findings": 25,
-    "overall_score": 89.08,
+    "total_findings": 24,
+    "overall_score": 98.02,
     "per_chapter": {
       "Pra-Bab": {
-        "checked": 14,
-        "failed": 1,
-        "score": 92.86
+        "checked": 110,
+        "failed": 4,
+        "score": 96.36
       },
       "BAB 1": {
-        "checked": 97,
-        "failed": 0,
-        "score": 100.0
+        "checked": 62,
+        "failed": 1,
+        "score": 98.39
       },
       "BAB 2": {
-        "checked": 242,
-        "failed": 4,
-        "score": 98.35
+        "checked": 226,
+        "failed": 2,
+        "score": 99.12
       },
       "BAB 3": {
-        "checked": 305,
-        "failed": 16,
-        "score": 94.75
+        "checked": 240,
+        "failed": 5,
+        "score": 97.92
+      },
+      "BAB 4": {
+        "checked": 479,
+        "failed": 9,
+        "score": 98.12
+      },
+      "BAB 5": {
+        "checked": 27,
+        "failed": 1,
+        "score": 96.3
       },
       "Umum (Cetak Bolak-Balik)": {
         "checked": 1,
-        "failed": 0,
-        "score": 100.0
+        "failed": 1,
+        "score": 0.0
       },
       "Umum (Margin Halaman)": {
         "checked": 4,
-        "failed": 2,
-        "score": 50.0
+        "failed": 0,
+        "score": 100.0
       },
       "Umum (Penomoran Halaman)": {
-        "checked": 3,
-        "failed": 1,
-        "score": 66.67
+        "checked": 2,
+        "failed": 0,
+        "score": 100.0
       },
       "Umum (Ukuran Kertas)": {
         "checked": 1,
@@ -183,9 +192,9 @@
         "score": 100.0
       },
       "DAFTAR PUSTAKA": {
-        "checked": 106,
+        "checked": 63,
         "failed": 1,
-        "score": 99.06
+        "score": 98.41
       }
     }
   }

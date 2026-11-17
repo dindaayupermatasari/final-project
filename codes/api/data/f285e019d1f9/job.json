@@ -1,0 +1,12 @@
+{
+  "id": "f285e019d1f9",
+  "status": "error",
+  "file": "Buku PA_Awal Raya.pdf",
+  "path": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\f285e019d1f9\\Buku PA_Awal Raya.pdf",
+  "judul": "",
+  "created": "2026-11-14T20:41:51",
+  "error": "SyntaxError: f-string: unmatched '[' (sentence_judge.py, line 170)",
+  "skor": null,
+  "started": "2026-11-14T20:41:51",
+  "finished": "2026-11-14T20:42:35"
+}

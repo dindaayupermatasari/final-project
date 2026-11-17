@@ -1,0 +1,515 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-1_instruction",
+        "subbab_num": "1.1",
+        "subbab_title": "LATAR BELAKANG",
+        "distance": 0.3227
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.4406
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.4542
+      }
+    ]
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.3873
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-2_instruction",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "distance": 0.3877
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.4034
+      }
+    ]
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.4032
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.4298
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.4309
+      }
+    ]
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-5_instruction",
+        "subbab_num": "1.5",
+        "subbab_title": "MANFAAT",
+        "distance": 0.3661
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.5528
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.5565
+      }
+    ]
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab1_sub1-6_instruction",
+        "subbab_num": "1.6",
+        "subbab_title": "SISTEMATIKA PENULISAN",
+        "distance": 0.2523
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-2_instruction",
+        "subbab_num": "4.2",
+        "subbab_title": "KARATERISTIK DATA",
+        "distance": 0.2719
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab5_sub5-1_instruction",
+        "subbab_num": "5.1",
+        "subbab_title": "KESIMPULAN",
+        "distance": 0.2734
+      }
+    ]
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab2_sub2-1_instruction",
+        "subbab_num": "2.1",
+        "subbab_title": "DESKRIPSI PERMASALAHAN",
+        "distance": 0.1867
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-2_instruction",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "distance": 0.2218
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.2373
+      }
+    ]
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.2444
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.3172
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab2_sub2-3_instruction",
+        "subbab_num": "2.3",
+        "subbab_title": "PENELITIAN TERKAIT",
+        "distance": 0.3256
+      }
+    ]
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab2_sub2-3_instruction",
+        "subbab_num": "2.3",
+        "subbab_title": "PENELITIAN TERKAIT",
+        "distance": 0.3767
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-5_instruction",
+        "subbab_num": "1.5",
+        "subbab_title": "MANFAAT",
+        "distance": 0.4295
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.4465
+      }
+    ]
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab3_sub3-1_instruction",
+        "subbab_num": "3.1",
+        "subbab_title": "DESKRIPSI SOLUSI",
+        "distance": 0.2755
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab2_sub2-1_instruction",
+        "subbab_num": "2.1",
+        "subbab_title": "DESKRIPSI PERMASALAHAN",
+        "distance": 0.3061
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.3579
+      }
+    ]
+  },
+  {
+    "subbab": "3.2 PERANCANGAN SISTEM",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab3_sub3-2_instruction",
+        "subbab_num": "3.2",
+        "subbab_title": "PERANCANGAN SISTEM",
+        "distance": 0.3717
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-6_instruction",
+        "subbab_num": "1.6",
+        "subbab_title": "SISTEMATIKA PENULISAN",
+        "distance": 0.3766
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab2_sub2-2_instruction",
+        "subbab_num": "2.2",
+        "subbab_title": "TEORI PENUNJANG",
+        "distance": 0.3859
+      }
+    ]
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-1_instruction",
+        "subbab_num": "4.1",
+        "subbab_title": "PARAMETER EKSPERIMEN",
+        "distance": 0.3007
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-6_instruction",
+        "subbab_num": "4.6",
+        "subbab_title": "HASIL EKSPERMEN",
+        "distance": 0.349
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-7_instruction",
+        "subbab_num": "4.7",
+        "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+        "distance": 0.365
+      }
+    ]
+  },
+  {
+    "subbab": "4.2 KARAKTERISTIK DATA",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-2_instruction",
+        "subbab_num": "4.2",
+        "subbab_title": "KARATERISTIK DATA",
+        "distance": 0.3098
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-6_instruction",
+        "subbab_num": "4.6",
+        "subbab_title": "HASIL EKSPERMEN",
+        "distance": 0.3994
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-7_instruction",
+        "subbab_num": "4.7",
+        "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+        "distance": 0.4001
+      }
+    ]
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.3759
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-4_instruction",
+        "subbab_num": "4.4",
+        "subbab_title": "WAKTU UJICOBA",
+        "distance": 0.4087
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.4886
+      }
+    ]
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-4_instruction",
+        "subbab_num": "4.4",
+        "subbab_title": "WAKTU UJICOBA",
+        "distance": 0.3102
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.4022
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.452
+      }
+    ]
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJICOBA",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-5_instruction",
+        "subbab_num": "4.5",
+        "subbab_title": "SPESIFIKASI PERALATAN UJICOBA",
+        "distance": 0.2205
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-4_instruction",
+        "subbab_num": "4.4",
+        "subbab_title": "WAKTU UJICOBA",
+        "distance": 0.259
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.2881
+      }
+    ]
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERIMEN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-7_instruction",
+        "subbab_num": "4.7",
+        "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+        "distance": 0.3611
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-6_instruction",
+        "subbab_num": "4.6",
+        "subbab_title": "HASIL EKSPERMEN",
+        "distance": 0.365
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-1_instruction",
+        "subbab_num": "4.1",
+        "subbab_title": "PARAMETER EKSPERIMEN",
+        "distance": 0.3944
+      }
+    ]
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab4_sub4-7_instruction",
+        "subbab_num": "4.7",
+        "subbab_title": "ANALISIS HASIL EKSPERIMEN",
+        "distance": 0.2578
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab4_sub4-6_instruction",
+        "subbab_num": "4.6",
+        "subbab_title": "HASIL EKSPERMEN",
+        "distance": 0.286
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-1_instruction",
+        "subbab_num": "4.1",
+        "subbab_title": "PARAMETER EKSPERIMEN",
+        "distance": 0.3119
+      }
+    ]
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab5_sub5-1_instruction",
+        "subbab_num": "5.1",
+        "subbab_title": "KESIMPULAN",
+        "distance": 0.3638
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-2_instruction",
+        "subbab_num": "1.2",
+        "subbab_title": "PERMASALAHAN",
+        "distance": 0.3855
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab4_sub4-3_instruction",
+        "subbab_num": "4.3",
+        "subbab_title": "TEMPAT UJICOBA",
+        "distance": 0.39
+      }
+    ]
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "error": null,
+    "kandidat": [
+      {
+        "rank": 1,
+        "chunk_id": "bab5_sub5-2_instruction",
+        "subbab_num": "5.2",
+        "subbab_title": "SARAN",
+        "distance": 0.4377
+      },
+      {
+        "rank": 2,
+        "chunk_id": "bab1_sub1-3_instruction",
+        "subbab_num": "1.3",
+        "subbab_title": "BATASAN MASALAH",
+        "distance": 0.4841
+      },
+      {
+        "rank": 3,
+        "chunk_id": "bab1_sub1-4_instruction",
+        "subbab_num": "1.4",
+        "subbab_title": "TUJUAN",
+        "distance": 0.4994
+      }
+    ]
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "0/3",
+    "chunk_id": "bab1_sub1-1_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering\nProblem Domain: opinion mining pada sosial media terkait layanan PDAM | Problem: sulitnya menganalisis opinion mining pada sosial media | Uniqueness: automatic clustering\n\nSUBBAB: LATAR BELAKANG\n\nPETUNJUK PANDUAN:\nDeskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nCONTOH DI PANDUAN (ilustrasi):\nMisalkan penulis mengambil suatu judul berikut \"Deteksi Penyakit Kanker Dengan Sistem Pakar Berbasis Fuzzy\". Judul tersebut mempunyai Problem adalah Deteksi Penyakit Kanker, Problem Domain adalah Penyakit Kanker, dan Uniqueness adalah Sistem Pakar Berbasis Fuzzy. Berkaitan dengan Latar Belakang, Problem Domain-nya adalah tentang penyakit kanker, sehingga disini penulis dapat menceritakan tentang penyakit kanker dan tingkat urgensi (seperti tingkat kenaikan jumlah penderitanya dari tahun ke tahun, gawatnya penyakit kanker tersebut, dan semisalnya).\n\nTEKS MAHASISWA:\n\"\"\"\nPerusahaan Umum Daerah (Perumda) Air Minum Surya Sembada, atau yang kerap dikenal dengan nama lamanya PDAM, merupakan Badan Usaha Milik Daerah (BUMD) yang diberi wewenang oleh pemerintah daerah untuk bergerak di bidang pelayanan penyediaan air bersih bagi masyarakat Kota Surabaya. Sebagai BUMD, mereka memiliki peran strategis dalam menyediakan kebutuhan dasar air minum yang berkualitas dan berkelanjutan bagi penduduk di wilayah Kota Surabaya. Penyediaan layanan air minum biasa mereka lakukan melalui sambungan pipa langsung ke persil pelanggan. Sejak awal berdirinya, PDAM Surya Sembada telah menjadi penyedia air bersih terbesar dan paling banyak digunakan di Surabaya karena merupakan peninggalan jaman Belanda yang telah menjadi penyedia air minum pertama di Kota Surabaya. Berdasarkan Peraturan Walikota Nomor 29 Tahun 2011, perusahaan ini tidak hanya bertanggung jawab atas distribusi air bersih, tetapi juga atas pengelolaan instalasi pengolahan dan jaringan distribusi air minum, serta pelayanan administrasi dan teknis kepada pelanggan/masyarakat. Tingkat urgensi peran PDAM Surya Sembada dapat dilihat dari jumlah pelanggan yang terus meningkat setiap tahunnya. Pada tahun 2024, PDAM Surya Sembada telah berhasil menjangkau cakupan layanan 100%, yang berarti seluruh wilayah pelayanan yang menjadi tanggung jawab perusahaan memiliki akses terhadap sumber air yang telah disediakan. Walau begitu, jumlah penduduk Surabaya bersifat dinamis dan terus mengalami perubahan, sehingga permintaan akan pemasangan sambungan baru dan akses terhadap air bersih tetap bermunculan. Kondisi ini menuntut PDAM tidak hanya menjaga cakupan layanan yang telah dicapai, tetapi juga terus meningkatkan kualitas layanan dan melakukan inovasi dalam pengelolaan sumber daya air, guna memenuhi kebutuhan yang terus berkembang dan meningkatkan kepuasan pelanggan secara berkelanjutan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "status": "sesuai",
+    "wajib_terpenuhi": "2/2",
+    "chunk_id": "bab1_sub1-2_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Namun, dalam praktiknya, pelanggan sering kali menyampaikan keluhan mereka melalui media sosial seperti Instagram pada akun resmi PDAM Surya Sembada. | Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering\nProblem Domain: opinion mining pada sosial media terkait layanan PDAM | Problem: sulitnya menganalisis opinion mining pada sosial media | Uniqueness: automatic clustering\n\nSUBBAB: PERMASALAHAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, Problem-nya adalah tentang deteksi penyakit kanker, sehingga penulis disini dapat menceritakan tentang sulitnya pendeteksian penyakit kanker dengan mendeskripsikan faktor- faktor yang membuat sulit dalam pendeteksiannya.\n\nTEKS MAHASISWA:\n\"\"\"\nAtas tuntutan yang tinggi untuk terus meningkatkan kualitas pelayanannya, salah satu aspek penting dalam peningkatan kualitas tersebut adalah kemampuan menerima dan menindaklanjuti pengaduan serta keluhan dari masyarakat secara efektif dan efisien. PDAM menyediakan beberapa kanal resmi pengaduan, antara lain melalui situs resmi PDAM Surya Sembada, aplikasi Customer Information Service (CIS), call center 24 jam, dan WhatsApp. Kanal utama yang digunakan untuk pengaduan adalah situs resmi dan aplikasi CIS, yang dirancang untuk memudahkan pelanggan dalam menyampaikan masalah dan mendapatkan solusi secara terstruktur. Namun, dalam praktiknya, pelanggan sering kali menyampaikan keluhan mereka melalui media sosial seperti Instagram pada akun resmi PDAM Surya Sembada. Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal. Selain itu, keluhan yang disampaikan di media sosial tidak jarang muncul secara berulang pada beberapa postingan berbeda, sehingga menimbulkan duplikasi dan kompleksitas dalam pemantauan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Namun, dalam praktiknya, pelanggan sering kali menyampaikan keluhan mereka melalui media sosial seperti Instagram pada akun resmi PDAM Surya Sembada. | Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "TUJUAN",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "4/5",
+    "chunk_id": "bab1_sub1-4_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Tujuan proyek akhir harus jelas.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Tujuan proyek akhir harus singkat.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Tujuan proyek akhir harus mengandung klaim orisinalitas.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Dengan demikian, pendekatan ini memberikan solusi yang inovatif dalam pengelolaan opini pelanggan berbasis media sosial, dengan menekankan pada pemahaman konteks dan penyajian wawasan yang relevan bagi pengambilan keputusan.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Fitur utama dalam penelitian ini adalah penerapan contextual analysis pada tahap clustering. | Konteks dari setiap opini dianalisis dengan menggunakan representasi vektor yang mempertimbangkan kemiripan makna dan tema antar opini. | Dengan metode hierarchical clustering berbasis centroid-linkage, opini-opini yang memiliki kemiripan konteks akan dikelompokkan secara otomatis ke dalam cluster yang merepresentasikan isu atau tema utama yang berkembang di masyarakat.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering\nProblem Domain: opinion mining pada sosial media terkait layanan PDAM | Problem: sulitnya menganalisis opinion mining pada sosial media | Uniqueness: automatic clustering\n\nSUBBAB: TUJUAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”. Kalimat-kalimat selanjutnya kemudian memperjelas solusi dengan fitur-fitur unik seperti apa yang ditawarkan pada penelitian sebagai suatu solusi untuk menjawab permasalahan.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, orisinalitasnya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker. Kalimat pertama pada tujuan dapat diawali dengan contoh berikut, “Penelitian proyek akhir ini mengajukan suatu pendekatan baru untuk pendeteksian penyakit kanker dengan mempresentasikan model klasifikasi menggunakan Sistem Pakar yang berbasis Fuzzy”. Kemudian pada kalimat- kalimat berikutnya terangkan secara argumentatif tentang fitur-fitur unik pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker.\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial. Data yang digunakan dalam penelitian ini adalah hasil pengumpulan data melalui web scraping yang telah dilakukan sebelumnya, sehingga fokus utama penelitian adalah pada proses clustering dan summarization terhadap opini pelanggan berdasarkan kemiripan konteks dan isu yang diangkat dalam opini tersebut. Fitur utama dalam penelitian ini adalah penerapan contextual analysis pada tahap clustering. Konteks dari setiap opini dianalisis dengan menggunakan representasi vektor yang mempertimbangkan kemiripan makna dan tema antar opini. Dengan metode hierarchical clustering berbasis centroid-linkage, opini-opini yang memiliki kemiripan konteks akan dikelompokkan secara otomatis ke dalam cluster yang merepresentasikan isu atau tema utama yang berkembang di masyarakat. Pendekatan ini memungkinkan sistem untuk secara adaptif menentukan jumlah dan batas cluster tanpa perlu ditentukan di awal, sehingga lebih responsif terhadap variasi data media sosial yang dinamis. Hasil dari proses clustering ini kemudian diolah dengan untuk mencapai tujuan akhir penelitian, yaitu pembentukan ringkasan opini (summary) pada setiap cluster. Ringkasan ini menyajikan wawasan utama, seperti tren keluhan atau apresiasi yang dominan pada periode tertentu, sehingga manajemen PDAM dapat memahami pola opini pelanggan secara cepat dan terstruktur. Dengan demikian, pendekatan ini memberikan solusi yang inovatif dalam pengelolaan opini pelanggan berbasis media sosial, dengan menekankan pada pemahaman konteks dan penyajian wawasan yang relevan bagi pengambilan keputusan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Tujuan proyek akhir harus jelas.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Tujuan proyek akhir harus singkat.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Tujuan proyek akhir harus mengandung klaim orisinalitas.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Dengan demikian, pendekatan ini memberikan solusi yang inovatif dalam pengelolaan opini pelanggan berbasis media sosial, dengan menekankan pada pemahaman konteks dan penyajian wawasan yang relevan bagi pengambilan keputusan.\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Fitur utama dalam penelitian ini adalah penerapan contextual analysis pada tahap clustering. | Konteks dari setiap opini dianalisis dengan menggunakan representasi vektor yang mempertimbangkan kemiripan makna dan tema antar opini. | Dengan metode hierarchical clustering berbasis centroid-linkage, opini-opini yang memiliki kemiripan konteks akan dikelompokkan secara otomatis ke dalam cluster yang merepresentasikan isu atau tema utama yang berkembang di masyarakat.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "MANFAAT",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "4/5",
+    "chunk_id": "bab1_sub1-5_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Dari sisi pengembangan ilmu pengetahuan dan teknologi, penelitian ini berkontribusi pada penerapan metode analisis opini berbasis kontes dan centroid-linkage hierarchical clustering dalam domain pelayanan publik di Indonesia.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Uraikan kontribusi proyek akhir pada pemecahan masalah pembangunan",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Dengan adanya sistem yang mampu melakukan automatic clustering dan penyusunan ringkasan, PDAM dapat secara cepat mengidentifikasi isu-isu utama yang sedang berkembang di masyarakat, sehingga respons dan perbaikan layanan dapat dilakukan secara lebih tepat sasaran dan berbasis data.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Uraikan kontribusi proyek akhir pada pengembangan kelembagaan",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan efektivitas pengelolaan opini dan keluhan pelanggan yang tersebar di media sosial. | Bagi masyarakat luas, manfaat yang diberikan adalah terciptanya saluran komunikasi yang lebih efektif antara pelanggan dan PDAM.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan efektivitas pengelolaan opini dan keluhan pelanggan yang tersebar di media sosial. | Bagi masyarakat luas, manfaat yang diberikan adalah terciptanya saluran komunikasi yang lebih efektif antara pelanggan dan PDAM.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering\nProblem Domain: opinion mining pada sosial media terkait layanan PDAM | Problem: sulitnya menganalisis opinion mining pada sosial media | Uniqueness: automatic clustering\n\nSUBBAB: MANFAAT\n\nPETUNJUK PANDUAN:\nUraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian ini memberikan beberapa manfaat yang spesifik dan nyata bagi berbagai pihak terkait. Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan efektivitas pengelolaan opini dan keluhan pelanggan yang tersebar di media sosial. Dengan adanya sistem yang mampu melakukan automatic clustering dan penyusunan ringkasan, PDAM dapat secara cepat mengidentifikasi isu-isu utama yang sedang berkembang di masyarakat, sehingga respons dan perbaikan layanan dapat dilakukan secara lebih tepat sasaran dan berbasis data. Hal ini diharapkan dapat meningkatkan kepuasan pelanggan serta memperkuat citra perusahaan sebagai penyedia layanan publik yang responsif dan inovatif. Dari sisi pengembangan ilmu pengetahuan dan teknologi, penelitian ini berkontribusi pada penerapan metode analisis opini berbasis kontes dan centroid-linkage hierarchical clustering dalam domain pelayanan publik di Indonesia. Pendekatan ini dapat menjadi referensi atau acuan bagi penelitian selanjutnya yang ingin mengembangkan sistem pemantauan opini publik otomatis, khususnya untuk data yang bersifat dinamis dan tidak terstruktur seperti pada media sosial. Bagi masyarakat luas, manfaat yang diberikan adalah terciptanya saluran komunikasi yang lebih efektif antara pelanggan dan PDAM. Dengan sistem yang mampu menangkap dan merangkum opini masyarakat secara otomatis, aspirasi dan keluhan pelanggan dapat lebih mudah sampai ke pihak pengelola, sehingga diharapkan terjadi peningkatan kualitas layanan air bersih yang diterima masyarakat.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Dari sisi pengembangan ilmu pengetahuan dan teknologi, penelitian ini berkontribusi pada penerapan metode analisis opini berbasis kontes dan centroid-linkage hierarchical clustering dalam domain pelayanan publik di Indonesia.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pemecahan masalah pembangunan\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Dengan adanya sistem yang mampu melakukan automatic clustering dan penyusunan ringkasan, PDAM dapat secara cepat mengidentifikasi isu-isu utama yang sedang berkembang di masyarakat, sehingga respons dan perbaikan layanan dapat dilakukan secara lebih tepat sasaran dan berbasis data.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pengembangan kelembagaan\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan efektivitas pengelolaan opini dan keluhan pelanggan yang tersebar di media sosial. | Bagi masyarakat luas, manfaat yang diberikan adalah terciptanya saluran komunikasi yang lebih efektif antara pelanggan dan PDAM.\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bagi Perumda Air Minum Surya Sembada, hasil penelitian ini dapat menjadi alat bantu untuk meningkatkan efektivitas pengelolaan opini dan keluhan pelanggan yang tersebar di media sosial. | Bagi masyarakat luas, manfaat yang diberikan adalah terciptanya saluran komunikasi yang lebih efektif antara pelanggan dan PDAM.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "0/6",
+    "chunk_id": "bab1_sub1-6_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 1.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Pendahuluan",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 2.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Kajian Pustaka",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 3.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K6",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 4.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: Contextual Analysis untuk Opinion Mining pada Sosial Media dengan Menggunakan Automatic Clustering\nProblem Domain: opinion mining pada sosial media terkait layanan PDAM | Problem: sulitnya menganalisis opinion mining pada sosial media | Uniqueness: automatic clustering\n\nSUBBAB: SISTEMATIKA PENULISAN\n\nPETUNJUK PANDUAN:\nJelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan memuat bagian-bagian penting pada Penutup.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nSistematika pembahasan dalam buku proyek akhir meliputi:\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 1.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Pendahuluan\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 2.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Kajian Pustaka\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 3.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K6\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 4.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    }\n  ]\n}"
+    }
+  }
+]

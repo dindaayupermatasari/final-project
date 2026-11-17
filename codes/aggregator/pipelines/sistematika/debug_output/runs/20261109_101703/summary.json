@@ -1,0 +1,37 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "BENAR",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "BENAR",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "BENAR",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  }
+]

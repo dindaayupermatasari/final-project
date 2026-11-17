@@ -1,0 +1,17 @@
+/* pratinjau PDF asli di halaman Hasil */
+.pdfv{display:flex;flex-direction:column;min-height:0;flex:1}
+.pdfbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 16px;border-bottom:1.5px solid var(--line);font-size:13px;color:var(--mute)}
+.pdfbar label,.pdfbar div{display:flex;align-items:center;gap:8px}
+.pdfbar input{width:56px;padding:4px 6px;border:1.5px solid var(--line);border-radius:8px;font:inherit;text-align:center}
+.pdfbar button{width:28px;height:28px;border:0;border-radius:8px;background:var(--bt);color:var(--b);font-weight:700;cursor:pointer}
+.pdfscroll{flex:1;min-height:0;overflow:auto;background:var(--n);border-radius:0 0 16px 16px;position:relative}
+.pdfpages{display:flex;flex-direction:column;margin:0 auto;box-sizing:content-box}
+.pdfp{position:relative;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.18);flex:none}
+.pdfp canvas{display:block}
+.pdfmuat{position:absolute;inset:0;display:grid;place-items:center;color:var(--mute)}
+.pdfp .sr{position:absolute;padding:0;border:0;border-bottom:2px solid transparent;background:rgba(250,215,232,.5);cursor:pointer;mix-blend-mode:multiply}
+.pdfp .sr.on{background:rgba(236,72,153,.38);border-bottom-color:var(--a)}
+.pdfp .sr.judul,.pdfp .sr.bab{background:none;outline:2px dashed var(--a);outline-offset:1px}
+.pdfp .sr.judul.on,.pdfp .sr.bab.on{background:rgba(236,72,153,.18)}
+.pdfp .sr sup{position:absolute;left:-9px;top:-9px;background:var(--a);color:var(--ona);font:700 11px/18px Archivo,sans-serif;width:18px;text-align:center;border-radius:50%;pointer-events:none}
+@media (max-width:860px){.pv .pdfv{height:560px}}

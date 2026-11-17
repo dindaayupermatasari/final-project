@@ -1,0 +1,178 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "SALAH",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "SALAH",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "bab": "1",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "BENAR",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.2 PERANCANGAN SISTEM",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.5.1 Login Page",
+    "bab": "3",
+    "rag": "tidak_dinilai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_dinilai"
+  },
+  {
+    "subbab": "3.5.2 Generation Workspace Page",
+    "bab": "3",
+    "rag": "tidak_dinilai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_dinilai"
+  },
+  {
+    "subbab": "3.5.3 Verifikasi Sumber",
+    "bab": "3",
+    "rag": "tidak_dinilai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_dinilai"
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "4.2 KARAKTERISTIK DATA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.3 TEMPAT UJI COBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.4 WAKTU UJI COBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJI COBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERIMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "bab": "5",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "bab": "5",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  }
+]

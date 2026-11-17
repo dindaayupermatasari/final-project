@@ -1,0 +1,258 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "SALAH",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "SALAH",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "bab": "1",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "BENAR",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "bab": "1",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "bab": "1",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "bab": "2",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.2 SUMBER DATA",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.3 PERANCANGAN SISTEM",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.4 TAHAPAN IMPLEMENTASI SISTEM",
+    "bab": "3",
+    "rag": "kosong",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "kosong"
+  },
+  {
+    "subbab": "3.5 Proses Pembuatan Model",
+    "bab": "3",
+    "rag": "tidak_ada_padanan",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_ada_padanan"
+  },
+  {
+    "subbab": "3.6 Stratisfied K-Fold Cross Validation",
+    "bab": "3",
+    "rag": "tidak_ada_padanan",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_ada_padanan"
+  },
+  {
+    "subbab": "3.7 Fine-Tuning Model BERT",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.8 Evaluasi Model",
+    "bab": "3",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "3.9 Penyimpanan Model",
+    "bab": "3",
+    "rag": "tidak_ada_padanan",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_ada_padanan"
+  },
+  {
+    "subbab": "3.10 Alur Kerja Antarmuka Website",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.11 SEGMENTASI KALIMAT TAHAP INFERENSI",
+    "bab": "3",
+    "rag": "kosong",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "kosong"
+  },
+  {
+    "subbab": "3.12 Latar Belakang Penerapan Segmentasi",
+    "bab": "3",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "3.13 Mekanisme Segmentasi Berbasis Konjungsi",
+    "bab": "3",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "3.14 Alur Proses Segmentasi",
+    "bab": "3",
+    "rag": "tidak_ada_padanan",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_ada_padanan"
+  },
+  {
+    "subbab": "3.15 RANCANGAN ANTARMUKA",
+    "bab": "3",
+    "rag": "tidak_ada_padanan",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_ada_padanan"
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "4.2 KARATERISTIK DATA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJICOBA",
+    "bab": "4",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "bab": "4",
+    "rag": "tidak_sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "tidak_sesuai"
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "bab": "5",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "bab": "5",
+    "rag": "sesuai",
+    "manual": null,
+    "aturan": "tidak_ada_aturan",
+    "akhir": "sesuai"
+  }
+]

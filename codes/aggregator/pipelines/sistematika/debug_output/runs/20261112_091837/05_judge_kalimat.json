@@ -1,0 +1,327 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      },
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 9,
+      "MASALAH": 0,
+      "SOLUSI": 0,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Perusahaan Umum Daerah (Perumda) Air Minum Surya Sembada, atau yang kerap dikenal dengan nama lamanya PDAM, merupakan Badan Usaha Milik Daerah (BUMD) yang diberi wewenang oleh pemerintah daerah untuk bergerak di bidang pelayanan penyediaan air bersih bagi masyarakat Kota Surabaya.",
+        "label": "PD",
+        "alasan": "menjelaskan entitas PDAM dan perannya"
+      },
+      {
+        "n": 2,
+        "kalimat": "Sebagai BUMD, mereka memiliki peran strategis dalam menyediakan kebutuhan dasar air minum yang berkualitas dan berkelanjutan bagi penduduk di wilayah Kota Surabaya.",
+        "label": "PD",
+        "alasan": "menyebut peran strategis PDAM dalam penyediaan air"
+      },
+      {
+        "n": 3,
+        "kalimat": "Penyediaan layanan air minum biasa mereka lakukan melalui sambungan pipa langsung ke persil pelanggan.",
+        "label": "PD",
+        "alasan": "menjelaskan cara penyediaan layanan air"
+      },
+      {
+        "n": 4,
+        "kalimat": "Sejak awal berdirinya, PDAM Surya Sembada telah menjadi penyedia air bersih terbesar dan paling banyak digunakan di Surabaya karena merupakan peninggalan jaman Belanda yang telah menjadi penyedia air minum pertama di Kota Surabaya.",
+        "label": "PD",
+        "alasan": "menyampaikan sejarah dan posisi PDAM di Surabaya"
+      },
+      {
+        "n": 5,
+        "kalimat": "Berdasarkan Peraturan Walikota Nomor 29 Tahun 2011, perusahaan ini tidak hanya bertanggung jawab atas distribusi air bersih, tetapi juga atas pengelolaan instalasi pengolahan dan jaringan distribusi air minum, serta pelayanan administrasi dan teknis kepada pelanggan/masyarakat.",
+        "label": "PD",
+        "alasan": "menjabarkan regulasi dan tanggung jawab PDAM"
+      },
+      {
+        "n": 6,
+        "kalimat": "Tingkat urgensi peran PDAM Surya Sembada dapat dilihat dari jumlah pelanggan yang terus meningkat setiap tahunnya.",
+        "label": "PD",
+        "alasan": "menunjukkan urgensi peran PDAM melalui pertumbuhan pelanggan"
+      },
+      {
+        "n": 7,
+        "kalimat": "Pada tahun 2024, PDAM Surya Sembada telah berhasil menjangkau cakupan layanan 100%, yang berarti seluruh wilayah pelayanan yang menjadi tanggung jawab perusahaan memiliki akses terhadap sumber air yang telah disediakan.",
+        "label": "PD",
+        "alasan": "menyatakan capaian cakupan layanan 100%"
+      },
+      {
+        "n": 8,
+        "kalimat": "Walau begitu, jumlah penduduk Surabaya bersifat dinamis dan terus mengalami perubahan, sehingga permintaan akan pemasangan sambungan baru dan akses terhadap air bersih tetap bermunculan.",
+        "label": "PD",
+        "alasan": "menggambarkan dinamika penduduk dan permintaan layanan"
+      },
+      {
+        "n": 9,
+        "kalimat": "Kondisi ini menuntut PDAM tidak hanya menjaga cakupan layanan yang telah dicapai, tetapi juga terus meningkatkan kualitas layanan dan melakukan inovasi dalam pengelolaan sumber daya air, guna memenuhi kebutuhan yang terus berkembang dan meningkatkan kepuasan pelanggan secara berkelanjutan.",
+        "label": "PD",
+        "alasan": "menekankan kebutuhan inovasi dan peningkatan kualitas layanan"
+      }
+    ]
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 3,
+      "MASALAH": 3,
+      "SOLUSI": 0,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Atas tuntutan yang tinggi untuk terus meningkatkan kualitas pelayanannya, salah satu aspek penting dalam peningkatan kualitas tersebut adalah kemampuan menerima dan menindaklanjuti pengaduan serta keluhan dari masyarakat secara efektif dan efisien.",
+        "label": "PD",
+        "alasan": "menyebut urgensi peningkatan kualitas layanan dan pentingnya penanganan keluhan"
+      },
+      {
+        "n": 2,
+        "kalimat": "PDAM menyediakan beberapa kanal resmi pengaduan, antara lain melalui situs resmi PDAM Surya Sembada, aplikasi Customer Information Service (CIS), call center 24 jam, dan WhatsApp.",
+        "label": "PD",
+        "alasan": "menjelaskan kanal resmi pengaduan PDAM"
+      },
+      {
+        "n": 3,
+        "kalimat": "Kanal utama yang digunakan untuk pengaduan adalah situs resmi dan aplikasi CIS, yang dirancang untuk memudahkan pelanggan dalam menyampaikan masalah dan mendapatkan solusi secara terstruktur.",
+        "label": "PD",
+        "alasan": "menjelaskan kanal utama dan tujuan memudahkan pelanggan"
+      },
+      {
+        "n": 4,
+        "kalimat": "Namun, dalam praktiknya, pelanggan sering kali menyampaikan keluhan mereka melalui media sosial seperti Instagram pada akun resmi PDAM Surya Sembada.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan kesulitan pelanggan menggunakan media sosial untuk keluhan"
+      },
+      {
+        "n": 5,
+        "kalimat": "Hal ini menyebabkan informasi opini tersebar di luar sistem formal, sehingga tidak semua keluhan tercatat atau tertindaklanjuti secara optimal.",
+        "label": "MASALAH",
+        "alasan": "menjelaskan dampak negatif penyebaran opini di luar sistem formal"
+      },
+      {
+        "n": 6,
+        "kalimat": "Selain itu, keluhan yang disampaikan di media sosial tidak jarang muncul secara berulang pada beberapa postingan berbeda, sehingga menimbulkan duplikasi dan kompleksitas dalam pemantauan.",
+        "label": "MASALAH",
+        "alasan": "menyebut duplikasi dan kompleksitas pemantauan keluhan di media sosial"
+      }
+    ]
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 0,
+      "MASALAH": 0,
+      "SOLUSI": 9,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Penelitian ini mengajukan suatu pendekatan baru untuk memahami pola opini pelanggan terhadap Perumda Air Minum Surya Sembada dengan memanfaatkan contextual analysis pada tahap automatic clustering terhadap data sentimen berbasis media sosial.",
+        "label": "SOLUSI",
+        "alasan": "memperkenalkan pendekatan baru dengan automatic clustering"
+      },
+      {
+        "n": 2,
+        "kalimat": "Data yang digunakan dalam penelitian ini adalah hasil pengumpulan data melalui web scraping yang telah dilakukan sebelumnya, sehingga fokus utama penelitian adalah pada proses clustering dan summarization terhadap opini pelanggan berdasarkan kemiripan konteks dan isu yang diangkat dalam opini tersebut.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan fokus pada proses clustering dan summarization"
+      },
+      {
+        "n": 3,
+        "kalimat": "Fitur utama dalam penelitian ini adalah penerapan contextual analysis pada tahap clustering.",
+        "label": "SOLUSI",
+        "alasan": "menyebutkan fitur utama berupa contextual analysis"
+      },
+      {
+        "n": 4,
+        "kalimat": "Konteks dari setiap opini dianalisis dengan menggunakan representasi vektor yang mempertimbangkan kemiripan makna dan tema antar opini.",
+        "label": "SOLUSI",
+        "alasan": "menguraikan cara analisis konteks menggunakan representasi vektor"
+      },
+      {
+        "n": 5,
+        "kalimat": "Dengan metode hierarchical clustering berbasis centroid-linkage, opini-opini yang memiliki kemiripan konteks akan dikelompokkan secara otomatis ke dalam cluster yang merepresentasikan isu atau tema utama yang berkembang di masyarakat.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan metode hierarchical clustering untuk pengelompokan otomatis"
+      },
+      {
+        "n": 6,
+        "kalimat": "Pendekatan ini memungkinkan sistem untuk secara adaptif menentukan jumlah dan batas cluster tanpa perlu ditentukan di awal, sehingga lebih responsif terhadap variasi data media sosial yang dinamis.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kemampuan adaptif penentuan jumlah cluster"
+      },
+      {
+        "n": 7,
+        "kalimat": "Hasil dari proses clustering ini kemudian diolah dengan untuk mencapai tujuan akhir penelitian, yaitu pembentukan ringkasan opini (summary) pada setiap cluster.",
+        "label": "SOLUSI",
+        "alasan": "menyebutkan tahap pengolahan hasil clustering menjadi ringkasan"
+      },
+      {
+        "n": 8,
+        "kalimat": "Ringkasan ini menyajikan wawasan utama, seperti tren keluhan atau apresiasi yang dominan pada periode tertentu, sehingga manajemen PDAM dapat memahami pola opini pelanggan secara cepat dan terstruktur.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan manfaat ringkasan bagi manajemen PDAM"
+      },
+      {
+        "n": 9,
+        "kalimat": "Dengan demikian, pendekatan ini memberikan solusi yang inovatif dalam pengelolaan opini pelanggan berbasis media sosial, dengan menekankan pada pemahaman konteks dan penyajian wawasan yang relevan bagi pengambilan keputusan.",
+        "label": "SOLUSI",
+        "alasan": "menegaskan bahwa pendekatan memberikan solusi inovatif"
+      }
+    ]
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.2 PERANCANGAN SISTEM",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.2 KARAKTERISTIK DATA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  }
+]

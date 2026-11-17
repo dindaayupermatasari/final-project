@@ -1,0 +1,318 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "PD",
+        "aturan": "dominan",
+        "status": "TIDAK DOMINAN",
+        "kalimat": [
+          "Proyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi.",
+          "Melalui Proyek Akhir, mahasiswa melakukan penelitian atau perancangan dengan menerapkan ilmu yang telah dipelajari untuk menyelesaikan suatu permasalahan.",
+          "Proyek Akhir juga menjadi bukti kompetensi mahasiswa dalam menganalisis permasalahan, merancang solusi, serta mendokumentasikan hasil penelitian secara sistematis.",
+          "Artikel ilmiah, atau yang sering disebut paper, merupakan karya tulis yang disusun untuk mempublikasikan hasil atau kontribusi suatu penelitian kepada masyarakat ilmiah yang lebih luas.",
+          "Artikel ilmiah berfungsi sebagai media diseminasi ilmu pengetahuan sehingga hasil penelitian dapat dipelajari, dikritisi, divalidasi, dan dijadikan referensi oleh peneliti lain.",
+          "Bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS), publikasi artikel ilmiah tidak hanya menjadi sarana untuk menyebarluaskan hasil penelitian, tetapi juga merupakan salah satu persyaratan kelulusan."
+        ],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": "PD 6 kalimat, MASALAH 6, SOLUSI 1"
+      },
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "status": "SALAH",
+        "kalimat": [
+          "Hasil dari Proyek Akhir umumnya berupa laporan yang cukup panjang sehingga pembaca di luar lingkungan kampus, seperti praktisi industri maupun peneliti lain, sering mengalami kesulitan untuk memahami inti dari penelitian tersebut.",
+          "Namun, mengubah laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang ringkas, padat, dan sesuai dengan gaya penulisan jurnal masih menjadi tantangan bagi banyak mahasiswa [2][8].",
+          "Tantangan tersebut muncul karena proses konversi dokumen tidak sekadar merangkum isi laporan.",
+          "Mahasiswa perlu memilih informasi yang paling penting, menentukan kontribusi utama penelitian, serta menyesuaikan gaya penulisan dari bentuk laporan yang bersifat deskriptif menjadi artikel ilmiah yang lebih ringkas dan terstruktur.",
+          "Seluruh proses tersebut membutuhkan waktu dan usaha yang tidak sedikit.",
+          "Akibatnya, tidak sedikit hasil penelitian yang memiliki kualitas baik hanya tersimpan sebagai laporan di perpustakaan tanpa dipublikasikan dalam bentuk artikel ilmiah."
+        ],
+        "dibebaskan": [],
+        "saran": "Latar belakang tidak perlu membahas problem; pindahkan ke Permasalahan.",
+        "catatan": ""
+      },
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "status": "SALAH",
+        "kalimat": [
+          "Kondisi ini menunjukkan perlunya sebuah sistem yang dapat membantu proses penyusunan draf artikel ilmiah secara otomatis sehingga waktu konversi dokumen dapat dipersingkat dan produktivitas publikasi ilmiah mahasiswa dapat ditingkatkan."
+        ],
+        "dibebaskan": [],
+        "saran": "Solusi tidak dibahas di latar belakang; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 6,
+      "MASALAH": 6,
+      "SOLUSI": 1,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Proyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi.",
+        "label": "PD",
+        "alasan": "definisi Proyek Akhir"
+      },
+      {
+        "n": 2,
+        "kalimat": "Melalui Proyek Akhir, mahasiswa melakukan penelitian atau perancangan dengan menerapkan ilmu yang telah dipelajari untuk menyelesaikan suatu permasalahan.",
+        "label": "PD",
+        "alasan": "penjelasan tujuan PA"
+      },
+      {
+        "n": 3,
+        "kalimat": "Proyek Akhir juga menjadi bukti kompetensi mahasiswa dalam menganalisis permasalahan, merancang solusi, serta mendokumentasikan hasil penelitian secara sistematis.",
+        "label": "PD",
+        "alasan": "peran PA sebagai bukti kompetensi"
+      },
+      {
+        "n": 4,
+        "kalimat": "Hasil dari Proyek Akhir umumnya berupa laporan yang cukup panjang sehingga pembaca di luar lingkungan kampus, seperti praktisi industri maupun peneliti lain, sering mengalami kesulitan untuk memahami inti dari penelitian tersebut.",
+        "label": "MASALAH",
+        "alasan": "kesulitan pembaca memahami laporan panjang",
+        "alasan_verifikasi": "menyebut kesulitan memahami laporan"
+      },
+      {
+        "n": 5,
+        "kalimat": "Artikel ilmiah, atau yang sering disebut paper, merupakan karya tulis yang disusun untuk mempublikasikan hasil atau kontribusi suatu penelitian kepada masyarakat ilmiah yang lebih luas.",
+        "label": "PD",
+        "alasan": "definisi artikel ilmiah"
+      },
+      {
+        "n": 6,
+        "kalimat": "Artikel ilmiah berfungsi sebagai media diseminasi ilmu pengetahuan sehingga hasil penelitian dapat dipelajari, dikritisi, divalidasi, dan dijadikan referensi oleh peneliti lain.",
+        "label": "PD",
+        "alasan": "fungsi artikel ilmiah"
+      },
+      {
+        "n": 7,
+        "kalimat": "Bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS), publikasi artikel ilmiah tidak hanya menjadi sarana untuk menyebarluaskan hasil penelitian, tetapi juga merupakan salah satu persyaratan kelulusan.",
+        "label": "PD",
+        "alasan": "kewajiban publikasi bagi mahasiswa PENS"
+      },
+      {
+        "n": 8,
+        "kalimat": "Namun, mengubah laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang ringkas, padat, dan sesuai dengan gaya penulisan jurnal masih menjadi tantangan bagi banyak mahasiswa [2][8].",
+        "label": "MASALAH",
+        "alasan": "tantangan mengubah laporan menjadi artikel",
+        "alasan_verifikasi": "menyebut tantangan konversi laporan ke artikel"
+      },
+      {
+        "n": 9,
+        "kalimat": "Tantangan tersebut muncul karena proses konversi dokumen tidak sekadar merangkum isi laporan.",
+        "label": "MASALAH",
+        "alasan": "penyebab tantangan konversi dokumen",
+        "alasan_verifikasi": "menjelaskan penyebab tantangan konversi"
+      },
+      {
+        "n": 10,
+        "kalimat": "Mahasiswa perlu memilih informasi yang paling penting, menentukan kontribusi utama penelitian, serta menyesuaikan gaya penulisan dari bentuk laporan yang bersifat deskriptif menjadi artikel ilmiah yang lebih ringkas dan terstruktur.",
+        "label": "MASALAH",
+        "alasan": "kesulitan memilih dan menyesuaikan konten",
+        "alasan_verifikasi": "menyebut beban kerja mahasiswa dalam konversi"
+      },
+      {
+        "n": 11,
+        "kalimat": "Seluruh proses tersebut membutuhkan waktu dan usaha yang tidak sedikit.",
+        "label": "MASALAH",
+        "alasan": "waktu dan usaha yang besar",
+        "alasan_verifikasi": "menyebut waktu dan usaha yang besar"
+      },
+      {
+        "n": 12,
+        "kalimat": "Akibatnya, tidak sedikit hasil penelitian yang memiliki kualitas baik hanya tersimpan sebagai laporan di perpustakaan tanpa dipublikasikan dalam bentuk artikel ilmiah.",
+        "label": "MASALAH",
+        "alasan": "hasil penelitian tidak dipublikasikan",
+        "alasan_verifikasi": "menyebut konsekuensi tidak dipublikasikannya hasil"
+      },
+      {
+        "n": 13,
+        "kalimat": "Kondisi ini menunjukkan perlunya sebuah sistem yang dapat membantu proses penyusunan draf artikel ilmiah secara otomatis sehingga waktu konversi dokumen dapat dipersingkat dan produktivitas publikasi ilmiah mahasiswa dapat ditingkatkan.",
+        "label": "SOLUSI",
+        "alasan": "penyataan kebutuhan sistem otomatis",
+        "alasan_verifikasi": "menyebut perlunya sistem otomatis"
+      }
+    ]
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "harus",
+        "status": "BENAR",
+        "kalimat": [
+          "Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.",
+          "Proses tersebut tidak hanya mengurangi panjang dokumen, tetapi juga memerlukan kemampuan untuk memilih informasi yang paling penting, menyusun kembali alur pembahasan, serta menyesuaikannya dengan batasan jumlah kata yang ditetapkan oleh jurnal tujuan.",
+          "Dalam praktiknya, proses konversi secara manual membutuhkan waktu yang cukup lama dan tidak jarang menjadi kendala bagi mahasiswa.",
+          "Selain harus menyusun kembali struktur artikel, mahasiswa juga dihadapkan pada keterbatasan waktu menjelang akhir masa studi.",
+          "Di sisi lain, proses peringkasan laporan yang memiliki banyak halaman berpotensi menyebabkan informasi penting terlewat atau tidak tersampaikan dengan baik."
+        ],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      },
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "status": "SALAH",
+        "kalimat": [
+          "Oleh karena itu, diperlukan suatu solusi yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah secara lebih cepat, konsisten, dan mudah digunakan."
+        ],
+        "dibebaskan": [],
+        "saran": "Permasalahan tidak memuat solusi; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 0,
+      "MASALAH": 5,
+      "SOLUSI": 1,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.",
+        "label": "MASALAH",
+        "alasan": "menyebut kesulitan mahasiswa mengonversi laporan"
+      },
+      {
+        "n": 2,
+        "kalimat": "Proses tersebut tidak hanya mengurangi panjang dokumen, tetapi juga memerlukan kemampuan untuk memilih informasi yang paling penting, menyusun kembali alur pembahasan, serta menyesuaikannya dengan batasan jumlah kata yang ditetapkan oleh jurnal tujuan.",
+        "label": "MASALAH",
+        "alasan": "menjelaskan tantangan memilih informasi dan menyesuaikan batas kata"
+      },
+      {
+        "n": 3,
+        "kalimat": "Dalam praktiknya, proses konversi secara manual membutuhkan waktu yang cukup lama dan tidak jarang menjadi kendala bagi mahasiswa.",
+        "label": "MASALAH",
+        "alasan": "menyatakan proses manual memakan waktu lama"
+      },
+      {
+        "n": 4,
+        "kalimat": "Selain harus menyusun kembali struktur artikel, mahasiswa juga dihadapkan pada keterbatasan waktu menjelang akhir masa studi.",
+        "label": "MASALAH",
+        "alasan": "menyoroti keterbatasan waktu mahasiswa"
+      },
+      {
+        "n": 5,
+        "kalimat": "Di sisi lain, proses peringkasan laporan yang memiliki banyak halaman berpotensi menyebabkan informasi penting terlewat atau tidak tersampaikan dengan baik.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan risiko kehilangan informasi penting"
+      },
+      {
+        "n": 6,
+        "kalimat": "Oleh karena itu, diperlukan suatu solusi yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah secara lebih cepat, konsisten, dan mudah digunakan.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan perlunya solusi otomatis",
+        "alasan_verifikasi": "menyebut kebutuhan solusi"
+      }
+    ]
+  },
+  {
+    "subbab": "TUJUAN",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "SOLUSI",
+        "aturan": "harus",
+        "status": "BENAR",
+        "kalimat": [
+          "Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).",
+          "Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren [23] serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah [1].",
+          "Sistem yang dikembangkan dirancang untuk menghasilkan draf bagian-bagian utama artikel ilmiah berdasarkan isi laporan Proyek Akhir.",
+          "Draf yang dihasilkan diharapkan memiliki bentuk yang lebih ringkas, terstruktur, dan sesuai dengan format penulisan artikel ilmiah.",
+          "Melalui penerapan arsitektur RAG, sistem memanfaatkan proses ekstraksi informasi dan rekayasa instruksi (prompt engineering) agar proses generasi tetap mengacu pada dokumen sumber yang diunggah oleh pengguna [26].",
+          "Dengan demikian, informasi yang dihasilkan diharapkan tetap sesuai dengan isi laporan Proyek Akhir.",
+          "Pada akhirnya, penelitian ini bertujuan menghasilkan sebuah purwarupa sistem generator artikel ilmiah serta mengevaluasi efisiensi dan efektivitasnya dalam membantu mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) menyusun artikel ilmiah sebagai salah satu persyaratan kelulusan."
+        ],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      },
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [],
+        "saran": "",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 0,
+      "MASALAH": 0,
+      "SOLUSI": 7,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).",
+        "label": "SOLUSI",
+        "alasan": "menyatakan pengembangan sistem sebagai solusi"
+      },
+      {
+        "n": 2,
+        "kalimat": "Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren [23] serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah [1].",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan alasan pemilihan arsitektur solusi"
+      },
+      {
+        "n": 3,
+        "kalimat": "Sistem yang dikembangkan dirancang untuk menghasilkan draf bagian-bagian utama artikel ilmiah berdasarkan isi laporan Proyek Akhir.",
+        "label": "SOLUSI",
+        "alasan": "menguraikan fungsi utama sistem yang dibangun"
+      },
+      {
+        "n": 4,
+        "kalimat": "Draf yang dihasilkan diharapkan memiliki bentuk yang lebih ringkas, terstruktur, dan sesuai dengan format penulisan artikel ilmiah.",
+        "label": "SOLUSI",
+        "alasan": "menyebutkan harapan hasil dari solusi"
+      },
+      {
+        "n": 5,
+        "kalimat": "Melalui penerapan arsitektur RAG, sistem memanfaatkan proses ekstraksi informasi dan rekayasa instruksi (prompt engineering) agar proses generasi tetap mengacu pada dokumen sumber yang diunggah oleh pengguna [26].",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan komponen teknis solusi RAG"
+      },
+      {
+        "n": 6,
+        "kalimat": "Dengan demikian, informasi yang dihasilkan diharapkan tetap sesuai dengan isi laporan Proyek Akhir.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kualitas output yang diharapkan dari solusi"
+      },
+      {
+        "n": 7,
+        "kalimat": "Pada akhirnya, penelitian ini bertujuan menghasilkan sebuah purwarupa sistem generator artikel ilmiah serta mengevaluasi efisiensi dan efektivitasnya dalam membantu mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) menyusun artikel ilmiah sebagai salah satu persyaratan kelulusan.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan tujuan menghasilkan prototipe dan evaluasinya"
+      }
+    ]
+  },
+  {
+    "subbab": "MANFAAT",
+    "status": "tidak_dinilai",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "status": "tidak_dinilai",
+    "aturan": [],
+    "kalimat": []
+  }
+]

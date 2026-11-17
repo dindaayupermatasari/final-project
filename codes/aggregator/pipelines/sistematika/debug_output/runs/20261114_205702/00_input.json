@@ -1,0 +1,24 @@
+{
+  "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\2d403dbb3b8a\\Buku PA_Awal Raya.pdf",
+  "sections": null,
+  "judul": "SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH",
+  "opsi": {
+    "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\2d403dbb3b8a\\Buku PA_Awal Raya.pdf",
+    "judul": "SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH",
+    "sections": null,
+    "bab": "all",
+    "only": null,
+    "mode": "kalimat",
+    "retrieval": "live",
+    "topk": 3,
+    "match": "auto",
+    "max_chars": 9000,
+    "max_windows": 6,
+    "chroma_dir": null,
+    "pause": false,
+    "yes": true,
+    "problem_domain": "proyek akhir dan artikel ilmiah",
+    "problem": "sulitnya menghasilkan artikel ilmiah",
+    "uniqueness": "sistem generator otomatis"
+  }
+}

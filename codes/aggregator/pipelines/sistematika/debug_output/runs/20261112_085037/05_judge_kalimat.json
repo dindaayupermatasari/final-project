@@ -1,0 +1,438 @@
+[
+  {
+    "subbab": "1.1 LATAR BELAKANG",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Dalam rekayasa sistem perkeretaapian, sekadar memvalidasi apakah sebuah rangkaian kereta mampu melintasi jalur tertentu tidaklah cukup.",
+          "Tantangan utamanya adalah menentukan konfigurasi spesifikasi yang paling efisien di antara berbagai kombinasi parameter teknis yang mungkin.",
+          "Terdapat hubungan trade-off yang kompleks antar variabel; misalnya, peningkatan kapasitas motor traksi akan meningkatkan akselerasi dan memangkas waktu tempuh, namun secara bersamaan akan meningkatkan konsumsi energi dan biaya operasional.",
+          "Metode perhitungan konvensional seringkali kesulitan untuk memetakan titik keseimbangan antara performa waktu dan efisiensi energi tersebut."
+        ],
+        "dibebaskan": [],
+        "saran": "Latar belakang tidak perlu membahas problem; pindahkan ke Permasalahan.",
+        "catatan": ""
+      },
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata.",
+          "Simulasi ini diharapkan dapat mengetahui spesifikasi teknis yang optimal untuk kereta listrik yang akan diproduksi.",
+          "Oleh karena itu, diperlukan pendekatan simulasi yang terintegrasi dengan algoritma optimasi untuk menghasilkan rekomendasi spesifikasi yang objektif dan terukur."
+        ],
+        "dibebaskan": [],
+        "saran": "Solusi tidak dibahas di latar belakang; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 5,
+      "MASALAH": 4,
+      "SOLUSI": 3,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Perusahaan Manufaktur Kereta Api mengembangkan dikenal sebagai manufaktur yang bergerak di bidang perancangan dan produksi sarana perkeretaapian.",
+        "label": "PD",
+        "alasan": "menjelaskan perusahaan manufaktur kereta api"
+      },
+      {
+        "n": 2,
+        "kalimat": "Salah satu produknya adalah kereta listrik, yaitu jenis kereta yang menggunakan tenaga listrik untuk pengoperasiannya tanpa menggunakan mesin diesel atau lokomotif.",
+        "label": "PD",
+        "alasan": "definisi kereta listrik"
+      },
+      {
+        "n": 3,
+        "kalimat": "Kereta ini terdiri atas dua kabin masinis yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal.",
+        "label": "PD",
+        "alasan": "deskripsi konfigurasi kabin"
+      },
+      {
+        "n": 4,
+        "kalimat": "Kereta listrik dikenal karena efisiensi energinya yang tinggi, akselerasi yang cepat, serta kontribusinya dalam mengurangi emisi karbon.",
+        "label": "PD",
+        "alasan": "menyebutkan keunggulan energi dan emisi"
+      },
+      {
+        "n": 5,
+        "kalimat": "Dalam pengembangannya, harus dipastikan bahwa kereta listrik yang diproduksi memiliki spesifikasi teknis yang optimal, agar dapat beroperasi secara andal dengan spesifikasi yang paling optimal yang dibutuhkan oleh pelanggan.",
+        "label": "PD",
+        "alasan": "menyatakan kebutuhan spesifikasi optimal"
+      },
+      {
+        "n": 6,
+        "kalimat": "Oleh karena itu, diperlukan proses evaluasi teknis yang mendalam, salah satunya melalui simulasi, sebelum kereta listrik diproduksi secara nyata.",
+        "label": "SOLUSI",
+        "alasan": "menyebutkan perlunya evaluasi via simulasi",
+        "alasan_verifikasi": "menyatakan kebutuhan proses evaluasi via simulasi"
+      },
+      {
+        "n": 7,
+        "kalimat": "Simulasi ini diharapkan dapat mengetahui spesifikasi teknis yang optimal untuk kereta listrik yang akan diproduksi.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan tujuan simulasi untuk menemukan spesifikasi optimal",
+        "alasan_verifikasi": "menyebutkan tujuan simulasi untuk menentukan spesifikasi optimal"
+      },
+      {
+        "n": 8,
+        "kalimat": "Dalam rekayasa sistem perkeretaapian, sekadar memvalidasi apakah sebuah rangkaian kereta mampu melintasi jalur tertentu tidaklah cukup.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan keterbatasan validasi sederhana",
+        "alasan_verifikasi": "menunjukkan keterbatasan validasi saat ini"
+      },
+      {
+        "n": 9,
+        "kalimat": "Tantangan utamanya adalah menentukan konfigurasi spesifikasi yang paling efisien di antara berbagai kombinasi parameter teknis yang mungkin.",
+        "label": "MASALAH",
+        "alasan": "menyebut tantangan menentukan konfigurasi efisien",
+        "alasan_verifikasi": "menyatakan tantangan utama optimasi spesifikasi"
+      },
+      {
+        "n": 10,
+        "kalimat": "Terdapat hubungan trade-off yang kompleks antar variabel; misalnya, peningkatan kapasitas motor traksi akan meningkatkan akselerasi dan memangkas waktu tempuh, namun secara bersamaan akan meningkatkan konsumsi energi dan biaya operasional.",
+        "label": "MASALAH",
+        "alasan": "menjelaskan trade‑off kompleks antar variabel",
+        "alasan_verifikasi": "menggambarkan trade‑off kompleks antar variabel"
+      },
+      {
+        "n": 11,
+        "kalimat": "Metode perhitungan konvensional seringkali kesulitan untuk memetakan titik keseimbangan antara performa waktu dan efisiensi energi tersebut.",
+        "label": "MASALAH",
+        "alasan": "menyoroti kesulitan metode konvensional",
+        "alasan_verifikasi": "menyoroti kesulitan metode konvensional"
+      },
+      {
+        "n": 12,
+        "kalimat": "Oleh karena itu, diperlukan pendekatan simulasi yang terintegrasi dengan algoritma optimasi untuk menghasilkan rekomendasi spesifikasi yang objektif dan terukur.",
+        "label": "SOLUSI",
+        "alasan": "mengusulkan pendekatan simulasi terintegrasi optimasi",
+        "alasan_verifikasi": "mengusulkan pendekatan simulasi terintegrasi optimasi"
+      }
+    ]
+  },
+  {
+    "subbab": "1.2 PERMASALAHAN",
+    "status": "SALAH",
+    "aturan": [
+      {
+        "unsur": "SOLUSI",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian solusi/metode yang ditawarkan.",
+        "status": "SALAH",
+        "kalimat": [
+          "Oleh karena itu, simulasi menjadi metode penting untuk memodelkan dan menganalisis berbagai skenario spesifikasi secara virtual.",
+          "Simulasi dengan skenario spesifik secara virtual diharapkan dapat memberikan gambaran terbaik atas spesifikasi kereta yang akan diuji.",
+          "Berdasarkan uraian permasalahan tersebut, dapat disimpulkan bahwa Perusahaan Manufaktur Kereta Api membutuhkan sebuah sistem simulasi yang lebih modern, interaktif, serta dapat digunakan secara fleksibel untuk membantu penentuan spesifikasi kereta listrik dengan lebih efisien dan akurat."
+        ],
+        "dibebaskan": [],
+        "saran": "Permasalahan tidak memuat solusi; pindahkan ke Tujuan.",
+        "catatan": ""
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 5,
+      "MASALAH": 9,
+      "SOLUSI": 3,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Perusahan Manufaktur Kereta Api memproduksi berbagai jenis kereta berpenggerak seperti Kereta Rel Diesel (KRD), Kereta Rel Listrik (KRL), dan kereta Hybrid.",
+        "label": "PD",
+        "alasan": "menyebutkan jenis‑jenis kereta yang diproduksi"
+      },
+      {
+        "n": 2,
+        "kalimat": "Salah satu produk unggulan Perusahaan Manufaktur Kereta Api adalah kereta listrik (KRL), yaitu jenis kereta yang menggunakan motor traksi listrik terintegrasi tanpa memerlukan lokomotif terpisah.",
+        "label": "PD",
+        "alasan": "menjelaskan produk unggulan kereta listrik"
+      },
+      {
+        "n": 3,
+        "kalimat": "KRL memiliki keunggulan dibanding KRD dalam hal efisiensi energi (85-90% vs 30-40%), akselerasi yang lebih cepat, dan emisi nol pada titik operasi.",
+        "label": "PD",
+        "alasan": "menyebutkan keunggulan KRL dibanding KRD"
+      },
+      {
+        "n": 4,
+        "kalimat": "Kereta ini terdiri atas dua atau lebih kereta yang dirangkai secara semipermanen, tetapi dapat juga berupa unit tunggal.",
+        "label": "PD",
+        "alasan": "menjelaskan konfigurasi kereta listrik"
+      },
+      {
+        "n": 5,
+        "kalimat": "Kereta listrik dikenal karena efisiensi energi yang tinggi, akselerasi yang cepat, serta berkontribusi dalam mengurangi emisi karbon.",
+        "label": "PD",
+        "alasan": "menyebutkan karakteristik efisiensi dan emisi kereta listrik"
+      },
+      {
+        "n": 6,
+        "kalimat": "Pengujian performa kereta dapat dilakukan melalui uji lapangan, walaupun metode ini tidak efisien dari segi waktu, biaya, dan risiko.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan ketidakefisienan uji lapangan"
+      },
+      {
+        "n": 7,
+        "kalimat": "Oleh karena itu, simulasi menjadi metode penting untuk memodelkan dan menganalisis berbagai skenario spesifikasi secara virtual.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan simulasi sebagai metode penting",
+        "alasan_verifikasi": "menyebutkan simulasi sebagai metode solusi"
+      },
+      {
+        "n": 8,
+        "kalimat": "Simulasi dengan skenario spesifik secara virtual diharapkan dapat memberikan gambaran terbaik atas spesifikasi kereta yang akan diuji.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan harapan manfaat simulasi",
+        "alasan_verifikasi": "menyebutkan simulasi sebagai solusi yang diharapkan"
+      },
+      {
+        "n": 9,
+        "kalimat": "Namun pada praktiknya, kombinasi variabel untuk pengujian belum merepresentasikan hasil terbaik yang bisa dicapai.",
+        "label": "MASALAH",
+        "alasan": "menyatakan kombinasi variabel belum optimal"
+      },
+      {
+        "n": 10,
+        "kalimat": "Misalnya, kereta yang akan diuji memiliki konsumsi daya yang sangat tinggi, sehingga biaya yang dikeluarkan untuk perjalanan kereta akan sangat tinggi.",
+        "label": "MASALAH",
+        "alasan": "contoh masalah konsumsi daya tinggi dan biaya"
+      },
+      {
+        "n": 11,
+        "kalimat": "Sebaliknya, jika konsumsi daya terlalu rendah, kereta memerlukan waktu yang lebih lama untuk mencapai tujuan.",
+        "label": "MASALAH",
+        "alasan": "contoh masalah konsumsi daya rendah memperlambat"
+      },
+      {
+        "n": 12,
+        "kalimat": "Hal tersebut dikarenakan penentuan kombinasi parameter teknis seperti percepatan dan weakening point masih dilakukan secara manual, sehingga tidak ada jaminan bahwa kombinasi yang dipilih benar-benar merepresentasikan titik keseimbangan terbaik antara waktu tempuh dan konsumsi daya.",
+        "label": "MASALAH",
+        "alasan": "menjelaskan penyebab manualnya pemilihan parameter"
+      },
+      {
+        "n": 13,
+        "kalimat": "Ketiadaan sistem optimasi berdampak pada efisiensi spesifikasi dan kualitas keputusan teknis yang dihasilkan.",
+        "label": "MASALAH",
+        "alasan": "menyatakan ketiadaan sistem optimasi berdampak negatif"
+      },
+      {
+        "n": 14,
+        "kalimat": "Tanpa adanya sistem evaluasi yang sistematis, engineer berpotensi memilih spesifikasi yang menghasilkan konsumsi daya yang lebih tinggi dari yang diperlukan.",
+        "label": "MASALAH",
+        "alasan": "menyatakan risiko tanpa sistem evaluasi"
+      },
+      {
+        "n": 15,
+        "kalimat": "Atau mungkin sebaliknya, spesifikasi yang terlalu berfokus pada efisiensi daya, sehingga waktu tempuh menjadi tidak efisien.",
+        "label": "MASALAH",
+        "alasan": "menyatakan spesifikasi fokus daya mengorbankan waktu"
+      },
+      {
+        "n": 16,
+        "kalimat": "Kedua kondisi ini berimplikasi pada peningkatan biaya produksi maupun operasional kereta yang merugikan Perusahaan Manufaktur Kereta Api maupun pelanggannya.",
+        "label": "MASALAH",
+        "alasan": "menyebutkan implikasi biaya produksi dan operasional"
+      },
+      {
+        "n": 17,
+        "kalimat": "Berdasarkan uraian permasalahan tersebut, dapat disimpulkan bahwa Perusahaan Manufaktur Kereta Api membutuhkan sebuah sistem simulasi yang lebih modern, interaktif, serta dapat digunakan secara fleksibel untuk membantu penentuan spesifikasi kereta listrik dengan lebih efisien dan akurat.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kebutuhan sistem simulasi modern",
+        "alasan_verifikasi": "menyatakan kebutuhan akan sistem simulasi"
+      }
+    ]
+  },
+  {
+    "subbab": "1.3 TUJUAN",
+    "status": "BENAR",
+    "aturan": [
+      {
+        "unsur": "MASALAH",
+        "aturan": "dilarang",
+        "deskripsi": "Tidak memuat uraian permasalahan (problem) yang ingin diselesaikan.",
+        "status": "BENAR",
+        "kalimat": [],
+        "dibebaskan": [
+          "Sistem ini tidak dapat diakses dengan mudah tanpa adanya antarmuka pengguna."
+        ],
+        "saran": "",
+        "catatan": "1 kalimat dibebaskan setelah verifikasi"
+      }
+    ],
+    "tidak_dinilai": [],
+    "hitung": {
+      "PD": 0,
+      "MASALAH": 1,
+      "SOLUSI": 8,
+      "LAIN": 0
+    },
+    "kalimat": [
+      {
+        "n": 1,
+        "kalimat": "Penelitian proyek akhir ini mengajukan suatu pendekatan pemodelan baru untuk simulasi kereta listrik dengan optimasi spesifikasi secara otomatis dengan menggunakan logika fuzzy.",
+        "label": "SOLUSI",
+        "alasan": "memperkenalkan pendekatan pemodelan baru dengan logika fuzzy"
+      },
+      {
+        "n": 2,
+        "kalimat": "Sistem ini dirancang untuk memungkinkan pengguna untuk menentukan spesifikasi yang paling optimal secara otomatis, sehingga hasil yang diberikan akan lebih objektif, terukur dan efisien secara biaya.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan fungsi sistem untuk menentukan spesifikasi optimal"
+      },
+      {
+        "n": 3,
+        "kalimat": "Melalui simulasi, sistem akan menghitung parameter-parameter teknis seperti berat, gaya resistensi, kecepatan, daya, jarak tempuh, serta konsumsi energi kereta secara real time.",
+        "label": "SOLUSI",
+        "alasan": "menguraikan perhitungan parameter teknis oleh sistem"
+      },
+      {
+        "n": 4,
+        "kalimat": "Nilai-nilai ini akan diproses lebih lanjut dengan menggunakan logika fuzzy, guna menentukan spesifikasi kereta paling optimal berdasarkan nilai-nilai hasil perhitungan simulasi sebelumnya.",
+        "label": "SOLUSI",
+        "alasan": "menyebutkan pemrosesan nilai dengan logika fuzzy"
+      },
+      {
+        "n": 5,
+        "kalimat": "Dengan adanya proses ini, sistem mampu memberikan spesifikasi kereta yang paling optimal dengan menyeimbangkan antara waktu tempuh paling cepat dengan daya penggerak dan konsumsi energi yang paling minimum.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kemampuan sistem memberikan spesifikasi optimal"
+      },
+      {
+        "n": 6,
+        "kalimat": "Sistem ini tidak dapat diakses dengan mudah tanpa adanya antarmuka pengguna.",
+        "label": "MASALAH",
+        "alasan": "menunjukkan kesulitan akses tanpa antarmuka pengguna",
+        "alasan_verifikasi": "bukan unsur terlarang",
+        "dibebaskan": true
+      },
+      {
+        "n": 7,
+        "kalimat": "Maka dari itu, selain adanya simulasi dan pemrosesan secara lanjut menggunakan logika fuzzy, antarmuka pengguna yang intuitif sangat diperlukan.",
+        "label": "SOLUSI",
+        "alasan": "menyatakan kebutuhan akan antarmuka pengguna intuitif"
+      },
+      {
+        "n": 8,
+        "kalimat": "Dengan adanya antarmuka pengguna yang intuitif, pengguna dapat dengan mudah menyusun parameter teknis maupun melihat hasil dari simulasi dan proses lanjutan dengan logika fuzzy.",
+        "label": "SOLUSI",
+        "alasan": "menjelaskan manfaat antarmuka pengguna intuitif"
+      },
+      {
+        "n": 9,
+        "kalimat": "Dengan adanya aplikasi ini, diharapkan memberikan rekomendasi spesifikasi kereta yang optimal serta lebih efisien dan adaptif dibanding metode simulasi manual yang selama ini digunakan di lingkungan industri Perusahaan Manufaktur Kereta Api.",
+        "label": "SOLUSI",
+        "alasan": "menyampaikan harapan aplikasi memberikan rekomendasi optimal"
+      }
+    ]
+  },
+  {
+    "subbab": "1.4 MANFAAT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "1.5 SISTEMATIKA PENULISAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.1 DESKRIPSI PERMASALAHAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.2 TEORI PENUNJANG",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "2.3 PENELITIAN TERKAIT",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.1 DESKRIPSI SOLUSI",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "3.2 PERANCANGAN SISTEM",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.1 PARAMETER EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.2 KARAKTERISTIK DATA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.3 TEMPAT UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.4 WAKTU UJICOBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.5 SPESIFIKASI PERALATAN UJI COBA",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.6 HASIL EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "4.7 ANALISIS HASIL EKSPERIMEN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.1 KESIMPULAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  },
+  {
+    "subbab": "5.2 SARAN",
+    "status": "tidak_ada_aturan",
+    "aturan": [],
+    "kalimat": []
+  }
+]

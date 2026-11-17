@@ -1,0 +1,77 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "match": {
+      "pilihan_llm": "bab1_sub1-1_instruction",
+      "alasan": "Petunjuk tersebut secara spesifik mengatur penulisan subbab LATAR BELAKANG yang sesuai dengan judul dan isi subbab mahasiswa.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-1_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: LATAR BELAKANG\nCuplikan isi: Proyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi. Melalui Proyek Akhir, mahasiswa melakukan penelitian atau perancangan dengan menerapkan ilmu yang telah dipelajari untuk menyelesaikan suatu permasalahan. Proyek Akhir juga menjadi bukti kompetensi mahasiswa dalam menganalisis permasalahan, merancang solusi, serta mendokumentasikan hasil penelitian secara sistematis. Hasil dari Proyek Akhi\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-1_instruction\nJudul panduan: LATAR BELAKANG\nIsi: Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nID: bab1_sub1-3_instruction\nJudul panduan: BATASAN MASALAH\nIsi: Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.\n\nID: bab2_sub2-2_instruction\nJudul panduan: TEORI PENUNJANG\nIsi: Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan. Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan. Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir. Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2].",
+        "raw": "{\"pilihan\": \"bab1_sub1-1_instruction\", \"alasan\": \"Petunjuk tersebut secara spesifik mengatur penulisan subbab LATAR BELAKANG yang sesuai dengan judul dan isi subbab mahasiswa.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-2_instruction",
+      "alasan": "Subbab berjudul PERMASALAHAN yang menjelaskan masalah penelitian secara deskriptif cocok dengan panduan ID bab1_sub1-2_instruction yang mengatur penulisan bagian PERMASALAHAN.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-2_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: PERMASALAHAN\nCuplikan isi: Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal. Proses tersebut tidak hanya mengurangi panjang dokumen, tetapi juga memerlukan kemampuan untuk memilih informasi yang paling penting, menyusun kembali alur pembahasan, serta menyesuaikannya dengan batasan jumlah ka\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-3_instruction\nJudul panduan: BATASAN MASALAH\nIsi: Deskripsikan dengan jelas hal-hal yang perlu dibatasi dari permasalahan yang diselesaikan dalam proyek akhir. Deskripsi batasan masalah sebaiknya dituliskan dengan bentuk itemik.\n\nID: bab1_sub1-2_instruction\nJudul panduan: PERMASALAHAN\nIsi: Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.\n\nID: bab4_sub4-5_instruction\nJudul panduan: SPESIFIKASI PERALATAN UJICOBA\nIsi: Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "raw": "{\n  \"pilihan\": \"bab1_sub1-2_instruction\",\n  \"alasan\": \"Subbab berjudul PERMASALAHAN yang menjelaskan masalah penelitian secara deskriptif cocok dengan panduan ID bab1_sub1-2_instruction yang mengatur penulisan bagian PERMASALAHAN.\"\n}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "TUJUAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-4_instruction",
+      "alasan": "Subbab berjudul TUJUAN dan isinya menjelaskan tujuan penelitian, sesuai dengan petunjuk bab1_sub1-4_instruction yang mengatur penulisan tujuan proyek akhir.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-4_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: TUJUAN\nCuplikan isi: Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM). Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren [23] serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah [1]. Sistem yang \n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab2_sub2-2_instruction\nJudul panduan: TEORI PENUNJANG\nIsi: Uraikan dengan jelas dasar teori yang menunjang penelitian proyek akhir yang akan dilakukan. Teori penunjang menguraikan dasar-dasar teori, temuan, dan bahan dari pustaka ilmiah lain, yang dijadikan landasan untuk melakukan proyek akhir yang diusulkan. Uraian dalam Teori Penunjang menjadi landasan untuk menyusun kerangka atau konsep yang akan digunakan dalam proyek akhir. Pada pembahasan teori penunjang, jangan lupa untuk menyebutkan semua kutipan dengan rujukan yang jelas seperti ini [2].\n\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-4_instruction\", \"alasan\": \"Subbab berjudul TUJUAN dan isinya menjelaskan tujuan penelitian, sesuai dengan petunjuk bab1_sub1-4_instruction yang mengatur penulisan tujuan proyek akhir.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "MANFAAT",
+    "match": {
+      "pilihan_llm": "bab1_sub1-5_instruction",
+      "alasan": "Judul dan isi subbab 'MANFAAT' sesuai dengan petunjuk yang mengatur penulisan manfaat proyek akhir pada panduan.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-5_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: MANFAAT\nCuplikan isi: Penelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah. Melalui pengembangan purwarupa sistem konversi otomatis, mahasiswa memperoleh sebuah sistem yang dapat membantu mempercepat proses penyusunan artikel dengan mengekstrak informasi penting dari laporan Proyek Akhir yang memiliki banyak halaman. Sistem ini diharapkan dapat membantu mahasiswa mengatasi kesulitan dalam mengubah lapor\n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-5_instruction\nJudul panduan: MANFAAT\nIsi: Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nID: bab1_sub1-4_instruction\nJudul panduan: TUJUAN\nIsi: Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunak\n\nID: bab4_sub4-5_instruction\nJudul panduan: SPESIFIKASI PERALATAN UJICOBA\nIsi: Peralatan dapat berupa perangkat keras, perangkat lunak, piranti elektronik, gadget, dan lain-lain, yang berfungsi sebagai alat yang dipakai untuk percobaan. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud penulis yang tertuang dalam tulisan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-5_instruction\", \"alasan\": \"Judul dan isi subbab 'MANFAAT' sesuai dengan petunjuk yang mengatur penulisan manfaat proyek akhir pada panduan.\"}"
+      }
+    },
+    "error": null
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "match": {
+      "pilihan_llm": "bab1_sub1-6_instruction",
+      "alasan": "Petunjuk dengan ID bab1_sub1-6_instruction secara spesifik mengatur penulisan subbab SISTEMATIKA PENULISAN yang menjelaskan isi tiap bab dalam laporan Proyek Akhir.",
+      "pilihan_valid": true,
+      "pilihan_aturan": "bab1_sub1-6_instruction",
+      "trace": {
+        "system": "Kamu mencocokkan satu subbab dokumen mahasiswa dengan petunjuk penulisan di panduan.\nPilih SATU petunjuk yang memang mengatur subbab tersebut, berdasarkan judul dan isi subbab.\nJika tidak ada kandidat yang mengatur subbab ini, pilih null; jangan memaksa.\nBalas hanya JSON: {\"pilihan\": \"<id kandidat>\" atau null, \"alasan\": \"<satu kalimat>\"}",
+        "user": "SUBBAB MAHASISWA\nJudul: SISTEMATIKA PENULISAN\nCuplikan isi: Bab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir. Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), \n\nKANDIDAT PETUNJUK PANDUAN\nID: bab1_sub1-6_instruction\nJudul panduan: SISTEMATIKA PENULISAN\nIsi: Jelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan mem\n\nID: bab4_sub4-2_instruction\nJudul panduan: KARATERISTIK DATA\nIsi: Akan lebih baik jika Penulis dapat memberikan alasan terhadap penggunaan data yang mempunyai karakteristik seperti itu. Deskripsi pembahasan seharusnya singkat, padat dan jelas, sehingga membuat pembaca memahami maksud Penulis yang tertuang dalam tulisan.\n\nID: bab5_sub5-1_instruction\nJudul panduan: KESIMPULAN\nIsi: Disini berikan kesimpulan terhadap Problem dan tingkat urgensi, solusi yang penulis tawarkan, orisinalitas pada proyek akhir ini, desain sistem, eksperimen dan kinerja sistem terhadap permasalahan.",
+        "raw": "{\"pilihan\": \"bab1_sub1-6_instruction\", \"alasan\": \"Petunjuk dengan ID bab1_sub1-6_instruction secara spesifik mengatur penulisan subbab SISTEMATIKA PENULISAN yang menjelaskan isi tiap bab dalam laporan Proyek Akhir.\"}"
+      }
+    },
+    "error": null
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "id": "f66255606d21",
+  "status": "done",
+  "file": "Buku PA_Awal Raya.pdf",
+  "path": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\api\\data\\f66255606d21\\Buku PA_Awal Raya.pdf",
+  "judul": "",
+  "created": "2026-11-14T23:53:02",
+  "error": null,
+  "skor": 84.1,
+  "started": "2026-11-14T23:53:20",
+  "decomp": {
+    "judul": "SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH",
+    "problem_domain": "proyek akhir dan artikel ilmiah",
+    "problem": "sulitnya menghasilkan artikel ilmiah",
+    "uniqueness": "sistem generator otomatis",
+    "catatan": "",
+    "perlu_dicek": [],
+    "judul_pasti": true,
+    "dikonfirmasi": true
+  },
+  "run_dir": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\aggregator\\pipelines\\sistematika\\debug_output\\runs\\20261114_235320",
+  "finished": "2026-11-14T23:55:00"
+}

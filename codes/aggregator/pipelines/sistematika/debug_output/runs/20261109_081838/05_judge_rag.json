@@ -1,0 +1,259 @@
+[
+  {
+    "subbab": "LATAR BELAKANG",
+    "status": "sesuai",
+    "wajib_terpenuhi": "3/3",
+    "chunk_id": "bab1_sub1-1_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Namun, mengubah laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang ringkas, padat, dan sesuai dengan gaya penulisan jurnal masih menjadi tantangan bagi banyak mahasiswa [2][8].",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Proyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi. | Artikel ilmiah, atau yang sering disebut paper, merupakan karya tulis yang disusun untuk mempublikasikan hasil atau kontribusi suatu penelitian kepada masyarakat ilmiah yang lebih luas.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Kondisi ini menunjukkan perlunya sebuah sistem yang dapat membantu proses penyusunan draf artikel ilmiah secara otomatis sehingga waktu konversi dokumen dapat dipersingkat dan produktivitas publikasi ilmiah mahasiswa dapat ditingkatkan.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH\nProblem Domain: proyek akhir dan artikel ilmiah | Problem: sulitnya menghasilkan artikel ilmiah | Uniqueness: sistem generator otomatis\n\nSUBBAB: LATAR BELAKANG\n\nPETUNJUK PANDUAN:\nDeskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir. Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian. Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi. Tabel dan gambar diberi nomor urut pada setiap bab dengan angka judul tabel dan gambar menggunakan huruf dengan ukuran 11. Penulisan nama tabel dan gambar ada contohnya di template buku proyek akhir. Daftar simbol/notasi atau istilah dapat ditambahkan sesuai kebutuhan, ditempatkan setelah Daftar Tabel.\n\nCONTOH DI PANDUAN (ilustrasi):\nMisalkan penulis mengambil suatu judul berikut \"Deteksi Penyakit Kanker Dengan Sistem Pakar Berbasis Fuzzy\". Judul tersebut mempunyai Problem adalah Deteksi Penyakit Kanker, Problem Domain adalah Penyakit Kanker, dan Uniqueness adalah Sistem Pakar Berbasis Fuzzy. Berkaitan dengan Latar Belakang, Problem Domain-nya adalah tentang penyakit kanker, sehingga disini penulis dapat menceritakan tentang penyakit kanker dan tingkat urgensi (seperti tingkat kenaikan jumlah penderitanya dari tahun ke tahun, gawatnya penyakit kanker tersebut, dan semisalnya).\n\nTEKS MAHASISWA:\n\"\"\"\nProyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi. Melalui Proyek Akhir, mahasiswa melakukan penelitian atau perancangan dengan menerapkan ilmu yang telah dipelajari untuk menyelesaikan suatu permasalahan. Proyek Akhir juga menjadi bukti kompetensi mahasiswa dalam menganalisis permasalahan, merancang solusi, serta mendokumentasikan hasil penelitian secara sistematis. Hasil dari Proyek Akhir umumnya berupa laporan yang cukup panjang sehingga pembaca di luar lingkungan kampus, seperti praktisi industri maupun peneliti lain, sering mengalami kesulitan untuk memahami inti dari penelitian tersebut. Artikel ilmiah, atau yang sering disebut paper, merupakan karya tulis yang disusun untuk mempublikasikan hasil atau kontribusi suatu penelitian kepada masyarakat ilmiah yang lebih luas. Artikel ilmiah berfungsi sebagai media diseminasi ilmu pengetahuan sehingga hasil penelitian dapat dipelajari, dikritisi, divalidasi, dan dijadikan referensi oleh peneliti lain. Bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS), publikasi artikel ilmiah tidak hanya menjadi sarana untuk menyebarluaskan hasil penelitian, tetapi juga merupakan salah satu persyaratan kelulusan. Namun, mengubah laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang ringkas, padat, dan sesuai dengan gaya penulisan jurnal masih menjadi tantangan bagi banyak mahasiswa [2][8]. Tantangan tersebut muncul karena proses konversi dokumen tidak sekadar merangkum isi laporan. Mahasiswa perlu memilih informasi yang paling penting, menentukan kontribusi utama penelitian, serta menyesuaikan gaya penulisan dari bentuk laporan yang bersifat deskriptif menjadi artikel ilmiah yang lebih ringkas dan terstruktur. Seluruh proses tersebut membutuhkan waktu dan usaha yang tidak sedikit. Akibatnya, tidak sedikit hasil penelitian yang memiliki kualitas baik hanya tersimpan sebagai laporan di perpustakaan tanpa dipublikasikan dalam bentuk artikel ilmiah. Kondisi ini menunjukkan perlunya sebuah sistem yang dapat membantu proses penyusunan draf artikel ilmiah secara otomatis sehingga waktu konversi dokumen dapat dipersingkat dan produktivitas publikasi ilmiah mahasiswa dapat ditingkatkan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan latar belakang dari permasalahan yang akan diangkat pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Namun, mengubah laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang ringkas, padat, dan sesuai dengan gaya penulisan jurnal masih menjadi tantangan bagi banyak mahasiswa [2][8].\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Latar belakang berisi penjelasan dari Problem Domain yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Proyek Akhir (PA) merupakan karya tulis ilmiah yang wajib disusun oleh mahasiswa sebagai salah satu syarat untuk menyelesaikan pendidikan di perguruan tinggi. | Artikel ilmiah, atau yang sering disebut paper, merupakan karya tulis yang disusun untuk mempublikasikan hasil atau kontribusi suatu penelitian kepada masyarakat ilmiah yang lebih luas.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Latar belakang yang baik berisikan problem domain yang mempunyai tingkat urgensi tinggi.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Kondisi ini menunjukkan perlunya sebuah sistem yang dapat membantu proses penyusunan draf artikel ilmiah secara otomatis sehingga waktu konversi dokumen dapat dipersingkat dan produktivitas publikasi ilmiah mahasiswa dapat ditingkatkan.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "PERMASALAHAN",
+    "status": "sesuai",
+    "wajib_terpenuhi": "4/4",
+    "chunk_id": "bab1_sub1-2_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Dalam praktiknya, proses konversi secara manual membutuhkan waktu yang cukup lama dan tidak jarang menjadi kendala bagi mahasiswa. | mahasiswa juga dihadapkan pada keterbatasan waktu menjelang akhir masa studi.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Oleh karena itu, diperlukan suatu solusi yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah secara lebih cepat, konsisten, dan mudah digunakan.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH\nProblem Domain: proyek akhir dan artikel ilmiah | Problem: sulitnya menghasilkan artikel ilmiah | Uniqueness: sistem generator otomatis\n\nSUBBAB: PERMASALAHAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir. Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian. Deskripsi masalah sebaiknya dituliskan dengan gaya bahasa deskriptif. Uraian permasalahan yang baik manakala penulis berhasil menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut sehingga membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, Problem-nya adalah tentang deteksi penyakit kanker, sehingga penulis disini dapat menceritakan tentang sulitnya pendeteksian penyakit kanker dengan mendeskripsikan faktor- faktor yang membuat sulit dalam pendeteksiannya.\n\nTEKS MAHASISWA:\n\"\"\"\nBerdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal. Proses tersebut tidak hanya mengurangi panjang dokumen, tetapi juga memerlukan kemampuan untuk memilih informasi yang paling penting, menyusun kembali alur pembahasan, serta menyesuaikannya dengan batasan jumlah kata yang ditetapkan oleh jurnal tujuan. Dalam praktiknya, proses konversi secara manual membutuhkan waktu yang cukup lama dan tidak jarang menjadi kendala bagi mahasiswa. Selain harus menyusun kembali struktur artikel, mahasiswa juga dihadapkan pada keterbatasan waktu menjelang akhir masa studi. Di sisi lain, proses peringkasan laporan yang memiliki banyak halaman berpotensi menyebabkan informasi penting terlewat atau tidak tersampaikan dengan baik. Oleh karena itu, diperlukan suatu solusi yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah secara lebih cepat, konsisten, dan mudah digunakan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas permasalahan yang ingin diteliti pada proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Permasalahan berisi penjelasan dari Problem yang termuat pada judul penelitian.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Berdasarkan latar belakang yang telah diuraikan, permasalahan dalam penelitian ini berawal dari kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir yang umumnya memiliki banyak halaman menjadi artikel ilmiah yang lebih ringkas, padat, dan sesuai dengan standar publikasi jurnal.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"menyakinkan kepada pembaca tentang seberapa tingkat urgensi dari permasalahan tersebut\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Dalam praktiknya, proses konversi secara manual membutuhkan waktu yang cukup lama dan tidak jarang menjadi kendala bagi mahasiswa. | mahasiswa juga dihadapkan pada keterbatasan waktu menjelang akhir masa studi.\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"membuat pembaca yakin bahwa permasalahan tersebut membutuhkan solusi dari penelitian pada proyek akhir penulis\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Oleh karena itu, diperlukan suatu solusi yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah secara lebih cepat, konsisten, dan mudah digunakan.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "TUJUAN",
+    "status": "tidak_sesuai",
+    "wajib_terpenuhi": "3/5",
+    "chunk_id": "bab1_sub1-4_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Tujuan proyek akhir harus jelas.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Tujuan proyek akhir harus singkat.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Tujuan proyek akhir harus mengandung klaim orisinalitas.",
+        "butuh_kutipan": true,
+        "terpenuhi": false,
+        "kutipan": "",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah. Sistem yang dikembangkan dirancang untuk menghasilkan draf bagian-bagian utama artikel ilmiah berdasarkan isi laporan Proyek Akhir. Melalui penerapan arsitektur RAG, sistem memanfaatkan proses ekstraksi informasi dan rekayasa instruksi (prompt engineering) agar proses generasi tetap mengacu pada dokumen sumber yang diunggah oleh pengguna.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH\nProblem Domain: proyek akhir dan artikel ilmiah | Problem: sulitnya menghasilkan artikel ilmiah | Uniqueness: sistem generator otomatis\n\nSUBBAB: TUJUAN\n\nPETUNJUK PANDUAN:\nDeskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat. Tujuan proyek akhir harus jelas, singkat, dan mengandung klaim orisinalitas. Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir. Untuk memberikan gambaran yang jelas apa yang dilakukan dan solusi unik apa yang akan ditawarkan pada penelitian, tujuan sebaiknya diawali dengan kalimat pembuka seperti ini: “Penelitian proyek akhir ini mengajukan suatu pendekatan / algoritma / pemodelan / teknik / metode yang baru untuk mengatasi ........................ (hubungan dengan Problem) dengan memakai / menggunakan / mempresentasikan / melibatkan (sebutkan solusi memakai apa)”. Kalimat-kalimat selanjutnya kemudian memperjelas solusi dengan fitur-fitur unik seperti apa yang ditawarkan pada penelitian sebagai suatu solusi untuk menjawab permasalahan.\n\nCONTOH DI PANDUAN (ilustrasi):\nPada contoh judul diatas, orisinalitasnya adalah Sistem Pakar Berbasis Fuzzy, sehingga penulis disini dapat menjelaskan tentang pemodelan sistem pakar dan fitur-fitur fuzzy yang seperti apa untuk deteksi penyakit kanker. Kalimat pertama pada tujuan dapat diawali dengan contoh berikut, “Penelitian proyek akhir ini mengajukan suatu pendekatan baru untuk pendeteksian penyakit kanker dengan mempresentasikan model klasifikasi menggunakan Sistem Pakar yang berbasis Fuzzy”. Kemudian pada kalimat- kalimat berikutnya terangkan secara argumentatif tentang fitur-fitur unik pemodelan Sistem Pakar dengan Fuzzy sehingga dapat digunakan untuk mendeteksi penyakit kanker.\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM). Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren [23] serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah [1]. Sistem yang dikembangkan dirancang untuk menghasilkan draf bagian-bagian utama artikel ilmiah berdasarkan isi laporan Proyek Akhir. Draf yang dihasilkan diharapkan memiliki bentuk yang lebih ringkas, terstruktur, dan sesuai dengan format penulisan artikel ilmiah. Melalui penerapan arsitektur RAG, sistem memanfaatkan proses ekstraksi informasi dan rekayasa instruksi (prompt engineering) agar proses generasi tetap mengacu pada dokumen sumber yang diunggah oleh pengguna [26]. Dengan demikian, informasi yang dihasilkan diharapkan tetap sesuai dengan isi laporan Proyek Akhir. Pada akhirnya, penelitian ini bertujuan menghasilkan sebuah purwarupa sistem generator artikel ilmiah serta mengevaluasi efisiensi dan efektivitasnya dalam membantu mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) menyusun artikel ilmiah sebagai salah satu persyaratan kelulusan.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Deskripsikan dengan jelas tujuan penelitian proyek akhir yang diangkat.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Tujuan proyek akhir harus jelas.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian Proyek Akhir ini bertujuan mengembangkan sistem generator artikel ilmiah berbasis web yang dapat membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah dengan menerapkan arsitektur Retrieval-Augmented Generation (RAG) dan Large Language Model (LLM).\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Tujuan proyek akhir harus singkat.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Tujuan proyek akhir harus mengandung klaim orisinalitas.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": false,\n      \"kutipan\": \"\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Tuliskan secara argumentatif apa saja fitur-fitur yang ditawarkan pada penelitian sebagai sesuatu solusi yang baru untuk mengklaim orisinalitas pada penelitian proyek akhir.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Pemilihan arsitektur tersebut didasarkan pada kemampuan model bahasa besar dalam menghasilkan teks yang koheren serta potensinya sebagai asisten penulisan untuk membantu proses penyusunan artikel ilmiah. Sistem yang dikembangkan dirancang untuk menghasilkan draf bagian-bagian utama artikel ilmiah berdasarkan isi laporan Proyek Akhir. Melalui penerapan arsitektur RAG, sistem memanfaatkan proses ekstraksi informasi dan rekayasa instruksi (prompt engineering) agar proses generasi tetap mengacu pada dokumen sumber yang diunggah oleh pengguna.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "MANFAAT",
+    "status": "sesuai",
+    "wajib_terpenuhi": "6/6",
+    "chunk_id": "bab1_sub1-5_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "melalui pengembangan purwarupa sistem konversi otomatis, mahasiswa memperoleh sebuah sistem yang dapat membantu mempercepat proses penyusunan artikel",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Uraikan kontribusi proyek akhir pada pemecahan masalah pembangunan",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Sistem ini diharapkan dapat membantu mahasiswa mengatasi kesulitan dalam mengubah laporan menjadi artikel ilmiah yang lebih ringkas dan terstruktur",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Uraikan kontribusi proyek akhir pada pengembangan kelembagaan",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Hasil penelitian berupa rancangan arsitektur sistem, implementasi purwarupa, serta dokumentasi proses pengembangan dapat dimanfaatkan sebagai dasar untuk penelitian selanjutnya | rancangan prompt dan alur pemrosesan teks yang dikembangkan pada penelitian ini diharapkan dapat menjadi acuan dalam pengembangan maupun penyempurnaan sistem otomatisasi penulisan ilmiah di lingkungan akademik",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Penelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah",
+        "sumber_valid": true
+      },
+      {
+        "id": "K6",
+        "sumber": "Jelaskan dalam bentuk apa manfaatnya",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "membantu mempercepat proses penyusunan artikel dengan mengekstrak informasi penting dari laporan Proyek Akhir yang memiliki banyak halaman | dapat menjadi referensi bagi pengembangan sistem generator artikel ilmiah berbasis Retrieval-Augmented Generation (RAG)",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH\nProblem Domain: proyek akhir dan artikel ilmiah | Problem: sulitnya menghasilkan artikel ilmiah | Uniqueness: sistem generator otomatis\n\nSUBBAB: MANFAAT\n\nPETUNJUK PANDUAN:\nUraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni, pemecahan masalah pembangunan, atau pengembangan kelembagaan. Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai. Kontribusi sebaiknya bersifat spesifik, tidak terlalu luas dan tidak terkesan mengada- ada. Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis dan dalam bentuk apa manfaatnya.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nPenelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah. Melalui pengembangan purwarupa sistem konversi otomatis, mahasiswa memperoleh sebuah sistem yang dapat membantu mempercepat proses penyusunan artikel dengan mengekstrak informasi penting dari laporan Proyek Akhir yang memiliki banyak halaman. Sistem ini diharapkan dapat membantu mahasiswa mengatasi kesulitan dalam mengubah laporan menjadi artikel ilmiah yang lebih ringkas dan terstruktur, sehingga penyusunan draf awal artikel dapat dilakukan dengan lebih cepat sebagai salah satu pendukung pemenuhan persyaratan kelulusan. Selain memberikan manfaat bagi mahasiswa, penelitian ini juga diharapkan dapat menjadi referensi bagi pengembangan sistem generator artikel ilmiah berbasis Retrieval-Augmented Generation (RAG). Hasil penelitian berupa rancangan arsitektur sistem, implementasi purwarupa, serta dokumentasi proses pengembangan dapat dimanfaatkan sebagai dasar untuk penelitian selanjutnya. Selain itu, rancangan prompt dan alur pemrosesan teks yang dikembangkan pada penelitian ini diharapkan dapat menjadi acuan dalam pengembangan maupun penyempurnaan sistem otomatisasi penulisan ilmiah di lingkungan akademik.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pengembangan ilmu pengetahuan teknologi dan seni\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"melalui pengembangan purwarupa sistem konversi otomatis, mahasiswa memperoleh sebuah sistem yang dapat membantu mempercepat proses penyusunan artikel\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pemecahan masalah pembangunan\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Sistem ini diharapkan dapat membantu mahasiswa mengatasi kesulitan dalam mengubah laporan menjadi artikel ilmiah yang lebih ringkas dan terstruktur\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Uraikan kontribusi proyek akhir pada pengembangan kelembagaan\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Hasil penelitian berupa rancangan arsitektur sistem, implementasi purwarupa, serta dokumentasi proses pengembangan dapat dimanfaatkan sebagai dasar untuk penelitian selanjutnya | rancangan prompt dan alur pemrosesan teks yang dikembangkan pada penelitian ini diharapkan dapat menjadi acuan dalam pengembangan maupun penyempurnaan sistem otomatisasi penulisan ilmiah di lingkungan akademik\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Kontribusi menggambarkan manfaat dari penelitian terhadap pihak tertentu saat penelitian sudah selesai\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Jelaskan siapa yang mendapatkan manfaat dari penelitian penulis\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Penelitian Proyek Akhir ini diharapkan dapat memberikan manfaat bagi mahasiswa Politeknik Elektronika Negeri Surabaya (PENS) dalam proses penyusunan draf artikel ilmiah\"\n    },\n    {\n      \"id\": \"K6\",\n      \"sumber\": \"Jelaskan dalam bentuk apa manfaatnya\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"membantu mempercepat proses penyusunan artikel dengan mengekstrak informasi penting dari laporan Proyek Akhir yang memiliki banyak halaman | dapat menjadi referensi bagi pengembangan sistem generator artikel ilmiah berbasis Retrieval-Augmented Generation (RAG)\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "subbab": "SISTEMATIKA PENULISAN",
+    "status": "sesuai",
+    "wajib_terpenuhi": "6/6",
+    "chunk_id": "bab1_sub1-6_instruction",
+    "kriteria": [
+      {
+        "id": "K1",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 1.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K2",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Pendahuluan.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K3",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 2.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), Natural Language Processing (NLP), Large Language Model (LLM), sistem generator teks otomatis, text embedding, vector database, Retrieval-Augmented Generation (RAG), Prompt Engineering, serta metode evaluasi kualitas teks. Selain itu, bab ini juga membahas penelitian-penelitian terdahulu yang relevan sebagai landasan dalam pengembangan sistem.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K4",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Kajian Pustaka.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), Natural Language Processing (NLP), Large Language Model (LLM), sistem generator teks otomatis, text embedding, vector database, Retrieval-Augmented Generation (RAG), Prompt Engineering, serta metode evaluasi kualitas teks. Selain itu, bab ini juga membahas penelitian-penelitian terdahulu yang relevan sebagai landasan dalam pengembangan sistem.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K5",
+        "sumber": "Jelaskan tentang apa saja yang dibahas pada Bab 3.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 3 Desain Sistem Bab ini menjelaskan proses perancangan dan implementasi sistem konversi otomatis laporan Proyek Akhir menjadi artikel ilmiah. Pembahasan meliputi arsitektur sistem secara keseluruhan, alur pemrosesan dokumen, mekanisme retrieval dan generation, perancangan frontend dan backend, proses embedding, penyimpanan pada vector database, penyusunan prompt, mekanisme postprocessing, serta implementasi basis data yang digunakan dalam sistem.",
+        "sumber_valid": true
+      },
+      {
+        "id": "K6",
+        "sumber": "Penjelasan memuat bagian-bagian penting pada Desain Sistem.",
+        "butuh_kutipan": true,
+        "terpenuhi": true,
+        "kutipan": "Bab 3 Desain Sistem Bab ini menjelaskan proses perancangan dan implementasi sistem konversi otomatis laporan Proyek Akhir menjadi artikel ilmiah. Pembahasan meliputi arsitektur sistem secara keseluruhan, alur pemrosesan dokumen, mekanisme retrieval dan generation, perancangan frontend dan backend, proses embedding, penyimpanan pada vector database, penyusunan prompt, mekanisme postprocessing, serta implementasi basis data yang digunakan dalam sistem.",
+        "sumber_valid": true
+      }
+    ],
+    "trace": {
+      "system": "Kamu memeriksa kesesuaian ISI satu subbab dokumen proyek akhir terhadap petunjuk panduan.\nKerjakan dua hal:\n1. Turunkan checklist kriteria WAJIB dari PETUNJUK (maksimal 6). Ambil hanya yang benar-benar diminta\n   untuk isi tulisan dan bunyinya tegas (harus, berisi, deskripsikan, jelaskan). Lewati anjuran\n   (sebaiknya, yang baik, tidak terlalu ...) dan kalimat tentang format: ukuran huruf, penomoran\n   tabel/gambar, daftar simbol.\n   Satu kriteria hanya memuat satu syarat: pecah kalimat petunjuk yang memuat beberapa syarat\n   (mis. \"jelas, singkat, dan mengandung klaim orisinalitas\" menjadi tiga kriteria).\n   Setiap kriteria wajib punya \"sumber\": kutipan persis dari PETUNJUK yang menjadi dasarnya.\n2. Nilai TEKS MAHASISWA per kriteria. Baca SELURUH teks subbab sekaligus; sebuah kriteria bisa\n   dipenuhi oleh gabungan beberapa kalimat. \"terpenuhi\": true hanya jika ada \"kutipan\": satu sampai tiga\n   kalimat lengkap dari teks mahasiswa, persis seperti tertulis, dipisah \" | \". Untuk kriteria bernada\n   \"tidak memuat ...\", set \"butuh_kutipan\": false.\nCONTOH di panduan hanya ilustrasi, jangan dijadikan kriteria tambahan. Jangan menilai ejaan atau gaya bahasa.\nJudul proyek sudah dipecah menjadi Problem Domain, Problem, dan Uniqueness; gunakan unsur itu untuk\nmenilai apakah isi subbab membahas hal yang tepat. Jangan menulis alasan atau saran.\nBalas hanya satu objek JSON.",
+      "user": "JUDUL PROYEK AKHIR: SISTEM GENERATOR OTOMATIS UNTUK ARTIKEL ILMIAH\nProblem Domain: proyek akhir dan artikel ilmiah | Problem: sulitnya menghasilkan artikel ilmiah | Uniqueness: sistem generator otomatis\n\nSUBBAB: SISTEMATIKA PENULISAN\n\nPETUNJUK PANDUAN:\nJelaskan tentang sistematika pembahasan dalam buku proyek akhir yang meliputi : Bab 1 Pendahuluan Jelaskan tentang apa saja yang dibahas pada Bab 1. Penjelasan memuat bagian-bagian penting pada Pendahuluan Bab 2 Kajian Pustaka Jelaskan tentang apa saja yang dibahas pada Bab 2. Penjelasan memuat bagian-bagian penting pada Kajian Pustaka. Bab 3 Desain Sistem Jelaskan tentang apa saja yang dibahas pada Bab 3. Penjelasan memuat bagian-bagian penting pada Desain Sistem. Bab 4 Eksperimen dan Analisis Jelaskan tentang apa saja yang dibahas pada Bab 4. Penjelasan memuat bagian-bagian penting pada Eksperimen dan Analisis. Bab 5 Penutup Jelaskan tentang apa saja yang dibahas pada Bab 5. Penjelasan memuat bagian-bagian penting pada Penutup.\n\nCONTOH DI PANDUAN (ilustrasi):\n(tidak ada)\n\nTEKS MAHASISWA:\n\"\"\"\nBab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir. Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), Natural Language Processing (NLP), Large Language Model (LLM), sistem generator teks otomatis, text embedding, vector database, Retrieval-Augmented Generation (RAG), Prompt Engineering, serta metode evaluasi kualitas teks. Selain itu, bab ini juga membahas penelitian-penelitian terdahulu yang relevan sebagai landasan dalam pengembangan sistem. Bab 3 Desain Sistem Bab ini menjelaskan proses perancangan dan implementasi sistem konversi otomatis laporan Proyek Akhir menjadi artikel ilmiah. Pembahasan meliputi arsitektur sistem secara keseluruhan, alur pemrosesan dokumen, mekanisme retrieval dan generation, perancangan frontend dan backend, proses embedding, penyimpanan pada vector database, penyusunan prompt, mekanisme postprocessing, serta implementasi basis data yang digunakan dalam sistem. Bab 4 Eksperimen dan Analisis Bab ini membahas pelaksanaan pengujian terhadap sistem yang telah dikembangkan. Pengujian meliputi evaluasi mekanisme retrieval, stabilitas proses generasi, kualitas luaran artikel ilmiah, serta analisis performa sistem berdasarkan aspek akurasi, faithfulness, koherensi, dan kesesuaian terhadap aturan penulisan artikel ilmiah. Hasil pengujian kemudian dianalisis untuk mengetahui efektivitas sistem dalam membantu proses konversi laporan Proyek Akhir menjadi artikel ilmiah. Bab 5 Penutup Bab ini menyajikan kesimpulan berdasarkan hasil perancangan dan pengujian sistem, serta memberikan saran untuk pengembangan penelitian selanjutnya, khususnya dalam peningkatan kemampuan sistem, pengembangan metode retrieval maupun model bahasa, serta penyempurnaan fitur konversi artikel ilmiah.\n\"\"\"\n\nFormat JSON:\n{\"kriteria\": [{\"id\": \"K1\", \"sumber\": \"<kutipan persis dari petunjuk>\",\n  \"butuh_kutipan\": true, \"terpenuhi\": true, \"kutipan\": \"<kalimat dari teks mahasiswa atau kosong>\"}]}",
+      "raw": "{\n  \"kriteria\": [\n    {\n      \"id\": \"K1\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 1.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir.\"\n    },\n    {\n      \"id\": \"K2\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Pendahuluan.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 1 Pendahuluan Bab ini menjelaskan latar belakang penelitian mengenai kesulitan mahasiswa dalam mengonversi laporan Proyek Akhir menjadi artikel ilmiah. Selanjutnya dipaparkan rumusan masalah, tujuan penelitian, manfaat penelitian, serta sistematika penulisan sebagai gambaran umum mengenai isi setiap bab dalam laporan Proyek Akhir.\"\n    },\n    {\n      \"id\": \"K3\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 2.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), Natural Language Processing (NLP), Large Language Model (LLM), sistem generator teks otomatis, text embedding, vector database, Retrieval-Augmented Generation (RAG), Prompt Engineering, serta metode evaluasi kualitas teks. Selain itu, bab ini juga membahas penelitian-penelitian terdahulu yang relevan sebagai landasan dalam pengembangan sistem.\"\n    },\n    {\n      \"id\": \"K4\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Kajian Pustaka.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 2 Kajian Pustaka Bab ini menguraikan teori-teori yang menjadi dasar pengembangan sistem, meliputi artikel ilmiah, kecerdasan buatan (Artificial Intelligence), Natural Language Processing (NLP), Large Language Model (LLM), sistem generator teks otomatis, text embedding, vector database, Retrieval-Augmented Generation (RAG), Prompt Engineering, serta metode evaluasi kualitas teks. Selain itu, bab ini juga membahas penelitian-penelitian terdahulu yang relevan sebagai landasan dalam pengembangan sistem.\"\n    },\n    {\n      \"id\": \"K5\",\n      \"sumber\": \"Jelaskan tentang apa saja yang dibahas pada Bab 3.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 3 Desain Sistem Bab ini menjelaskan proses perancangan dan implementasi sistem konversi otomatis laporan Proyek Akhir menjadi artikel ilmiah. Pembahasan meliputi arsitektur sistem secara keseluruhan, alur pemrosesan dokumen, mekanisme retrieval dan generation, perancangan frontend dan backend, proses embedding, penyimpanan pada vector database, penyusunan prompt, mekanisme postprocessing, serta implementasi basis data yang digunakan dalam sistem.\"\n    },\n    {\n      \"id\": \"K6\",\n      \"sumber\": \"Penjelasan memuat bagian-bagian penting pada Desain Sistem.\",\n      \"butuh_kutipan\": true,\n      \"terpenuhi\": true,\n      \"kutipan\": \"Bab 3 Desain Sistem Bab ini menjelaskan proses perancangan dan implementasi sistem konversi otomatis laporan Proyek Akhir menjadi artikel ilmiah. Pembahasan meliputi arsitektur sistem secara keseluruhan, alur pemrosesan dokumen, mekanisme retrieval dan generation, perancangan frontend dan backend, proses embedding, penyimpanan pada vector database, penyusunan prompt, mekanisme postprocessing, serta implementasi basis data yang digunakan dalam sistem.\"\n    }\n  ]\n}"
+    }
+  }
+]

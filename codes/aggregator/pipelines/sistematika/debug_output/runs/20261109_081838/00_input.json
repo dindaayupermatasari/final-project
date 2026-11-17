@@ -1,0 +1,21 @@
+{
+  "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\CheckRun\\data\\samples\\Buku PA_Awal Raya.pdf",
+  "sections": null,
+  "judul": null,
+  "opsi": {
+    "doc": "C:\\Users\\Dicky Zulfikar\\Documents\\kuliah\\TA\\codes\\CheckRun\\data\\samples\\Buku PA_Awal Raya.pdf",
+    "judul": null,
+    "sections": null,
+    "bab": "1",
+    "only": null,
+    "mode": "kalimat",
+    "retrieval": "cached",
+    "topk": 3,
+    "chroma_dir": null,
+    "pause": false,
+    "yes": false,
+    "problem_domain": null,
+    "problem": null,
+    "uniqueness": null
+  }
+}

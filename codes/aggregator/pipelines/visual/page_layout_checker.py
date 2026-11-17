@@ -114,6 +114,7 @@ CHANGELOG (revisi terbaru -- confidence flag utk hasil berbasis font):
 """
 
 import os
+import pathlib
 import re
 import subprocess
 import sys
@@ -135,6 +136,32 @@ LIBREOFFICE_PATH = os.environ.get(
     "LIBREOFFICE_PATH",
     r"C:\Users\Dicky Zulfikar\Downloads\LibreOfficePortablePrevious\App\libreoffice\program\soffice.exe",
 )
+
+# Folder induk untuk SEMUA file/folder sementara konversi LibreOffice
+# (input.docx, profil sementara, output pdf). WAJIB path TANPA spasi di
+# Windows -- default tempfile.gettempdir() ada di
+# C:\Users\<nama user>\AppData\Local\Temp, dan kalau nama user
+# mengandung spasi (mis. "Dicky Zulfikar") soffice bisa crash dengan
+# exit code 0xE06D7363 walau file sudah dinamai "input.docx".
+# Override lewat env var LO_TEMP_ROOT. Kalau tidak di-set: di Windows
+# dipakai C:\temp kalau temp bawaan berspasi; selain itu temp bawaan OS.
+def _resolve_lo_temp_root() -> str | None:
+    env = os.environ.get("LO_TEMP_ROOT")
+    if env:
+        os.makedirs(env, exist_ok=True)
+        return env
+    default_tmp = tempfile.gettempdir()
+    if os.name == "nt" and " " in default_tmp:
+        safe = r"C:\temp"
+        try:
+            os.makedirs(safe, exist_ok=True)
+            return safe
+        except OSError:
+            return None
+    return None
+
+
+LO_TEMP_ROOT = _resolve_lo_temp_root()
 
 # wdFormatPDF = 17 (konstanta MS Word, tidak berubah antar versi Word).
 _WD_FORMAT_PDF = 17
@@ -304,21 +331,41 @@ def _render_via_libreoffice(docx_path: str, output_dir: str) -> str:
     LEBIH DULU di render_to_pdf() sebelum fungsi ini jalan -- kalau
     fungsi ini sampai dipanggil, font sudah dipastikan (atau di-skip
     sengaja lewat SKIP_FONT_CHECK).
+
+    CHANGELOG: file disalin dulu ke nama sederhana ("input.docx") dan
+    soffice dijalankan dengan profil pengguna SEMENTARA yang bersih
+    (-env:UserInstallation). Alasannya: di Windows, soffice (terutama
+    build Portable) bisa crash dengan exit code 0xE06D7363 (unhandled C++
+    exception) kalau path file mengandung spasi/tanda kutip, atau profil
+    bawaannya korup/terkunci oleh instance lain. Hasil PDF SELALU bernama
+    "input.pdf" di output_dir -- pemanggil memakai path yang dikembalikan
+    fungsi ini, bukan menebak nama dari nama docx.
     """
+    import shutil
+
+    work_dir = tempfile.mkdtemp(prefix="lo_work_", dir=LO_TEMP_ROOT)
+    profile_dir = tempfile.mkdtemp(prefix="lo_profile_", dir=LO_TEMP_ROOT)
+    src = os.path.join(work_dir, "input.docx")
+    shutil.copyfile(docx_path, src)
+    # as_uri() meng-encode spasi/karakter khusus (%20), beda dengan
+    # "file:///" + path mentah yang rusak kalau path berspasi.
+    profile_url = pathlib.Path(profile_dir).resolve().as_uri()
     try:
         subprocess.run(
             [
                 LIBREOFFICE_PATH,
+                f"-env:UserInstallation={profile_url}",
                 "--headless",
+                "--norestore",
                 "--convert-to",
                 "pdf",
                 "--outdir",
                 output_dir,
-                docx_path,
+                src,
             ],
             check=True,
             capture_output=True,
-            timeout=120,
+            timeout=180,
         )
     except FileNotFoundError:
         raise RuntimeError(
@@ -327,13 +374,23 @@ def _render_via_libreoffice(docx_path: str, output_dir: str) -> str:
             "soffice di mesin ini (atau set env var LIBREOFFICE_PATH)."
         )
     except subprocess.CalledProcessError as e:
-        stderr = e.stderr.decode(errors="ignore") if e.stderr else str(e)
-        raise RuntimeError(f"Gagal convert docx ke pdf (LibreOffice): {stderr}")
+        detail = (e.stderr or b"").decode(errors="ignore").strip() or (
+            e.stdout or b""
+        ).decode(errors="ignore").strip()
+        raise RuntimeError(
+            f"soffice keluar dengan kode {e.returncode & 0xFFFFFFFF:#x}. "
+            f"{detail or '(tanpa pesan)'} "
+            f"[soffice='{LIBREOFFICE_PATH}', temp_root='{LO_TEMP_ROOT or tempfile.gettempdir()}'] "
+            "Kode 0xe06d7363 = soffice crash; coba LibreOffice yang "
+            "terinstal normal (bukan Portable) lewat env var LIBREOFFICE_PATH."
+        )
     except subprocess.TimeoutExpired:
-        raise RuntimeError("Konversi docx ke pdf melebihi batas waktu (120s).")
+        raise RuntimeError("Konversi docx ke pdf melebihi batas waktu (180s).")
+    finally:
+        shutil.rmtree(work_dir, ignore_errors=True)
+        shutil.rmtree(profile_dir, ignore_errors=True)
 
-    base = os.path.splitext(os.path.basename(docx_path))[0]
-    pdf_path = os.path.join(output_dir, f"{base}.pdf")
+    pdf_path = os.path.join(output_dir, "input.pdf")
     if not os.path.exists(pdf_path):
         raise RuntimeError(
             "Konversi PDF (LibreOffice) selesai tapi file output tidak ditemukan."
@@ -435,7 +492,9 @@ def render_to_pdf(docx_path: str, output_dir: str | None = None) -> tuple[str, s
     font aslinya sendiri lewat OS, tidak ada substitusi metric-compatible
     sama sekali, jadi tidak perlu _verify_font_available().
     """
-    output_dir = output_dir or tempfile.mkdtemp(prefix="page_layout_")
+    output_dir = output_dir or tempfile.mkdtemp(
+        prefix="page_layout_", dir=LO_TEMP_ROOT
+    )
 
     if RENDER_ENGINE == "word":
         return _render_via_word(docx_path, output_dir), "verified"
@@ -540,7 +599,38 @@ def _footer_pair_agrees(prev_page: int, prev_val: int, page: int, val: int) -> b
     return is_continue or is_restart
 
 
-def _validate_footer_sequence(footer_numbers: dict[int, int]) -> dict[int, int]:
+def _is_confirmed_format_transition(
+    footer_numbers: dict[int, int],
+    footer_fmts: dict[int, str] | None,
+    pages_sorted: list[int],
+    last_trusted_page: int,
+    page: int,
+) -> bool:
+    """
+    True kalau `page` memulai section penomoran baru dengan FORMAT beda
+    dari titik terpercaya terakhir (mis. lowerRoman -> decimal) dan titik
+    sesudahnya mengonfirmasi (lanjut naik mengikuti jarak halaman, atau
+    restart ke 1) pada format yang sama. Nilai awal section baru bebas
+    (tidak harus 1) -- apakah harus 1 itu urusan comparator, bukan
+    validasi urutan.
+    """
+    if not footer_fmts:
+        return False
+    if footer_fmts.get(page) == footer_fmts.get(last_trusted_page):
+        return False
+    idx = pages_sorted.index(page)
+    if idx + 1 >= len(pages_sorted):
+        return False
+    nxt = pages_sorted[idx + 1]
+    if footer_fmts.get(nxt) != footer_fmts.get(page):
+        return False
+    return _footer_pair_agrees(page, footer_numbers[page], nxt, footer_numbers[nxt])
+
+
+def _validate_footer_sequence(
+    footer_numbers: dict[int, int],
+    footer_fmts: dict[int, str] | None = None,
+) -> dict[int, int]:
     """
     Footer yang terbaca "meyakinkan" oleh extract_footer_numbers() (tepat
     satu kandidat konsisten di zona footer) TETAP bisa salah kalau field
@@ -632,6 +722,16 @@ def _validate_footer_sequence(footer_numbers: dict[int, int]) -> dict[int, int]:
     for phys_page in pages_sorted[baseline_idx + 1 :]:
         val = footer_numbers[phys_page]
         if _footer_pair_agrees(last_trusted_page, last_trusted_val, phys_page, val):
+            validated[phys_page] = val
+            last_trusted_page, last_trusted_val = phys_page, val
+        elif _is_confirmed_format_transition(
+            footer_numbers, footer_fmts, pages_sorted, last_trusted_page, phys_page
+        ):
+            # FIX: transisi format (romawi -> arab) dengan nilai awal
+            # BEBAS (mis. BAB 1 mulai dari 4, bukan 1) -- bukan glitch
+            # field PAGE, karena halaman berikutnya konsisten dengannya.
+            # Tanpa ini seluruh halaman arab ikut ke-drop dan BAB 1
+            # dianggap masih romawi (False finding "Romawi kecil").
             validated[phys_page] = val
             last_trusted_page, last_trusted_val = phys_page, val
         # else: menyimpang dari kedua pola -> field PAGE di halaman ini
@@ -730,7 +830,8 @@ def extract_footer_details(pdf_path: str) -> dict[int, dict]:
     # tidak-sinkron satu sama lain (satu bilang halaman X terpercaya,
     # yang lain bilang tidak).
     value_only = {p: d["value"] for p, d in raw.items()}
-    validated_values = _validate_footer_sequence(value_only)
+    fmt_only = {p: d["fmt"] for p, d in raw.items()}
+    validated_values = _validate_footer_sequence(value_only, fmt_only)
     return {p: raw[p] for p in validated_values}
 
 
@@ -863,10 +964,17 @@ def build_page_number_sections(pdf_path: str, margin_section: dict) -> list[dict
                 pgnum_fmt=d["fmt"],
                 pgnum_start=d["value"],
                 footer_has_page_field=True,
+                # Nomor TERCETAK tiap halaman fisik yang terbaca di section
+                # ini. Dipakai compare_page_numbering() untuk membaca nomor
+                # di halaman tempat BAB 1 BENAR-BENAR mulai, bukan nomor
+                # halaman pertama section (yang bisa lebih awal dari BAB 1,
+                # mis. halaman kosong/pra-bab yang sudah berformat Arab).
+                page_values={},
             )
             sections.append(cur)
             cur_centered_votes = []
         cur_last_value = d["value"]
+        cur["page_values"][p] = d["value"]
         cur_centered_votes.append(d["centered"])
     _flush_alignment()
 
